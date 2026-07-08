@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Public-facing casino data — readable by anyone, writable only by auth'd users
+    match /casinos/{casinoId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Insights/audit articles — readable by anyone, writable only by auth'd users
+    match /insights/{insightId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Everything else: require auth for any access
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

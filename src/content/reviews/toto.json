@@ -1,0 +1,100 @@
+{
+  "id": "toto",
+  "name": "Toto Casino",
+  "slug": "toto",
+  "domain": "toto.nl/casino",
+  "isKsaLicensed": true,
+  "isLicensedInNL": true,
+  "licenseNumber": "KSA/1420/22031",
+  "licenseType": "ksa",
+  "restrictedCountries": [],
+  "rating": 9.2,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-green-600 to-emerald-700",
+  "welcomeBonus": "100 Free Spins (No Wagering)",
+  "gameLibraryCount": "1,200+ Titles",
+  "summaryText": "Toto Casino, part of the state-owned Nederlandse Loterij, holds a prestigious KSA license and is one of the most trusted names in Dutch gaming history. It provides supreme safety and immediate payouts through Dutch banking channels.",
+  "warningText": "KSA Regulated: Fully authorized state-licensed operator.",
+  "affiliateUrl": "https://track.affiliate-link.com/toto-casino-bonus",
+  "pros": [
+    "Operated by Nederlandse Loterij (State-backed organization).",
+    "Free spins welcome offer carries absolutely zero wagering requirements.",
+    "100% Dutch-speaking live support and local gaming lobbies."
+  ],
+  "cons": [
+    "Strict limit enforcement restricts high-stakes players.",
+    "Smaller slot library compared to international networks."
+  ],
+  "securityTitle": "State-Backed Security",
+  "securitySummary": "Toto Casino operates under license KSA/1420/22031. As a subsidiary of the Nederlandse Loterij, it adheres to the highest level of regulatory scrutiny, with all profits contributing to Dutch sports and social causes.",
+  "securityWarning": "State-Backed Operator - Unrivaled trust and financial reliability.",
+  "securityPoints": [
+    {
+      "title": "KSA Regulatory Compliance",
+      "description": "Complies with the strict Wet Kansspelen op afstand (Koa). Subject to rigorous continuous oversight.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "100 Free Spins on Slot of the Week",
+  "bonusWagering": "0x (All winnings are instant real cash)",
+  "bonusMinDeposit": "€10",
+  "bonusValidity": "14 Days",
+  "bonusMaxBet": "N/A",
+  "bonusTermsVerdict": "Outstanding player terms. The free spins are issued with 0x wagering. If you win €50 from your free spins, you can withdraw it instantly without having to play it through.",
+  "bonusTermsDetails": [
+    {
+      "title": "Zero Wagering",
+      "description": "What you win from free spins is paid as real cash, which is extremely rare and highly valued."
+    }
+  ],
+  "gameSummary": "Features 1,200+ selected games with specific focuses on Dutch favorites and localized classic fruit machines.",
+  "gameCategories": [
+    {
+      "title": "Classic Slots",
+      "description": "Classic physical slot machines converted to digital format, hugely popular in the Netherlands.",
+      "notable": "Club 2000, Simply Wild, Random Runner",
+      "iconName": "slots"
+    }
+  ],
+  "paymentSummary": "All deposits and withdrawals are processed via iDEAL, the secure and mandatory payment method for Dutch state lottery brands.",
+  "paymentMethods": [
+    {
+      "name": "iDEAL",
+      "type": "Direct Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant (Within 5 minutes)",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Toto is a leader in responsible gaming, maintaining low maximum limit caps to prevent problem gambling behavior.",
+  "rgTools": [
+    {
+      "title": "CRUKS Integration",
+      "description": "Mandatory check on every login. Suspended players cannot bypass restrictions.",
+      "status": "success",
+      "iconName": "shield-ban"
+    }
+  ],
+  "comparisonTitle": "Comparison: Toto vs. Offshore Operators",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "KSA State-Backed (NL) - Maximum Safety",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "success"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Toto Casino state-owned?",
+      "answer": "Yes, Toto is operated by Nederlandse Loterij, which is the state-owned lottery and gaming organization of the Netherlands."
+    }
+  ],
+  "license": "KSA/1420/22031",
+  "bonus": "100 Free Spins (No Wagering)",
+  "wagering": "0x (All winnings are instant real cash)"
+}

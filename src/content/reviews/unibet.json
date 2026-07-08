@@ -1,0 +1,335 @@
+{
+  "id": "unibet",
+  "name": "Unibet",
+  "slug": "unibet",
+  "domain": "unibet.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "licenseNumber": "MGA/B2C/106/2000",
+  "licenseType": "mga",
+  "restrictedCountries": [
+    "NL",
+    "USA",
+    "Afghanistan",
+    "Ethiopia",
+    "Iran",
+    "Iraq",
+    "Jordan",
+    "Kuwait",
+    "Pakistan",
+    "Syria",
+    "Yemen"
+  ],
+  "rating": 8.9,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "welcomeBonus": "100% up to £100 + 50 Free Spins",
+  "gameLibraryCount": "1,500+ Titles",
+  "summaryText": "Unibet is a globally recognized iGaming operator offering a comprehensive platform for sports betting, casino games, and live dealer experiences. With a strong focus on security and responsible gaming, Unibet provides a tailored experience to players in various regulated markets worldwide.",
+  "warningText": "Gambling can be addictive. Play responsibly. For help, visit your local responsible gambling authority.",
+  "affiliateUrl": "https://track.unibet-affiliates.com/casino-bonus",
+  "pros": [
+    "Globally recognized brand",
+    "Wide range of casino & sports products",
+    "Strong licensing & security",
+    "Fast withdrawals for e-wallets",
+    "Excellent mobile apps"
+  ],
+  "cons": [
+    "Bonus offers vary significantly by region",
+    "Customer support response times can vary"
+  ],
+  "securityTitle": "Unibet: A Secure and Trustworthy Gaming Environment",
+  "securitySummary": "Unibet prioritizes player security through advanced encryption technologies (SSL), robust data protection protocols, and strict adherence to regulatory standards set by its multiple licensing bodies. It employs industry-standard firewalls and regularly audits its systems to ensure a safe and fair gaming experience for all users. All personal and financial data is handled with the utmost care, in compliance with GDPR and other data protection regulations.",
+  "securityWarning": "Unibet maintains excellent security standards, ensuring player data and funds are protected with cutting-edge technology and rigorous compliance.",
+  "securityPoints": [
+    {
+      "title": "SSL Encryption",
+      "description": "All data transfers are secured with state-of-the-art SSL encryption.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Regulatory Compliance",
+      "description": "Licensed and regulated by reputable authorities, ensuring fair play and player protection.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Data Protection",
+      "description": "Strict adherence to data protection laws, including GDPR.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Fraud Prevention",
+      "description": "Advanced systems in place to detect and prevent fraudulent activities.",
+      "iconName": "alert",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "100% up to £100",
+  "bonusWagering": "35x Bonus",
+  "bonusMinDeposit": "£10",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "£5",
+  "bonusTermsVerdict": "The bonus terms are generally industry-standard, with a fair wagering requirement and reasonable validity period. Players should review specific regional T&Cs for precise details.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "Bonus funds must be wagered 35 times before they can be withdrawn. Game contributions vary."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of £10 is required to qualify for the welcome bonus."
+    },
+    {
+      "title": "Bonus Expiry",
+      "description": "The bonus and any winnings from it must be used within 30 days of activation."
+    },
+    {
+      "title": "Game Restrictions",
+      "description": "Certain games may be excluded from bonus wagering or contribute less than 100%."
+    },
+    {
+      "title": "Max Bet Rule",
+      "description": "A maximum bet of £5 per spin/round applies while the bonus is active."
+    }
+  ],
+  "gameSummary": "Unibet offers an expansive game library, featuring thousands of titles across video slots, classic table games, and an immersive live casino experience. Players can enjoy popular jackpot slots, diverse roulette and blackjack variants, and engaging live dealer streams from top providers. The selection also includes Slingo, scratch cards, and various other instant-win games, ensuring a rich and varied gaming portfolio.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "A vast collection of video slots including popular titles, Megaways, and progressive jackpots from leading software providers like NetEnt, Microgaming, and Play'n GO.",
+      "notable": "Starburst, Book of Dead, Gonzo's Quest, Mega Moolah, Divine Fortune",
+      "iconName": "slots"
+    },
+    {
+      "title": "Table Games",
+      "description": "Classic table games such as Blackjack, Roulette, Baccarat, and Poker, available in multiple variations and betting limits.",
+      "notable": "European Roulette, Classic Blackjack, Casino Hold'em, Baccarat Squeeze",
+      "iconName": "dice"
+    },
+    {
+      "title": "Live Casino",
+      "description": "An immersive live dealer experience with real-time streaming of Blackjack, Roulette, Baccarat, and game shows hosted by professional dealers.",
+      "notable": "Live Blackjack, Live Roulette, Lightning Roulette, Dream Catcher, Crazy Time",
+      "iconName": "live"
+    },
+    {
+      "title": "Jackpot Games",
+      "description": "A dedicated section for high-payout progressive jackpot slots with life-changing prizes.",
+      "notable": "Mega Moolah, Hall of Gods, Major Millions, Wheel of Wishes",
+      "iconName": "slots"
+    }
+  ],
+  "paymentSummary": "Unibet supports a wide array of secure and convenient payment methods for both deposits and withdrawals, including popular e-wallets, credit/debit cards, and bank transfers. Transactions are processed efficiently, with varying times depending on the chosen method, and generally no fees are applied by the casino.",
+  "paymentMethods": [
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Skrill",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 12 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Neteller",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 12 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "PayPal",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 12 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Trustly",
+      "type": "Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-2 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Bank Transfer",
+      "type": "Bank Transfer",
+      "depositTime": "2-3 Business Days",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Unibet is deeply committed to responsible gambling, offering a comprehensive suite of tools and resources to help players manage their activity and ensure a safe gaming environment. This includes setting various limits, self-exclusion options, reality checks, and direct access to professional support organizations.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Set daily, weekly, or monthly limits on how much you can deposit.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Loss Limits",
+      "description": "Control how much you can lose over a specified period.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Manage the amount of time you spend playing games.",
+      "status": "supported",
+      "iconName": "clock"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Temporarily or permanently restrict access to your account.",
+      "status": "supported",
+      "iconName": "ban"
+    },
+    {
+      "title": "Reality Check",
+      "description": "Receive periodic notifications about your gaming activity.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    }
+  ],
+  "comparisonTitle": "Unibet's Performance Against Industry Benchmarks",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "Regulated (MGA/UKGC) - High Safety",
+      "regulatedStandard": "Industry Standard: MGA/UKGC",
+      "status": "success"
+    },
+    {
+      "feature": "Bonus Fairness (Wagering)",
+      "thisCasino": "35x Bonus - Fair",
+      "regulatedStandard": "Industry Standard: 30-40x",
+      "status": "success"
+    },
+    {
+      "feature": "Payout Speed (E-Wallets)",
+      "thisCasino": "Instant - 12 Hours - Excellent",
+      "regulatedStandard": "Industry Standard: 0-24 Hours",
+      "status": "success"
+    },
+    {
+      "feature": "Game Variety",
+      "thisCasino": "1,500+ Titles - Extensive",
+      "regulatedStandard": "Industry Standard: 1,000+ Titles",
+      "status": "success"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Unibet a licensed and safe casino?",
+      "answer": "Yes, Unibet holds licenses from several reputable authorities, including the Malta Gaming Authority (MGA), ensuring a safe and regulated gaming environment with strong player protection measures."
+    },
+    {
+      "question": "What kind of games can I play at Unibet?",
+      "answer": "Unibet offers a diverse range of games, including a vast selection of video slots, classic table games like Blackjack and Roulette, an immersive live casino with real dealers, and a comprehensive sports betting platform."
+    },
+    {
+      "question": "How fast are withdrawals at Unibet?",
+      "answer": "Withdrawal times at Unibet vary by method. E-wallet withdrawals are typically processed instantly to within 12 hours, while bank transfers and card withdrawals can take 1-5 business days."
+    }
+  ],
+  "license": "MGA/B2C/106/2000",
+  "bonus": "100% up to £100 + 50 Free Spins",
+  "wagering": "35x Bonus",
+  "editorialVerdict": "Unibet stands as a cornerstone in the online gambling industry, known for its robust platform and extensive offerings across sports, casino, and poker. It boasts strong regulatory compliance, holding licenses in multiple stringent jurisdictions, which speaks volumes about its trustworthiness and commitment to player safety. Payout speeds are generally efficient, ranging from instant for e-wallets to 1-3 business days for bank transfers, aligning with industry best practices. While its global approach sometimes means localized bonuses vary, the core product remains solid, offering a secure and diverse gaming environment that players can confidently rely on for fair play and timely withdrawals.",
+  "gameContributions": [
+    {
+      "category": "Slots",
+      "contribution": "100%"
+    },
+    {
+      "category": "Live Casino",
+      "contribution": "10%"
+    },
+    {
+      "category": "Table Games",
+      "contribution": "5%"
+    },
+    {
+      "category": "Video Poker",
+      "contribution": "10%"
+    }
+  ],
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €200 + 100 Free Spins",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "Not explicitly stated on homepage, please verify local site.",
+      "wagering": "Not explicitly stated on homepage, please verify local site."
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "swe": {
+      "offer": "100% up to 1000 SEK + 100 Free Spins",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 2000 NOK + 50 Free Spins",
+      "wagering": "30x"
+    },
+    "fin": {
+      "offer": "100% up to 200€ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 500 DKK + 25 Free Spins",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 300€ + 150 Free Spins",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "Bet €10, Get €50 Free Bets",
+      "wagering": "1x"
+    },
+    "bel": {
+      "offer": "100% up to 200€",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 500€ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "Not explicitly stated on homepage, please verify local site.",
+      "wagering": "Not explicitly stated on homepage, please verify local site."
+    },
+    "bra": {
+      "offer": "100% up to 500 BRL + R$20 Free Bet",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 500 CAD + 50 Free Spins",
+      "wagering": "35x"
+    }
+  }
+}

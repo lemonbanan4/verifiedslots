@@ -1,0 +1,48 @@
+# Dependency directories
+node_modules/
+/jspm_packages/
+
+# Next.js build and cache output
+.next/
+out/
+
+# Firebase Cache & Logs
+.firebase/
+*-debug.log
+*-debug.*.log
+.apphosting/
+
+# Production build outputs
+build/
+dist/
+
+# Coverage directory used by tools
+coverage/
+
+# OS/System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environmental variables (Must never be committed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Allow example file to be committed
+!.env.example
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,8 @@
+const DEFAULT_RAW_DATA = `
+Casino Name: LeoVegas
+License Status: Malta Gaming Authority (MGA/CRP/237/2013) and UK Gambling Commission (000-039198-R-319450-022).
+Asset Segregation: Funds are held in accordance with MGA/UKGC regulations; under the "Medium Protection" standard, player funds are held in accounts separate from operational funds, though they are not legally protected in the event of insolvency.
+Withdrawal Limits: No strictly enforced site-wide daily/weekly cap, though individual payment methods may have limits; subject to verification and internal risk assessment.
+Wagering / Playthrough: Variable based on the specific bonus. Generally, bonus funds must be wagered (often 20x-35x), but many offers are structured as "cash" bonuses where the deposit is wagered first to release the reward.
+Responsible Gaming Controls: Extensive "LeoSafePlay" suite including time alerts, loss limits, session limits, wagering limits, deposit limits, self-assessment tests, and self-exclusion options.
+`;

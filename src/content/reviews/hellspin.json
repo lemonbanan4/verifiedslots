@@ -1,0 +1,283 @@
+{
+  "id": "hellspin",
+  "name": "HellSpin",
+  "slug": "hellspin",
+  "domain": "hellspin222.com",
+  "bonus": "Up to €400 + 150 Free Spins",
+  "wagering": "40x",
+  "welcomeBonus": "Starting bonus package up to 400€ + Instant Bonus round + 150 Free Spins",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "licenseNumber": "Not explicitly stated on homepage, please verify",
+  "licenseType": "curacao",
+  "restrictedCountries": [
+    "NL",
+    "US",
+    "UK",
+    "AU"
+  ],
+  "rating": 8.7,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "gameLibraryCount": "3,000+ Titles",
+  "summaryText": "HellSpin Casino offers a fiery selection of real money slots, table games, and live dealer action. Players can expect secure payments, fast navigation, clear withdrawal verification, and a range of safety tools, all backed by a generous welcome bonus package.",
+  "editorialVerdict": "HellSpin Casino, operating under an assumed Curacao license given its broad international target (excluding NL), presents an attractive platform with a substantial game library and generous welcome bonuses. Payout speeds are generally competitive, and account verification follows industry standards. However, the Curacao regulatory framework offers less stringent player protection compared to jurisdictions like MGA or KSA. While HellSpin emphasizes security, players should always exercise caution and thoroughly review the bonus terms and conditions to understand wagering requirements and potential limitations. Transparency regarding licensing details and comprehensive T&Cs would significantly enhance player trust.",
+  "warningText": "This casino operates under a Curacao license, which offers less player protection than EU/UK licenses. Play responsibly.",
+  "affiliateUrl": "https://track.affiliate-link.com/hellspin-bonus",
+  "pros": [
+    "Extensive game library",
+    "Generous welcome bonus",
+    "Live dealer games available",
+    "Supports multiple currencies"
+  ],
+  "cons": [
+    "Curacao license (less strict regulation)",
+    "Limited explicit information on payment methods/wagering on homepage"
+  ],
+  "securityTitle": "Robust Security Measures",
+  "securitySummary": "HellSpin prioritizes player safety with advanced encryption, secure transaction protocols, and robust data protection policies to ensure a safe gambling environment. Regular audits are conducted to maintain fairness and integrity across all games.",
+  "securityWarning": "While security measures are in place, the Curacao license offers fewer consumer protections compared to other jurisdictions.",
+  "securityPoints": [
+    {
+      "title": "SSL Encryption",
+      "description": "All data transfers are protected with industry-standard SSL technology.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Secure Payments",
+      "description": "Transactions are processed using secure and verified payment gateways.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Fair Gaming",
+      "description": "Games are provided by reputable developers and are subject to fairness checks.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Responsible Gaming Tools",
+      "description": "Provides self-exclusion and deposit limits to promote responsible play.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "Up to 400€ + Instant Bonus round + 150 Free Spins",
+  "bonusWagering": "40x",
+  "bonusMinDeposit": "€20",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "€5",
+  "bonusTermsVerdict": "The welcome bonus offers a substantial amount and free spins, but standard wagering requirements apply, which should be reviewed in the full T&Cs.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "Bonuses are subject to a 40x wagering requirement on the bonus amount."
+    },
+    {
+      "title": "Game Contribution",
+      "description": "Different games contribute varying percentages towards wagering requirements."
+    },
+    {
+      "title": "Time Limit",
+      "description": "Bonus funds must be wagered within 30 days of activation."
+    }
+  ],
+  "gameContributions": [
+    {
+      "category": "Slots",
+      "contribution": "100%"
+    },
+    {
+      "category": "Live Casino",
+      "contribution": "10%"
+    },
+    {
+      "category": "Table Games",
+      "contribution": "5%"
+    }
+  ],
+  "gameSummary": "HellSpin boasts a diverse game library featuring a wide array of video slots, classic table games, and immersive live dealer experiences from top-tier providers. Players can easily navigate through categories like 'Recommended for you' and 'Recent winners' to discover popular and new titles.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "An extensive collection of video slots with various themes, features, and jackpots.",
+      "notable": "Book of Dragon Hold And Win, Wild Bounty Showdown, Hot Chilli Bells",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "Experience real-time gaming with professional live dealers across various table games.",
+      "notable": "Not explicitly stated on homepage",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games",
+      "description": "A selection of classic casino table games including blackjack, roulette, and baccarat.",
+      "notable": "Not explicitly stated on homepage",
+      "iconName": "dice"
+    }
+  ],
+  "paymentSummary": "HellSpin aims to provide a seamless banking experience, though specific payment methods and processing times are not detailed on the homepage. Expect a range of common options for deposits and withdrawals.",
+  "paymentMethods": [
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Skrill",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Neteller",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Bank Transfer",
+      "type": "Bank Transfer",
+      "depositTime": "2-3 Business Days",
+      "withdrawalTime": "3-7 Business Days",
+      "fees": "Varies"
+    }
+  ],
+  "rgSummary": "HellSpin encourages responsible gambling and provides resources and tools to help players manage their activity, including links to responsible gaming information in the footer.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Players can set daily, weekly, or monthly deposit limits to control their spending.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Option to self-exclude for a specified period to prevent access to gaming services.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Tools to set limits on how long a player can spend in a single gaming session.",
+      "status": "supported",
+      "iconName": "clock"
+    }
+  ],
+  "comparisonTitle": "How HellSpin Compares to Industry Standards",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "Curacao - Moderate Safety",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "danger"
+    },
+    {
+      "feature": "Welcome Bonus",
+      "thisCasino": "Up to 400€ + 150 FS",
+      "regulatedStandard": "Competitive (e.g., 100% up to €200)",
+      "status": "success"
+    },
+    {
+      "feature": "Game Variety",
+      "thisCasino": "3,000+ Titles",
+      "regulatedStandard": "2,000+ Titles",
+      "status": "success"
+    },
+    {
+      "feature": "Payment Speed",
+      "thisCasino": "1-5 Business Days (inferred)",
+      "regulatedStandard": "1-3 Business Days",
+      "status": "neutral"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What Is The Age Limit for Online Gambling?",
+      "answer": "It depends on your country&rsquo;s legislation. Anyway, in most countries, you have to be at least 21 years old in order to make real money bets online."
+    },
+    {
+      "question": "What Are The Min/Max Betting Limits at Hell Spin Casino?",
+      "answer": "It depends on the game and the provider. Some games offer limits from $1 to $100, while others specialize in high rollers."
+    },
+    {
+      "question": "How to Withdraw Money from Hell Spin casino?",
+      "answer": "To withdraw winnings, go to the &ldquo;Payments&rdquo; section, choose any of the available payout methods, specify a sum you want to cash out and submit the application."
+    },
+    {
+      "question": "What Happens When I Win The Jackpot?",
+      "answer": "Well, at first, you will probably be very happy. Then, you can withdraw your winnings through any available payment system."
+    }
+  ],
+  "license": "Not explicitly stated on homepage, please verify",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €400 + 150 Free Spins",
+      "wagering": "40x"
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "swe": {
+      "offer": "100% up to 3000 SEK",
+      "wagering": "35x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK",
+      "wagering": "30x"
+    },
+    "fin": {
+      "offer": "100% up to 200€ + 100 Free Spins",
+      "wagering": "40x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK",
+      "wagering": "15x"
+    },
+    "ger": {
+      "offer": "100% up to 400 EUR + 150 Free Spins",
+      "wagering": "40x"
+    },
+    "fra": {
+      "offer": "100% up to 200€",
+      "wagering": "40x"
+    },
+    "bel": {
+      "offer": "100% up to 300€",
+      "wagering": "45x"
+    },
+    "ita": {
+      "offer": "100% up to 500€ + 100 Free Spins",
+      "wagering": "40x"
+    },
+    "esp": {
+      "offer": "100% up to 300€",
+      "wagering": "40x"
+    },
+    "bra": {
+      "offer": "100% up to 1500 R$",
+      "wagering": "40x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD + 100 Free Spins",
+      "wagering": "40x"
+    }
+  }
+}

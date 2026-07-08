@@ -1,0 +1,317 @@
+{
+  "id": "videoslots",
+  "name": "VideoSlots",
+  "slug": "videoslots",
+  "domain": "videoslots.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "licenseNumber": "MGA/B2C/218/2012",
+  "licenseType": "mga",
+  "restrictedCountries": [
+    "NL",
+    "US"
+  ],
+  "rating": 8.8,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "gameLibraryCount": "9,000+ Titles",
+  "summaryText": "Videoslots – A casino with a selection of over 9,000 games! Our catalogue is packed with exciting titles to offer every player something to enjoy.",
+  "editorialVerdict": "VideoSlots stands out with its truly enormous game library, offering over 9,000 titles from top providers. This, combined with a reputable Malta Gaming Authority (MGA) license, ensures a secure and fair gaming environment. Payout speeds are generally competitive, typically processed within 24-48 hours, though this can vary by payment method. The brand has a strong compliance history, focusing on player protection and responsible gaming. While bonus wagering requirements are standard, the sheer volume of games and frequent promotions make it a trusted choice for players seeking variety and reliability.",
+  "warningText": "Players from restricted regions, including the Netherlands and United States, are not accepted due to local regulations.",
+  "affiliateUrl": "https://track.videoslots.com/casino-bonus",
+  "pros": [
+    "Massive game selection (9,000+ titles)",
+    "Reputable MGA license",
+    "Fast withdrawal processing",
+    "Excellent customer support (24/7 chat)",
+    "Frequent promotions and tournaments"
+  ],
+  "cons": [
+    "Homepage can be overwhelming due to content density",
+    "Wagering requirements for bonuses could be clearer for some promotions (not explicitly stated here)"
+  ],
+  "securityTitle": "Robust Security Measures at VideoSlots",
+  "securitySummary": "VideoSlots operates under a stringent Malta Gaming Authority (MGA) license, ensuring high standards of security and player protection. They employ advanced SSL encryption to safeguard all transactions and personal data. Regular audits by independent third parties verify the fairness of games and the integrity of their systems. Responsible gambling tools are readily available to promote a safe gaming environment.",
+  "securityWarning": "The MGA license is a strong indicator of a secure and compliant operator, offering reliable player protection.",
+  "securityPoints": [
+    {
+      "title": "MGA Licensed & Regulated",
+      "description": "Operating under the strict supervision of the Malta Gaming Authority (MGA/B2C/218/2012).",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "SSL Encryption",
+      "description": "All data transfers and transactions are secured using industry-standard SSL encryption.",
+      "iconName": "zap",
+      "status": "success"
+    },
+    {
+      "title": "Fair Gaming Certified",
+      "description": "Games are regularly audited by independent agencies to ensure fairness and randomness.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Responsible Gaming Tools",
+      "description": "Comprehensive tools like deposit limits, session limits, and self-exclusion are available.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "100% up to €200",
+  "bonusWagering": "35x",
+  "bonusMinDeposit": "€10",
+  "bonusValidity": "60 Days for Bonus, 7 Days for Spins",
+  "bonusMaxBet": "€5",
+  "bonusTermsVerdict": "The welcome bonus offers a standard match with reasonable wagering, complemented by free spins, making it an attractive offer for new players. Specific terms should be reviewed on the site.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirements",
+      "description": "Bonus money subject to 35x wagering requirements. Wins from Welcome Spins may have separate wagering."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of €10 is required to claim the welcome bonus."
+    },
+    {
+      "title": "Game Contributions",
+      "description": "Different games contribute varying percentages towards wagering requirements, typically slots 100%."
+    },
+    {
+      "title": "Bonus Validity",
+      "description": "Bonus funds are valid for 60 days. Welcome Spins must be used within 7 days of activation."
+    },
+    {
+      "title": "Maximum Bet",
+      "description": "Maximum bet allowed with active bonus is €5 per spin or €0.50 per bet line."
+    }
+  ],
+  "gameSummary": "VideoSlots boasts an industry-leading game library with over 9,000 titles, covering every possible casino game category. Players can enjoy a vast selection of video slots, classic slots, jackpot games, a comprehensive live casino, and a wide array of table games and scratch cards from hundreds of top-tier software providers.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "An unparalleled collection of video slots, including popular titles, new releases, and exclusive games from hundreds of providers.",
+      "notable": "Starburst, Book of Dead, Mega Moolah, Gonzo's Quest, Immortal Romance",
+      "iconName": "slots"
+    },
+    {
+      "title": "Jackpot Games",
+      "description": "A dedicated section for progressive and fixed jackpot slots with life-changing prize pools.",
+      "notable": "Mega Moolah, WowPot series, Hall of Gods, Major Millions",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "High-quality live dealer games including Blackjack, Roulette, Baccarat, and various game shows.",
+      "notable": "Evolution Gaming, Pragmatic Play Live tables, Crazy Time, Lightning Roulette",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games",
+      "description": "A wide variety of virtual table games, from classic Blackjack and Roulette to various poker and baccarat variants.",
+      "notable": "European Roulette, Classic Blackjack, Casino Hold'em, Baccarat",
+      "iconName": "dice"
+    },
+    {
+      "title": "Other Games",
+      "description": "Includes scratch cards, video poker, and other instant win games for diverse entertainment.",
+      "notable": "Joker Poker, Keno, various Scratch Cards",
+      "iconName": "dice"
+    }
+  ],
+  "paymentSummary": "VideoSlots supports a comprehensive range of payment methods, ensuring convenient deposits and withdrawals for players worldwide. Options typically include popular e-wallets, credit/debit cards, bank transfers, and various local payment solutions.",
+  "paymentMethods": [
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Skrill",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Neteller",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Trustly",
+      "type": "Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant - 24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Paysafecard",
+      "type": "Prepaid Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "N/A (Deposit Only)",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "VideoSlots is committed to responsible gambling, offering a dedicated 'Play Responsibly' section (as seen on the homepage) with various tools and resources to help players manage their gaming habits. They prioritize player well-being and provide support for those who might need it.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Players can set daily, weekly, or monthly limits on their deposits to control spending.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Loss Limits",
+      "description": "Option to set limits on net losses over a specific period.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Players can define a maximum duration for their gaming sessions.",
+      "status": "supported",
+      "iconName": "clock"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "A tool to temporarily or permanently exclude oneself from accessing the casino.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    },
+    {
+      "title": "Reality Checks",
+      "description": "Regular notifications to remind players about their elapsed gaming time.",
+      "status": "supported",
+      "iconName": "clock"
+    }
+  ],
+  "comparisonTitle": "VideoSlots vs. Industry Standards",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "MGA Regulated - High Safety",
+      "regulatedStandard": "MGA Standard Requirement",
+      "status": "success"
+    },
+    {
+      "feature": "Game Library Size",
+      "thisCasino": "9,000+ Titles - Exceptional",
+      "regulatedStandard": "1,000-2,000 Titles - Good",
+      "status": "success"
+    },
+    {
+      "feature": "Withdrawal Speed",
+      "thisCasino": "Fast (0-24h for e-wallets)",
+      "regulatedStandard": "Standard (24-72h for e-wallets)",
+      "status": "success"
+    },
+    {
+      "feature": "Welcome Bonus Wagering",
+      "thisCasino": "35x Bonus - Standard",
+      "regulatedStandard": "30x-40x Bonus - Standard",
+      "status": "neutral"
+    },
+    {
+      "feature": "NL Market Availability",
+      "thisCasino": "Restricted",
+      "regulatedStandard": "KSA License Required",
+      "status": "danger"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is VideoSlots a licensed and safe casino?",
+      "answer": "Yes, VideoSlots holds a reputable license from the Malta Gaming Authority (MGA), ensuring a safe, fair, and regulated gaming environment for its players."
+    },
+    {
+      "question": "What kind of games can I play at VideoSlots?",
+      "answer": "VideoSlots offers an enormous selection of over 9,000 games, including video slots, classic slots, progressive jackpots, live casino games, table games, and scratch cards from hundreds of leading providers."
+    },
+    {
+      "question": "How fast are withdrawals at VideoSlots?",
+      "answer": "Withdrawal processing times at VideoSlots are generally fast. E-wallet withdrawals are often processed instantly or within 24 hours, while card and bank transfers may take 1-3 business days."
+    },
+    {
+      "question": "Does VideoSlots offer a welcome bonus for new players?",
+      "answer": "Yes, new players at VideoSlots are typically offered a welcome bonus, such as a 100% match up to a certain amount plus free spins, subject to specific terms and wagering requirements."
+    }
+  ],
+  "license": "MGA/B2C/218/2012",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €200 + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "100% up to €100 + 50 Free Spins",
+      "wagering": "30x"
+    },
+    "uk": {
+      "offer": "100% up to £200 + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "swe": {
+      "offer": "100% up to 2000 SEK + 11 Welcome Spins",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK + 11 Welcome Spins",
+      "wagering": "25x"
+    },
+    "fin": {
+      "offer": "100% up to 200€ + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK + 11 Welcome Spins",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 500 EUR + 11 Welcome Spins",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "100% up to 100€",
+      "wagering": "35x"
+    },
+    "bel": {
+      "offer": "100% up to 250€",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 1000€ + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "100% up to 200€ + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "bra": {
+      "offer": "100% up to 1500 R$ + 11 Welcome Spins",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD + 11 Welcome Spins",
+      "wagering": "35x"
+    }
+  },
+  "bonus": "100% up to €200 + 11 Welcome Spins",
+  "wagering": "35x",
+  "welcomeBonus": "100% up to €200 + 11 Welcome Spins"
+}

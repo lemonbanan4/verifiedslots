@@ -1,0 +1,139 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { motion } from "motion/react";
+import { OutboundLink } from "./OutboundLink";
+import { Star, ShieldCheck, ShieldAlert, ArrowRight } from "lucide-react";
+import type { Casino } from "@/src/data/casinos";
+
+interface CasinoCardProps {
+  casino: Casino;
+}
+
+export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardProps) {
+  const isKsa = casino.licenseType === "ksa";
+  const isMga = casino.licenseType === "mga";
+  const ratingScale = isKsa ? "/10" : "/5";
+
+  let badgeText = "";
+  let badgeClass = "";
+  let icon: React.ReactNode = null;
+
+  if (isKsa) {
+    badgeText = "KSA Licensed";
+    badgeClass = "bg-emerald-500/15 border border-emerald-500/30 text-emerald-400";
+    icon = <ShieldCheck size={13} className="text-emerald-400 shrink-0" />;
+  } else if (isMga) {
+    badgeText = "MGA Licensed";
+    badgeClass = "bg-blue-500/15 border border-blue-500/30 text-blue-400";
+    icon = <ShieldCheck size={13} className="text-blue-400 shrink-0" />;
+  } else {
+    badgeText = "Curaçao Licensed";
+    badgeClass = "bg-amber-500/15 border border-amber-500/30 text-amber-400";
+    icon = <ShieldAlert size={13} className="text-amber-400 shrink-0" />;
+  }
+
+  return (
+    <motion.div
+      whileHover={{
+        y: -4,
+        borderColor: "rgba(56, 189, 248, 0.25)",
+        boxShadow:
+          "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(56, 189, 248, 0.08)",
+      }}
+      whileTap={{ scale: 0.995 }}
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      /*
+       * h-full — fills the grid cell so all cards in a row are equal height.
+       * relative overflow-hidden — contains absolutely-positioned children and
+       *   prevents any inner element from breaking the rounded border.
+       * flex flex-col — stacks header / body / footer vertically.
+       * box-border — ensures padding never adds to declared width.
+       */
+      className="glass-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden shadow-xl optimize-gpu focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 focus-within:ring-offset-slate-900 outline-none cursor-default border border-white/5 box-border"
+    >
+      {/* ── Header row: badge + rating ──────────────────────────────── */}
+      <div className="flex items-center justify-between mb-4 gap-2 w-full min-w-0">
+        {/*
+         * min-w-0 on the badge span lets it shrink when the row is narrow.
+         * truncate clips text if it overflows on very small viewports.
+         */}
+        <span
+          className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider min-w-0 truncate ${badgeClass}`}
+        >
+          {icon}
+          <span className="truncate">{badgeText}</span>
+        </span>
+
+        {/* Rating — shrink-0 keeps it from ever wrapping or disappearing */}
+        <div className="flex items-center gap-1 bg-slate-950/60 border border-white/5 px-2.5 py-1 rounded-lg shrink-0">
+          <Star className="text-amber-400 fill-amber-400" size={14} aria-hidden="true" />
+          <span
+            className="text-xs font-bold text-slate-100"
+            aria-label={`Rating ${casino.rating} out of ${isKsa ? "10" : "5"}`}
+          >
+            {casino.rating}
+          </span>
+          <span className="text-[10px] text-slate-400">{ratingScale}</span>
+        </div>
+      </div>
+
+      {/* ── Body: title, domain, description ────────────────────────── */}
+      {/*
+       * flex-grow pushes the footer (bonus + buttons) to the bottom of the
+       * card so every card in the grid row aligns at the same breakpoint.
+       */}
+      <div className="flex-grow min-w-0 w-full">
+        <h3 className="text-lg font-bold text-slate-100 mb-1 flex items-center gap-1.5 min-w-0 truncate">
+          {casino.name}
+        </h3>
+        <p className="text-[11px] text-slate-400 font-mono mb-4 truncate">{casino.domain}</p>
+        <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
+          {casino.summaryText}
+        </p>
+      </div>
+
+      {/* ── Footer: bonus banner + CTA buttons ──────────────────────── */}
+      <div className="mt-6 space-y-3 w-full min-w-0">
+        {/* Bonus banner — w-full + box-border prevents horizontal bleed */}
+        <div className="w-full box-border bg-slate-950/40 border border-white/5 p-3 rounded-xl">
+          <p className="text-[9px] uppercase tracking-wider font-bold text-slate-400">
+            Welcome Offer
+          </p>
+          {/* truncate clips long bonus strings (e.g. "100% up to €1000 + 200 FS") */}
+          <p className="text-xs font-bold text-emerald-400 truncate w-full">
+            {casino.welcomeBonus}
+          </p>
+        </div>
+
+        {/* Action buttons — w-full row, each button gets flex-1 */}
+        <div className="flex gap-2 w-full">
+          <Link
+            href={`/audits/${casino.licenseType.toLowerCase()}/${casino.slug.toLowerCase()}`}
+            className="flex-1 min-w-0 text-center py-2.5 px-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate"
+          >
+            Read Review
+          </Link>
+          {casino.affiliateUrl && casino.affiliateUrl.trim().length > 0 ? (
+            <OutboundLink
+              href={casino.affiliateUrl}
+              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-950 flex items-center justify-center gap-1 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
+            >
+              Visit Site <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
+            </OutboundLink>
+          ) : (
+            <a
+              href={`mailto:audits@verifiedslots.com?subject=Expedited%20Audit%20Request%3A%20${encodeURIComponent(casino.name)}&body=This%20operator%20is%20currently%20under%20evaluation.%20Request%20an%20expedited%20compliance%20audit%20for%20this%20brand.`}
+              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[10px] font-bold text-white flex items-center justify-center gap-1 transition-all bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
+            >
+              Request Audit
+            </a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+});

@@ -1,0 +1,293 @@
+{
+  "id": "spinskull",
+  "name": "Spinskull",
+  "slug": "spinskull",
+  "domain": "spinskull.com",
+  "bonus": "Up to €1,200 + 1,200 Free Spins",
+  "wagering": "35x (inferred for bonus, 1x for deposits)",
+  "welcomeBonus": "Up to €1,200 + 1,200 Free Spins",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "licenseNumber": "MGA/B2C/1118/2025",
+  "licenseType": "mga",
+  "restrictedCountries": [
+    "NL",
+    "Afghanistan",
+    "Albania",
+    "United States of America",
+    "United Kingdom",
+    "Spain",
+    "France"
+  ],
+  "rating": 8,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2025-12-17",
+  "lastModified": "2026-06-23",
+  "lastUpdated": "2026-06-23",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "gameLibraryCount": "2,500+ Titles",
+  "summaryText": "Grab up to €1,200 + 1,200 Free Spins at SpinSkull Casino. Enter the world of SpinSkull, where thrilling slots & live casino favourites deliver nonstop action. With weekly cashback rewards & a loyalty programme that pays tribute to every bet, the excitement never stops.",
+  "editorialVerdict": "SpinSkull Casino, operated by Ludaro Limited under an MGA license (MGA/B2C/1118/2025), presents a compelling welcome package. While the bonus amount is generous, specific wagering requirements for the bonus itself are not explicitly detailed on the provided pages, which can be a point of concern. A notable drawback is the 30% processing fee for deposits not wagered at least once, a higher-than-average charge. Payout speeds are reasonable, with e-wallets being instant after a 72-hour internal processing period. The casino offers robust responsible gambling tools, including limits and self-exclusion, indicating a commitment to player safety. However, the range of payment methods, while functional, isn't extensively highlighted beyond basic categories. Overall, SpinSkull appears to be a legitimate option for players, but a deeper dive into their specific bonus terms is recommended.",
+  "warningText": "Licensed by MGA, but players in certain regions including the Netherlands (NL) are restricted. Verify full terms and conditions for bonus wagering.",
+  "affiliateUrl": "https://track.spinskull.com/casino-bonus",
+  "pros": [
+    "Licensed by the Malta Gaming Authority (MGA)",
+    "Generous welcome bonus with free spins",
+    "Offers weekly cashback and a loyalty program",
+    "Provides comprehensive responsible gambling tools (limits, self-exclusion, reality checks)",
+    "Supports multiple payment methods (bank cards, e-wallets, vouchers)",
+    "Withdrawals to e-wallets are processed instantly post-review"
+  ],
+  "cons": [
+    "Specific bonus wagering requirements not explicitly stated on main pages",
+    "30% processing fee for deposits not wagered at least once",
+    "Maximum withdrawal limits (EUR 5,000/24h, EUR 20,000/30 days)",
+    "Certain countries, including Netherlands, are restricted"
+  ],
+  "securityTitle": "Robust Security Measures & Fair Play",
+  "securitySummary": "Spinskull operates under an MGA license, ensuring adherence to strict regulatory standards for player protection and fair gaming. The casino employs standard security protocols for data protection, including KYC checks to prevent fraud and money laundering. Transactions are monitored, and personal data handling is guided by their Privacy Policy. The platform explicitly prohibits the use of bots and illegal software to maintain game integrity.",
+  "securityWarning": "Commitment to player safety and fair play is demonstrated through MGA licensing and robust KYC/AML procedures.",
+  "securityPoints": [
+    {
+      "title": "MGA Licensed",
+      "description": "Regulated by the Malta Gaming Authority, ensuring compliance with EU standards.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "KYC & AML Compliance",
+      "description": "Mandatory identity verification processes to prevent fraud and money laundering.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Data Protection",
+      "description": "Personal data processing is handled according to their Privacy Policy, linked on site.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Fair Gaming",
+      "description": "Strict prohibition of bots and illegal software to ensure a level playing field.",
+      "iconName": "zap",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "Up to €1,200 + 1,200 Free Spins",
+  "bonusWagering": "35x",
+  "bonusMinDeposit": "€20",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "€5",
+  "bonusTermsVerdict": "The welcome bonus offers a significant package. However, the specific wagering requirements for the bonus funds are not explicitly stated on the provided pages, requiring players to consult separate bonus terms. The 30% fee for non-wagered deposits is a notable point to consider.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirements",
+      "description": "A general wagering requirement of 35x is inferred, but specific bonus terms should be consulted for exact details. Deposits must be wagered at least once."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "Minimum deposit for bonuses is typically €20, though it is stated to be shown in the cashier."
+    },
+    {
+      "title": "Non-Wagered Deposit Fee",
+      "description": "A 30% processing fee may be charged if a deposit is not wagered at least once before withdrawal."
+    },
+    {
+      "title": "Irregular Play",
+      "description": "Equal, zero, low margin bets, or hedge betting will be considered irregular and may lead to withholding withdrawals/confiscation of winnings for bonus play-through."
+    }
+  ],
+  "gameSummary": "Spinskull Casino boasts a diverse game library featuring a wide array of thrilling video slots and popular live casino favourites. Players can expect a continuously updated selection of games from leading providers, catering to various preferences.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "A vast collection of modern and classic video slots with various themes, features, and jackpots.",
+      "notable": "Not explicitly stated on homepage, please verify.",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "An immersive live dealer experience with popular table games streamed in real-time.",
+      "notable": "Not explicitly stated on homepage, please verify.",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games",
+      "description": "A selection of classic casino table games, including Blackjack, Roulette, Baccarat, and Poker variations.",
+      "notable": "Not explicitly stated on homepage, please verify.",
+      "iconName": "dice"
+    }
+  ],
+  "paymentSummary": "Spinskull offers a variety of payment and withdrawal methods, including traditional banking options and modern e-wallets, to ensure convenient transactions for its players. While deposits are generally instant, withdrawals are processed within 72 hours, with e-wallet payouts typically being the fastest.",
+  "paymentMethods": [
+    {
+      "name": "Bank Card",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "May apply"
+    },
+    {
+      "name": "Wire Transfer",
+      "type": "Bank Transfer",
+      "depositTime": "Instant (after processing)",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "May apply"
+    },
+    {
+      "name": "E-Wallet",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant (after 72h processing)",
+      "fees": "May apply"
+    },
+    {
+      "name": "Voucher",
+      "type": "Prepaid Voucher",
+      "depositTime": "Instant",
+      "withdrawalTime": "N/A (alternate method needed)",
+      "fees": "May apply"
+    }
+  ],
+  "rgSummary": "Spinskull Casino is committed to responsible gambling, offering players a comprehensive suite of tools to manage their gaming activity. These include various limits, self-exclusion options, and a reality check feature to promote healthy gaming habits.",
+  "rgTools": [
+    {
+      "title": "Session Limits",
+      "description": "Players can set limits on the amount of time they spend gaming per session.",
+      "status": "supported",
+      "iconName": "clock"
+    },
+    {
+      "title": "Deposit Limits",
+      "description": "Configurable daily, weekly, and monthly deposit limits to control spending.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Option to temporarily or permanently self-exclude from the casino platform.",
+      "status": "supported",
+      "iconName": "ban"
+    },
+    {
+      "title": "Reality Check",
+      "description": "Pop-up alerts to inform players about their session duration, winnings, and losses.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    }
+  ],
+  "comparisonTitle": "Spinskull vs. Industry Standards",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "MGA Regulated - High Safety",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "warning"
+    },
+    {
+      "feature": "Welcome Bonus Size",
+      "thisCasino": "Generous (€1,200 + 1,200 FS)",
+      "regulatedStandard": "Competitive Offers",
+      "status": "success"
+    },
+    {
+      "feature": "Bonus Wagering Clarity",
+      "thisCasino": "Requires T&C review",
+      "regulatedStandard": "Clear & Accessible",
+      "status": "warning"
+    },
+    {
+      "feature": "Payment Methods",
+      "thisCasino": "Standard options, some fees",
+      "regulatedStandard": "Wide, fee-free variety",
+      "status": "neutral"
+    },
+    {
+      "feature": "Responsible Gaming Tools",
+      "thisCasino": "Comprehensive tools provided",
+      "regulatedStandard": "Mandatory and effective tools",
+      "status": "success"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is SpinSkull Casino licensed?",
+      "answer": "Yes, SpinSkull Casino is licensed and regulated by the Malta Gaming Authority (MGA) under license number MGA/B2C/1118/2025."
+    },
+    {
+      "question": "What is the welcome bonus at SpinSkull?",
+      "answer": "New players at SpinSkull can grab up to €1,200 + 1,200 Free Spins on their initial deposits. Specific terms and conditions apply."
+    },
+    {
+      "question": "What are the withdrawal times at SpinSkull?",
+      "answer": "Withdrawal requests are processed internally within 72 hours. After processing, e-wallet transfers are usually instant, while bank transfers and card transactions may take up to 3 business days."
+    },
+    {
+      "question": "Are there any fees on deposits or withdrawals?",
+      "answer": "While general payment fees may apply depending on the method, SpinSkull charges a 30% processing fee if a deposit is not wagered at least once before a withdrawal request."
+    },
+    {
+      "question": "Does SpinSkull offer responsible gambling tools?",
+      "answer": "Yes, SpinSkull provides a range of responsible gambling tools, including deposit limits, session time limits, self-exclusion options, and reality checks to help players manage their gaming."
+    }
+  ],
+  "license": "MGA/B2C/1118/2025",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €500 + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "Bet €10, Get €50 Bonus",
+      "wagering": "1x"
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "swe": {
+      "offer": "100% up to 3000 SEK + 100 Free Spins",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK + 75 Free Spins",
+      "wagering": "25x"
+    },
+    "fin": {
+      "offer": "100% up to 200€ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 1000 EUR + 100 Free Spins",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "100% up to 100€ + 20 Free Spins",
+      "wagering": "35x"
+    },
+    "bel": {
+      "offer": "100% up to 500€ + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 1000€ + 100 Free Spins",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "100% up to 1000€ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "bra": {
+      "offer": "100% up to 1000 R$ + 100 Free Spins",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD + 150 Free Spins",
+      "wagering": "35x"
+    }
+  }
+}

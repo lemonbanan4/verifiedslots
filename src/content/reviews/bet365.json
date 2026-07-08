@@ -1,0 +1,99 @@
+{
+  "id": "bet365",
+  "name": "Bet365 NL",
+  "slug": "bet365",
+  "domain": "bet365.nl",
+  "isKsaLicensed": true,
+  "isLicensedInNL": true,
+  "licenseNumber": "KSA/1782/30912",
+  "licenseType": "ksa",
+  "restrictedCountries": [],
+  "rating": 9.4,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-indigo-650 to-blue-700",
+  "welcomeBonus": "50 Free Spins or €50 Bet Credits",
+  "gameLibraryCount": "1,000+ Titles",
+  "summaryText": "Bet365 NL brings its massive global betting brand to the regulated Dutch market. Holding a valid KSA license, they provide a stellar sports betting platform alongside a dedicated online casino lobby featuring secure iDEAL deposits.",
+  "warningText": "KSA Regulated: Full sports and casino authorization in the Netherlands.",
+  "affiliateUrl": "https://track.affiliate-link.com/bet365-nl-bonus",
+  "pros": [
+    "World's leading sports betting and casino operator with KSA approval.",
+    "Highly responsive mobile application for Dutch players.",
+    "Excellent customer service available in Dutch 24/7."
+  ],
+  "cons": [
+    "Casino slot library is smaller than their sports betting platform."
+  ],
+  "securityTitle": "Global Brand, Local Safety",
+  "securitySummary": "Bet365 operates in the Netherlands under license KSA/1782/30912. It employs industry-standard SSL encryption and meets all KSA directives regarding data security and local compliance reporting.",
+  "securityWarning": "KSA Approved - Robust security framework and reputable brand.",
+  "securityPoints": [
+    {
+      "title": "GDPR & KSA Security Standards",
+      "description": "Adheres to strict European data privacy guidelines. Financial transactions are encrypted via banking-grade networks.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "50 Free Spins",
+  "bonusWagering": "1x",
+  "bonusMinDeposit": "€10",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "N/A",
+  "bonusTermsVerdict": "Very fair welcome terms. Free spins carry a simple 1x wagering requirement on winnings before withdrawal is allowed.",
+  "bonusTermsDetails": [
+    {
+      "title": "Low Playthrough",
+      "description": "Only a single playthrough of winnings is required, making it highly transparent."
+    }
+  ],
+  "gameSummary": "A curated library of 1,000+ slots, table games, and live blackjack tables.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "Top-tier slots and exclusive original creations only available on Bet365.",
+      "notable": "Book of Clontarf, Sizzling 7s",
+      "iconName": "slots"
+    }
+  ],
+  "paymentSummary": "Deposits are processed instantly and safely using iDEAL. Withdrawals are directly routed back to the linked Dutch bank account.",
+  "paymentMethods": [
+    {
+      "name": "iDEAL",
+      "type": "Direct Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "Instant (Within 10 minutes)",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Bet365 incorporates a comprehensive set of gambling controls, including self-assessment tests and budget planners.",
+  "rgTools": [
+    {
+      "title": "Session Limits",
+      "description": "Players must set absolute session time limits upon registering, which cannot be raised without a 7-day cooling-off period.",
+      "status": "success",
+      "iconName": "clock"
+    }
+  ],
+  "comparisonTitle": "Comparison: Bet365 vs. Offshore Operators",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "KSA Regulated (NL) - High Safety",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "success"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does Bet365 NL offer sports betting?",
+      "answer": "Yes, Bet365 is a global leader in sports betting and sports streaming, which is fully accessible to Dutch users alongside the casino."
+    }
+  ],
+  "license": "KSA/1782/30912",
+  "bonus": "50 Free Spins or €50 Bet Credits",
+  "wagering": "1x"
+}

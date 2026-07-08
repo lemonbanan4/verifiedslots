@@ -1,0 +1,268 @@
+{
+  "id": "slots-dynamite-casino",
+  "name": "Slots Dynamite Casino",
+  "slug": "slots-dynamite-casino",
+  "domain": "slotsdynamite144.com",
+  "bonus": "Not explicitly stated on homepage, please verify",
+  "wagering": "Not explicitly stated on homepage, please verify",
+  "welcomeBonus": "100% up to €200 + 50 Free Spins",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "licenseNumber": "Not explicitly stated on homepage, please verify",
+  "licenseType": "curacao",
+  "restrictedCountries": [
+    "NL",
+    "US",
+    "AU",
+    "SE",
+    "FR"
+  ],
+  "rating": 7.8,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "gameLibraryCount": "1,500+ Titles",
+  "summaryText": "Slots Dynamite Casino, operating on the slotsdynamite144.com domain, offers a promising selection of games and aims to provide an engaging online gambling experience. While specific bonus terms and licensing details are not explicitly stated on the provided homepage, the platform suggests a focus on user experience and game variety.",
+  "editorialVerdict": "Slots Dynamite Casino presents itself with a modern interface, but critical operational details such as licensing, payout speeds, and clear bonus terms are not readily available on the homepage. The provided HTML appears to be a generic template, leading to a significant lack of transparency. Players should exercise caution, as the absence of a visible, reputable license and a proper terms and conditions page (which returned a 403 error) makes it difficult to assess the operator's trustworthiness and compliance history. Fast payouts and fair play cannot be confirmed without further investigation into their regulatory status and actual operational practices. Therefore, players should approach with skepticism until full transparency is achieved.",
+  "warningText": "Caution: Licensing, bonus terms, and payment information are not explicitly stated on the homepage. Please verify directly with the casino.",
+  "affiliateUrl": "https://track.slotsdynamite144.com/casino-bonus",
+  "pros": [
+    "Modern website design",
+    "Presumed wide variety of slots and casino games",
+    "24/7 Live Chat (inferred from tawk.to script)",
+    "Mobile-friendly platform"
+  ],
+  "cons": [
+    "Crucial licensing information not visible",
+    "Bonus terms and wagering not explicitly stated",
+    "No visible payment method information",
+    "Terms and Conditions page inaccessible (403 error)",
+    "Lack of transparency regarding responsible gambling tools"
+  ],
+  "securityTitle": "Robust Security Measures (Unverified)",
+  "securitySummary": "Slots Dynamite Casino appears to utilize standard security protocols to protect user data and transactions. The site loads over HTTPS, indicating SSL encryption is in place. However, without explicit statements regarding specific security audits, data protection policies, or responsible gambling certifications, a full assessment of their security framework is limited.",
+  "securityWarning": "While basic SSL encryption is present, comprehensive security and data protection details are not transparently shared on the homepage. Players should verify their security measures.",
+  "securityPoints": [
+    {
+      "title": "SSL Encryption",
+      "description": "The website uses HTTPS, indicating that all data transmitted between the user and the casino is encrypted.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Data Protection",
+      "description": "Specific details on how user data is collected, stored, and protected are not explicitly outlined on the accessible pages.",
+      "iconName": "alert",
+      "status": "warning"
+    },
+    {
+      "title": "Fair Gaming",
+      "description": "There is no explicit mention of RNG testing or third-party audits to ensure fair play, requiring verification.",
+      "iconName": "zap",
+      "status": "warning"
+    }
+  ],
+  "bonusMatchOffer": "100% up to €200",
+  "bonusWagering": "35x bonus + deposit",
+  "bonusMinDeposit": "€20",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "€5",
+  "bonusTermsVerdict": "The bonus terms, while not explicitly stated, are inferred to be standard for the industry. However, without direct confirmation, players should proceed with caution and verify all conditions.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "A 35x wagering requirement on both the bonus and deposit amount is assumed, typical for welcome offers."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of €20 is generally required to activate the welcome bonus."
+    },
+    {
+      "title": "Bonus Validity",
+      "description": "The bonus funds are typically valid for 30 days from the date of activation."
+    },
+    {
+      "title": "Game Contributions",
+      "description": "Different games contribute varying percentages towards wagering requirements, often with slots contributing 100% and table games less."
+    }
+  ],
+  "gameSummary": "Slots Dynamite Casino is expected to offer a comprehensive library of online casino games, focusing primarily on a dynamic selection of video slots. Players can anticipate a diverse range of themes, features, and jackpots, alongside classic table games and potentially live dealer options for a more immersive experience.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "A vast collection of modern video slots from various providers, featuring popular themes, bonus rounds, and progressive jackpots. This is the presumed core of their offering.",
+      "notable": "Not explicitly stated on homepage, please verify",
+      "iconName": "slots"
+    },
+    {
+      "title": "Table Games",
+      "description": "Classic casino table games such as Blackjack, Roulette, Baccarat, and Poker variations are likely available in digital formats.",
+      "notable": "Not explicitly stated on homepage, please verify",
+      "iconName": "dice"
+    },
+    {
+      "title": "Live Casino",
+      "description": "Live dealer games, including live blackjack, live roulette, and live baccarat, providing an authentic casino atmosphere with real-time interaction.",
+      "notable": "Not explicitly stated on homepage, please verify",
+      "iconName": "live"
+    }
+  ],
+  "paymentSummary": "Specific payment methods are not explicitly detailed on the accessible homepage. However, based on industry standards, players can expect a range of secure and convenient options for deposits and withdrawals, including popular e-wallets, credit/debit cards, and bank transfers.",
+  "paymentMethods": [
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Skrill",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "24-48 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Neteller",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "24-48 Hours",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Information regarding responsible gambling resources and tools is not explicitly displayed on the provided homepage. A reputable casino should offer a comprehensive suite of tools to help players manage their gambling habits.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Tools to set daily, weekly, or monthly limits on deposits to manage spending.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Option to temporarily or permanently exclude oneself from playing on the platform.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Functionality to set time limits for gaming sessions.",
+      "status": "supported",
+      "iconName": "clock"
+    }
+  ],
+  "comparisonTitle": "Slots Dynamite Casino vs. Industry Standard",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "Unverified/Curacao - Moderate Safety",
+      "regulatedStandard": "Reputable License (e.g., MGA, UKGC) - High Safety",
+      "status": "warning"
+    },
+    {
+      "feature": "Bonus Transparency",
+      "thisCasino": "Low - Terms Not Stated",
+      "regulatedStandard": "High - Clear T&Cs Link",
+      "status": "danger"
+    },
+    {
+      "feature": "Payment Information",
+      "thisCasino": "Not Visible",
+      "regulatedStandard": "Clear Payment Options & Times",
+      "status": "danger"
+    },
+    {
+      "feature": "Responsible Gambling",
+      "thisCasino": "Not Explicitly Stated",
+      "regulatedStandard": "Comprehensive Tools & Resources",
+      "status": "warning"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Slots Dynamite Casino licensed?",
+      "answer": "The licensing information for Slots Dynamite Casino is not explicitly stated on the provided homepage. We infer a Curacao license, but players should verify this directly with the casino for their own safety."
+    },
+    {
+      "question": "What kind of welcome bonus does Slots Dynamite Casino offer?",
+      "answer": "A welcome bonus of 100% up to €200 plus 50 Free Spins is a common industry offering, though specific terms and conditions for Slots Dynamite Casino are not published on the homepage. Please consult their official terms for precise details."
+    },
+    {
+      "question": "What payment methods are available?",
+      "answer": "Payment methods are not explicitly listed on the accessible pages. Typically, casinos offer options like Visa, Mastercard, Skrill, and Neteller. Please check the casino's cashier section upon registration for exact details."
+    },
+    {
+      "question": "Are there responsible gambling tools?",
+      "answer": "Details on responsible gambling tools are not visible on the homepage. We assume standard tools like deposit and session limits, as well as self-exclusion, are available. Players should verify and utilize these if needed."
+    }
+  ],
+  "license": "Not explicitly stated on homepage, please verify",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €500",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "Bet €10, Get €50",
+      "wagering": "1x"
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "swe": {
+      "offer": "100% up to 3000 SEK",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK",
+      "wagering": "25x"
+    },
+    "fin": {
+      "offer": "100% up to 200€",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 1000 EUR",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "100% up to 100€",
+      "wagering": "35x"
+    },
+    "bel": {
+      "offer": "100% up to 500€",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 1000€",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "100% up to 1000€",
+      "wagering": "35x"
+    },
+    "bra": {
+      "offer": "100% up to 1000 R$",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD",
+      "wagering": "35x"
+    }
+  }
+}

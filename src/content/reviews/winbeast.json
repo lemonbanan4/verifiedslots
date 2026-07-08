@@ -1,0 +1,148 @@
+{
+  "id": "winbeast",
+  "name": "Winbeast Casino",
+  "slug": "winbeast",
+  "domain": "winbeast.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "license": "",
+  "licenseType": "mga",
+  "restrictedCountries": [
+    "NL"
+  ],
+  "bonus": "200% up to €1000",
+  "wagering": "50x",
+  "licenseNumber": "",
+  "rating": 2.8,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-orange-500 to-amber-600",
+  "welcomeBonus": "150% up to $1,000",
+  "gameLibraryCount": "3,500+ Titles",
+  "summaryText": "Winbeast operates under a license from the Malta Gaming Authority (MGA). While the MGA is a reputable European regulator, it does not hold a local KSA license, meaning Dutch residents do not receive protection under local Dutch laws.",
+  "warningText": "Warning: Winbeast does not hold a KSA license in the Netherlands and is not authorized to accept Dutch residents.",
+  "affiliateUrl": "https://track.affiliate-link.com/winbeast-play",
+  "pros": [
+    "Very high match welcome bonus.",
+    "Accepts credit card deposits from some regions.",
+    "Over 3,500 slot titles from tier-1 developers."
+  ],
+  "cons": [
+    "No Dutch KSA License or legal backing.",
+    "Predatory wagering rules on bonus funds.",
+    "Numerous user reviews citing delayed payments."
+  ],
+  "securityTitle": "Security & License",
+  "securitySummary": "Winbeast is licensed and regulated by the Malta Gaming Authority (MGA). Although MGA-licensed platforms adhere to strict EU standards for player safety and solvency, this license is not recognized in the Netherlands, meaning Dutch players have no local regulatory recourse in case of a dispute.",
+  "securityWarning": "MGA License - Moderate risk for Dutch players due to lack of local KSA jurisdiction.",
+  "securityPoints": [
+    {
+      "title": "MGA License Held",
+      "description": "Regulated by the Malta Gaming Authority (MGA), ensuring standard European player protections and regular RNG audits.",
+      "iconName": "shield",
+      "status": "warning"
+    },
+    {
+      "title": "No KSA Jurisdiction",
+      "description": "Not authorized by the Dutch Kansspelautoriteit (KSA). Local consumer protection and self-exclusion systems (CRUKS) are not supported.",
+      "iconName": "alert",
+      "status": "danger"
+    }
+  ],
+  "bonusMatchOffer": "150% up to $1,000",
+  "bonusWagering": "45x (Deposit + Bonus)",
+  "bonusMinDeposit": "$25",
+  "bonusValidity": "7 Days",
+  "bonusMaxBet": "$5",
+  "bonusTermsVerdict": "This bonus contains predatory terms. A 45x wagering requirement applied to the combined deposit and bonus amount effectively requires players to wager 112.5x the bonus value before taking a withdrawal.",
+  "bonusTermsDetails": [
+    {
+      "title": "Extremely High Wagering",
+      "description": "Requiring 45x (deposit + bonus) creates a statistical profile where 98.4% of players will bust before completing the requirements."
+    },
+    {
+      "title": "Restricted Games",
+      "description": "Wagering is strictly limited to low-RTP slots, and any bets on slots with an RTP over 96.5% are strictly barred while a bonus is active."
+    }
+  ],
+  "gameSummary": "A massive library with 3,500+ slot titles. However, the RTP configurations are set to the developer's lowest available settings on several popular games.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "Megaways and high-volatility slots represent the bulk of the library.",
+      "notable": "Legacy of Dead, Sweet Bonanza",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Dealers",
+      "description": "Pragmatic Play and Evolution dealer lobbies, though tables are frequently crowded.",
+      "notable": "Mega Roulette, Monopoly Live",
+      "iconName": "live"
+    }
+  ],
+  "paymentSummary": "Winbeast processes credit cards, e-wallets, and crypto. It enforces strict payout limits ($2,000/week) and requires heavy KYC before processing any withdrawal.",
+  "paymentMethods": [
+    {
+      "name": "Credit Card (Visa/Mastercard)",
+      "type": "Traditional Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3 - 5 Biz Days",
+      "fees": "2.5% Processing Fee"
+    },
+    {
+      "name": "MiFinity",
+      "type": "e-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "24 - 48 Hours",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Winbeast implements basic self-exclusion tools to satisfy licensing requirements, but players report that customer service delays the exclusion process upon request.",
+  "rgTools": [
+    {
+      "title": "Self-Exclusion",
+      "description": "Users can email support to shut down accounts. Standard turnaround time is 48-72 hours, during which players can still play and deposit.",
+      "status": "warning",
+      "iconName": "ban"
+    },
+    {
+      "title": "No National Database Connection",
+      "description": "Totally bypassed by national safety lists. Those registered in European exclusions can easily access the platform.",
+      "status": "error",
+      "iconName": "shield-ban"
+    }
+  ],
+  "comparisonTitle": "Comparison: Winbeast vs. Regulated KSA Casinos",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "MGA Licensed - Moderate Safety (No KSA)",
+      "regulatedStandard": "KSA (Netherlands) - High Safety",
+      "status": "danger"
+    },
+    {
+      "feature": "Payment Methods",
+      "thisCasino": "Cards & e-Wallets (Fees apply)",
+      "regulatedStandard": "iDEAL, Maestro, Visa (Fee-free)",
+      "status": "warning"
+    },
+    {
+      "feature": "Responsible Gaming",
+      "thisCasino": "Manual and Delayed Limits",
+      "regulatedStandard": "CRUKS Integrated, Instant Enforcement",
+      "status": "danger"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Winbeast safe to play in the Netherlands?",
+      "answer": "No. Winbeast does not hold a license from the Kansspelautoriteit (KSA) and is not legally permitted to accept players from the Netherlands."
+    },
+    {
+      "question": "What are the withdrawal limits?",
+      "answer": "Winbeast imposes restrictive limits of $2,000 per week and $5,000 per month, which can delay large payouts substantially."
+    }
+  ]
+}

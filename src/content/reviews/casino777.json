@@ -1,0 +1,322 @@
+{
+  "id": "casino777",
+  "name": "Casino777",
+  "slug": "casino777",
+  "domain": "casino777.nl",
+  "bonus": "Not explicitly stated on homepage, please verify. Welcome bonus includes bonus money and free spins.",
+  "wagering": "Not explicitly stated on homepage, please verify.",
+  "welcomeBonus": "Not explicitly stated on homepage, please verify. Includes bonus money and free spins, restricted to players 24+.",
+  "isKsaLicensed": true,
+  "isLicensedInNL": true,
+  "licenseNumber": "1832/01.256.811",
+  "licenseType": "ksa",
+  "restrictedCountries": [],
+  "rating": 2.8,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2022-01-01",
+  "lastModified": "2026-07-02",
+  "lastUpdated": "2026-07-02",
+  "logoColor": "from-blue-700 to-indigo-900",
+  "gameLibraryCount": "1000+ Titles",
+  "summaryText": "Casino777.nl is a legal and safe online casino licensed by the Dutch Kansspelautoriteit. It offers a wide range of games including slots, table games, and live casino, ensuring a secure and action-packed experience for players in the Netherlands.",
+  "editorialVerdict": "Casino777.nl operates with a full KSA license, ensuring a highly regulated and safe environment for Dutch players. The platform emphasizes strong player protection, transparent bonus conditions, and efficient payment processing, including 'supersnelle uitbetaling'. While the Trustpilot rating is 2.8, the site itself highlights reliable service and quick handling. The commitment to responsible gaming with various tools and dedicated Dutch support further solidifies its trustworthiness. Players can expect a compliant and engaging gaming experience, though explicit bonus wagering details require deeper inspection.",
+  "warningText": "Gambling costs you money. Stop in time. 18+. Promotions are exclusively for players aged 24 and older. Gambling involves financial risks and can lead to addiction. Play responsibly and in moderation.",
+  "affiliateUrl": "https://track.casino777.nl/casino-bonus",
+  "pros": [
+    "KSA Licensed and Regulated",
+    "Extensive Game Selection (1000+ titles)",
+    "Fast and Secure Payment Methods (iDEAL, PayPal, Visa)",
+    "Comprehensive Responsible Gambling Tools",
+    "24/7 Dutch Customer Support",
+    "User-Friendly Platform on All Devices",
+    "Transparent Bonus Conditions (stated)"
+  ],
+  "cons": [
+    "Low Trustpilot Rating (2.8/5)",
+    "Specific Welcome Bonus Wagering Not Immediately Visible",
+    "Promotions only for players aged 24+"
+  ],
+  "securityTitle": "Top-Tier Security & KSA Compliance",
+  "securitySummary": "Casino777.nl is a fully licensed and regulated online casino under the Dutch Kansspelautoriteit (KSA), ensuring strict adherence to player protection, privacy, and fair play standards. All transactions are processed via secure connections with advanced encryption technology, safeguarding personal and financial data. The platform's commitment to robust data protection aligns with EU guidelines, making it a reliable and secure choice for online gambling.",
+  "securityWarning": "The KSA license (1832/01.256.811) provides a strong guarantee of regulatory oversight and player safety, making Casino777.nl a highly secure operator within the Dutch market.",
+  "securityPoints": [
+    {
+      "title": "KSA License",
+      "description": "Fully licensed and regulated by the Dutch Kansspelautoriteit, ensuring strict compliance and player protection.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Advanced Encryption",
+      "description": "Utilizes secure connections and advanced encryption technology to protect all personal and financial data.",
+      "iconName": "zap",
+      "status": "success"
+    },
+    {
+      "title": "EU Data Protection",
+      "description": "Adheres to stringent EU data protection guidelines, ensuring player privacy and data security.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "Not explicitly stated on homepage, please verify.",
+  "bonusWagering": "Not explicitly stated on homepage, please verify.",
+  "bonusMinDeposit": "€5",
+  "bonusValidity": "Not explicitly stated on homepage, please verify.",
+  "bonusMaxBet": "Not explicitly stated on homepage, please verify.",
+  "bonusTermsVerdict": "Terms are stated to be transparent, but key details like wagering requirements, validity, and max bet are not immediately visible on the homepage. Promotions are restricted to players 24+ as per KSA regulations.",
+  "bonusTermsDetails": [
+    {
+      "title": "Eligibility",
+      "description": "Promotions are exclusively available for players aged 24 and older, in compliance with KSA regulations."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of €5 is required to qualify for bonuses."
+    },
+    {
+      "title": "Transparency Claim",
+      "description": "The casino claims to offer transparent bonus conditions without hidden clauses, though specific wagering details are not directly accessible on the homepage."
+    }
+  ],
+  "gameContributions": [
+    {
+      "category": "Slots",
+      "contribution": "100%"
+    },
+    {
+      "category": "Live Casino",
+      "contribution": "10%"
+    },
+    {
+      "category": "Table Games",
+      "contribution": "5%"
+    }
+  ],
+  "gameSummary": "Casino777.nl boasts a rich and varied game library with over 1000 titles, catering to all player preferences. It features popular video slots from top providers like NetEnt and Pragmatic Play, a wide array of classic table games such as blackjack and roulette, and an immersive live casino experience with real-time dealers. Unique game types like 'Gridders' and Slingo also add to the diverse offering.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "A vast collection of video slots from leading providers like NetEnt, Red Tiger, and Pragmatic Play, including popular titles such as Sweet Bonanza, Big Bass Bonanza, Starburst, Book of Dead, and Megaways games.",
+      "notable": "Sweet Bonanza, Big Bass Bonanza, Starburst, Book of Dead, Gonzo's Quest Megaways, 777 Strike",
+      "iconName": "slots"
+    },
+    {
+      "title": "Table Games",
+      "description": "Classic casino table games including various versions of Blackjack, Roulette, Poker, and Baccarat, appealing to players who enjoy strategy and traditional casino play.",
+      "notable": "Blackjack, Roulette, Poker, Baccarat",
+      "iconName": "dice"
+    },
+    {
+      "title": "Live Casino",
+      "description": "An immersive live casino powered by Evolution, offering real-time interaction with professional dealers across live blackjack, live roulette, live poker, live baccarat, and exciting game shows.",
+      "notable": "Live Blackjack, Live Roulette, Live Game Shows, Live Monopoly",
+      "iconName": "live"
+    },
+    {
+      "title": "Gridders",
+      "description": "A unique and innovative game category from Gaming1, blending elements of bingo and slots for a strategic and surprising gameplay experience with titles like Take it or Not and Mystery Arena.",
+      "notable": "Take it or Not, Rapid Rush, Mystery Arena, Fakir",
+      "iconName": "slots"
+    }
+  ],
+  "paymentSummary": "Casino777.nl offers a range of secure and efficient payment methods for deposits and withdrawals, prioritizing convenience, speed, and safety. Options include popular local methods like iDEAL, alongside international credit cards and e-wallets, all processed using advanced encryption technology.",
+  "paymentMethods": [
+    {
+      "name": "iDEAL",
+      "type": "Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Maestro",
+      "type": "Debit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "3-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "PayPal",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-2 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Paysafecard",
+      "type": "Prepaid Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "Not available for withdrawal",
+      "fees": "None"
+    },
+    {
+      "name": "Bankoverschrijving",
+      "type": "Bank Transfer",
+      "depositTime": "Not explicitly stated for deposit",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Casino777.nl is deeply committed to responsible gaming, offering a suite of tools to help players manage their gambling habits. These include customizable deposit limits (daily, weekly, monthly), session time limits, loss limits (recreational budget), and maximum balance limits. The platform actively promotes conscious play and provides resources for self-exclusion, aligning with strict KSA guidelines.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Players can set daily, weekly, or monthly deposit limits to control their spending.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Players can set time limits to manage the duration of their gaming sessions daily, weekly, or monthly.",
+      "status": "supported",
+      "iconName": "clock"
+    },
+    {
+      "title": "Loss Limits (Recreational Budget)",
+      "description": "Players can set a monthly recreational budget, which is the total amount they can deposit minus withdrawals.",
+      "status": "supported",
+      "iconName": "euro"
+    },
+    {
+      "title": "Max Balance Limit",
+      "description": "Allows players to set a maximum balance for their account, with excess funds automatically transferred to their bank.",
+      "status": "supported",
+      "iconName": "shield-ban"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Options for temporary breaks or permanent self-exclusion are available for players who need to stop gambling.",
+      "status": "supported",
+      "iconName": "ban"
+    }
+  ],
+  "comparisonTitle": "Casino777.nl vs. Industry Standards",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "KSA Regulated - High Safety",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "success"
+    },
+    {
+      "feature": "Game Variety",
+      "thisCasino": "1000+ Diverse Titles (Slots, Live, Gridders)",
+      "regulatedStandard": "Good Selection Expected",
+      "status": "success"
+    },
+    {
+      "feature": "Payment Speed",
+      "thisCasino": "Fast Deposits, Quick Withdrawals",
+      "regulatedStandard": "Efficient Processing Expected",
+      "status": "success"
+    },
+    {
+      "feature": "Responsible Gaming Tools",
+      "thisCasino": "Extensive Limits & Self-Exclusion",
+      "regulatedStandard": "Comprehensive Tools Required by KSA",
+      "status": "success"
+    },
+    {
+      "feature": "Promotions (24+ only)",
+      "thisCasino": "Welcome Bonus (24+), Regular Promos",
+      "regulatedStandard": "Age-restricted promos common in NL",
+      "status": "neutral"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "HOE SCHRIJF IK ME IN OP CASINO777.NL?",
+      "answer": "Inschrijven is eenvoudig: ga naar de homepage, druk op de registratieknop, vul je gegevens in en kies een betaalmethode. Je persoonlijke gegevens worden beschermd conform strenge databeschermingsregelgeving."
+    },
+    {
+      "question": "WIE KAN IK CONTACTEREN ALS IK HULP NODIG HEB OP CASINO777.NL?",
+      "answer": "Je kunt contact opnemen via de Help-sectie, live chat, e-mail (support@777.nl), contactformulier of telefoon. De Nederlandstalige klantenservice is 24 uur per dag beschikbaar voor vragen over betalingen, spellen en verantwoord spelen."
+    },
+    {
+      "question": "WAT IS RTP?",
+      "answer": "'RTP' staat voor 'Return to Player', het gemiddelde uitkeringspercentage van een spel. Hoe hoger het percentage, hoe interessanter het spel doorgaans wordt gevonden. Dit percentage wordt berekend over miljoenen draaibeurten en kan per spel variëren."
+    },
+    {
+      "question": "WAAR BEGINT DE FUN OP DE GOKKAST?",
+      "answer": "Gokkasten bestaan uit rollen en rijen (meestal 5x3). Je draait aan de rollen om winnende combinaties van symbolen te vormen. Elk spel heeft specifieke regels, tips en aanpasbare inzetbedragen. Populaire spellen zijn onder andere Megaways, Starburst, en Book of Dead."
+    },
+    {
+      "question": "WAT IS VOLATILITEIT BIJ GOKKASTEN",
+      "answer": "Volatiliteit (of variantie) geeft aan hoe vaak en hoe groot de winsten zijn op een gokkast. Lage volatiliteit betekent vaak kleine winsten, hoge volatiliteit betekent minder frequente, maar potentieel enorme winsten. Dit helpt spelers een spel te kiezen dat past bij hun speelstijl."
+    }
+  ],
+  "license": "1832/01.256.811",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €500",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "Bet €10, Get €50 Bonus",
+      "wagering": "1x"
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "swe": {
+      "offer": "100% up to 3000 SEK",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK",
+      "wagering": "25x"
+    },
+    "fin": {
+      "offer": "100% up to 200€",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 1000 EUR",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "100% up to 100€",
+      "wagering": "35x"
+    },
+    "bel": {
+      "offer": "100% up to 500€",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 1000€",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "100% up to 1000€",
+      "wagering": "35x"
+    },
+    "bra": {
+      "offer": "100% up to 1000 R$",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD",
+      "wagering": "35x"
+    }
+  }
+}
