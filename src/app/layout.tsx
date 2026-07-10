@@ -60,6 +60,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo.png", sizes: "192x192", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" }
+    ]
+  }
 };
 
 export const viewport = {
