@@ -56,7 +56,7 @@ export function GeoGuard({ children }: GeoGuardProps) {
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Floating Simulation Control Panel */}
-      {mounted && showPanel && (
+      {mounted && showPanel && process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-4 right-4 left-4 md:left-auto md:w-80 md:max-w-sm z-50 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl transition-all duration-300">
           <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
             <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ export function GeoGuard({ children }: GeoGuardProps) {
       )}
 
       {/* Mini Toggle tab if hidden */}
-      {!showPanel && (
+      {!showPanel && process.env.NODE_ENV === "development" && (
         <button
           onClick={() => setShowPanel(true)}
           className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-white/10 hover:bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 cursor-pointer"
