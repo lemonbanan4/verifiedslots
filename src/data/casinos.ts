@@ -1384,7 +1384,7 @@ export const casinos: Casino[] = [
   },
   {
     "id": "leovegas",
-    "name": "Leovegas",
+    "name": "LeoVegas",
     "slug": "leovegas",
     "domain": "leovegas.com",
     "bonus": "Up to €1,000 and 2,600 Free Spins",

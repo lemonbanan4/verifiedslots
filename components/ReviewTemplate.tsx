@@ -117,7 +117,13 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
 
             {/* LEFT: Casino identity */}
             <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left lg:justify-self-start">
-              <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${avatarGradient} rounded-2xl flex items-center justify-center font-bold ${avatarTextClass} text-3xl shadow-xl shadow-slate-950/50 shrink-0`}>
+              <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center font-bold text-3xl shadow-xl shadow-slate-950/50 shrink-0 ${
+                activeRegulator === "ksa"
+                  ? "bg-gradient-to-br from-emerald-600 to-teal-700 text-white"
+                  : activeRegulator === "mga"
+                  ? "bg-gradient-to-br from-blue-600 to-indigo-700 text-white"
+                  : "bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950"
+              }`}>
                 {displayName.charAt(0)}
               </div>
               <div>
