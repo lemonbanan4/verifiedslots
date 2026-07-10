@@ -47,6 +47,43 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     ? activeLicenseRoute.toLowerCase()
     : review.licenseType.toLowerCase();
 
+  const displayName = review.name === "Bet365 NL" && activeRegulator !== "ksa"
+    ? "Bet365"
+    : review.name;
+
+  let avatarGradient = "from-slate-700 to-slate-800";
+  let avatarTextClass = "text-white";
+  if (activeRegulator === "ksa") {
+    avatarGradient = "from-emerald-600 to-teal-700";
+  } else if (activeRegulator === "mga") {
+    avatarGradient = "from-blue-600 to-indigo-700";
+  } else if (activeRegulator === "ukgc") {
+    avatarGradient = "from-amber-400 to-yellow-500";
+    avatarTextClass = "text-slate-950";
+  }
+
+  let bonusTextColor = "text-emerald-400";
+  if (activeRegulator === "ksa") {
+    bonusTextColor = "text-emerald-400";
+  } else if (activeRegulator === "mga") {
+    bonusTextColor = "text-sky-400";
+  } else if (activeRegulator === "ukgc") {
+    bonusTextColor = "text-amber-400";
+  }
+
+  let topBadgeText = "Reviewed & Audited";
+  let topBadgeClass = "bg-blue-500/10 border border-blue-500/20 text-blue-400";
+  if (activeRegulator === "ksa") {
+    topBadgeText = isNl ? "KSA Gecertificeerd" : "KSA Licensed";
+    topBadgeClass = "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400";
+  } else if (activeRegulator === "mga") {
+    topBadgeText = "MGA Licensed";
+    topBadgeClass = "bg-blue-500/10 border border-blue-500/20 text-blue-450";
+  } else if (activeRegulator === "ukgc") {
+    topBadgeText = "UKGC Regulated";
+    topBadgeClass = "bg-amber-500/10 border border-amber-500/20 text-amber-400";
+  }
+
   // geo location
   const headerStore = await headers();
   const userCountry = headerStore.get('x-user-country') || 'global';
@@ -80,27 +117,24 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
 
             {/* LEFT: Casino identity */}
             <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left lg:justify-self-start">
-              <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${review.logoColor} rounded-2xl flex items-center justify-center font-bold text-white text-3xl shadow-xl shadow-slate-950/50 shrink-0`}>
-                {review.name.charAt(0)}
+              <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${avatarGradient} rounded-2xl flex items-center justify-center font-bold ${avatarTextClass} text-3xl shadow-xl shadow-slate-950/50 shrink-0`}>
+                {displayName.charAt(0)}
               </div>
               <div>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
                   <h1 className="text-3xl font-display font-extrabold text-white tracking-tight">
-                    {review.name}
+                    {displayName}
                   </h1>
-                  <div className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${review.isKsaLicensed
-                    ? "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400"
-                    : "bg-blue-500/10 border border-blue-500/20 text-blue-400"
-                    }`}>
+                  <div className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${topBadgeClass}`}>
                     <ShieldCheck size={12} />
-                    {review.isKsaLicensed ? (isNl ? "KSA Gecertificeerd" : "KSA Licensed") : "Reviewed & Audited"}
+                    {topBadgeText}
                   </div>
                 </div>
                 <p className="text-xs text-slate-400 font-mono mb-3">{review.domain}</p>
                 <div className="flex items-center justify-center md:justify-start gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg w-max">
                   <Star className="text-amber-400 fill-amber-400" size={14} />
                   <span className="text-xs font-bold text-white">{review.rating}</span>
-                  <span className="text-[10px] text-slate-500">/{review.isKsaLicensed ? "10" : "5"} rating</span>
+                  <span className="text-[10px] text-slate-500">/10 rating</span>
                 </div>
               </div>
             </div>
@@ -114,7 +148,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
             <div className="flex flex-col items-center lg:items-end gap-2 w-full lg:justify-self-end">
               <div className="text-center lg:text-right w-full">
                 <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold block">Welcome Bonus</span>
-                <p className="text-sm md:text-base font-extrabold text-emerald-400 leading-snug mt-1 whitespace-normal break-words">
+                <p className={`text-sm md:text-base font-extrabold ${bonusTextColor} leading-snug mt-1 whitespace-normal break-words`}>
                   {currentWelcomeBonus}
                 </p>
               </div>
@@ -127,13 +161,13 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                   affiliateUrl={review.affiliateUrl}
                   isLicensedInNL={review.isLicensedInNL}
                   isKsaLicensed={review.isKsaLicensed}
-                  licenseType={review.licenseType}
-                  name={review.name}
+                  licenseType={activeRegulator}
+                  name={displayName}
                   welcomeBonus={currentWelcomeBonus}
                   className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
-                    review.licenseType === "ksa"
+                    activeRegulator === "ksa"
                       ? "bg-emerald-500 hover:bg-emerald-450 shadow-emerald-500/10"
-                      : review.licenseType === "mga"
+                      : activeRegulator === "mga"
                       ? "bg-sky-500 hover:bg-sky-450 shadow-sky-500/10"
                       : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
                   }`}
@@ -143,10 +177,12 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
               ) : (
                 <Link
                   href="/contact"
-                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
-                    review.isLicensedInNL
-                      ? "bg-emerald-400 hover:bg-emerald-350 text-slate-950 shadow-emerald-500/10"
-                      : "bg-blue-950/60 hover:bg-blue-900 border border-blue-500/30 text-blue-200 shadow-blue-550/5"
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
+                    activeRegulator === "ksa"
+                      ? "bg-emerald-500 hover:bg-emerald-450 shadow-emerald-500/10"
+                      : activeRegulator === "mga"
+                      ? "bg-sky-500 hover:bg-sky-450 shadow-sky-500/10"
+                      : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
                   }`}
                 >
                   {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}

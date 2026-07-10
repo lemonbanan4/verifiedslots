@@ -19,6 +19,10 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
     ? licenseType.toLowerCase()
     : casino.licenseType.toLowerCase();
 
+  const displayName = casino.name === "Bet365 NL" && activeLicense !== "ksa"
+    ? "Bet365"
+    : casino.name;
+
   const isKsa = activeLicense === "ksa";
   const isMga = activeLicense === "mga";
   const ratingScale = "/10";
@@ -90,7 +94,7 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
 
       <div className="flex-grow min-w-0 w-full">
         <h3 className="text-lg font-bold text-slate-100 mb-1 flex items-center gap-1.5 min-w-0 truncate">
-          {casino.name}
+          {displayName}
         </h3>
         <p className="text-[11px] text-slate-400 font-mono mb-4 truncate">{casino.domain}</p>
         <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
