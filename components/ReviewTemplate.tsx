@@ -51,6 +51,10 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     ? "Bet365"
     : review.name;
 
+  const displayDomain = review.domain === "bet365.nl" && activeRegulator !== "ksa"
+    ? "bet365.com"
+    : review.domain;
+
   let avatarGradient = "from-slate-700 to-slate-800";
   let avatarTextClass = "text-white";
   if (activeRegulator === "ksa") {
@@ -136,7 +140,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                     {topBadgeText}
                   </div>
                 </div>
-                <p className="text-xs text-slate-400 font-mono mb-3">{review.domain}</p>
+                <p className="text-xs text-slate-400 font-mono mb-3">{displayDomain}</p>
                 <div className="flex items-center justify-center md:justify-start gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg w-max">
                   <Star className="text-amber-400 fill-amber-400" size={14} />
                   <span className="text-xs font-bold text-white">{review.rating}</span>
