@@ -130,10 +130,10 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
               ) : (
                 <Link
                   href="/contact"
-                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
                     review.isLicensedInNL
-                      ? "bg-emerald-400 hover:bg-emerald-350 shadow-emerald-500/10"
-                      : "bg-blue-400 hover:bg-blue-350 shadow-blue-500/10"
+                      ? "bg-emerald-400 hover:bg-emerald-350 text-slate-950 shadow-emerald-500/10"
+                      : "bg-blue-950/60 hover:bg-blue-900 border border-blue-500/30 text-blue-200 shadow-blue-550/5"
                   }`}
                 >
                   {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}

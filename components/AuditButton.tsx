@@ -65,7 +65,7 @@ export function AuditButton({
   return (
     <Link
       href="/contact"
-      className={`w-full py-3 px-4 bg-blue-400 hover:bg-blue-350 text-slate-950 rounded-xl text-xs font-bold transition-all shadow-[0_4px_20px_rgba(56,189,248,0.18)] hover:shadow-[0_4px_25px_rgba(56,189,248,0.4)] border border-blue-400/20 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-955 ${className}`}
+      className={`w-full py-3 px-4 bg-blue-950/60 hover:bg-blue-900 text-blue-200 rounded-xl text-xs font-bold transition-all shadow-[0_4px_20px_rgba(59,130,246,0.18)] hover:shadow-[0_4px_25px_rgba(59,130,246,0.4)] border border-blue-500/30 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-955 ${className}`}
     >
       Request Audit <ArrowRight size={13} />
     </Link>
