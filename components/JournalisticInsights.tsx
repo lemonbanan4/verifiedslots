@@ -29,6 +29,12 @@ import { AuditModal } from "./AuditModal";
 
 const FALLBACK_ARTICLES = auditsData as Audit[];
 
+// Articles aren't guaranteed to be stored newest-first, so the freshest
+// content (what this widget exists to surface) always sorts to the top.
+function sortByDateDesc(list: Audit[]): Audit[] {
+  return [...list].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
 // ─── Category Icon & Color Mapping ───────────────────────────────────────────
 const categoryIconMap: Record<AuditCategory, React.ComponentType<{ size?: number; className?: string }>> = {
   "Math & RNG Auditing": Coins,
@@ -112,10 +118,10 @@ export function JournalisticInsights({ limit }: { limit?: number } = {}) {
         const res = await fetch("/api/insights");
         if (!res.ok) throw new Error("Failed to fetch articles");
         const data = await res.json();
-        setArticles(data);
+        setArticles(sortByDateDesc(data));
       } catch (err) {
         console.error("Failed to load insights, falling back to static content:", err);
-        setArticles(FALLBACK_ARTICLES);
+        setArticles(sortByDateDesc(FALLBACK_ARTICLES));
       } finally {
         setLoading(false);
       }

@@ -282,7 +282,9 @@ export default function AuditsPage() {
       );
     }
 
-    return list;
+    // Articles aren't guaranteed to be stored newest-first, so sort by
+    // publish date descending rather than relying on array insertion order.
+    return [...list].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [activeFilter, searchQuery]);
 
   // General Database Statistics
