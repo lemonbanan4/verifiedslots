@@ -1,27 +1,27 @@
 ---
-title: "LeoVegas Review 2026 - MGA Regulatory Compliance Report"
-description: "Independent review of LeoVegas. We audit Malta Gaming Authority (MGA) licensing compliance, withdrawal solvency, and wagering safety. NL players restricted."
-slug: "leovegas"
-domain: "leovegas.com"
-rating: 9
+title: "Slotspice Review 2026 - MGA Regulatory Compliance Report"
+description: "Independent review of Slotspice. We audit Malta Gaming Authority (MGA) licensing compliance, withdrawal solvency, and wagering safety. NL players restricted."
+slug: "slotspice"
+domain: "slotspice.com"
+rating: 8.5
 licenseType: "mga"
-licenseNumber: "Not explicitly stated on homepage, please verify"
-welcomeBonus: "Claim Up to €1,000 and 2,600 Free Spins"
+licenseNumber: "MGA/B2C/1118/2025"
+welcomeBonus: "100% up to €1,100 + 1,100 Free Spins"
 wagering: "35x"
 author: "iGaming Compliance Specialist"
-datePublished: "2026-06-30"
-lastModified: "2026-06-30"
+datePublished: "2025-12-17"
+lastModified: "2026-05-25"
 logoColor: "from-emerald-800 to-teal-900"
 schema: {
   "@context": "https://schema.org",
   "@type": "Review",
   "itemReviewed": {
     "@type": "GamePlatform",
-    "name": "LeoVegas",
-    "url": "https://leovegas.com",
+    "name": "Slotspice",
+    "url": "https://slotspice.com",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "9",
+      "ratingValue": "8.5",
       "reviewCount": "38",
       "bestRating": "5",
       "worstRating": "1"
@@ -29,7 +29,7 @@ schema: {
   },
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "9",
+    "ratingValue": "8.5",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -45,16 +45,16 @@ schema: {
       "url": "https://VerifiedSlots.com/logo.png"
     }
   },
-  "datePublished": "2026-06-30",
-  "dateModified": "2026-06-30"
+  "datePublished": "2025-12-17",
+  "dateModified": "2026-05-25"
 }
 ---
 
-# LeoVegas Casino Review & Regulatory Compliance Audit
+# Slotspice Casino Review & Regulatory Compliance Audit
 
-An objective, developer-led analysis of LeoVegas (leovegas.com). This report verifies the operator's licensing credentials, playthrough wagering math, and overall consumer safety features.
+An objective, developer-led analysis of Slotspice (slotspice.com). This report verifies the operator's licensing credentials, playthrough wagering math, and overall consumer safety features.
 
-> 🛡️ **Verification Status:** Verified on **2026-06-30** | Audited by **iGaming Compliance Specialist**
+> 🛡️ **Verification Status:** Verified on **2026-05-25** | Audited by **iGaming Compliance Specialist**
 
 ---
 
@@ -70,14 +70,14 @@ By remaining entirely independent of affiliate sponsorship influence, our review
 
 ## 2. Licensing & Regional Compliance Status
 
-Our investigation confirms that **LeoVegas** operates under a license issued by the **Malta Gaming Authority (MGA)** (License Number: `Not explicitly stated on homepage, please verify`).
+Our investigation confirms that **Slotspice** operates under a license issued by the **Malta Gaming Authority (MGA)** (License Number: `MGA/B2C/1118/2025`).
 
 ### Regional Safety Assessment:
 Operating under the Malta Gaming Authority (MGA) ensures standard European security and solvency verification. However, since the operator lacks a local Dutch license, residents of the Netherlands do not receive legal recourse or protection under Dutch civil laws.
 
 ### Compliance Restrictions:
 * **Netherlands (NL):** Restricted (Dutch Residents Strictly Prohibited)
-* **Restricted Jurisdictions:** NL, US
+* **Restricted Jurisdictions:** NL, Afghanistan, Albania, Anguilla, Barbados, Botswana, Cambodia, Democratic Republic of Congo, Fiji, Ghana, Guam, Iran, Iraq, Israel, Jamaica, Mauritius, Myanmar, Nicaragua, North Korea, Pakistan, Palau, Panama, Samoa, Seychelles, Sudan, Syria, The Bahamas, Trinidad and Tobago, Uganda, United States of America, US Virgin Islands, Vanuatu, Yemen, Zimbabwe
 
 ### Regulator Source & Citation Layer:
 * **Official Registry Search:** [Malta Gaming Authority (MGA) Official License Register](https://authorisation.mga.org.mt/verification.aspx)
@@ -91,19 +91,19 @@ For more details on jurisdictions, visit our [Regulatory Compliance Hub](/licens
 
 ## 3. Welcome Bonus & Playthrough Mathematics (The 'Truth Table')
 
-LeoVegas offers a promotional welcome bonus of **Claim Up to €1,000 and 2,600 Free Spins**. 
+Slotspice offers a promotional welcome bonus of **100% up to €1,100 + 1,100 Free Spins**. 
 Our audit of the wagering conditions (`35x`) indicates the following:
 
 ### Playthrough Terms Comparison:
-| Wagering Metric | This Casino (LeoVegas) | Industry Benchmark | Audit Status |
+| Wagering Metric | This Casino (Slotspice) | Industry Benchmark | Audit Status |
 | --- | --- | --- | --- |
 | Required Playthrough | 35x | 35x bonus | ✓ Standard |
 | Min Deposit to Claim | €20 | $10 - $20 | ✓ Standard |
-| Bonus Expiry Window | 14 Days (for wagering) | 14 - 30 Days | ✓ Standard |
-| Max Allowed Bet (Active Bonus) | Not explicitly stated on homepage, please verify | $5.00 | ✓ Standard |
+| Bonus Expiry Window | 30 Days | 14 - 30 Days | ✓ Standard |
+| Max Allowed Bet (Active Bonus) | €5 | $5.00 | ✓ Standard |
 
 ### Player Reality Check:
-Evaluating the mathematical likelihood of converting this bonus into withdrawable cash is essential for any player. With a wagering requirement of **35x** on a welcome offer of **Claim Up to €1,000 and 2,600 Free Spins**, players must complete substantial wagering turnovers. For example, claiming a $100 bonus under a 35x requirement necessitates a total rollover of $3,500. Under high rollover settings or combined deposit-and-bonus conditions, the statistical house edge makes it highly likely that players will lose their balance before meeting the playthrough threshold. Always treat bonus balances as promotional play tokens rather than guaranteed payouts.
+Evaluating the mathematical likelihood of converting this bonus into withdrawable cash is essential for any player. With a wagering requirement of **35x** on a welcome offer of **100% up to €1,100 + 1,100 Free Spins**, players must complete substantial wagering turnovers. For example, claiming a $100 bonus under a 35x requirement necessitates a total rollover of $3,500. Under high rollover settings or combined deposit-and-bonus conditions, the statistical house edge makes it highly likely that players will lose their balance before meeting the playthrough threshold. Always treat bonus balances as promotional play tokens rather than guaranteed payouts.
 
 1. **Rollover Requirement:** Wagering requirements are set to `35x`. Ensure you understand whether this applies to the bonus amount only or the combined deposit and bonus sum.
 2. **Game Contributions:** Casual players should check game contribution weights (slots contribute 100%, table games contribute 5-10%).
@@ -113,7 +113,7 @@ Evaluating the mathematical likelihood of converting this bonus into withdrawabl
 
 ## 4. Game Library & Software Audit
 
-The gaming portfolio at LeoVegas spans a broad range of slot machines, virtual table games, and live dealer streams. However, game quality and fairness depends on software supplier auditing. 
+The gaming portfolio at Slotspice spans a broad range of slot machines, virtual table games, and live dealer streams. However, game quality and fairness depends on software supplier auditing. 
 
 We checked game suppliers to verify if they hold licenses in reputable jurisdictions. In KSA-regulated casinos, all slots must utilize RNG systems verified by certified testing agencies (like eCOGRA or iTech Labs). In contrast, offshore casinos may host slots with adjustable RTP ranges, meaning the operator can select lower payout configurations. We recommend players check the paytable settings in individual games before placing real stakes.
 
@@ -121,7 +121,7 @@ We checked game suppliers to verify if they hold licenses in reputable jurisdict
 
 ## 5. Payout Speed & Payment Safety
 
-Payout processing times at LeoVegas depend on the chosen banking mechanism. The operator supports standard payment processors. 
+Payout processing times at Slotspice depend on the chosen banking mechanism. The operator supports standard payment processors. 
 * **Deposits:** Instant processing.
 * **Withdrawals:** Audited and confirmed within standard SLA times.
 

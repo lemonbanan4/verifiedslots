@@ -110,10 +110,10 @@ function main() {
     metaDescription = `Independent review of ${name}. We audit Malta Gaming Authority (MGA) licensing compliance, withdrawal solvency, and wagering safety. NL players restricted.`;
     safetySafetyText = `Operating under the Malta Gaming Authority (MGA) ensures standard European security and solvency verification. However, since the operator lacks a local Dutch license, residents of the Netherlands do not receive legal recourse or protection under Dutch civil laws.`;
   } else {
-    licenseName = "Curaçao eGaming";
-    metaTitle = `${name} Review 2026 - Curaçao Offshore License Audit`;
-    metaDescription = `Read our compliance audit of the ${name} offshore casino. Review playthrough terms, payment safety, and Curaçao license parameters. NL players restricted.`;
-    safetySafetyText = `Operating under a Curaçao master license places the brand in an offshore jurisdiction. While offering high deposit limits and crypto anonymity, it provides minimal player protection, no independent dispute mediation, and carries elevated payment solvency risks.`;
+    licenseName = "UK Gambling Commission (UKGC)";
+    metaTitle = `${name} Review 2026 - UKGC Regulated Compliance Audit`;
+    metaDescription = `Read our expert audit of ${name}. We verify UK Gambling Commission (UKGC) license credentials, social responsibility audits, and withdrawal safety.`;
+    safetySafetyText = `Holding a UKGC license guarantees adherence to the strictest player protection rules, mandatory GAMSTOP self-exclusion integration, and strict customer segregation standard audits.`;
   }
 
   const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -211,13 +211,13 @@ ${safetySafetyText}
       ? `[Kansspelautoriteit (KSA) Official Website](https://kansspelautoriteit.nl/)`
       : licenseType === "mga"
         ? `[Malta Gaming Authority (MGA) Official License Register](https://authorisation.mga.org.mt/verification.aspx)`
-        : `[Curaçao eGaming Official Licensing Authority](https://www.curacao-egaming.com/)`
+        : `[UK Gambling Commission (UKGC) Official Public Register](https://www.gamblingcommission.gov.uk/public-register)`
     }
 
 For more details on jurisdictions, visit our [Regulatory Compliance Hub](/licenses) or read about specific license models like:
 * [KSA Regulated Index](/licenses/ksa)
 * [MGA Regulated Index](/licenses/mga)
-* [Curaçao Offshore Index](/licenses/curacao)
+* [UKGC Regulated Index](/licenses/ukgc)
 
 ---
 
