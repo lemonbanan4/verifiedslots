@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: AuditPageProps): Promise<Meta
   }
 
   const name = casino.name;
-  const jurisdiction = casino.licenseType.toUpperCase();
+  const jurisdiction = license.toUpperCase();
   const title = `${name} Audit & Compliance Report (${jurisdiction})`;
   const description = `Independent iGaming audit of ${name} (${casino.domain}). Verify safety rating (${casino.rating}), regulatory license status, welcome offer wagering terms (${casino.wagering}), and payment solvency.`;
 
