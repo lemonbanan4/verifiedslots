@@ -2,7 +2,12 @@
 # See https://firebase.google.com/docs/app-hosting/configure#cloud-run
 runConfig:
   minInstances: 0
-  # maxInstances: 100
+  # Capped at 20: this project's europe-west4 Cloud Run quota allows only
+  # 20 vCPU total (CpuAllocPerProjectRegion), and each instance uses 1 CPU.
+  # Leaving this unset defaults to 100, which Cloud Run rejects on every
+  # rollout (visible as a quota ERROR in Cloud Logging) before falling back
+  # to 20 anyway - setting it explicitly avoids that failed first attempt.
+  maxInstances: 20
   # concurrency: 80
   # cpu: 1
   # memoryMiB: 512
