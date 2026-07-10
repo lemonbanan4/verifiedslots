@@ -32,6 +32,11 @@ export default function TermsPage() {
           <p>
             User acknowledges that VerifiedSlots receives commissions through outbound affiliate referral links. These sponsorships do not affect the impartiality of our compliance ratings or scoring algorithms.
           </p>
+
+          <h2 className="text-base font-bold text-white mt-6 mb-2">4. Company Information</h2>
+          <p>
+            VerifiedSlots.com is a trade name of CogCore LLC. Registered Office: 30 N Gould St Ste R, Sheridan, WY 82801, USA.
+          </p>
         </div>
       </div>
     </div>
