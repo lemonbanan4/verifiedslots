@@ -12,6 +12,7 @@ interface CasinoCardProps {
 }
 
 export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardProps) {
+  const [showExpeditedModal, setShowExpeditedModal] = React.useState(false);
   const isKsa = casino.licenseType === "ksa";
   const isMga = casino.licenseType === "mga";
   const ratingScale = isKsa ? "/10" : "/5";
