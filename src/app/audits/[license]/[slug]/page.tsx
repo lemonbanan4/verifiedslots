@@ -17,7 +17,10 @@ export async function generateMetadata({ params }: AuditPageProps): Promise<Meta
   const { license, slug } = await params;
   const casino = await fetchCasinoBySlug(slug);
 
-  if (!casino || casino.licenseType.toLowerCase() !== license.toLowerCase()) {
+  const types = casino ? (casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType]) : [];
+  const hasMatchingLicense = types.map((t) => t.toLowerCase()).includes(license.toLowerCase());
+
+  if (!casino || !hasMatchingLicense) {
     return {
       title: "Audit Not Found - VerifiedSlots",
       description: "The requested casino compliance audit could not be found.",
@@ -44,7 +47,14 @@ export default async function AuditPage({ params }: AuditPageProps) {
   const casino = await fetchCasinoBySlug(slug);
 
   // Guard: Verify document exists and license segment matches to avoid duplicate routing
-  if (!casino || casino.licenseType.toLowerCase() !== license.toLowerCase()) {
+  if (!casino) {
+    notFound();
+  }
+
+  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
+  const hasMatchingLicense = types.map((t) => t.toLowerCase()).includes(license.toLowerCase());
+
+  if (!hasMatchingLicense) {
     notFound();
   }
 
@@ -52,13 +62,13 @@ export default async function AuditPage({ params }: AuditPageProps) {
     <div>
       <div className="mb-4">
         <Link
-          href={`/licenses/${casino.licenseType}`}
+          href={`/licenses/${license.toLowerCase()}`}
           className="text-xs text-slate-400 hover:text-white inline-flex items-center gap-1.5 transition-colors bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg font-semibold cursor-pointer"
         >
-          ← Back to {casino.licenseType.toUpperCase()} Regulated Directory
+          ← Back to {license.toUpperCase()} Regulated Directory
         </Link>
       </div>
-      <ReviewTemplate review={casino} />
+      <ReviewTemplate review={casino} activeLicenseRoute={license} />
     </div>
   );
 }
@@ -67,8 +77,15 @@ export default async function AuditPage({ params }: AuditPageProps) {
 export async function generateStaticParams() {
   const casinosList = await fetchAllCasinos();
   
-  return casinosList.map((casino) => ({
-    license: casino.licenseType.toLowerCase(),
-    slug: casino.slug.toLowerCase(),
-  }));
+  const paths: Array<{ license: string; slug: string }> = [];
+  casinosList.forEach((casino) => {
+    const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
+    types.forEach((type) => {
+      paths.push({
+        license: type.toLowerCase(),
+        slug: casino.slug.toLowerCase(),
+      });
+    });
+  });
+  return paths;
 }

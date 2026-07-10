@@ -28,13 +28,20 @@ import { CheckCircle2, XCircle, ShieldCheck, ShieldAlert, Star, Calendar, Activi
 
 interface ReviewTemplateProps {
   review: Casino;
+  activeLicenseRoute?: string;
 }
 
-export async function ReviewTemplate({ review }: ReviewTemplateProps) {
+export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTemplateProps) {
   // Determine compliance profile directly on the server via cookies
   const cookieStore = await cookies();
   const simulatedGeo = cookieStore.get("simulated_geo_nl")?.value;
   const isNl = simulatedGeo === "true";
+
+  // Check if operator holds the license for the current route
+  const types = review.licenseTypes && review.licenseTypes.length > 0 ? review.licenseTypes : [review.licenseType];
+  const isLicensedInCurrentRoute = activeLicenseRoute 
+    ? types.map((t) => t.toLowerCase()).includes(activeLicenseRoute.toLowerCase())
+    : true;
 
   // geo location
   const headerStore = await headers();
@@ -170,36 +177,36 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
 
         {/* Bento Item 2: Compliance Notice Block (Spans 2 columns) */}
         <section
-          className={`reveal-card delay-2 lg:col-span-2 border rounded-3xl p-5 optimize-gpu ${review.isKsaLicensed
+          className={`reveal-card delay-2 lg:col-span-2 border rounded-3xl p-5 optimize-gpu ${isLicensedInCurrentRoute
             ? "bg-emerald-950/20 border-emerald-500/25 neon-border-emerald"
             : "bg-rose-950/25 border-rose-500/30 neon-border-rose"
             }`}
         >
           <div className="flex gap-4 items-start">
-            {review.isKsaLicensed ? (
+            {isLicensedInCurrentRoute ? (
               <ShieldCheck className="text-emerald-405 shrink-0 mt-0.5" size={20} />
             ) : (
               <ShieldAlert className="text-rose-455 shrink-0 mt-0.5" size={20} />
             )}
             <div>
-              <h3 className={`text-xs font-bold uppercase tracking-wider mb-1.5 ${review.isKsaLicensed ? "text-emerald-400" : "text-rose-405"
+              <h3 className={`text-xs font-bold uppercase tracking-wider mb-1.5 ${isLicensedInCurrentRoute ? "text-emerald-400" : "text-rose-405"
                 }`}>
-                {review.isKsaLicensed
+                {isLicensedInCurrentRoute
                   ? (isNl ? "✓ Licentie Naleving Geverifieerd" : "✓ Regulatory Compliance Confirmed")
                   : (isNl ? "⚠️ Waarschuwing: Niet-Gelicenseerde Aanbieder" : "⚠️ Compliance Warning: Unregulated Entity")}
               </h3>
               <p className="text-[11px] text-slate-300 leading-relaxed">
-                {review.isKsaLicensed ? (
+                {isLicensedInCurrentRoute ? (
                   isNl ? (
-                    `Deze aanbieder bezit licentienummer ${review.licenseNumber} verstrekt door de Nederlandse Kansspelautoriteit (KSA). Het is wettelijk toegestaan voor deze aanbieder om kansspelen aan te bieden aan ingezetenden van Nederland.`
+                    `Deze aanbieder bezit licentienummer ${review.licenseNumber} verstrekt door de toezichthouder. Het is wettelijk toegestaan om kansspelen aan te bieden aan ingezetenden van deze gereguleerde regio.`
                   ) : (
-                    `This operator is officially licensed (License no: ${review.licenseNumber}) by the Kansspelautoriteit (KSA) and is fully authorized to operate within the regulated market of the Netherlands.`
+                    `This operator is officially licensed (License no: ${review.licenseNumber}) by the regulatory authority and is fully authorized to operate within the regulated market.`
                   )
                 ) : (
                   isNl ? (
-                    `LET OP: ${review.name} heeft GEEN vergunning van de Kansspelautoriteit (KSA). Het is illegaal om in Nederland bij dit casino te spelen. Spelers genieten geen consumentenbescherming, hebben geen toegang tot het CRUKS-register en lopen risico op inbeslagname van tegoeden.`
+                    `LET OP: ${review.name} heeft GEEN vergunning van de toezichthouder in deze jurisdictie. Het is illegaal om hier te spelen. Spelers genieten geen consumentenbescherming.`
                   ) : (
-                    `WARNING: This operator is NOT licensed by the Kansspelautoriteit (KSA). It does not hold a regulatory permit for the Netherlands region. Accessing this site from restricted areas constitutes a breach of local policy, exposing players to severe payout and safety risks.`
+                    `WARNING: This operator is NOT licensed/regulated by this active jurisdiction. Accessing this site from restricted areas constitutes a breach of local policy, exposing players to severe payout and safety risks.`
                   )
                 )}
               </p>
