@@ -265,8 +265,29 @@ async function main() {
             }
         }
     } catch (error: any) {
-        console.error('❌ Error fetching/parsing casino review:', error.message);
-        process.exit(1);
+        console.warn(`⚠️ Primary scraping failed: ${error.message}. Falling back to Google Search Grounding...`);
+        try {
+            if (!GEMINI_API_KEY) {
+                throw new Error('❌ GEMINI_API_KEY is required for fallback research. Please check your .env file.');
+            }
+            const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+            console.log('📡 Querying Google Search Grounding to research operator data...');
+            const searchPrompt = `Please search Google and research compliance metrics, licensing status (MGA, KSA, Curaçao), welcome bonuses, game library sizes, restricted countries, and safety information for the operator: "${name}" (${domain}).`;
+            const searchResponse = await ai.models.generateContent({
+                model: "gemini-2.5-flash",
+                contents: searchPrompt,
+                config: {
+                    tools: [{ googleSearch: {} }]
+                }
+            });
+            const researchFacts = searchResponse.text || "";
+            
+            console.log('🤖 Parsing research facts into structured review JSON...');
+            data = await parseCasinoHtmlWithGemini(researchFacts, "", name, domain);
+        } catch (fallbackError: any) {
+            console.error('❌ Error: Fallback research also failed:', fallbackError.message);
+            process.exit(1);
+        }
     }
 
     // 3. NOW READ EXISTING DATA

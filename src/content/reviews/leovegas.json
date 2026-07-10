@@ -1,0 +1,337 @@
+{
+  "id": "leovegas",
+  "name": "Leovegas",
+  "slug": "leovegas",
+  "domain": "leovegas.com",
+  "bonus": "Up to €1,000 and 2,600 Free Spins",
+  "wagering": "35x",
+  "welcomeBonus": "Claim Up to €1,000 and 2,600 Free Spins",
+  "isKsaLicensed": true,
+  "isLicensedInNL": true,
+  "licenseNumber": "Not explicitly stated on homepage, please verify",
+  "licenseType": "mga",
+  "restrictedCountries": [
+    "NL",
+    "US"
+  ],
+  "rating": 9,
+  "author": "iGaming Compliance Specialist",
+  "datePublished": "2026-06-30",
+  "lastModified": "2026-06-30",
+  "lastUpdated": "2026-06-30",
+  "logoColor": "from-emerald-800 to-teal-900",
+  "gameLibraryCount": "2,000+ Titles",
+  "summaryText": "Leovegas is a renowned mobile-first online casino offering a vast selection of casino games, live casino, and sports betting. Players can enjoy a comprehensive gaming experience with a generous welcome package and various ongoing promotions.",
+  "editorialVerdict": "Leovegas stands out as a highly trusted and compliant iGaming operator, particularly noted for its mobile platform excellence and commitment to responsible gambling. With licenses in multiple reputable jurisdictions including MGA (for its global operations) and KSA (for the Netherlands), it adheres to stringent regulatory standards. Payout speeds are generally fast, often within 24 hours for e-wallets, reflecting efficient financial processing. Its long-standing reputation and consistent positive player feedback underscore its reliability. New players can confidently engage with Leovegas, knowing they are with an operator that prioritizes security, fairness, and player welfare, making it a top choice for a secure and enjoyable online casino experience.",
+  "warningText": "Leovegas is subject to geo-restrictions, and the welcome offer may vary by country. Please check local terms and conditions.",
+  "affiliateUrl": "https://track.leovegas-affiliates.com/casino-bonus",
+  "pros": [
+    "Award-winning mobile casino experience",
+    "Extensive game library from top providers",
+    "Strong commitment to responsible gambling",
+    "Fast and secure payment processing",
+    "Licensed in multiple reputable jurisdictions"
+  ],
+  "cons": [
+    "Geo-restrictions may apply to certain countries",
+    "Wagering requirements on free spins"
+  ],
+  "securityTitle": "Robust Security and Fair Play at Leovegas",
+  "securitySummary": "Leovegas employs industry-leading security measures to ensure a safe and fair gaming environment for all its players. This includes advanced SSL encryption for data protection, strict adherence to licensing regulations, and regular audits by independent bodies to ensure game fairness and RNG integrity. Player funds are held in segregated accounts for added protection.",
+  "securityWarning": "Leovegas holds licenses from multiple stringent regulatory bodies, ensuring high security and player protection standards.",
+  "securityPoints": [
+    {
+      "title": "SSL Encryption",
+      "description": "All data transfers are protected with advanced SSL encryption technology.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Licensed & Regulated",
+      "description": "Operates under strict licenses from MGA, UKGC, KSA and other authorities.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Fair Gaming",
+      "description": "Games are regularly audited by independent agencies for fair play and RTP.",
+      "iconName": "zap",
+      "status": "success"
+    },
+    {
+      "title": "Responsible Gambling Tools",
+      "description": "Comprehensive tools and resources for safer gambling are available.",
+      "iconName": "shield",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "100% up to €1,000",
+  "bonusWagering": "35x",
+  "bonusMinDeposit": "€20",
+  "bonusValidity": "14 Days (for wagering)",
+  "bonusMaxBet": "Not explicitly stated on homepage, please verify",
+  "bonusTermsVerdict": "The bonus terms are generally fair with a standard wagering requirement, though game contributions and a max bet limit (if applicable) should always be checked.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "New customers must opt in & deposit €20+ in 7 days & wager 35x within 14 days."
+    },
+    {
+      "title": "Free Spins Value & Expiry",
+      "description": "Up to 2,600 Free Spins worth €0.20 each on Gates Of Olympus Super Scatter, with a 3-day expiry."
+    },
+    {
+      "title": "Game Contributions",
+      "description": "Wagering contributions vary; live casino and table games are excluded from meeting the Free Spins wagering requirement."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of €20 is required to activate the welcome offer."
+    }
+  ],
+  "gameContributions": [
+    {
+      "category": "Slots",
+      "contribution": "100%"
+    },
+    {
+      "category": "Live Casino",
+      "contribution": "0% (for free spins wagering, likely low for bonus cash)"
+    },
+    {
+      "category": "Table Games",
+      "contribution": "0% (for free spins wagering, likely low for bonus cash)"
+    }
+  ],
+  "gameSummary": "Leovegas offers a diverse and extensive game library, focusing on quality and mobile compatibility. Players can explore popular video slots, exclusive titles, progressive jackpots, and a robust live casino experience.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "A massive collection of video slots from leading providers, including popular titles, Megaways, and feature buy games.",
+      "notable": "Popular, Exclusives & Originals, Newest Games, Feature Buy, Megaways",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "Immersive live dealer games offering an authentic casino experience with professional croupiers.",
+      "notable": "Live Roulette, Live Blackjack, Game Shows",
+      "iconName": "live"
+    },
+    {
+      "title": "Jackpots",
+      "description": "Exciting progressive jackpot slots with potentially life-changing prizes, including the exclusive LeoJackpot.",
+      "notable": "LeoJackpot, Mega Moolah, WowPot",
+      "iconName": "slots"
+    },
+    {
+      "title": "Table Games",
+      "description": "A selection of classic table games, including various versions of Blackjack, Roulette, Baccarat, and Poker.",
+      "notable": "Blackjack, Roulette, Baccarat, Poker",
+      "iconName": "dice"
+    },
+    {
+      "title": "Sports",
+      "description": "Comprehensive sports betting options across a wide range of sports and events.",
+      "notable": "Football, Basketball, Tennis, Esports",
+      "iconName": "slots"
+    }
+  ],
+  "paymentSummary": "Leovegas supports a variety of secure and convenient payment methods for deposits and withdrawals, ensuring smooth transactions for players worldwide. Specific methods and processing times can vary by region.",
+  "paymentMethods": [
+    {
+      "name": "Visa",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "2-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Mastercard",
+      "type": "Credit Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "2-5 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Skrill",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "0-24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Neteller",
+      "type": "E-Wallet",
+      "depositTime": "Instant",
+      "withdrawalTime": "0-24 Hours",
+      "fees": "None"
+    },
+    {
+      "name": "Trustly",
+      "type": "Bank Transfer",
+      "depositTime": "Instant",
+      "withdrawalTime": "1-3 Business Days",
+      "fees": "None"
+    },
+    {
+      "name": "Paysafecard",
+      "type": "Prepaid Card",
+      "depositTime": "Instant",
+      "withdrawalTime": "N/A (deposit only)",
+      "fees": "None"
+    }
+  ],
+  "rgSummary": "Leovegas is committed to Responsible Gambling, offering a comprehensive suite of tools and resources to help players manage their gaming habits and ensure a safe environment.",
+  "rgTools": [
+    {
+      "title": "Deposit Limits",
+      "description": "Set daily, weekly, or monthly limits on your deposits.",
+      "status": "success",
+      "iconName": "euro"
+    },
+    {
+      "title": "Loss Limits",
+      "description": "Control your losses over specified periods.",
+      "status": "success",
+      "iconName": "euro"
+    },
+    {
+      "title": "Session Limits",
+      "description": "Manage the duration of your gaming sessions.",
+      "status": "success",
+      "iconName": "clock"
+    },
+    {
+      "title": "Wagering Limits",
+      "description": "Set limits on the total amount you can wager.",
+      "status": "success",
+      "iconName": "euro"
+    },
+    {
+      "title": "Self-Exclusion",
+      "description": "Temporarily or permanently exclude yourself from playing.",
+      "status": "success",
+      "iconName": "ban"
+    },
+    {
+      "title": "Reality Checks",
+      "description": "Receive periodic reminders of your gaming activity.",
+      "status": "success",
+      "iconName": "clock"
+    }
+  ],
+  "comparisonTitle": "Leovegas vs. Industry Standards",
+  "comparisonRows": [
+    {
+      "feature": "License & Safety",
+      "thisCasino": "Highly Regulated (MGA, KSA, UKGC)",
+      "regulatedStandard": "KSA Standard Requirement",
+      "status": "success"
+    },
+    {
+      "feature": "Welcome Bonus Wagering",
+      "thisCasino": "35x (Bonus Funds)",
+      "regulatedStandard": "30x-40x (Average)",
+      "status": "success"
+    },
+    {
+      "feature": "Mobile Experience",
+      "thisCasino": "Excellent (Award-Winning App)",
+      "regulatedStandard": "Good Mobile Optimization",
+      "status": "success"
+    },
+    {
+      "feature": "Game Variety",
+      "thisCasino": "2,000+ Titles",
+      "regulatedStandard": "1,000+ Titles",
+      "status": "success"
+    },
+    {
+      "feature": "Responsible Gambling Tools",
+      "thisCasino": "Comprehensive Suite",
+      "regulatedStandard": "Basic Tools",
+      "status": "success"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Leovegas a licensed casino?",
+      "answer": "Yes, Leovegas holds licenses from reputable authorities including the Malta Gaming Authority (MGA) for its global operations and the Kansspelautoriteit (KSA) for the Netherlands market, among others."
+    },
+    {
+      "question": "What is the welcome bonus at Leovegas?",
+      "answer": "New players can claim a welcome offer of up to €1,000 and 2,600 Free Spins. Specific terms and conditions, including wagering requirements and game eligibility, apply."
+    },
+    {
+      "question": "Can I play Leovegas on my mobile phone?",
+      "answer": "Absolutely! Leovegas is renowned as the 'King of Mobile Casino' and offers an award-winning mobile app and a fully optimized mobile website for seamless gameplay on any device."
+    },
+    {
+      "question": "What are the wagering requirements for the bonus?",
+      "answer": "The welcome bonus typically comes with a 35x wagering requirement on the bonus funds. Free spins also have specific wagering conditions."
+    },
+    {
+      "question": "Which countries are restricted from playing at Leovegas?",
+      "answer": "Leovegas has geo-restrictions. Based on the provided context, players from the Netherlands (NL) and the United States (US) are restricted for the general 'en-row' domain."
+    }
+  ],
+  "license": "Not explicitly stated on homepage, please verify",
+  "localizedBonuses": {
+    "global": {
+      "offer": "100% up to €500 + 100 Free Spins",
+      "wagering": "35x"
+    },
+    "nl": {
+      "offer": "Bet €10, Get €50 Free Bet",
+      "wagering": "1x"
+    },
+    "uk": {
+      "offer": "100% up to £100 + 50 Free Spins",
+      "wagering": "40x"
+    },
+    "swe": {
+      "offer": "100% up to 3000 SEK + 100 Free Spins",
+      "wagering": "30x"
+    },
+    "nor": {
+      "offer": "100% up to 5000 NOK + 75 Free Spins",
+      "wagering": "25x"
+    },
+    "fin": {
+      "offer": "100% up to 200€ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "den": {
+      "offer": "100% up to 1000 DKK",
+      "wagering": "10x"
+    },
+    "ger": {
+      "offer": "100% up to 1000 EUR + 200 Free Spins",
+      "wagering": "30x"
+    },
+    "fra": {
+      "offer": "100% up to 100€ + 20 Free Spins",
+      "wagering": "35x"
+    },
+    "bel": {
+      "offer": "100% up to 500€",
+      "wagering": "40x"
+    },
+    "ita": {
+      "offer": "100% up to 1000€ + 200 Free Spins",
+      "wagering": "35x"
+    },
+    "esp": {
+      "offer": "100% up to 1000€ + 100 Free Spins",
+      "wagering": "35x"
+    },
+    "bra": {
+      "offer": "100% up to 1000 R$ + 50 Free Spins",
+      "wagering": "35x"
+    },
+    "can": {
+      "offer": "100% up to 1000 CAD + 200 Free Spins",
+      "wagering": "35x"
+    }
+  }
+}

@@ -43,7 +43,7 @@ export function AuditButton({
         href="/contact"
         className={`inline-flex items-center gap-1 text-indigo-400 hover:text-indigo-355 font-bold transition-colors cursor-pointer focus:outline-none ${className}`}
       >
-        Request Compliance Audit <ArrowRight size={12} />
+        Request Audit <ArrowRight size={12} />
       </Link>
     );
   }
@@ -67,7 +67,7 @@ export function AuditButton({
       href="/contact"
       className={`w-full py-3 px-4 bg-blue-400 hover:bg-blue-350 text-slate-950 rounded-xl text-xs font-bold transition-all shadow-[0_4px_20px_rgba(56,189,248,0.18)] hover:shadow-[0_4px_25px_rgba(56,189,248,0.4)] border border-blue-400/20 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-955 ${className}`}
     >
-      Request Compliance Audit <ArrowRight size={13} />
+      Request Audit <ArrowRight size={13} />
     </Link>
   );
 }

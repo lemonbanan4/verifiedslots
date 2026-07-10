@@ -120,7 +120,7 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
               href="/contact"
               className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[9px] font-bold text-slate-955 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate flex items-center justify-center gap-1"
             >
-              Request Compliance Audit <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
+              Request Audit <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
             </Link>
           )}
         </div>
