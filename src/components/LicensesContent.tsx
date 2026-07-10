@@ -39,9 +39,12 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
   const { visitorProfile } = useCompliance();
 
   // Filter casinos matching the license type. If Dutch, only show KSA.
-  const visibleCasinos = casinos.filter(
-    (c) => c.licenseType === licenseType && (visitorProfile !== "Local" || c.licenseType === "ksa")
-  );
+  const visibleCasinos = casinos.filter((c) => {
+    const types = c.licenseTypes && c.licenseTypes.length > 0 ? c.licenseTypes : [c.licenseType];
+    const matchesLicense = types.includes(licenseType as any);
+    const passesGeoCheck = visitorProfile !== "Local" || types.includes("ksa");
+    return matchesLicense && passesGeoCheck;
+  });
 
   // Setup dynamic content based on license type
   let heading = "";

@@ -33,11 +33,11 @@ export function AuthorBox({
     verificationUrl = "https://www.kansspelautoriteit.nl/kansspelwijzer/";
     verificationText = "Verify KSA Kansspelwijzer";
   } else if (licenseType === "mga") {
-    verificationUrl = "https://authorisation.mga.org.mt/verification.aspx";
+    verificationUrl = "https://www.mga.org.mt/licensee-hub/licensee-register/";
     verificationText = "Verify MGA Register";
   } else if (licenseType === "curacao") {
-    verificationUrl = "/licenses/curacao";
-    verificationText = "Audit Offshore Registry";
+    verificationUrl = "https://www.cga.cw/en/133i348441001";
+    verificationText = "Verify CGA Register";
   }
 
   return (

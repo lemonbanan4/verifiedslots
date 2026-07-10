@@ -40,6 +40,7 @@ export interface Casino {
   isLicensedInNL: boolean;
   license: string;
   licenseType: "ksa" | "mga" | "curacao";
+  licenseTypes?: Array<"ksa" | "mga" | "curacao">;
   restrictedCountries: string[];
   bonus: string;
   wagering: string;
@@ -1956,6 +1957,10 @@ export const casinos: Casino[] = [
     "isLicensedInNL": true,
     "licenseNumber": "Not explicitly stated on homepage, please verify",
     "licenseType": "mga",
+    "licenseTypes": [
+      "mga",
+      "ksa"
+    ],
     "restrictedCountries": [
       "NL",
       "US"

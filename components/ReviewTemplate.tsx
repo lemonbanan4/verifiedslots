@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { cookies, headers } from "next/headers";
 import { Casino } from "@/src/data/casinos";
 import { TrustAndSafety } from "./TrustAndSafety";
@@ -110,7 +111,7 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
                 <div className="mt-2 text-center py-2.5 px-4 rounded-xl text-[10px] font-bold uppercase tracking-wider text-rose-400 border border-rose-500/20 bg-rose-500/5 neon-border-rose">
                   Niet beschikbaar in NL
                 </div>
-              ) : (
+              ) : review.isPartner && review.affiliateUrl && review.affiliateUrl.trim().length > 0 ? (
                 <OutboundLinkWithTooltip
                   affiliateUrl={review.affiliateUrl}
                   isLicensedInNL={review.isLicensedInNL}
@@ -118,14 +119,25 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
                   licenseType={review.licenseType}
                   name={review.name}
                   welcomeBonus={currentWelcomeBonus}
-                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all ${
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
                     review.isLicensedInNL
                       ? "bg-emerald-400 hover:bg-emerald-350 shadow-emerald-500/10"
                       : "bg-blue-400 hover:bg-blue-350 shadow-blue-500/10"
                   }`}
                 >
-                  {review.isLicensedInNL ? (isNl ? "Claim Bonus & Speel" : "Claim Offer & Play") : "Visit Site (External)"}
+                  {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}
                 </OutboundLinkWithTooltip>
+              ) : (
+                <Link
+                  href="/contact"
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
+                    review.isLicensedInNL
+                      ? "bg-emerald-400 hover:bg-emerald-350 shadow-emerald-500/10"
+                      : "bg-blue-400 hover:bg-blue-350 shadow-blue-500/10"
+                  }`}
+                >
+                  {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}
+                </Link>
               )}
             </div>
 
