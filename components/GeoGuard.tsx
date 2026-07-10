@@ -13,11 +13,17 @@ interface GeoGuardProps {
 export function GeoGuard({ children }: GeoGuardProps) {
   const { isDutch, detectedCountry, setProfile } = useCompliance();
   const currentPath = usePathname() || "";
-  const [showPanel, setShowPanel] = useState(true);
+  const [showPanel, setShowPanel] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    if (typeof window !== "undefined") {
+      const hasSimulateParam = window.location.search.includes("simulate=true");
+      if (hasSimulateParam) {
+        setShowPanel(true);
+      }
+    }
   }, []);
 
   // Enforce compliance routing on client side as fallback
@@ -56,7 +62,7 @@ export function GeoGuard({ children }: GeoGuardProps) {
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Floating Simulation Control Panel */}
-      {mounted && showPanel && process.env.NODE_ENV === "development" && (
+      {mounted && showPanel && (
         <div className="fixed bottom-4 right-4 left-4 md:left-auto md:w-80 md:max-w-sm z-50 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl transition-all duration-300">
           <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
             <div className="flex items-center gap-2">
@@ -104,7 +110,7 @@ export function GeoGuard({ children }: GeoGuardProps) {
                   <ShieldCheck className="text-blue-400 shrink-0" size={16} />
                   <div>
                     <p className="font-bold text-blue-400 text-[10px] uppercase tracking-wider">🌐 Global Profile Active</p>
-                    <p className="text-[9px] text-slate-400 leading-tight">Showing MGA & Curaçao directories.</p>
+                    <p className="text-[9px] text-slate-450 leading-tight">Showing MGA & Curaçao directories.</p>
                   </div>
                 </>
               )}
@@ -114,7 +120,7 @@ export function GeoGuard({ children }: GeoGuardProps) {
       )}
 
       {/* Mini Toggle tab if hidden */}
-      {!showPanel && process.env.NODE_ENV === "development" && (
+      {!showPanel && (
         <button
           onClick={() => setShowPanel(true)}
           className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-white/10 hover:bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 cursor-pointer"
