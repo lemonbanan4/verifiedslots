@@ -115,6 +115,9 @@ export function Footer() {
             <Link href="/responsible-gambling" className="hover:text-slate-300 transition-colors">
               Responsible Gambling
             </Link>
+            <Link href="/partnership" className="hover:text-slate-300 transition-colors">
+              Partnerships
+            </Link>
           </div>
 
           {/* Licensed & Audited Badge */}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Info, BookOpen, AlertTriangle, ChevronDown, MessageSquare, Shield } from "lucide-react";
+import { Info, BookOpen, AlertTriangle, ChevronDown, MessageSquare, Shield, Handshake } from "lucide-react";
 
 export function Navbar() {
   const currentPath = usePathname() || "";
@@ -102,7 +102,7 @@ export function Navbar() {
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
           <button
-            className={`flex items-center gap-1.5 transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent cursor-pointer font-bold uppercase tracking-wider text-[10px] md:text-[11px] ${["/editorial-policy", "/responsible-gambling", "/contact"].includes(currentPath)
+            className={`flex items-center gap-1.5 transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent cursor-pointer font-bold uppercase tracking-wider text-[10px] md:text-[11px] ${["/editorial-policy", "/responsible-gambling", "/contact", "/partnership"].includes(currentPath)
                 ? "text-blue-400 bg-blue-500/10 border-blue-500/20"
                 : "text-slate-350 hover:text-white hover:bg-white/5"
               }`}
@@ -157,6 +157,19 @@ export function Navbar() {
                 >
                   <MessageSquare size={13} aria-hidden="true" />
                   <span>Contact</span>
+                </Link>
+
+                <Link
+                  href="/partnership"
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-left transition-colors text-[10px] md:text-[11px] font-bold uppercase tracking-wider ${currentPath === "/partnership"
+                      ? "text-indigo-400 bg-indigo-500/10"
+                      : "text-slate-350 hover:text-white hover:bg-white/5"
+                    }`}
+                  role="menuitem"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <Handshake size={13} aria-hidden="true" />
+                  <span>Partners</span>
                 </Link>
               </div>
             </div>
