@@ -7,6 +7,11 @@
   "isLicensedInNL": true,
   "licenseNumber": "KSA/1782/30912",
   "licenseType": "ksa",
+  "licenseTypes": [
+    "ksa",
+    "mga",
+    "ukgc"
+  ],
   "restrictedCountries": [],
   "rating": 9.4,
   "author": "iGaming Compliance Specialist",

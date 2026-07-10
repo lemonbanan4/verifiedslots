@@ -7,6 +7,10 @@
   "isLicensedInNL": false,
   "licenseNumber": "MGA/B2C/218/2012",
   "licenseType": "mga",
+  "licenseTypes": [
+    "mga",
+    "ukgc"
+  ],
   "restrictedCountries": [
     "NL",
     "US"

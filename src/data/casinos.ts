@@ -129,6 +129,11 @@ export const casinos: Casino[] = [
     "isLicensedInNL": true,
     "licenseNumber": "KSA/1782/30912",
     "licenseType": "ksa",
+    "licenseTypes": [
+      "ksa",
+      "mga",
+      "ukgc"
+    ],
     "restrictedCountries": [],
     "rating": 9.4,
     "author": "iGaming Compliance Specialist",
@@ -1391,7 +1396,8 @@ export const casinos: Casino[] = [
     "licenseType": "mga",
     "licenseTypes": [
       "mga",
-      "ksa"
+      "ksa",
+      "ukgc"
     ],
     "restrictedCountries": [
       "NL",
@@ -2468,6 +2474,11 @@ export const casinos: Casino[] = [
     "isLicensedInNL": false,
     "licenseNumber": "MGA/B2C/106/2000",
     "licenseType": "mga",
+    "licenseTypes": [
+      "mga",
+      "ksa",
+      "ukgc"
+    ],
     "restrictedCountries": [
       "NL",
       "USA",
@@ -2803,6 +2814,10 @@ export const casinos: Casino[] = [
     "isLicensedInNL": false,
     "licenseNumber": "MGA/B2C/218/2012",
     "licenseType": "mga",
+    "licenseTypes": [
+      "mga",
+      "ukgc"
+    ],
     "restrictedCountries": [
       "NL",
       "US"
