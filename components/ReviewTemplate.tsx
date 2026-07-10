@@ -43,6 +43,10 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     ? types.map((t) => t.toLowerCase()).includes(activeLicenseRoute.toLowerCase())
     : true;
 
+  const activeRegulator = activeLicenseRoute 
+    ? activeLicenseRoute.toLowerCase()
+    : review.licenseType.toLowerCase();
+
   // geo location
   const headerStore = await headers();
   const userCountry = headerStore.get('x-user-country') || 'global';
@@ -224,7 +228,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
               <div className="mt-3 pt-2.5 border-t border-white/5 flex flex-wrap items-center justify-between gap-1.5 text-[10px]">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="text-slate-450 font-bold uppercase tracking-wider">Source / Official Regulator:</span>
-                  {review.licenseType === "ksa" ? (
+                  {activeRegulator === "ksa" ? (
                     <a
                       href="https://kansspelautoriteit.nl/"
                       target="_blank"
@@ -233,7 +237,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                     >
                       Kansspelautoriteit (KSA) Official Website
                     </a>
-                  ) : review.licenseType === "mga" ? (
+                  ) : activeRegulator === "mga" ? (
                     <a
                       href="https://www.mga.org.mt/"
                       target="_blank"
@@ -254,7 +258,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                   )}
                 </div>
 
-                <LicenseVerifier licenseType={review.licenseType} licenseNumber={review.licenseNumber} />
+                <LicenseVerifier licenseType={activeRegulator} licenseNumber={review.licenseNumber} />
               </div>
             </div>
           </div>
@@ -271,7 +275,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
             <div className="space-y-3.5 text-[11px]">
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-slate-400">Jurisdiction:</span>
-                <span className="font-bold text-white uppercase">{review.licenseType}</span>
+                <span className="font-bold text-white uppercase">{activeRegulator}</span>
               </div>
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-slate-400">Verified RTP:</span>
@@ -296,7 +300,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
         <div className="reveal-card delay-3 lg:col-span-3 optimize-gpu">
           <AuthorBox
             authorName={review.author}
-            licenseType={review.licenseType}
+            licenseType={activeRegulator}
             licenseNumber={review.licenseNumber}
           />
         </div>

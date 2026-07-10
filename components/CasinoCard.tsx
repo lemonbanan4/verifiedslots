@@ -9,12 +9,19 @@ import type { Casino } from "@/src/data/casinos";
 
 interface CasinoCardProps {
   casino: Casino;
+  licenseType?: string;
 }
 
-export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardProps) {
-  const isKsa = casino.licenseType === "ksa";
-  const isMga = casino.licenseType === "mga";
-  const ratingScale = isKsa ? "/10" : "/5";
+export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }: CasinoCardProps) {
+  // Determine active license based on page context
+  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
+  const activeLicense = licenseType && types.includes(licenseType as any)
+    ? licenseType.toLowerCase()
+    : casino.licenseType.toLowerCase();
+
+  const isKsa = activeLicense === "ksa";
+  const isMga = activeLicense === "mga";
+  const ratingScale = "/10";
 
   let badgeText = "";
   let badgeClass = "";
@@ -29,9 +36,9 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
     badgeClass = "bg-blue-500/15 border border-blue-500/30 text-blue-400";
     icon = <ShieldCheck size={13} className="text-blue-400 shrink-0" />;
   } else {
-    badgeText = "Curaçao Licensed";
+    badgeText = "UKGC Regulated";
     badgeClass = "bg-amber-500/15 border border-amber-500/30 text-amber-400";
-    icon = <ShieldAlert size={13} className="text-amber-400 shrink-0" />;
+    icon = <ShieldCheck size={13} className="text-amber-400 shrink-0" />;
   }
 
   return (
@@ -103,7 +110,7 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
 
         <div className="flex gap-2 w-full">
           <Link
-            href={`/audits/${casino.licenseType.toLowerCase()}/${casino.slug.toLowerCase()}`}
+            href={`/audits/${activeLicense}/${casino.slug.toLowerCase()}`}
             className="flex-1 min-w-0 text-center py-2.5 px-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate"
           >
             Read Review
@@ -112,9 +119,9 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
             <OutboundLink
               href={casino.affiliateUrl}
               className={`flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer ${
-                casino.licenseType === "ksa"
+                activeLicense === "ksa"
                   ? "bg-emerald-500 hover:bg-emerald-450 focus:ring-emerald-500"
-                  : casino.licenseType === "mga"
+                  : activeLicense === "mga"
                   ? "bg-sky-500 hover:bg-sky-450 focus:ring-sky-500"
                   : "bg-amber-400 hover:bg-amber-350 focus:ring-amber-500"
               }`}
