@@ -20,7 +20,7 @@ export default function TermsPage() {
 
           <h2 className="text-base font-bold text-white mt-6 mb-2">1. Directory Purpose & Disclaimer</h2>
           <p>
-            VerifiedSlots is an independent compliance auditing directory. The content provided is for informational purposes only. We verify operator licensing status, fund segregation, and playthrough transparency based on public files and regulatory enforcement records. This information does not constitute financial, legal, or professional advice.
+            VerifiedSlots is not an online gambling operator, does not process wagers, and does not conduct any real-money transaction services. The content provided is an independent compliance auditing directory and is for informational, audit, and educational purposes only. We verify operator licensing status, fund segregation, and playthrough transparency based on public files and regulatory enforcement records. This information does not constitute financial, legal, or professional advice.
           </p>
 
           <h2 className="text-base font-bold text-white mt-6 mb-2">2. Limitation of Liability</h2>
@@ -33,7 +33,7 @@ export default function TermsPage() {
             User acknowledges that VerifiedSlots receives commissions through outbound affiliate referral links. These sponsorships do not affect the impartiality of our compliance ratings or scoring algorithms.
           </p>
 
-          <h2 className="text-base font-bold text-white mt-6 mb-2">4. Company Information</h2>
+          <h2 className="text-base font-bold text-white mt-6 mb-2">4. Corporate Information</h2>
           <p>
             VerifiedSlots.com is a trade name of CogCore LLC. Registered Office: 30 N Gould St Ste R, Sheridan, WY 82801, USA.
           </p>
