@@ -81,11 +81,6 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
         </div>
       </div>
 
-      {/* ── Body: title, domain, description ────────────────────────── */}
-      {/*
-       * flex-grow pushes the footer (bonus + buttons) to the bottom of the
-       * card so every card in the grid row aligns at the same breakpoint.
-       */}
       <div className="flex-grow min-w-0 w-full">
         <h3 className="text-lg font-bold text-slate-100 mb-1 flex items-center gap-1.5 min-w-0 truncate">
           {casino.name}
@@ -96,20 +91,16 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
         </p>
       </div>
 
-      {/* ── Footer: bonus banner + CTA buttons ──────────────────────── */}
       <div className="mt-6 space-y-3 w-full min-w-0">
-        {/* Bonus banner — w-full + box-border prevents horizontal bleed */}
         <div className="w-full box-border bg-slate-950/40 border border-white/5 p-3 rounded-xl">
           <p className="text-[9px] uppercase tracking-wider font-bold text-slate-400">
             Welcome Offer
           </p>
-          {/* truncate clips long bonus strings (e.g. "100% up to €1000 + 200 FS") */}
           <p className="text-xs font-bold text-emerald-400 truncate w-full">
             {casino.welcomeBonus}
           </p>
         </div>
 
-        {/* Action buttons — w-full row, each button gets flex-1 */}
         <div className="flex gap-2 w-full">
           <Link
             href={`/audits/${casino.licenseType.toLowerCase()}/${casino.slug.toLowerCase()}`}
@@ -125,15 +116,42 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
               Visit Site <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
             </OutboundLink>
           ) : (
-            <a
-              href={`mailto:audits@verifiedslots.com?subject=Expedited%20Audit%20Request%3A%20${encodeURIComponent(casino.name)}&body=This%20operator%20is%20currently%20under%20evaluation.%20Request%20an%20expedited%20compliance%20audit%20for%20this%20brand.`}
-              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[10px] font-bold text-white flex items-center justify-center gap-1 transition-all bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
+            <button
+              onClick={() => setShowExpeditedModal(true)}
+              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[9px] font-bold text-slate-955 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate"
             >
-              Request Audit
-            </a>
+              Request Compliance Audit
+            </button>
           )}
         </div>
       </div>
+
+      {showExpeditedModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+          <div className="bg-slate-900 border border-white/10 p-6 rounded-2xl max-w-md w-full shadow-2xl space-y-4 text-left">
+            <h4 className="text-xs font-bold text-white uppercase tracking-widest border-b border-white/5 pb-2">
+              Compliance Evaluation Notice
+            </h4>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              This operator is currently under evaluation by <strong>CogCore LLC</strong>. If you are a player, please check back soon. If you are a representative, please contact us for an expedited audit.
+            </p>
+            <div className="flex justify-end gap-2 pt-2">
+              <a
+                href={`mailto:audits@verifiedslots.com?subject=Expedited%20Audit%20Request%3A%20${encodeURIComponent(casino.name)}`}
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition-all text-center"
+              >
+                Contact Desk
+              </a>
+              <button
+                onClick={() => setShowExpeditedModal(false)}
+                className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-lg text-xs font-bold transition-all cursor-pointer"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 });
