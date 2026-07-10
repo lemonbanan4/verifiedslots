@@ -230,7 +230,7 @@ export const casinos: Casino[] = [
         "title": "Table Games",
         "description": "Classic card and dice games featuring RNG fairness certifications.",
         "notable": "Multihand Blackjack",
-        "iconName": "cards"
+        "iconName": "dice"
       }
     ],
     "paymentSummary": "Deposits are processed instantly and safely using direct bank transfers. Withdrawals are directly routed back to the linked player bank account.",
@@ -275,7 +275,7 @@ export const casinos: Casino[] = [
         "title": "Self-Exclusion Registry",
         "description": "Integrates directly with national registries (like CRUKS in NL or GAMSTOP in the UK) to block access when requested.",
         "status": "success",
-        "iconName": "shield"
+        "iconName": "shield-ban"
       }
     ],
     "comparisonTitle": "Comparison: Bet365 vs. Offshore Operators",
@@ -323,6 +323,7 @@ export const casinos: Casino[] = [
         "answer": "Yes. Bet365 is integrated with CRUKS in the Netherlands and GAMSTOP in the United Kingdom, ensuring compliance with player exclusion requests."
       }
     ],
+    "license": "KSA/1782/30912",
     "bonus": "50 Free Spins",
     "wagering": "1x"
   },
