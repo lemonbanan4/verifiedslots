@@ -57,6 +57,7 @@ export interface Casino {
   summaryText: string;
   warningText?: string;
   affiliateUrl: string;
+  isPartner?: boolean;
 
   // Verdict section
   editorialVerdict?: string;
@@ -238,8 +239,8 @@ export const casinos: Casino[] = [
     "welcomeBonus": "50 Free Spins or €50 Bet Credits",
     "gameLibraryCount": "1,000+ Titles",
     "summaryText": "Bet365 NL brings its massive global betting brand to the regulated Dutch market. Holding a valid KSA license, they provide a stellar sports betting platform alongside a dedicated online casino lobby featuring secure iDEAL deposits.",
-    "warningText": "KSA Regulated: Full sports and casino authorization in the Netherlands.",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://track.affiliate-link.com/bet365-nl-bonus",
+    "isPartner": true,
     "pros": [
       "World's leading sports betting and casino operator with KSA approval.",
       "Highly responsive mobile application for Dutch players.",
@@ -3571,8 +3572,8 @@ export const casinos: Casino[] = [
     "welcomeBonus": "100% up to £100 + 50 Free Spins",
     "gameLibraryCount": "1,500+ Titles",
     "summaryText": "Unibet is a globally recognized iGaming operator offering a comprehensive platform for sports betting, casino games, and live dealer experiences. With a strong focus on security and responsible gaming, Unibet provides a tailored experience to players in various regulated markets worldwide.",
-    "warningText": "Gambling can be addictive. Play responsibly. For help, visit your local responsible gambling authority.",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://track.unibet-affiliates.com/casino-bonus",
+    "isPartner": true,
     "pros": [
       "Globally recognized brand",
       "Wide range of casino & sports products",

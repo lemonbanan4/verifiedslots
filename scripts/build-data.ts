@@ -99,6 +99,7 @@ export interface Casino {
   summaryText: string;
   warningText?: string;
   affiliateUrl: string;
+  isPartner?: boolean;
 
   // Verdict section
   editorialVerdict?: string;

@@ -12,7 +12,6 @@ interface CasinoCardProps {
 }
 
 export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardProps) {
-  const [showExpeditedModal, setShowExpeditedModal] = React.useState(false);
   const isKsa = casino.licenseType === "ksa";
   const isMga = casino.licenseType === "mga";
   const ratingScale = isKsa ? "/10" : "/5";
@@ -109,50 +108,23 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
           >
             Read Review
           </Link>
-          {casino.affiliateUrl && casino.affiliateUrl.trim().length > 0 ? (
+          {casino.isPartner && casino.affiliateUrl && casino.affiliateUrl.trim().length > 0 ? (
             <OutboundLink
               href={casino.affiliateUrl}
-              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-950 flex items-center justify-center gap-1 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
+              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
             >
-              Visit Site <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
+              Visit Operator <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
             </OutboundLink>
           ) : (
-            <button
-              onClick={() => setShowExpeditedModal(true)}
-              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[9px] font-bold text-slate-955 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate"
+            <Link
+              href="/contact"
+              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-[9px] font-bold text-slate-955 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer truncate flex items-center justify-center gap-1"
             >
-              Request Compliance Audit
-            </button>
+              Request Compliance Audit <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
+            </Link>
           )}
         </div>
       </div>
-
-      {showExpeditedModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-white/10 p-6 rounded-2xl max-w-md w-full shadow-2xl space-y-4 text-left">
-            <h4 className="text-xs font-bold text-white uppercase tracking-widest border-b border-white/5 pb-2">
-              Compliance Evaluation Notice
-            </h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              This operator is currently under evaluation by <strong>CogCore LLC</strong>. If you are a player, please check back soon. If you are a representative, please contact us for an expedited audit.
-            </p>
-            <div className="flex justify-end gap-2 pt-2">
-              <a
-                href={`mailto:audits@verifiedslots.com?subject=Expedited%20Audit%20Request%3A%20${encodeURIComponent(casino.name)}`}
-                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition-all text-center"
-              >
-                Contact Desk
-              </a>
-              <button
-                onClick={() => setShowExpeditedModal(false)}
-                className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-lg text-xs font-bold transition-all cursor-pointer"
-              >
-                Dismiss
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </motion.div>
   );
 });

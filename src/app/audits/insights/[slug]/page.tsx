@@ -246,6 +246,7 @@ export default async function AuditInsightPage({ params }: AuditInsightPageProps
 
             <AuditButton
               affiliateLink={audit.affiliateLink}
+              isPartner={audit.isPartner}
               variant="block"
             />
           </div>

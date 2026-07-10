@@ -29,8 +29,8 @@
   "welcomeBonus": "100% up to £100 + 50 Free Spins",
   "gameLibraryCount": "1,500+ Titles",
   "summaryText": "Unibet is a globally recognized iGaming operator offering a comprehensive platform for sports betting, casino games, and live dealer experiences. With a strong focus on security and responsible gaming, Unibet provides a tailored experience to players in various regulated markets worldwide.",
-  "warningText": "Gambling can be addictive. Play responsibly. For help, visit your local responsible gambling authority.",
-  "affiliateUrl": "",
+  "affiliateUrl": "https://track.unibet-affiliates.com/casino-bonus",
+  "isPartner": true,
   "pros": [
     "Globally recognized brand",
     "Wide range of casino & sports products",

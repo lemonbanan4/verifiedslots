@@ -52,6 +52,8 @@ export interface Audit {
   sections: AuditSection[];
   /** Optional affiliate redirect link to visit the operator directly */
   affiliateLink?: string;
+  /** Boolean flag to indicate whether the operator has a signed partner contract */
+  isPartner?: boolean;
   /** SEO specific meta title (max 60 chars) */
   metaTitle?: string;
   /** SEO specific meta description (max 160 chars) */
