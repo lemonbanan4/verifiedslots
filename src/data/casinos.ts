@@ -240,7 +240,7 @@ export const casinos: Casino[] = [
     "welcomeBonus": "50 Free Spins or €50 Bet Credits",
     "gameLibraryCount": "1,000+ Titles",
     "summaryText": "Bet365 NL brings its massive global betting brand to the regulated Dutch market. Holding a valid KSA license, they provide a stellar sports betting platform alongside a dedicated online casino lobby featuring secure iDEAL deposits.",
-    "affiliateUrl": "https://track.affiliate-link.com/bet365-nl-bonus",
+    "affiliateUrl": "",
     "isPartner": true,
     "pros": [
       "World's leading sports betting and casino operator with KSA approval.",
@@ -1975,7 +1975,7 @@ export const casinos: Casino[] = [
     "summaryText": "Leovegas is a renowned mobile-first online casino offering a vast selection of casino games, live casino, and sports betting. Players can enjoy a comprehensive gaming experience with a generous welcome package and various ongoing promotions.",
     "editorialVerdict": "Leovegas stands out as a highly trusted and compliant iGaming operator, particularly noted for its mobile platform excellence and commitment to responsible gambling. With licenses in multiple reputable jurisdictions including MGA (for its global operations) and KSA (for the Netherlands), it adheres to stringent regulatory standards. Payout speeds are generally fast, often within 24 hours for e-wallets, reflecting efficient financial processing. Its long-standing reputation and consistent positive player feedback underscore its reliability. New players can confidently engage with Leovegas, knowing they are with an operator that prioritizes security, fairness, and player welfare, making it a top choice for a secure and enjoyable online casino experience.",
     "warningText": "Leovegas is subject to geo-restrictions, and the welcome offer may vary by country. Please check local terms and conditions.",
-    "affiliateUrl": "https://track.leovegas-affiliates.com/casino-bonus",
+    "affiliateUrl": "",
     "pros": [
       "Award-winning mobile casino experience",
       "Extensive game library from top providers",
@@ -3914,7 +3914,7 @@ export const casinos: Casino[] = [
     "welcomeBonus": "100% up to £100 + 50 Free Spins",
     "gameLibraryCount": "1,500+ Titles",
     "summaryText": "Unibet is a globally recognized iGaming operator offering a comprehensive platform for sports betting, casino games, and live dealer experiences. With a strong focus on security and responsible gaming, Unibet provides a tailored experience to players in various regulated markets worldwide.",
-    "affiliateUrl": "https://track.unibet-affiliates.com/casino-bonus",
+    "affiliateUrl": "",
     "isPartner": true,
     "pros": [
       "Globally recognized brand",
