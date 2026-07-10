@@ -120,9 +120,11 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
                   name={review.name}
                   welcomeBonus={currentWelcomeBonus}
                   className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
-                    review.isLicensedInNL
-                      ? "bg-emerald-400 hover:bg-emerald-350 shadow-emerald-500/10"
-                      : "bg-blue-400 hover:bg-blue-350 shadow-blue-500/10"
+                    review.licenseType === "ksa"
+                      ? "bg-emerald-500 hover:bg-emerald-450 shadow-emerald-500/10"
+                      : review.licenseType === "mga"
+                      ? "bg-sky-500 hover:bg-sky-450 shadow-sky-500/10"
+                      : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
                   }`}
                 >
                   {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}

@@ -111,7 +111,13 @@ export const CasinoCard = React.memo(function CasinoCard({ casino }: CasinoCardP
           {casino.isPartner && casino.affiliateUrl && casino.affiliateUrl.trim().length > 0 ? (
             <OutboundLink
               href={casino.affiliateUrl}
-              className="flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all bg-blue-400 hover:bg-blue-350 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer"
+              className={`flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer ${
+                casino.licenseType === "ksa"
+                  ? "bg-emerald-500 hover:bg-emerald-450 focus:ring-emerald-500"
+                  : casino.licenseType === "mga"
+                  ? "bg-sky-500 hover:bg-sky-450 focus:ring-sky-500"
+                  : "bg-amber-400 hover:bg-amber-350 focus:ring-amber-500"
+              }`}
             >
               Visit Operator <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
             </OutboundLink>

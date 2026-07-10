@@ -7,6 +7,8 @@ interface AuditButtonProps {
   affiliateLink?: string;
   /** Boolean flag to indicate whether the operator has a signed partner contract */
   isPartner?: boolean;
+  /** License jurisdiction held by this operator (e.g. ksa, mga, curacao) */
+  licenseType?: string;
   /** Triggered when the button is clicked and there is no affiliate link */
   onClick?: () => void;
   /** Visual presentation style: "block" (large card button) or "inline" (small text button) */
@@ -18,6 +20,7 @@ interface AuditButtonProps {
 export function AuditButton({
   affiliateLink,
   isPartner = false,
+  licenseType = "mga",
   onClick,
   variant = "block",
   className = "",
@@ -50,12 +53,21 @@ export function AuditButton({
 
   // Block style (large card button)
   if (hasAffiliate) {
+    let buttonColorClass = "";
+    if (licenseType === "ksa") {
+      buttonColorClass = "bg-emerald-500 hover:bg-emerald-450 text-slate-950 shadow-[0_4px_20px_rgba(16,185,129,0.18)] hover:shadow-[0_4px_25px_rgba(16,185,129,0.4)] border border-emerald-500/20 focus:ring-emerald-500";
+    } else if (licenseType === "mga") {
+      buttonColorClass = "bg-sky-500 hover:bg-sky-450 text-slate-955 shadow-[0_4px_20px_rgba(14,165,233,0.18)] hover:shadow-[0_4px_25px_rgba(14,165,233,0.4)] border border-sky-500/20 focus:ring-sky-500";
+    } else {
+      buttonColorClass = "bg-amber-400 hover:bg-amber-350 text-slate-955 shadow-[0_4px_20px_rgba(245,158,11,0.18)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.4)] border border-amber-500/20 focus:ring-amber-500";
+    }
+
     return (
       <a
         href={affiliateLink}
         target="_blank"
         rel="noopener noreferrer"
-        className={`w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-all shadow-[0_4px_20px_rgba(16,185,129,0.18)] hover:shadow-[0_4px_25px_rgba(16,185,129,0.4)] border border-emerald-500/20 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-955 ${className}`}
+        className={`w-full py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-955 ${buttonColorClass} ${className}`}
       >
         Visit Operator <ExternalLink size={13} />
       </a>
