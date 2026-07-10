@@ -273,7 +273,7 @@ Wat kost gokken jou? Stop op tijd. 18+
 
   const finalOutputPath = outputPath
     ? path.resolve(outputPath)
-    : path.resolve(__dirname, `../content/reviews/${slug}.md`);
+    : path.resolve(process.cwd(), `src/content/reviews/${slug}.md`);
 
   const outputDir = path.dirname(finalOutputPath);
   if (!fs.existsSync(outputDir)) {
