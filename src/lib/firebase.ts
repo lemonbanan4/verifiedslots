@@ -1,6 +1,9 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { createLogger } from "@/src/utils/logging";
+
+const log = createLogger("firebase");
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -28,7 +31,7 @@ if (isFirebaseConfigured) {
     db = getFirestore(app);
     auth = getAuth(app);
   } catch (error) {
-    console.error("Failed to initialize Firebase SDK:", error);
+    log.error("Failed to initialize Firebase SDK", { error });
   }
 }
 

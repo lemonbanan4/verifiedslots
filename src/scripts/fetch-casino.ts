@@ -3,9 +3,12 @@ import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
+import { createLogger } from '@/src/utils/logging';
 
 // Load environment variables
 dotenv.config();
+
+const log = createLogger('fetch-casino');
 
 const SCRAPINGANT_API_KEY = process.env.SCRAPINGANT_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -17,7 +20,7 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
  */
 async function fetchHtml(url: string): Promise<string> {
     if (!SCRAPINGANT_API_KEY) {
-        console.warn('⚠️ SCRAPINGANT_API_KEY not found in env. Falling back to direct axios fetch...');
+        log.warn('SCRAPINGANT_API_KEY not found in env. Falling back to direct axios fetch...');
         const response = await axios.get(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -26,14 +29,14 @@ async function fetchHtml(url: string): Promise<string> {
         return response.data;
     }
 
-    console.log(`🚀 Scraping via ScrapingAnt: ${url}`);
+    log.info(`Scraping via ScrapingAnt: ${url}`);
     const scrapingAntUrl = `https://api.scrapingant.com/v2/general?url=${encodeURIComponent(url)}&x-api-key=${SCRAPINGANT_API_KEY}&browser=true&stealth=true&proxy_type=residential`;
     try {
         const response = await axios.get(scrapingAntUrl);
         return response.data;
     } catch (error: any) {
         if (error.response?.data) {
-            console.error('❌ ScrapingAnt Error Response Details:', JSON.stringify(error.response.data));
+            log.error('ScrapingAnt error response details', { data: error.response.data });
         }
         throw error;
     }
@@ -47,7 +50,7 @@ async function parseCasinoHtmlWithGemini(homeHtml: string, termsHtml: string, na
         throw new Error('❌ GEMINI_API_KEY is required to parse scraped HTML into review JSON. Please check your .env file.');
     }
 
-    console.log('🤖 Parsing HTML content using Gemini AI...');
+    log.info('Parsing HTML content using Gemini AI...');
     const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
     const prompt = `
@@ -222,7 +225,7 @@ function mergeData(existing: any, newData: any) {
 async function main() {
     const args = process.argv.slice(2);
     if (args.length < 3) {
-        console.error('❌ Usage: npx tsx src/scripts/fetch-casino.ts <url> <name> <domain>');
+        log.error('Usage: npx tsx src/scripts/fetch-casino.ts <url> <name> <domain>');
         process.exit(1);
     }
 
@@ -236,18 +239,18 @@ async function main() {
     // 2. FETCH DATA FIRST (Since 'data' needs to exist for the merge)
     let data;
     try {
-        console.log(`🚀 Fetching homepage: ${url}`);
+        log.info(`Fetching homepage: ${url}`);
         const htmlHome = await fetchHtml(url);
 
         await sleep(2000); // Wait 2 seconds before the next request to free up the concurrency slot
 
         const termsUrl = url.replace(/\/$/, "") + "/terms-and-conditions/";
-        console.log(`🚀 Fetching terms page: ${termsUrl}`);
+        log.info(`Fetching terms page: ${termsUrl}`);
         let htmlTerms = "";
         try {
             htmlTerms = await fetchHtml(termsUrl);
         } catch (termsError: any) {
-            console.warn(`⚠️ Warning: Failed to fetch terms page: ${termsError.message}. Proceeding with homepage only.`);
+            log.warn('Failed to fetch terms page. Proceeding with homepage only.', { error: termsError });
         }
 
         data = await parseCasinoHtmlWithGemini(htmlHome, htmlTerms, name, domain);
@@ -255,24 +258,24 @@ async function main() {
         // Secondary SEARCH LOGIC
         if (!data.isKsaLicensed || !data.licenseNumber || !data.licenseType) {
             try {
-                console.log('⏳ Waiting 2 seconds before secondary search to reduce rate-limiting...');
+                log.info('Waiting 2 seconds before secondary search to reduce rate-limiting...');
                 await sleep(2000);
                 const secondarySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(`${name} ${domain} license`)}`;
                 const secondaryHtml = await fetchHtml(secondarySearchUrl);
                 const secondaryData = await parseCasinoHtmlWithGemini(secondaryHtml, "", name, domain);
                 data = { ...data, ...secondaryData };
             } catch (searchError: any) {
-                console.warn('⚠️ Warning: Secondary license search failed (likely blocked by Google). Proceeding with primary scraped data.');
+                log.warn('Secondary license search failed (likely blocked by Google). Proceeding with primary scraped data.', { error: searchError });
             }
         }
     } catch (error: any) {
-        console.warn(`⚠️ Primary scraping failed: ${error.message}. Falling back to Google Search Grounding...`);
+        log.warn('Primary scraping failed. Falling back to Google Search Grounding...', { error });
         try {
             if (!GEMINI_API_KEY) {
-                throw new Error('❌ GEMINI_API_KEY is required for fallback research. Please check your .env file.');
+                throw new Error('GEMINI_API_KEY is required for fallback research. Please check your .env file.');
             }
             const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-            console.log('📡 Querying Google Search Grounding to research operator data...');
+            log.info('Querying Google Search Grounding to research operator data...');
             const searchPrompt = `Please search Google and research compliance metrics, licensing status (MGA, KSA, Curaçao), welcome bonuses, game library sizes, restricted countries, and safety information for the operator: "${name}" (${domain}).`;
             const searchResponse = await ai.models.generateContent({
                 model: "gemini-2.5-flash",
@@ -283,10 +286,10 @@ async function main() {
             });
             const researchFacts = searchResponse.text || "";
             
-            console.log('🤖 Parsing research facts into structured review JSON...');
+            log.info('Parsing research facts into structured review JSON...');
             data = await parseCasinoHtmlWithGemini(researchFacts, "", name, domain);
         } catch (fallbackError: any) {
-            console.error('❌ Error: Fallback research also failed:', fallbackError.message);
+            log.error('Fallback research also failed', { error: fallbackError });
             process.exit(1);
         }
     }
@@ -299,7 +302,7 @@ async function main() {
             existingData = JSON.parse(fileContent);
         }
     } catch (e: any) {
-        console.error("Error reading existing data:", e.message);
+        log.error("Error reading existing data", { error: e });
     }
 
     // 4. MERGE AND SAVE
@@ -310,7 +313,7 @@ async function main() {
     }
 
     fs.writeFileSync(filePath, JSON.stringify(finalData, null, 2), 'utf-8');
-    console.log(`\n🎉 Successfully saved data to: ${filePath}`);
+    log.info(`Successfully saved data to: ${filePath}`);
 }
 
 main();

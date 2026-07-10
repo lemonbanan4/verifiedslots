@@ -1,12 +1,15 @@
 import * as fs from "fs";
 import * as path from "path";
+import { createLogger } from "@/src/utils/logging";
+
+const log = createLogger("build-data");
 
 function main() {
   const reviewsDir = path.resolve("./src/content/reviews");
   const outputPath = path.resolve("./src/data/casinos.ts");
 
   if (!fs.existsSync(reviewsDir)) {
-    console.error(`❌ Error: content directory not found at: ${reviewsDir}`);
+    log.error(`Content directory not found at: ${reviewsDir}`);
     process.exit(1);
   }
 
@@ -32,8 +35,7 @@ function main() {
 
       casinos.push(casino);
     } catch (err) {
-      console.error(`❌ Error parsing JSON file: ${filePath}`);
-      console.error(err);
+      log.error(`Error parsing JSON file: ${filePath}`, { error: err });
       process.exit(1);
     }
   }
@@ -165,7 +167,7 @@ export interface Casino {
   const casinosCode = `${interfacesCode}\nexport const casinos: Casino[] = ${JSON.stringify(casinos, null, 2)};\n\nexport function isCasinoAvailableInCountry(slug: string, countryCode: string): boolean {\n  const casino = casinos.find((c) => c.slug === slug);\n  if (!casino) return false;\n  return !casino.restrictedCountries.includes(countryCode);\n}\n`;
 
   fs.writeFileSync(outputPath, casinosCode, "utf-8");
-  console.log(`🎉 Successfully compiled ${casinos.length} reviews from JSON to ${outputPath}`);
+  log.info(`Successfully compiled ${casinos.length} reviews from JSON to ${outputPath}`);
 }
 
 main();

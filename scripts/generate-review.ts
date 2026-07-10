@@ -1,5 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
+import { createLogger } from "@/src/utils/logging";
+
+const log = createLogger("generate-review");
 
 // Define the interface for the raw input JSON
 interface RawCasinoInput {
@@ -28,15 +31,14 @@ function main() {
   const outputPath = args[1];
 
   if (!inputPath) {
-    console.error("❌ Error: Missing input JSON file path.");
-    console.log("Usage: npx tsx scripts/generate-review.ts <input-json-path> [output-md-path]");
+    log.error("Missing input JSON file path. Usage: npx tsx scripts/generate-review.ts <input-json-path> [output-md-path]");
     process.exit(1);
   }
 
   // 1. Load and parse raw JSON input
   const resolvedInputPath = path.resolve(inputPath);
   if (!fs.existsSync(resolvedInputPath)) {
-    console.error(`❌ Error: File not found at path: ${resolvedInputPath}`);
+    log.error(`File not found at path: ${resolvedInputPath}`);
     process.exit(1);
   }
 
@@ -45,8 +47,7 @@ function main() {
     const fileContent = fs.readFileSync(resolvedInputPath, "utf-8");
     rawData = JSON.parse(fileContent);
   } catch (err) {
-    console.error("❌ Error parsing input JSON file. Ensure it is valid JSON.");
-    console.error(err);
+    log.error("Error parsing input JSON file. Ensure it is valid JSON.", { error: err });
     process.exit(1);
   }
 
@@ -73,7 +74,7 @@ function main() {
   // 2. Compliance Guardrail Validation Layer
   const validLicenses = ["ksa", "mga", "ukgc"];
   if (!validLicenses.includes(licenseType)) {
-    console.error(`❌ Compliance Failure: Invalid licenseType "${licenseType}". Allowed types: ${validLicenses.join(", ")}`);
+    log.error(`Compliance failure: invalid licenseType "${licenseType}". Allowed types: ${validLicenses.join(", ")}`);
     process.exit(1);
   }
 
@@ -81,17 +82,17 @@ function main() {
 
   if (licenseType === "ksa") {
     if (isRestrictingNL) {
-      console.error(`❌ Compliance Failure: KSA licensed casino "${name}" cannot restrict the Netherlands (NL). Dutch players must be permitted.`);
+      log.error(`Compliance failure: KSA licensed casino "${name}" cannot restrict the Netherlands (NL). Dutch players must be permitted.`);
       process.exit(1);
     }
   } else {
     if (!isRestrictingNL) {
-      console.error(`❌ Compliance Failure: Non-KSA licensed casino "${name}" (${licenseType}) MUST restrict the Netherlands (NL). The restrictedCountries array must include "NL".`);
+      log.error(`Compliance failure: non-KSA licensed casino "${name}" (${licenseType}) MUST restrict the Netherlands (NL). The restrictedCountries array must include "NL".`);
       process.exit(1);
     }
   }
 
-  console.log(`✅ Compliance Guardrail Passed: "${name}" (${licenseType}) meets localization criteria.`);
+  log.info(`Compliance guardrail passed: "${name}" (${licenseType}) meets localization criteria.`);
 
   // 3. Generate Auto-SEO Parameters
   let metaTitle = "";
@@ -281,7 +282,7 @@ Wat kost gokken jou? Stop op tijd. 18+
   }
 
   fs.writeFileSync(finalOutputPath, markdownContent, "utf-8");
-  console.log(`🎉 Review Markdown successfully written to: ${finalOutputPath}`);
+  log.info(`Review markdown successfully written to: ${finalOutputPath}`);
 }
 
 main();

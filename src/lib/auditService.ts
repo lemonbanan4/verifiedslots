@@ -1,6 +1,9 @@
 import { db, isFirebaseConfigured } from "./firebase";
 import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { casinos as localCasinos, Casino } from "@/src/data/casinos";
+import { createLogger } from "@/src/utils/logging";
+
+const log = createLogger("audit-service");
 
 // The Firebase JS client SDK requires a browser environment with an active
 // auth session. Server Components (Node.js) have neither, so we guard all
@@ -16,7 +19,7 @@ export async function fetchCasinoBySlug(slug: string): Promise<Casino | null> {
         return docSnap.data() as Casino;
       }
     } catch (error) {
-      console.error(`Error fetching casino "${slug}" from Firestore:`, error);
+      log.error(`Error fetching casino "${slug}" from Firestore`, { error });
     }
   }
 
@@ -37,7 +40,7 @@ export async function fetchAllCasinos(): Promise<Casino[]> {
         return list;
       }
     } catch (error) {
-      console.error("Error fetching casinos list from Firestore:", error);
+      log.error("Error fetching casinos list from Firestore", { error });
     }
   }
 
