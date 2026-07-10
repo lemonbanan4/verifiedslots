@@ -237,12 +237,12 @@ export async function ReviewTemplate({ review }: ReviewTemplateProps) {
                     </a>
                   ) : (
                     <a
-                      href="https://www.curacao-egaming.com/"
+                      href="https://www.gamblingcommission.gov.uk/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 font-bold underline transition-colors cursor-pointer"
                     >
-                      Curaçao eGaming Portal
+                      UK Gambling Commission (UKGC) Portal
                     </a>
                   )}
                 </div>

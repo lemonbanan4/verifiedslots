@@ -81,8 +81,8 @@ export interface Casino {
   isKsaLicensed: boolean;
   isLicensedInNL: boolean;
   license: string;
-  licenseType: "ksa" | "mga" | "curacao";
-  licenseTypes?: Array<"ksa" | "mga" | "curacao">;
+  licenseType: "ksa" | "mga" | "ukgc";
+  licenseTypes?: Array<"ksa" | "mga" | "ukgc">;
   restrictedCountries: string[];
   bonus: string;
   wagering: string;

@@ -39,8 +39,8 @@ export interface Casino {
   isKsaLicensed: boolean;
   isLicensedInNL: boolean;
   license: string;
-  licenseType: "ksa" | "mga" | "curacao";
-  licenseTypes?: Array<"ksa" | "mga" | "curacao">;
+  licenseType: "ksa" | "mga" | "ukgc";
+  licenseTypes?: Array<"ksa" | "mga" | "ukgc">;
   restrictedCountries: string[];
   bonus: string;
   wagering: string;
@@ -128,7 +128,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "license": "",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL"
     ],
@@ -328,7 +328,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "license": "",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL"
     ],
@@ -837,7 +837,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "licenseNumber": "Not explicitly stated on homepage, please verify",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL",
       "US",
@@ -2297,7 +2297,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "licenseNumber": "GLH-OCCHKTW07032023",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL",
       "USA",
@@ -2612,7 +2612,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "licenseNumber": "OGL/2024/1497/0884",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL"
     ],
@@ -2885,7 +2885,7 @@ export const casinos: Casino[] = [
     "isKsaLicensed": false,
     "isLicensedInNL": false,
     "licenseNumber": "Not explicitly stated on homepage, please verify",
-    "licenseType": "curacao",
+    "licenseType": "ukgc",
     "restrictedCountries": [
       "NL",
       "US",

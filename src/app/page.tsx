@@ -15,7 +15,7 @@ export default async function Homepage() {
   const casinos = await fetchAllCasinos();
   const ksaCount = casinos.filter((c) => c.licenseType === "ksa").length;
   const mgaCount = casinos.filter((c) => c.licenseType === "mga").length;
-  const curacaoCount = casinos.filter((c) => c.licenseType === "curacao").length;
+  const ukgcCount = casinos.filter((c) => c.licenseType === "ukgc").length;
 
   return (
     <div className="flex flex-col gap-10 py-2 optimize-gpu">
@@ -55,8 +55,8 @@ export default async function Homepage() {
               <p className="text-lg font-bold text-blue-400 font-mono">{mgaCount} Audits</p>
             </div>
             <div>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Offshore Curaçao</span>
-              <p className="text-lg font-bold text-amber-400 font-mono">{curacaoCount} Audits</p>
+              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated UKGC</span>
+              <p className="text-lg font-bold text-amber-400 font-mono">{ukgcCount} Audits</p>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default async function Homepage() {
         {/* KSA */}
         <div className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu">
           <div>
-            <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-450 mb-4 border border-emerald-500/20 group-hover:scale-105 transition-all">
+            <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-455 mb-4 border border-emerald-500/20 group-hover:scale-105 transition-all">
               <ShieldCheck size={18} />
             </div>
             <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
@@ -98,7 +98,7 @@ export default async function Homepage() {
               </span>
             </h3>
             <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Assessments of Malta Gaming Authority licensees. Audits of playthrough calculations, solvent player fund separation, and secure withdrawal windows.
+              Assessments of Malta Gaming Authority licensees. Audits of playthrough calculations, solvent player fund segregation, and secure withdrawal windows.
             </p>
           </div>
           <Link href="/licenses/mga" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-405 hover:text-blue-300 transition-colors">
@@ -106,24 +106,24 @@ export default async function Homepage() {
           </Link>
         </div>
 
-        {/* Curaçao */}
+        {/* UKGC */}
         <div className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu">
           <div>
             <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-455 mb-4 border border-amber-500/20 group-hover:scale-105 transition-all">
               <ShieldAlert size={18} />
             </div>
             <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
-              Curaçao Brands
+              UKGC Regulated
               <span className="text-[9px] bg-amber-500/15 border border-amber-500/20 text-amber-400 font-extrabold px-2 py-0.5 rounded font-mono">
-                {curacaoCount} active
+                {ukgcCount} active
               </span>
             </h3>
             <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Solvency ratings of international brands operating under Curaçao EGaming permits. High crypto accessibility but limited European consumer protection frameworks.
+              Evaluations of operators regulated by the UK Gambling Commission. High social responsibility standards, strict playthrough math audits, and secure payouts.
             </p>
           </div>
-          <Link href="/licenses/curacao" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-455 hover:text-amber-300 transition-colors">
-            Curaçao Audits <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+          <Link href="/licenses/ukgc" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-455 hover:text-amber-300 transition-colors">
+            UKGC Audits <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>

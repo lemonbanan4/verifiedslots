@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: LicensePageProps): Promise<Me
   } else if (licenseType === "mga") {
     title = "MGA Regulated Casinos - European Standards Compliance";
     description = "Audit reports and safety evaluations of gaming platforms licensed by the Malta Gaming Authority (MGA). Analyze payout metrics and wagering terms.";
-  } else if (licenseType === "curacao") {
-    title = "Curaçao Offshore Casinos - Independent Risk Assessments";
-    description = "Read compliance reports and consumer safety evaluations of international gaming operators licensed under Curaçao eGaming master permits.";
+  } else if (licenseType === "ukgc") {
+    title = "UKGC Regulated Casinos - UK Compliance Audits";
+    description = "Read compliance reports and consumer safety evaluations of international gaming operators regulated by the UK Gambling Commission (UKGC).";
   } else {
     title = "VerifiedSlots - Independent Licensing Audits";
     description = "Independent compliance evaluations of regulated and offshore iGaming platforms.";
@@ -40,7 +40,7 @@ export default async function LicensePage({ params }: LicensePageProps) {
   const { licenseType } = await params;
 
   // Validate licenseType
-  const validLicenses = ["ksa", "mga", "curacao"];
+  const validLicenses = ["ksa", "mga", "ukgc"];
   if (!validLicenses.includes(licenseType)) {
     notFound();
   }
@@ -55,6 +55,6 @@ export async function generateStaticParams() {
   return [
     { licenseType: "ksa" },
     { licenseType: "mga" },
-    { licenseType: "curacao" },
+    { licenseType: "ukgc" },
   ];
 }

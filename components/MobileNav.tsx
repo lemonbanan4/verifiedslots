@@ -25,9 +25,9 @@ export function MobileNav() {
       path: "/licenses/mga",
     },
     {
-      label: "Curaçao",
+      label: "UKGC",
       icon: <ShieldAlert size={18} />,
-      path: "/licenses/curacao",
+      path: "/licenses/ukgc",
     },
   ];
 

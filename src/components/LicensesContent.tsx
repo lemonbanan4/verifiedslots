@@ -63,9 +63,9 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
     subLicenseText = "Independent audits and compliance reviews of operators licensed by the Malta Gaming Authority (MGA). Check playthrough maths and regulatory safety.";
     heroIconClass = "text-blue-400";
   } else {
-    heading = "Curaçao Licensed Brands";
-    subHeading = "Offshore Gaming Audits";
-    subLicenseText = "Compliance oversight and safety evaluations of operators operating under Curaçao eGaming master licenses. Analyze consumer protection limitations.";
+    heading = "UKGC Regulated Operators";
+    subHeading = "UK Gambling Commission Evaluation";
+    subLicenseText = "Compliance oversight and safety evaluations of operators regulated by the UK Gambling Commission (UKGC). Inspect playthrough math and social responsibility standards.";
     heroIconClass = "text-amber-400";
   }
 

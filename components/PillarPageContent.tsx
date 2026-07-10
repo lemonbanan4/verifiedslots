@@ -36,7 +36,7 @@ const itemVariants: Variants = {
 export function PillarPageContent({ casinos }: PillarPageContentProps) {
   const ksaCount = casinos.filter((c) => c.licenseType === "ksa").length;
   const mgaCount = casinos.filter((c) => c.licenseType === "mga").length;
-  const curacaoCount = casinos.filter((c) => c.licenseType === "curacao").length;
+  const ukgcCount = casinos.filter((c) => c.licenseType === "ukgc").length;
 
   return (
     <motion.div
@@ -85,8 +85,8 @@ export function PillarPageContent({ casinos }: PillarPageContentProps) {
               <p className="text-lg font-bold text-blue-400 font-mono">{mgaCount} Brands</p>
             </div>
             <div>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Offshore Curaçao</span>
-              <p className="text-lg font-bold text-amber-400 font-mono">{curacaoCount} Brands</p>
+              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated UKGC</span>
+              <p className="text-lg font-bold text-amber-400 font-mono">{ukgcCount} Brands</p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export function PillarPageContent({ casinos }: PillarPageContentProps) {
           </Link>
         </motion.div>
 
-        {/* Cluster 3 - Curaçao */}
+        {/* Cluster 3 - UKGC */}
         <motion.div 
           variants={itemVariants}
           className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu"
@@ -153,17 +153,17 @@ export function PillarPageContent({ casinos }: PillarPageContentProps) {
               <ShieldAlert size={18} />
             </div>
             <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
-              Curaçao Licensed
+              UKGC Regulated
               <span className="text-[9px] bg-amber-500/15 border border-amber-500/20 text-amber-400 font-extrabold px-2 py-0.5 rounded font-mono">
-                {curacaoCount} audited
+                {ukgcCount} audited
               </span>
             </h3>
             <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Platforms operating under Curaçao eGaming master license systems. Regarded as offshore hubs, these casinos offer higher anonymity and crypto options but carry notable risks in consumer protection and dispute mediation.
+              Assessments of operators licensed by the UK Gambling Commission (UKGC). High social responsibility standards, strict playthrough math audits, and secure payouts.
             </p>
           </div>
-          <Link href="/licenses/curacao" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-455 hover:text-amber-300 transition-colors">
-            Browse Curaçao Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+          <Link href="/licenses/ukgc" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-455 hover:text-amber-300 transition-colors">
+            Browse UKGC Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
 

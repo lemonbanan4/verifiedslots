@@ -35,9 +35,9 @@ export function AuthorBox({
   } else if (licenseType === "mga") {
     verificationUrl = "https://www.mga.org.mt/licensee-hub/licensee-register/";
     verificationText = "Verify MGA Register";
-  } else if (licenseType === "curacao") {
-    verificationUrl = "https://www.cga.cw/en/133i348441001";
-    verificationText = "Verify CGA Register";
+  } else if (licenseType === "ukgc") {
+    verificationUrl = "https://www.gamblingcommission.gov.uk/public-register/";
+    verificationText = "Verify UKGC Public Register";
   }
 
   return (

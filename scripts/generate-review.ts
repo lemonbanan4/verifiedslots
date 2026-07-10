@@ -6,7 +6,7 @@ interface RawCasinoInput {
   name: string;
   domain: string;
   rating: number;
-  licenseType: "ksa" | "mga" | "curacao";
+  licenseType: "ksa" | "mga" | "ukgc";
   licenseNumber: string;
   restrictedCountries: string[];
   welcomeBonus: string;
@@ -71,7 +71,7 @@ function main() {
   } = rawData;
 
   // 2. Compliance Guardrail Validation Layer
-  const validLicenses = ["ksa", "mga", "curacao"];
+  const validLicenses = ["ksa", "mga", "ukgc"];
   if (!validLicenses.includes(licenseType)) {
     console.error(`❌ Compliance Failure: Invalid licenseType "${licenseType}". Allowed types: ${validLicenses.join(", ")}`);
     process.exit(1);

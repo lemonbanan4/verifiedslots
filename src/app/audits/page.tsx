@@ -223,7 +223,7 @@ export default function AuditsPage() {
   const [activeTab, setActiveTab] = useState<MainTabKey>("directory");
 
   // State for Directory Tab
-  const [activeLicenseFilter, setActiveLicenseFilter] = useState<"All" | "ksa" | "mga" | "curacao">("All");
+  const [activeLicenseFilter, setActiveLicenseFilter] = useState<"All" | "ksa" | "mga" | "ukgc">("All");
 
   // Reset active license filter if user is Dutch and it's set to non-KSA
   useEffect(() => {
@@ -395,7 +395,7 @@ export default function AuditsPage() {
           {activeTab === "directory" ? (
             // Compliance Directory License Filters
             <>
-              {(isDutch ? (["ksa"] as const) : (["All", "ksa", "mga", "curacao"] as const)).map((license) => (
+              {(isDutch ? (["ksa"] as const) : (["All", "ksa", "mga", "ukgc"] as const)).map((license) => (
                 <button
                   key={license}
                   onClick={() => setActiveLicenseFilter(license)}

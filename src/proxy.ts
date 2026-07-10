@@ -31,7 +31,7 @@ export function proxy(request: NextRequest) {
 
   // 2. License Enforcement for Dutch Visitors
   if (isDutch && !isAdminBypass) {
-    if (pathname === "/licenses" || pathname === "/licenses/" || pathname.startsWith("/licenses/curacao") || pathname.startsWith("/licenses/mga")) {
+    if (pathname === "/licenses" || pathname === "/licenses/" || pathname.startsWith("/licenses/ukgc") || pathname.startsWith("/licenses/mga")) {
       return NextResponse.redirect(new URL("/licenses/ksa", request.url));
     }
   }
@@ -67,7 +67,7 @@ export function proxy(request: NextRequest) {
     response.cookies.delete("admin_bypass");
   }
 
-  if (isDutch && (pathname.startsWith("/licenses/mga") || pathname.startsWith("/licenses/curacao"))) {
+  if (isDutch && (pathname.startsWith("/licenses/mga") || pathname.startsWith("/licenses/ukgc"))) {
     response.headers.set("x-robots-tag", "noindex");
   } else if (!isDutch && pathname.startsWith("/licenses/ksa")) {
     response.headers.set("x-robots-tag", "noindex");
@@ -89,7 +89,7 @@ export function runComplianceMiddleware(pathname: string, isDutch: boolean): str
 
 
   if (isDutch) {
-    if (pathname === "/licenses" || pathname === "/licenses/" || pathname.startsWith("/licenses/mga") || pathname.startsWith("/licenses/curacao")) {
+    if (pathname === "/licenses" || pathname === "/licenses/" || pathname.startsWith("/licenses/mga") || pathname.startsWith("/licenses/ukgc")) {
       return "/licenses/ksa";
     }
     if (pathname.startsWith("/reviews/")) {

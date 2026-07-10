@@ -51,8 +51,8 @@ export function OutboundLinkWithTooltip({
       statusText = `✓ MGA Licensed: Solvency checked under EU rules. Available for global players.`;
       tooltipTitle = "Compliant Gateway";
       isCompliant = true;
-    } else if (licenseType === "curacao") {
-      statusText = `✓ Offshore Licensed: Available for global players. High deposit limits.`;
+    } else if (licenseType === "ukgc") {
+      statusText = `✓ UKGC Regulated: Secure and compliant UK Gambling Commission standards. Available for UK players.`;
       tooltipTitle = "Compliant Gateway";
       isCompliant = true;
     } else {

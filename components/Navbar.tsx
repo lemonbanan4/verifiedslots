@@ -26,13 +26,13 @@ export function Navbar() {
 
         <div>
           <h1 className="text-base md:text-lg font-bold tracking-tight text-slate-100 flex items-center gap-2 leading-tight">
-            Casino Review<span className="text-blue-400 font-medium">Pro</span>
+            VerifiedSlots
             <span className="text-[10px] px-2 py-0.5 rounded-full font-bold uppercase bg-blue-500/10 border border-blue-500/20 text-blue-400">
               Compliance
             </span>
           </h1>
           <p className="hidden md:block text-[9px] text-slate-500 uppercase tracking-widest font-semibold leading-none mt-0.5">
-            COMPLIANCE AUDIT & LICENSING DESK
+            INDEPENDENT COMPLIANCE AUDIT DESK
           </p>
         </div>
       </Link>
@@ -60,13 +60,13 @@ export function Navbar() {
         </Link>
 
         <Link
-          href="/licenses/curacao"
-          className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2 py-1.5 md:px-2.5 border border-transparent ${currentPath === "/licenses/curacao"
+          href="/licenses/ukgc"
+          className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2 py-1.5 md:px-2.5 border border-transparent ${currentPath === "/licenses/ukgc"
             ? "text-amber-400 bg-amber-500/10 border-amber-500/20"
             : "hover:text-white hover:bg-white/5"
             }`}
         >
-          Curaçao
+          UKGC
         </Link>
 
         <Link
