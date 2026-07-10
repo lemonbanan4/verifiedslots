@@ -62,6 +62,19 @@ export function LicenseVerifier({ licenseType, licenseNumber, className = "" }: 
       "No protection under Dutch local civil laws or KSA regulations.",
       "No national CRUKS database checks (separate site-specific limit tools only)."
     ];
+  } else if (licenseType === "ukgc") {
+    name = "UK Gambling Commission (UKGC) - United Kingdom";
+    status = "Highly Regulated (Gold Standard)";
+    guarantees = [
+      "Strict player protection rules and verification standards.",
+      "Solvency and client fund segregation (medium/high protection standard requirements).",
+      "Mandatory participation in national multi-operator self-exclusion registry (GAMSTOP).",
+      "Strict oversight on game math, fairness checks, and marketing transparency."
+    ];
+    risks = [
+      "No support for credit card deposits (restricted under UKGC rules).",
+      "Rigorous affordability and KYC validation checks."
+    ];
   } else {
     name = "Curaçao eGaming - Offshore";
     status = "Offshore Regulated (High Risk)";
