@@ -76,6 +76,23 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
     ? `Local Regulated Brand Reviews (${licenseType.toUpperCase()})`
     : `Verified Brand Reviews (${licenseType.toUpperCase()})`;
 
+  // The proxy already redirects genuinely NL-geo visitors away from
+  // /licenses/mga and /licenses/ukgc before this ever renders, but the
+  // admin bypass and the client-side geo simulator can still land a
+  // "Local" visitorProfile here - that's the one case where an MGA/UKGC
+  // page is actually the wrong jurisdiction, so the warning is scoped to
+  // it rather than shown unconditionally to every visitor.
+  const isWrongJurisdictionRisk = licenseType !== "ksa" && visitorProfile === "Local";
+
+  const regulatedBannerClass: Record<string, string> = {
+    mga: "bg-blue-500/10 border border-blue-500/20 text-blue-400 neon-border-blue",
+    ukgc: "bg-amber-500/10 border border-amber-500/20 text-amber-400",
+  };
+  const regulatorFullName: Record<string, string> = {
+    mga: "Malta Gaming Authority",
+    ukgc: "UK Gambling Commission",
+  };
+
   return (
     <motion.div
       variants={containerVariants}
@@ -90,10 +107,15 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
             <ShieldCheck className="text-emerald-400 shrink-0" size={16} />
             <span>KSA-Regulated: Full legal protection under Kansspelautoriteit regulations. Exclusively for Dutch residents.</span>
           </div>
-        ) : (
+        ) : isWrongJurisdictionRisk ? (
           <div className="bg-rose-500/10 border border-rose-500/20 text-rose-400 px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 neon-border-rose">
             <ShieldAlert className="text-rose-400 shrink-0" size={16} />
             <span>International Licensed ({licenseType.toUpperCase()}): Not authorized for residents of the Netherlands. NL players are strictly prohibited.</span>
+          </div>
+        ) : (
+          <div className={`px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 ${regulatedBannerClass[licenseType] ?? regulatedBannerClass.mga}`}>
+            <ShieldCheck className="shrink-0" size={16} />
+            <span>{licenseType.toUpperCase()} Regulated: Independently audited operator compliant with {regulatorFullName[licenseType] ?? regulatorFullName.mga} standards.</span>
           </div>
         )}
       </motion.div>
