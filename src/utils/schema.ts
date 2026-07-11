@@ -41,7 +41,7 @@ export function injectReviewSchema(review: Casino) {
       "name": "VerifiedSlots",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://VerifiedSlots.com/logo.png"
+        "url": "https://verifiedslots.com/loogo_twitter.png"
       }
     },
     "datePublished": review.datePublished,

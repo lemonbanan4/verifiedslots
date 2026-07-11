@@ -63,11 +63,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/logo.png", sizes: "192x192", type: "image/png" }
+      { url: "/loogo_twitter.png", sizes: "192x192", type: "image/png" }
     ],
     shortcut: "/favicon.ico",
     apple: [
-      { url: "/logo.png", sizes: "180x180", type: "image/png" }
+      { url: "/loogo_twitter.png", sizes: "180x180", type: "image/png" }
     ]
   }
 };
