@@ -1,0 +1,166 @@
+{
+  "id": "casumo",
+  "name": "Casumo",
+  "slug": "casumo",
+  "domain": "casumo.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "license": "MGA/CRP/217/2012-05",
+  "licenseType": "mga",
+  "licenseTypes": ["mga", "ukgc"],
+  "restrictedCountries": ["NL", "US"],
+  "bonus": "50% Deposit Match up to £100",
+  "wagering": "10x",
+  "licenseNumber": "MGA/CRP/217/2012-05",
+  "rating": 9,
+  "author": "Dr. Evelyn Reed, Senior Compliance Analyst",
+  "datePublished": "2026-07-11",
+  "lastModified": "2026-07-11",
+  "lastUpdated": "2026-07-11",
+  "logoColor": "from-orange-700 to-pink-800",
+  "gameLibraryCount": "3,500+ Titles",
+  "summaryText": "Casumo is a Malta-based operator with a distinctive space-themed loyalty program, offering a large slots-first library alongside an Evolution-powered live casino. UK operations are run under a separate licensed entity, Recro Limited, following a 2023 licence transfer.",
+  "editorialVerdict": "Casumo holds a primary MGA licence (MGA/CRP/217/2012-05) and operates its UK-facing business through Recro Limited, which holds an active UK Gambling Commission remote licence (account 61549) as of our audit date. Notably, the original UKGC licence held directly by Casumo Services Limited was surrendered on 3 Nov 2023, with operations transitioning to Recro Limited shortly after — players should confirm which entity they are contracting with in their local Terms & Conditions. Bonus terms are comparatively player-friendly, with a 10x wagering requirement well below the industry norm of 30-40x, though the trade-off is a smaller headline bonus cap. Responsible gambling tooling is comprehensive and prominently surfaced in the account dashboard rather than buried in support menus.",
+  "warningText": "Casumo is subject to geo-restrictions and Dutch (NL) residents are strictly prohibited under this MGA/UKGC licence. Welcome offer terms vary by region — always confirm current terms on the operator's own bonus terms page before depositing.",
+  "affiliateUrl": "",
+  "pros": [
+    "Wagering requirement of 10x on the standard welcome offer is well below the 30-40x industry norm",
+    "Broad payment method support, including PayPal and fast e-wallet withdrawals",
+    "Comprehensive, dashboard-first responsible gambling tools (deposit/loss/session/wagering limits, reality checks, self-exclusion)",
+    "Large slots library (3,500+ titles) from 19+ providers including Evolution, NetEnt, Pragmatic Play and Play'n GO",
+    "Currently active MGA and UKGC (via Recro Limited) licensing"
+  ],
+  "cons": [
+    "UK licensing history includes a 2023 licence surrender and transfer to a separate legal entity (Recro Limited) — verify which entity your account terms actually reference",
+    "Live casino selection is comparatively limited next to the size of the slots library",
+    "Headline welcome bonus cap (£100) is modest relative to operators offering larger match percentages, even with the lower wagering requirement",
+    "Max bet while a bonus is active (£5) can feel restrictive for higher-stakes players"
+  ],
+  "securityTitle": "Licensing Continuity and Fair Play at Casumo",
+  "securitySummary": "Casumo's primary licence is issued by the Malta Gaming Authority (MGA/CRP/217/2012-05), with UK-facing operations run under Recro Limited's active UK Gambling Commission remote licence. Player funds are held under standard MGA/UKGC segregation requirements, and slot RNGs are independently tested by recognised labs used by the platform's software providers (including Evolution, NetEnt and Pragmatic Play).",
+  "securityWarning": "Confirm which licensed entity (Casumo Services Limited or Recro Limited) your account terms reference — the operating entity changed in late 2023.",
+  "securityPoints": [
+    {
+      "title": "MGA Licensed",
+      "description": "Primary licence MGA/CRP/217/2012-05, issued by the Malta Gaming Authority.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "UKGC Licensed (via Recro Limited)",
+      "description": "UK operations run under Recro Limited's active UK Gambling Commission remote licence (account 61549).",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Licence Transfer History",
+      "description": "Casumo Services Limited's own UKGC licence was surrendered on 3 Nov 2023; verify the current operating entity in your local terms.",
+      "iconName": "alert",
+      "status": "warning"
+    },
+    {
+      "title": "Independent RNG Testing",
+      "description": "Game fairness is tested at the provider level by labs used by Evolution, NetEnt, Pragmatic Play and Play'n GO.",
+      "iconName": "zap",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "50% up to £100",
+  "bonusWagering": "10x",
+  "bonusMinDeposit": "£20",
+  "bonusValidity": "7 Days",
+  "bonusMaxBet": "£5",
+  "bonusTermsVerdict": "A materially lower wagering requirement (10x) than the industry standard (30-40x) makes this one of the more realistically clearable welcome bonuses on the market, even though the headline match amount is modest.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "Bonus funds must be wagered 10x within 7 days of opt-in, or the bonus and any related winnings expire."
+    },
+    {
+      "title": "Minimum Deposit",
+      "description": "A minimum deposit of £20 is required to qualify for the 50% match offer."
+    },
+    {
+      "title": "Max Bet While Wagering",
+      "description": "Bets are capped at £5 per spin while an active bonus balance is being wagered."
+    },
+    {
+      "title": "Game Contributions",
+      "description": "Slots contribute 100% toward wagering; live casino and table games contribute at a reduced rate or are excluded."
+    }
+  ],
+  "gameSummary": "Casumo's library is slots-first, spanning classic three-reel titles through to modern Megaways and cluster-pays mechanics, backed by an Evolution-powered live casino and a selection of game shows.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "The bulk of the 3,500+ title library, spanning classic slots through Megaways, cluster-pays and cascading-reel mechanics.",
+      "notable": "Megaways, Cluster Pays, Progressive Jackpots",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "A comparatively smaller but Evolution-backed live dealer lobby covering core table games and game shows.",
+      "notable": "Lightning Roulette, VIP Blackjack, Crazy Time, Dream Catcher",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games",
+      "description": "Standard RNG table game variants alongside the live dealer equivalents.",
+      "notable": "Blackjack, Roulette, Baccarat, Casino Hold'em",
+      "iconName": "dice"
+    }
+  ],
+  "gameContributions": [
+    { "category": "Slots", "contribution": "100%" },
+    { "category": "Live Casino", "contribution": "Reduced (verify per game)" },
+    { "category": "Table Games", "contribution": "Reduced (verify per game)" }
+  ],
+  "paymentSummary": "Casumo supports a broad spread of cards, e-wallets and bank-transfer methods. E-wallet withdrawals are the fastest route to cash-out; card and bank transfer withdrawals take longer to clear.",
+  "paymentMethods": [
+    { "name": "Visa", "type": "Credit/Debit Card", "depositTime": "Instant", "withdrawalTime": "1-5 Business Days", "fees": "None" },
+    { "name": "Mastercard", "type": "Credit/Debit Card", "depositTime": "Instant", "withdrawalTime": "1-5 Business Days", "fees": "None" },
+    { "name": "PayPal", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 1 Hour (post-approval)", "fees": "None" },
+    { "name": "Skrill", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 1 Hour (post-approval)", "fees": "None" },
+    { "name": "Neteller", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 1 Hour (post-approval)", "fees": "None" },
+    { "name": "Trustly", "type": "Bank Transfer", "depositTime": "Instant", "withdrawalTime": "1-3 Business Days", "fees": "None" },
+    { "name": "Paysafecard", "type": "Prepaid Card", "depositTime": "Instant", "withdrawalTime": "N/A (deposit only)", "fees": "None" }
+  ],
+  "rgSummary": "Responsible gambling tools are surfaced directly in the account dashboard rather than buried in support menus, covering deposit, loss, session and wagering limits alongside reality checks and self-exclusion.",
+  "rgTools": [
+    { "title": "Deposit Limits", "description": "Set daily, weekly, or monthly deposit caps.", "status": "success", "iconName": "euro" },
+    { "title": "Loss Limits", "description": "Cap losses over a defined period.", "status": "success", "iconName": "euro" },
+    { "title": "Session Limits", "description": "Set maximum session durations.", "status": "success", "iconName": "clock" },
+    { "title": "Reality Checks", "description": "Periodic pop-up reminders of elapsed session time and net spend.", "status": "success", "iconName": "clock" },
+    { "title": "Self-Exclusion", "description": "Temporary or permanent self-exclusion from the platform.", "status": "success", "iconName": "ban" }
+  ],
+  "comparisonTitle": "Casumo vs. Industry Standards",
+  "comparisonRows": [
+    { "feature": "License & Safety", "thisCasino": "MGA + UKGC (via Recro Limited)", "regulatedStandard": "KSA Standard Requirement", "status": "success" },
+    { "feature": "Welcome Bonus Wagering", "thisCasino": "10x (Bonus Funds)", "regulatedStandard": "30x-40x (Average)", "status": "success" },
+    { "feature": "Welcome Bonus Size", "thisCasino": "50% up to £100", "regulatedStandard": "100% up to £200+ (Average)", "status": "neutral" },
+    { "feature": "Game Variety", "thisCasino": "3,500+ Titles", "regulatedStandard": "1,000+ Titles", "status": "success" },
+    { "feature": "Responsible Gambling Tools", "thisCasino": "Comprehensive Suite", "regulatedStandard": "Basic Tools", "status": "success" }
+  ],
+  "faqs": [
+    {
+      "question": "Is Casumo a licensed casino?",
+      "answer": "Yes. Casumo's primary licence is issued by the Malta Gaming Authority (MGA/CRP/217/2012-05). Its UK-facing operations are run under Recro Limited, which holds an active UK Gambling Commission remote licence (account 61549)."
+    },
+    {
+      "question": "Did Casumo's UK licence change?",
+      "answer": "Yes. Casumo Services Limited's own UKGC licence was surrendered on 3 Nov 2023, with UK operations transferring to Recro Limited shortly after. Always check your account Terms & Conditions to confirm the current operating entity."
+    },
+    {
+      "question": "What is the welcome bonus at Casumo?",
+      "answer": "New customers can claim a 50% deposit match up to £100 (minimum £20 deposit), with a 10x wagering requirement and a £5 max bet while the bonus is active. Terms vary by region — always confirm current terms before depositing."
+    },
+    {
+      "question": "Can Dutch (NL) residents play at Casumo?",
+      "answer": "No. Casumo operates under MGA/UKGC licensing without a Dutch KSA licence, so Netherlands residents are restricted."
+    },
+    {
+      "question": "How fast are Casumo withdrawals?",
+      "answer": "E-wallet withdrawals (PayPal, Skrill, Neteller) are typically the fastest, often clearing within an hour of approval. Card and bank transfer withdrawals can take 1-5 business days."
+    }
+  ]
+}

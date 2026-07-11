@@ -1,5 +1,33 @@
 [
   {
+    "id": 13,
+    "slug": "regulatory-solvency-audit-casumo-group-s-compliance-and-operational-integrity-assessment",
+    "title": "Regulatory Solvency Audit: Casumo Group's Compliance and Operational Integrity Assessment",
+    "summary": "Casumo operates under the stringent regulatory oversight of the Malta Gaming Authority (MGA), specifically under license number MGA/CRP/217/2012-05. This primar...",
+    "author": "Dr. Evelyn Reed, Senior Compliance Analyst",
+    "authorRole": "Lead iGaming Solvency Analyst",
+    "readTime": "8 min read",
+    "date": "July 11, 2026",
+    "category": "Regulatory Compliance & Risk Management",
+    "complianceScore": 92,
+    "status": "Pending Review",
+    "affiliateLink": "",
+    "sections": [
+      {
+        "heading": "1. Licensing Jurisdictions and Regulatory Frameworks",
+        "body": "Casumo operates under the stringent regulatory oversight of the <strong>Malta Gaming Authority (MGA)</strong>, specifically under license number MGA/CRP/217/2012-05. This primary license is a hallmark of robust player protection standards, requiring significant capital reserves, stringent anti-money laundering (AML) protocols, and clear dispute resolution mechanisms. Furthermore, its UK-facing operations are facilitated by Recro Limited, implying compliance with the rigorous demands of the <strong>UK Gambling Commission (UKGC)</strong>. These dual Tier-1 licenses collectively establish a high benchmark for operational integrity and legal adherence, providing a strong assurance of regulatory compliance for its player base. For more details on regulatory bodies, refer to our <a href=\"/licenses/mga\">MGA Regulatory Insight</a> or <a href=\"/licenses/ukgc\">UKGC Compliance Overview</a>."
+      },
+      {
+        "heading": "2. Capital Segregation and Operational Solvency",
+        "body": "A critical aspect of financial compliance, Casumo's operational model demonstrates a strong commitment to <strong>player fund segregation</strong>, adhering to both MGA and UKGC mandates. This ensures that player deposits are held in separate bank accounts from operational funds, safeguarding against insolvency risks and ensuring immediate liquidity for withdrawals. The absence of a site-wide withdrawal cap, coupled with a reported processing time of typically within 24 hours for verified transactions, underscores robust <em>liquidity management</em> and efficient payment processing protocols. This approach significantly mitigates solvency risks and enhances consumer trust by guaranteeing timely access to funds."
+      },
+      {
+        "heading": "3. Wagering Liability and Playthrough Rollover Mechanics",
+        "body": "Casumo's bonus wagering mechanics diverge from industry norms by focusing on \"fair play\" with requirements often <strong>below 30x</strong> on specific bonus tiers. This strategy, linked to achievement-based \"bonus jars\" rather than high-multiplier churn requirements, significantly reduces the effective <em>wagering friction</em> for players. From an operator liability perspective, this model implies a lower deferred revenue liability compared to platforms with higher playthrough multiples (e.g., 40x-60x). The integration of prominent <strong>responsible gaming controls</strong>, including customizable deposit limits, reality checks, and cooling-off periods (accessible via <a href=\"/responsible-gambling\">Responsible Gaming Dashboard</a>), further enhances player protection and aligns with best practices in risk management, preventing excessive play that could lead to financial distress."
+      }
+    ]
+  },
+  {
     "id": 1,
     "slug": "regulatory-compliance-solvency-review-leovegas-operational-assessment",
     "title": "Regulatory Compliance & Solvency Review: LeoVegas Operational Assessment",
