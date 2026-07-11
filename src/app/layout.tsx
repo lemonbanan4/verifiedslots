@@ -94,7 +94,10 @@ export default function RootLayout({
             <LicenseBanner />
             <div className="relative flex flex-col flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6">
               <Navbar />
-              <div className="flex-1 py-16">
+              {/* Less top padding on mobile — 64px (py-16) on a narrow
+                  viewport reads as dead space between the nav and the first
+                  card; desktop keeps the original spacious gap. */}
+              <div className="flex-1 pt-6 pb-16 md:pt-16">
                 {children}
               </div>
               <Footer />

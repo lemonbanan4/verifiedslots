@@ -31,17 +31,42 @@ export function Navbar() {
     setMounted(true);
   }, []);
 
-  // Lock body scroll while the full-screen drawer is open, and close it
-  // automatically if the viewport is resized past the mobile breakpoint.
+  // Lock body scroll while the full-screen drawer is open. `overflow: hidden`
+  // alone doesn't reliably stop background scroll/rubber-banding on iOS
+  // Safari, which can leave the drawer visually "stuck" and its buttons
+  // untappable — pinning the body with `position: fixed` at the current
+  // scroll offset is the standard fix, restoring the exact scroll position
+  // on close.
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!isMobileMenuOpen) return;
+
+    const scrollY = window.scrollY;
+    const { style } = document.body;
+    style.position = "fixed";
+    style.top = `-${scrollY}px`;
+    style.left = "0";
+    style.right = "0";
+    style.overflow = "hidden";
+
     return () => {
-      document.body.style.overflow = "";
+      style.position = "";
+      style.top = "";
+      style.left = "";
+      style.right = "";
+      style.overflow = "";
+      window.scrollTo(0, scrollY);
     };
+  }, [isMobileMenuOpen]);
+
+  // Escape key as an extra way out, since the drawer has no visible
+  // "outside" area to tap given it fills the whole viewport.
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
