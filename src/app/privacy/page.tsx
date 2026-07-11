@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-base font-bold text-white mt-6 mb-2">2. Outbound Links & Third-Party Cookies</h2>
           <p>
-            VerifiedSlots contains outbound links to licensed gaming operators. Once you click these links, you will be redirected to third-party platforms which operate under their own privacy guidelines. These platforms may utilize tracking cookies for affiliate attribution.
+            VerifiedSlots contains outbound links to licensed gaming operators. Once you click these links, you will be redirected to third-party platforms which operate under their own privacy guidelines. These platforms may utilize tracking cookies for affiliate attribution. For a full breakdown of the cookies VerifiedSlots itself sets, see our <Link href="/cookie-policy" className="text-blue-400 hover:text-blue-300 underline">Cookie Policy</Link>.
           </p>
 
           <h2 className="text-base font-bold text-white mt-6 mb-2">3. Data Controller</h2>
