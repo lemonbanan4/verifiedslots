@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { fetchAllCasinos } from "@/src/lib/auditService";
+import { casinoHoldsLicense } from "@/src/data/casinos";
 import {
   Shield,
   ShieldCheck,
@@ -13,9 +14,9 @@ import { JournalisticInsights } from "@/components/JournalisticInsights";
 
 export default async function Homepage() {
   const casinos = await fetchAllCasinos();
-  const ksaCount = casinos.filter((c) => c.licenseType === "ksa").length;
-  const mgaCount = casinos.filter((c) => c.licenseType === "mga").length;
-  const ukgcCount = casinos.filter((c) => c.licenseType === "ukgc").length;
+  const ksaCount = casinos.filter((c) => casinoHoldsLicense(c, "ksa")).length;
+  const mgaCount = casinos.filter((c) => casinoHoldsLicense(c, "mga")).length;
+  const ukgcCount = casinos.filter((c) => casinoHoldsLicense(c, "ukgc")).length;
 
   return (
     <div className="flex flex-col gap-10 py-2 optimize-gpu">

@@ -84,7 +84,7 @@ export function ComplianceSeal({ score, size = "sm", className = "" }: Complianc
       </div>
 
       <div className="z-10 mt-1">
-        <div className="text-3xl font-black text-white leading-none tracking-tight flex items-baseline justify-left">
+        <div className="text-3xl font-black text-white leading-none tracking-tight flex items-baseline justify-center">
           <span className={tier.color}>{score}</span>
           <span className="text-xs text-slate-500 font-bold ml-0.5">/85</span>
         </div>
@@ -101,7 +101,7 @@ export function ComplianceSeal({ score, size = "sm", className = "" }: Complianc
         <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-500 ease-out"
-            style={{ 
+            style={{
               width: `${(Math.min(score, 85) / 85) * 100}%`,
               backgroundColor: tier.barColor
             }}

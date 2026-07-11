@@ -3384,3 +3384,13 @@ export function isCasinoAvailableInCountry(slug: string, countryCode: string): b
   if (!casino) return false;
   return !casino.restrictedCountries.includes(countryCode);
 }
+
+// Multi-licensed operators (e.g. bet365 holds ksa+mga+ukgc) only expose one
+// value via `licenseType` (the primary license) — checking that field alone
+// undercounts/excludes operators for any license they hold secondarily.
+// This checks the full `licenseTypes` array, falling back to `licenseType`
+// for operators that only ever held a single license.
+export function casinoHoldsLicense(casino: Casino, licenseType: string): boolean {
+  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
+  return types.includes(licenseType as Casino["licenseType"]);
+}

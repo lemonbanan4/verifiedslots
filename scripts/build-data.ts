@@ -164,7 +164,7 @@ export interface Casino {
 }
 `;
 
-  const casinosCode = `${interfacesCode}\nexport const casinos: Casino[] = ${JSON.stringify(casinos, null, 2)};\n\nexport function isCasinoAvailableInCountry(slug: string, countryCode: string): boolean {\n  const casino = casinos.find((c) => c.slug === slug);\n  if (!casino) return false;\n  return !casino.restrictedCountries.includes(countryCode);\n}\n`;
+  const casinosCode = `${interfacesCode}\nexport const casinos: Casino[] = ${JSON.stringify(casinos, null, 2)};\n\nexport function isCasinoAvailableInCountry(slug: string, countryCode: string): boolean {\n  const casino = casinos.find((c) => c.slug === slug);\n  if (!casino) return false;\n  return !casino.restrictedCountries.includes(countryCode);\n}\n\n// Multi-licensed operators (e.g. bet365 holds ksa+mga+ukgc) only expose one\n// value via \`licenseType\` (the primary license) — checking that field alone\n// undercounts/excludes operators for any license they hold secondarily.\n// This checks the full \`licenseTypes\` array, falling back to \`licenseType\`\n// for operators that only ever held a single license.\nexport function casinoHoldsLicense(casino: Casino, licenseType: string): boolean {\n  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];\n  return types.includes(licenseType as Casino["licenseType"]);\n}\n`;
 
   fs.writeFileSync(outputPath, casinosCode, "utf-8");
   log.info(`Successfully compiled ${casinos.length} reviews from JSON to ${outputPath}`);

@@ -23,7 +23,7 @@ import type { Audit, AuditCategory } from "@/src/types/audit";
 import auditsData from "@/src/data/audits.json";
 import { ComplianceSeal } from "@/components/ComplianceSeal";
 import { AuditModal } from "@/components/AuditModal";
-import { casinos } from "@/src/data/casinos";
+import { casinos, casinoHoldsLicense } from "@/src/data/casinos";
 import { CasinoCard } from "@/components/CasinoCard";
 import { useCompliance } from "@/src/context/ComplianceContext";
 
@@ -245,9 +245,9 @@ export default function AuditsPage() {
     let list = casinos;
 
     if (isDutch) {
-      list = list.filter((c) => c.licenseType === "ksa");
+      list = list.filter((c) => casinoHoldsLicense(c, "ksa"));
     } else if (activeLicenseFilter !== "All") {
-      list = list.filter((c) => c.licenseType === activeLicenseFilter);
+      list = list.filter((c) => casinoHoldsLicense(c, activeLicenseFilter));
     }
 
     if (searchQuery.trim().length > 0) {
@@ -290,7 +290,7 @@ export default function AuditsPage() {
   // General Database Statistics
   const totalCasinos = casinos.length;
   const totalAudits = audits.length;
-  const ksaLicensedCount = casinos.filter((c) => c.licenseType === "ksa").length;
+  const ksaLicensedCount = casinos.filter((c) => casinoHoldsLicense(c, "ksa")).length;
 
   return (
     <div className="flex flex-col gap-8 py-2">
@@ -411,7 +411,7 @@ export default function AuditsPage() {
                   <span className={`ml-2 font-mono ${activeLicenseFilter === license ? "text-blue-200" : "text-slate-600"}`}>
                     {license === "All"
                       ? casinos.length
-                      : casinos.filter((c) => c.licenseType === license).length}
+                      : casinos.filter((c) => casinoHoldsLicense(c, license)).length}
                   </span>
                 </button>
               ))}

@@ -176,7 +176,7 @@ export function Partnership() {
                 "Automatically flags if your compliance status changes",
                 "Lightweight embed snippet, no tracking scripts required",
               ].map((line) => (
-                <li key={line} className="flex items-start gap-2.5 text-[11px] md:text-xs text-slate-350">
+                <li key={line} className="flex items-start gap-2.5 text-[11px] md:text-xs text-slate-400">
                   <CheckCircle2 size={15} className="text-emerald-400 shrink-0 mt-0.5" />
                   <span>{line}</span>
                 </li>
@@ -236,7 +236,7 @@ export function Partnership() {
               </div>
               <div>
                 <h3 className="text-sm font-bold text-white mb-1.5">{title}</h3>
-                <p className="text-[11px] text-slate-350 leading-relaxed">{body}</p>
+                <p className="text-[11px] text-slate-400 leading-relaxed">{body}</p>
               </div>
             </div>
           ))}

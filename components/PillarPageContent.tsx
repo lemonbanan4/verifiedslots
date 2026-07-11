@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion, Variants } from "motion/react";
 import { Shield, ShieldCheck, ShieldAlert, BookOpen, HeartPulse, Scale, ArrowRight } from "lucide-react";
-import { Casino } from "@/src/data/casinos";
+import { Casino, casinoHoldsLicense } from "@/src/data/casinos";
 
 interface PillarPageContentProps {
   casinos: Casino[];
@@ -34,9 +34,9 @@ const itemVariants: Variants = {
 };
 
 export function PillarPageContent({ casinos }: PillarPageContentProps) {
-  const ksaCount = casinos.filter((c) => c.licenseType === "ksa").length;
-  const mgaCount = casinos.filter((c) => c.licenseType === "mga").length;
-  const ukgcCount = casinos.filter((c) => c.licenseType === "ukgc").length;
+  const ksaCount = casinos.filter((c) => casinoHoldsLicense(c, "ksa")).length;
+  const mgaCount = casinos.filter((c) => casinoHoldsLicense(c, "mga")).length;
+  const ukgcCount = casinos.filter((c) => casinoHoldsLicense(c, "ukgc")).length;
 
   return (
     <motion.div

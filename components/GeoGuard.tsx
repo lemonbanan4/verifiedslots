@@ -119,8 +119,9 @@ export function GeoGuard({ children }: GeoGuardProps) {
         </div>
       )}
 
-      {/* Mini Toggle tab if hidden */}
-      {!showPanel && (
+      {/* Mini Toggle tab if hidden — dev/staging only. Production keeps the
+          panel reachable via ?simulate=true, but doesn't advertise it. */}
+      {!showPanel && process.env.NODE_ENV !== "production" && (
         <button
           onClick={() => setShowPanel(true)}
           className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-white/10 hover:bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 cursor-pointer"
