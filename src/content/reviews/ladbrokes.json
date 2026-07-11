@@ -1,0 +1,166 @@
+{
+  "id": "ladbrokes",
+  "name": "Ladbrokes",
+  "slug": "ladbrokes",
+  "domain": "ladbrokes.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "license": "054743-R-330863-014",
+  "licenseType": "ukgc",
+  "restrictedCountries": ["NL", "US"],
+  "bonus": "Bet £10, Get £30 in Casino Bonus (or 100 Free Spins)",
+  "wagering": "40x",
+  "licenseNumber": "054743-R-330863-014",
+  "rating": 9,
+  "author": "Dr. Eleanor Vance, Lead Solvency Analyst",
+  "datePublished": "2026-07-11",
+  "lastModified": "2026-07-11",
+  "lastUpdated": "2026-07-11",
+  "logoColor": "from-red-800 to-red-950",
+  "gameLibraryCount": "5,700+ Titles",
+  "summaryText": "Ladbrokes is one of the UK's longest-established betting and casino brands, now operated under Entain plc's LC International Limited licence — the same UK Gambling Commission entity behind bwin, Coral and PartyCasino. It pairs a large slots library with a multi-supplier live casino.",
+  "editorialVerdict": "Ladbrokes' casino operations run under LC International Limited's active UK Gambling Commission remote licence (account 54743, licence 054743-R-330863-014) — the same operating entity we verified for bwin, since both are Entain-owned brands sharing one GB licence. Ladbrokes' international presence is additionally licensed by the Government of Gibraltar. The standard welcome bonus carries a 40x wagering requirement, at the higher end of the industry range, and specifically excludes blackjack variants from contributing to that wagering — a detail easy to miss in the promotional copy. Responsible gambling tooling is comprehensive and consistent with Entain's group-wide standard.",
+  "warningText": "Ladbrokes is subject to geo-restrictions and Dutch (NL) residents are strictly prohibited under this UKGC licence. Blackjack variants do not count toward the welcome bonus wagering requirement — check current game-weighting terms before opting in.",
+  "affiliateUrl": "",
+  "pros": [
+    "Long-established UK brand operating under LC International Limited's active UK Gambling Commission licence",
+    "Large game library (5,700+ titles) with live casino from Evolution, Playtech Live and Pragmatic Play Live",
+    "Broad payment method support including Instant Bank Transfer withdrawals clearing within minutes",
+    "Comprehensive Entain group-wide responsible gambling suite (deposit/stake limits, curfews, reality checks, play breaks, self-exclusion)",
+    "Same verified UKGC licence entity (054743-R-330863-014) as other audited Entain brands, simplifying cross-brand compliance verification"
+  ],
+  "cons": [
+    "40x wagering requirement on the standard welcome bonus is at the higher end of the industry range (vs. 30-35x average)",
+    "Blackjack variants are explicitly excluded from wagering contribution on the welcome bonus",
+    "Certain deposit methods (Neteller, PayPal, Paysafecard, Skrill) don't qualify for the welcome offer",
+    "Shares its licensing entity with several other Entain brands, so account/KYC verification issues can occasionally span multiple sites under one operator relationship"
+  ],
+  "securityTitle": "Licensing Structure and Fair Play at Ladbrokes",
+  "securitySummary": "Ladbrokes' GB casino operations are licensed and regulated by the UK Gambling Commission under LC International Limited (account 54743, remote licence 054743-R-330863-014) — the same entity operating bwin, Coral and PartyCasino. International operations carry an additional Government of Gibraltar licence. Game fairness is backed by established suppliers including Evolution, Playtech Live and Pragmatic Play Live.",
+  "securityWarning": "Ladbrokes shares its UK operating entity (LC International Limited) with several other Entain brands — confirm your account terms reference the entity and licence you expect.",
+  "securityPoints": [
+    {
+      "title": "UKGC Licensed",
+      "description": "Active UK Gambling Commission remote licence (054743-R-330863-014) under LC International Limited.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Shared Entain Licensing Entity",
+      "description": "LC International Limited also operates bwin, Coral, PartyCasino and other Entain brands under this same GB licence.",
+      "iconName": "alert",
+      "status": "warning"
+    },
+    {
+      "title": "Gibraltar Licensed (International)",
+      "description": "International operations carry an additional Government of Gibraltar remote gambling licence.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Independent RNG Testing",
+      "description": "Game fairness is tested at the provider level by labs used by Evolution, Playtech Live and Pragmatic Play Live.",
+      "iconName": "zap",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "Bet £10, Get £30 in Casino Bonus",
+  "bonusWagering": "40x",
+  "bonusMinDeposit": "£10",
+  "bonusValidity": "30 Days",
+  "bonusMaxBet": "Not explicitly stated on homepage, please verify",
+  "bonusTermsVerdict": "A 40x wagering requirement is above the industry average of 30-35x, and the blackjack exclusion further narrows how the bonus can realistically be cleared — read the qualifying-game list closely before opting in.",
+  "bonusTermsDetails": [
+    {
+      "title": "Wagering Requirement",
+      "description": "The £30 casino bonus must be wagered 40x before any winnings can be withdrawn, within 30 days of acceptance."
+    },
+    {
+      "title": "Qualifying Deposit",
+      "description": "A minimum £10 deposit is required; Neteller, PayPal, Paysafecard and Skrill deposits do not qualify for this offer."
+    },
+    {
+      "title": "Excluded Games",
+      "description": "Wagers placed on blackjack variants do not count toward clearing the welcome bonus."
+    },
+    {
+      "title": "Alternative Offer",
+      "description": "A 100 Free Spins alternative is available by betting £10+ on selected slots (spins valued at £0.10 each, 7-day validity)."
+    }
+  ],
+  "gameSummary": "Ladbrokes offers a slots-heavy library alongside a multi-supplier live casino, plus dedicated Slingo, Instant Win and jackpot sections.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "2,000+ slot titles from 13+ providers, spanning classic reels through modern Megaways mechanics.",
+      "notable": "Megaways, Classic Slots, Jackpots",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "A multi-supplier live dealer lobby covering core table games and game shows.",
+      "notable": "Evolution, Playtech Live, Pragmatic Play Live",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games & Slingo",
+      "description": "Standard RNG table games alongside Ladbrokes' Slingo and Instant Win sections.",
+      "notable": "Blackjack, Roulette, Slingo, Instant Win",
+      "iconName": "dice"
+    }
+  ],
+  "gameContributions": [
+    { "category": "Slots", "contribution": "100%" },
+    { "category": "Live Casino", "contribution": "Reduced (verify per game)" },
+    { "category": "Blackjack", "contribution": "0% (excluded from bonus wagering)" }
+  ],
+  "paymentSummary": "Ladbrokes supports a broad spread of cards, e-wallets and bank transfer options, with Instant Bank Transfer the fastest withdrawal route and standard bank transfers the slowest.",
+  "paymentMethods": [
+    { "name": "Visa", "type": "Debit Card", "depositTime": "Instant", "withdrawalTime": "Within 4 Hours (Fast Funds)", "fees": "None" },
+    { "name": "Mastercard/Maestro", "type": "Debit Card", "depositTime": "Instant", "withdrawalTime": "1-3 Business Days", "fees": "None" },
+    { "name": "PayPal", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 8 Hours", "fees": "None" },
+    { "name": "Skrill", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 24 Hours", "fees": "None" },
+    { "name": "Neteller", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Within 24 Hours", "fees": "None" },
+    { "name": "Instant Bank Transfer", "type": "Bank Transfer", "depositTime": "Instant", "withdrawalTime": "Within Minutes", "fees": "None" },
+    { "name": "Paysafecard", "type": "Prepaid Card", "depositTime": "Instant", "withdrawalTime": "N/A (deposit only)", "fees": "None" }
+  ],
+  "rgSummary": "As an Entain-owned brand, Ladbrokes provides a granular responsible gambling toolkit covering deposit and stake limits, deposit curfews, reality checks, play breaks and irreversible self-exclusion.",
+  "rgTools": [
+    { "title": "Deposit Limits", "description": "Set daily, weekly, or monthly deposit caps.", "status": "success", "iconName": "euro" },
+    { "title": "Max Stake Limits", "description": "Cap the maximum stake per bet or spin.", "status": "success", "iconName": "euro" },
+    { "title": "Deposit Curfews", "description": "Block deposits during set hours of the day.", "status": "success", "iconName": "clock" },
+    { "title": "Reality Checks", "description": "Periodic reminders of elapsed session time and net spend.", "status": "success", "iconName": "clock" },
+    { "title": "Play Breaks", "description": "Take a temporary break from the platform for a set period.", "status": "success", "iconName": "clock" },
+    { "title": "Self-Exclusion", "description": "Irreversible self-exclusion from the platform.", "status": "success", "iconName": "ban" }
+  ],
+  "comparisonTitle": "Ladbrokes vs. Industry Standards",
+  "comparisonRows": [
+    { "feature": "License & Safety", "thisCasino": "UKGC (LC International Limited) + Gibraltar", "regulatedStandard": "KSA Standard Requirement", "status": "success" },
+    { "feature": "Welcome Bonus Wagering", "thisCasino": "40x (Bonus Funds)", "regulatedStandard": "30x-40x (Average)", "status": "neutral" },
+    { "feature": "Welcome Bonus Size", "thisCasino": "Bet £10, Get £30", "regulatedStandard": "100% up to £200+ (Average)", "status": "neutral" },
+    { "feature": "Game Variety", "thisCasino": "5,700+ Titles", "regulatedStandard": "1,000+ Titles", "status": "success" },
+    { "feature": "Responsible Gambling Tools", "thisCasino": "Comprehensive Entain Suite", "regulatedStandard": "Basic Tools", "status": "success" }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ladbrokes a licensed casino?",
+      "answer": "Yes. Ladbrokes' GB casino operations are licensed by the UK Gambling Commission under LC International Limited (remote licence 054743-R-330863-014) — the same entity that operates bwin, Coral and PartyCasino for Entain. International operations carry an additional Government of Gibraltar licence."
+    },
+    {
+      "question": "Does Ladbrokes share its licence with other casinos?",
+      "answer": "Yes. LC International Limited, Ladbrokes' UK licence holder, also operates several other Entain brands (including bwin, Coral, Gala and PartyCasino) under the same GB licence."
+    },
+    {
+      "question": "What is the welcome bonus at Ladbrokes?",
+      "answer": "New customers can bet £10+ to receive a £30 casino bonus (40x wagering, 30-day validity), or opt for an alternative of 100 free spins on selected slots. Blackjack variants don't count toward wagering."
+    },
+    {
+      "question": "Can Dutch (NL) residents play at Ladbrokes?",
+      "answer": "No. Ladbrokes operates under UKGC/Gibraltar licensing without a Dutch KSA licence, so Netherlands residents are restricted."
+    },
+    {
+      "question": "How fast are Ladbrokes withdrawals?",
+      "answer": "Instant Bank Transfer is fastest, often clearing within minutes. Visa Fast Funds takes around 4 hours, PayPal around 8 hours, and standard bank transfers can take up to 3 business days."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 const DEFAULT_RAW_DATA = `
-Casino Name: bwin
-License Status: Operated by Entain under various jurisdictional licenses, including the UK Gambling Commission and the Gibraltar Gambling Commissioner.
-Asset Segregation: Adheres to Entain Group’s regulatory standards; player funds are managed in alignment with licensing requirements for liquidity and protection.
-Withdrawal Limits: No site-wide fixed withdrawal cap, though regulatory obligations and individual payment method limits apply. Withdrawals must be allowed without undue restriction on deposit balances.
-Wagering / Playthrough: Follows fair play transparency guidelines; wagering requirements apply to bonus funds, but operators must ensure players can withdraw their own deposited funds at any time.
-Responsible Gaming Controls: Offers comprehensive "Committed to player safety" tools including deposit limits, time-outs, and self-exclusion options.
+Casino Name: Ladbrokes
+License Status: Operated by the Entain Group, licensed by the UK Gambling Commission and the Gibraltar Gambling Commissioner.
+Asset Segregation: Complies with Entain Group’s internal and regulatory financial protection policies to ensure fund liquidity and management.
+Withdrawal Limits: No strictly enforced site-wide cap; however, transaction limits may apply based on payment methods and regulatory status.
+Wagering / Playthrough: Transparent terms regarding promotional play; bonus funds and deposit balances are displayed separately to prevent unfair restrictions on withdrawing personal deposits.
+Responsible Gaming Controls: Extensive suite of tools including deposit limits, max stake limits, deposit curfews, reality checks, play breaks, and irreversible self-exclusion.
 `;
