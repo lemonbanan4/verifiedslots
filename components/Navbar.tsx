@@ -83,25 +83,29 @@ export function Navbar() {
   );
 
   return (
-    <nav className="sticky top-4 z-40 glass-card rounded-2xl md:rounded-full px-5 py-3 md:py-3.5 flex items-center justify-between shadow-2xl mb-8 border border-white/10 select-none">
+    <nav className="sticky top-4 z-40 glass-card rounded-2xl md:rounded-full px-4 md:px-5 py-2.5 md:py-3.5 flex items-center justify-between shadow-2xl mb-8 border border-white/10 select-none">
       <Link
         href="/"
-        className="flex items-center gap-3 group focus:outline-none min-w-0"
+        className="flex items-center gap-2.5 md:gap-3 group focus:outline-none min-w-0"
       >
-        {/* Smaller on mobile so the logo + title never crowd out the hamburger */}
+        {/* Smaller on mobile so the logo + title never crowd out the hamburger, and keep the whole bar compact */}
         <img
           src="/logo.png"
-          className="h-12 w-12 md:h-20 md:w-20 object-contain transition-transform duration-200 group-hover:scale-105 shrink-0"
+          className="h-9 w-9 md:h-20 md:w-20 object-contain transition-transform duration-200 group-hover:scale-105 shrink-0"
           alt="Logo"
         />
 
         <div className="min-w-0">
-          <h1 className="text-sm md:text-lg font-bold tracking-tight text-slate-100 flex items-center gap-2 leading-tight truncate">
+          <h1 className="text-xs md:text-lg font-bold tracking-tight text-slate-100 flex items-center gap-2 leading-tight truncate">
             VerifiedSlots
             <span className="hidden sm:inline text-[10px] px-2 py-0.5 rounded-full font-bold uppercase bg-blue-500/10 border border-blue-500/20 text-blue-400">
               Compliance
             </span>
           </h1>
+          {/* Compact mobile-only subtitle; desktop keeps its own fuller line below */}
+          <p className="md:hidden text-[8px] text-slate-500 uppercase tracking-widest font-semibold leading-none mt-0.5 truncate">
+            Compliance Audit Desk
+          </p>
           <p className="hidden md:block text-[9px] text-slate-500 uppercase tracking-widest font-semibold leading-none mt-0.5">
             INDEPENDENT COMPLIANCE AUDIT DESK
           </p>
