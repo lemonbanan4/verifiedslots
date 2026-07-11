@@ -91,11 +91,6 @@ export function proxy(request: NextRequest) {
     response.headers.set("x-robots-tag", "noindex");
   }
 
-  // Temporary diagnostic header confirming which upstream geo header (if
-  // any) actually reaches the origin in production — safe to remove once
-  // confirmed live.
-  response.headers.set("x-debug-geo-header", rawCountryHeader || "none");
-
   return response;
 }
 
