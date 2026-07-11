@@ -4,6 +4,45 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * Extended in-between shades used throughout the component library
+   * (e.g. text-slate-350, text-emerald-450). These aren't part of
+   * Tailwind's default scale, so without an explicit token they were
+   * silently dropped by the compiler — components rendered with no
+   * color utility applied at all rather than the intended shade.
+   * Values are OKLCH-interpolated between their neighboring default
+   * Tailwind stops to stay visually consistent with the rest of the
+   * palette (slate-955 clamps to slate-950 — there's no 1000 stop to
+   * interpolate toward).
+   */
+  --color-slate-305: oklch(86.1% 0.023 253.089);
+  --color-slate-350: oklch(78.7% 0.031 254.841);
+  --color-slate-450: oklch(62.9% 0.043 257.102);
+  --color-slate-455: oklch(62.1% 0.043 257.134);
+  --color-slate-550: oklch(50.0% 0.044 257.349);
+  --color-slate-650: oklch(40.9% 0.043 257.284);
+  --color-slate-750: oklch(32.5% 0.042 258.659);
+  --color-slate-955: oklch(12.9% 0.042 264.695);
+  --color-emerald-350: oklch(80.5% 0.160 164.101);
+  --color-emerald-405: oklch(76.2% 0.177 163.186);
+  --color-emerald-450: oklch(73.0% 0.173 162.851);
+  --color-emerald-455: oklch(72.7% 0.173 162.814);
+  --color-blue-350: oklch(75.8% 0.135 253.219);
+  --color-blue-405: oklch(70.3% 0.167 254.884);
+  --color-blue-450: oklch(66.5% 0.190 257.219);
+  --color-indigo-350: oklch(72.9% 0.148 275.824);
+  --color-indigo-355: oklch(72.3% 0.152 275.935);
+  --color-indigo-405: oklch(66.9% 0.185 276.944);
+  --color-indigo-450: oklch(62.9% 0.208 277.026);
+  --color-indigo-650: oklch(48.4% 0.251 276.995);
+  --color-amber-350: oklch(85.3% 0.179 88.017);
+  --color-amber-450: oklch(79.8% 0.189 77.255);
+  --color-amber-455: oklch(79.6% 0.188 76.537);
+  --color-rose-405: oklch(70.9% 0.197 13.579);
+  --color-rose-450: oklch(67.8% 0.220 14.934);
+  --color-rose-455: oklch(67.5% 0.223 15.084);
+  --color-sky-450: oklch(71.5% 0.165 234.992);
 }
 
 /* 2026 Cyber-Premium 'Liquid Glass' Utility Classes */
