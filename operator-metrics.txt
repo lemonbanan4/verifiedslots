@@ -1,8 +1,8 @@
 const DEFAULT_RAW_DATA = `
-Casino Name: Casumo
-License Status: Licensed by the Malta Gaming Authority (MGA/CRP/217/2012-05). The UK-facing operations are managed by Recro Limited.
-Asset Segregation: Operates under strict adherence to UKGC and MGA standards. Player funds are managed in compliance with standard regulatory requirements for liquidity and separation.
-Withdrawal Limits: No strictly enforced site-wide cap; however, specific payment method limits apply. Verified withdrawals are typically processed within 24 hours.
-Wagering / Playthrough: Focuses on "fair play" wagering, often below 30x on specific tiers, with bonus funds linked to achievement-based "bonus jars" rather than high-multiplier "churn" requirements.
-Responsible Gaming Controls: "Front-and-center" dashboard providing easy access to deposit limits, reality checks, cooling-off periods, and self-assessment tools.
+Casino Name: bwin
+License Status: Operated by Entain under various jurisdictional licenses, including the UK Gambling Commission and the Gibraltar Gambling Commissioner.
+Asset Segregation: Adheres to Entain Group’s regulatory standards; player funds are managed in alignment with licensing requirements for liquidity and protection.
+Withdrawal Limits: No site-wide fixed withdrawal cap, though regulatory obligations and individual payment method limits apply. Withdrawals must be allowed without undue restriction on deposit balances.
+Wagering / Playthrough: Follows fair play transparency guidelines; wagering requirements apply to bonus funds, but operators must ensure players can withdraw their own deposited funds at any time.
+Responsible Gaming Controls: Offers comprehensive "Committed to player safety" tools including deposit limits, time-outs, and self-exclusion options.
 `;

@@ -63,6 +63,13 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     ? "bet365.com"
     : review.domain;
 
+  // Casinos hold one license number per jurisdiction, but the Casino type
+  // only stores a single `licenseNumber` (matching their primary
+  // licenseType) — so multi-licensed casinos need their other
+  // jurisdictions' numbers listed explicitly here. Falls back to the
+  // casino's own stored number for every other operator, rather than a
+  // fixed placeholder that would otherwise show one operator's real
+  // license number under a completely different brand's review page.
   let displayLicenseNumber = review.licenseNumber;
   if (activeRegulator === "ukgc") {
     if (review.id === "bet365") {
@@ -73,8 +80,8 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
       displayLicenseNumber = "39198";
     } else if (review.id === "videoslots") {
       displayLicenseNumber = "39380";
-    } else {
-      displayLicenseNumber = "39198";
+    } else if (review.id === "casumo") {
+      displayLicenseNumber = "061549-R-336718-002";
     }
   } else if (activeRegulator === "mga") {
     if (review.id === "unibet") {

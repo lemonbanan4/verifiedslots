@@ -328,6 +328,256 @@ export const casinos: Casino[] = [
     "wagering": "1x"
   },
   {
+    "id": "bwin",
+    "name": "bwin",
+    "slug": "bwin",
+    "domain": "bwin.com",
+    "isKsaLicensed": false,
+    "isLicensedInNL": false,
+    "license": "054743-R-330863-014",
+    "licenseType": "ukgc",
+    "restrictedCountries": [
+      "NL",
+      "US"
+    ],
+    "bonus": "100% up to £200 + 50 Free Spins",
+    "wagering": "35x",
+    "licenseNumber": "054743-R-330863-014",
+    "rating": 9,
+    "author": "Dr. Evelyn Reed, Senior Compliance Analyst",
+    "datePublished": "2026-07-11",
+    "lastModified": "2026-07-11",
+    "lastUpdated": "2026-07-11",
+    "logoColor": "from-slate-900 to-black",
+    "gameLibraryCount": "5,000+ Titles",
+    "summaryText": "bwin is one of Entain plc's flagship brands, operating in Great Britain under LC International Limited's UK Gambling Commission licence, with its wider international operations run by ElectraWorks Limited under Gibraltar licences. It pairs a large slots and live-dealer library with a long-standing sportsbook heritage.",
+    "editorialVerdict": "bwin's UK-facing operations run under LC International Limited's active UK Gambling Commission remote licence (account 54743, active since 1 Jul 2019) — one of the longer continuous licensing records among the operators we've audited. Its broader international business is run by a separate Entain entity, ElectraWorks Limited, under Gibraltar licences 050 and 051, which sit outside UKGC/MGA/KSA oversight; UK-based players should confirm they are on the UKGC-regulated GB-facing platform. Bonus terms follow the industry-standard 35x deposit wagering, with a materially lower 10x requirement on free-spin winnings specifically. Entain's group-wide responsible gambling framework is well-resourced and consistently surfaced across its brand portfolio.",
+    "warningText": "bwin is subject to geo-restrictions and Dutch (NL) residents are strictly prohibited under this UKGC licence. Confirm which Entain legal entity (LC International Limited vs. ElectraWorks Limited) applies to your region before depositing.",
+    "affiliateUrl": "",
+    "pros": [
+      "Long-standing, continuously active UK Gambling Commission licence (since 2019) under LC International Limited",
+      "Large game library (5,000+ titles) spanning slots, live dealer and a well-established sportsbook",
+      "Low 10x wagering requirement specifically on free-spin winnings",
+      "No deposit or withdrawal fees charged by the operator directly",
+      "Backed by Entain plc's group-wide responsible gambling infrastructure"
+    ],
+    "cons": [
+      "International (non-GB) operations run under a separate Gibraltar-licensed entity (ElectraWorks Limited) outside UKGC/MGA/KSA oversight — confirm which entity governs your account",
+      "Standard 35x wagering requirement on the main deposit bonus is at the higher end of typical ranges",
+      "Some popular e-wallets (including Skrill and Neteller in certain promotions) are excluded from bonus-qualifying deposits",
+      "Bank transfer and cheque withdrawals can take up to 7-20 business days"
+    ],
+    "securityTitle": "Licensing Structure and Fair Play at bwin",
+    "securitySummary": "bwin's Great Britain operations are licensed and regulated by the UK Gambling Commission under LC International Limited (account 54743, remote licence 054743-R-330863-014). Its wider international business operates under ElectraWorks Limited's Gibraltar licences (050, 051). Game fairness across both is backed by established suppliers including NetEnt, Play'n GO, Pragmatic Play and Evolution for live dealer titles.",
+    "securityWarning": "UK players should confirm they are using the UKGC-regulated GB platform (LC International Limited); the international ElectraWorks Limited entity operates under Gibraltar licensing, outside UKGC/MGA/KSA jurisdiction.",
+    "securityPoints": [
+      {
+        "title": "UKGC Licensed",
+        "description": "Active UK Gambling Commission remote licence (054743-R-330863-014) under LC International Limited, effective since 1 Jul 2019.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "Separate International Entity",
+        "description": "Non-GB operations run by ElectraWorks Limited under Gibraltar licences 050/051, outside UKGC/MGA/KSA oversight.",
+        "iconName": "alert",
+        "status": "warning"
+      },
+      {
+        "title": "Entain Group Backing",
+        "description": "Part of Entain plc, a listed operator group with group-wide compliance and responsible gambling infrastructure.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "Independent RNG Testing",
+        "description": "Game fairness is tested at the provider level by labs used by NetEnt, Play'n GO, Pragmatic Play and Evolution.",
+        "iconName": "zap",
+        "status": "success"
+      }
+    ],
+    "bonusMatchOffer": "100% up to £200",
+    "bonusWagering": "35x",
+    "bonusMinDeposit": "£10",
+    "bonusValidity": "7 Days",
+    "bonusMaxBet": "£5",
+    "bonusTermsVerdict": "The 35x deposit-bonus wagering requirement is standard for the industry, while the accompanying free spins carry a notably lower 10x requirement — worth checking which component of a promotion you're actually clearing.",
+    "bonusTermsDetails": [
+      {
+        "title": "Deposit Bonus Wagering",
+        "description": "The 100% deposit match must be wagered 35x before withdrawal."
+      },
+      {
+        "title": "Free Spin Winnings Wagering",
+        "description": "Winnings from the accompanying free spins carry a lower 10x wagering requirement, with no maximum cashout stated, but must be cleared within 7 days."
+      },
+      {
+        "title": "Excluded Payment Methods",
+        "description": "Certain e-wallets (including Skrill and Neteller in some promotions) are excluded from qualifying for the welcome bonus — check current terms before depositing."
+      },
+      {
+        "title": "Game Contributions",
+        "description": "Slots contribute 100% toward wagering; live casino and table games contribute at a reduced rate or are excluded."
+      }
+    ],
+    "gameSummary": "bwin combines a large slots and live-dealer casino library with Entain's established sportsbook, backed by major suppliers across both verticals.",
+    "gameCategories": [
+      {
+        "title": "Video Slots",
+        "description": "Over 4,300 slot titles from major suppliers spanning classic reels through modern video slot mechanics.",
+        "notable": "NetEnt, Pragmatic Play, Push Gaming, Red Tiger",
+        "iconName": "slots"
+      },
+      {
+        "title": "Live Casino",
+        "description": "170+ live dealer titles including bespoke bwin-branded tables and Evolution-supplied games.",
+        "notable": "bwin Live Roulette, Evolution Blackjack, Game Shows",
+        "iconName": "live"
+      },
+      {
+        "title": "Table Games",
+        "description": "Standard RNG table game variants alongside the live dealer equivalents.",
+        "notable": "Blackjack, Roulette, Baccarat, Poker",
+        "iconName": "dice"
+      }
+    ],
+    "gameContributions": [
+      {
+        "category": "Slots",
+        "contribution": "100%"
+      },
+      {
+        "category": "Live Casino",
+        "contribution": "Reduced (verify per game)"
+      },
+      {
+        "category": "Table Games",
+        "contribution": "Reduced (verify per game)"
+      }
+    ],
+    "paymentSummary": "bwin charges no deposit or withdrawal fees directly, though processing times vary considerably by method — e-wallets clear fastest, while bank transfers and cheques are the slowest options.",
+    "paymentMethods": [
+      {
+        "name": "Visa Direct",
+        "type": "Debit Card",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 4 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "PayPal",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 24 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "Neteller",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 24 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "Bank Transfer",
+        "type": "Bank Transfer",
+        "depositTime": "1-3 Business Days",
+        "withdrawalTime": "3-5 Business Days",
+        "fees": "None"
+      },
+      {
+        "name": "Cheque",
+        "type": "Cheque",
+        "depositTime": "N/A (withdrawal only)",
+        "withdrawalTime": "7-20 Business Days",
+        "fees": "None"
+      }
+    ],
+    "rgSummary": "As part of Entain plc, bwin offers a group-wide 'Committed to player safety' toolkit covering deposit limits, time-outs and self-exclusion, consistent across Entain's brand portfolio.",
+    "rgTools": [
+      {
+        "title": "Deposit Limits",
+        "description": "Set daily, weekly, or monthly deposit caps.",
+        "status": "success",
+        "iconName": "euro"
+      },
+      {
+        "title": "Time-Outs",
+        "description": "Take a temporary break from the platform for a set period.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Self-Exclusion",
+        "description": "Temporary or permanent self-exclusion from the platform.",
+        "status": "success",
+        "iconName": "ban"
+      },
+      {
+        "title": "Reality Checks",
+        "description": "Periodic reminders of elapsed session time and net spend.",
+        "status": "success",
+        "iconName": "clock"
+      }
+    ],
+    "comparisonTitle": "bwin vs. Industry Standards",
+    "comparisonRows": [
+      {
+        "feature": "License & Safety",
+        "thisCasino": "UKGC (LC International Limited)",
+        "regulatedStandard": "KSA Standard Requirement",
+        "status": "success"
+      },
+      {
+        "feature": "Welcome Bonus Wagering",
+        "thisCasino": "35x (Deposit) / 10x (Free Spins)",
+        "regulatedStandard": "30x-40x (Average)",
+        "status": "success"
+      },
+      {
+        "feature": "Welcome Bonus Size",
+        "thisCasino": "100% up to £200",
+        "regulatedStandard": "100% up to £200+ (Average)",
+        "status": "success"
+      },
+      {
+        "feature": "Game Variety",
+        "thisCasino": "5,000+ Titles",
+        "regulatedStandard": "1,000+ Titles",
+        "status": "success"
+      },
+      {
+        "feature": "Responsible Gambling Tools",
+        "thisCasino": "Group-Wide Entain Suite",
+        "regulatedStandard": "Basic Tools",
+        "status": "success"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is bwin a licensed casino?",
+        "answer": "Yes. bwin's Great Britain operations are licensed by the UK Gambling Commission under LC International Limited (remote licence 054743-R-330863-014, active since 1 Jul 2019). Its international operations are run separately by ElectraWorks Limited under Gibraltar licences 050 and 051."
+      },
+      {
+        "question": "Which company actually operates bwin?",
+        "answer": "bwin is a brand of Entain plc. UK players contract with LC International Limited under UKGC licensing; players outside the UK may be on ElectraWorks Limited's Gibraltar-licensed platform instead. Always check your account Terms & Conditions."
+      },
+      {
+        "question": "What is the welcome bonus at bwin?",
+        "answer": "New customers can claim a 100% deposit match up to £200 plus 50 free spins. The deposit bonus carries a 35x wagering requirement, while free spin winnings carry a lower 10x requirement, clearable within 7 days."
+      },
+      {
+        "question": "Can Dutch (NL) residents play at bwin?",
+        "answer": "No. bwin operates under UKGC/Gibraltar licensing without a Dutch KSA licence, so Netherlands residents are restricted."
+      },
+      {
+        "question": "How fast are bwin withdrawals?",
+        "answer": "E-wallet and Visa Direct withdrawals are fastest, often clearing within 4-24 hours. Bank transfers and cheque withdrawals are considerably slower, taking up to 3-20 business days depending on method."
+      }
+    ],
+    "welcomeBonus": "100% up to £200"
+  },
+  {
     "id": "casino777",
     "name": "Casino777",
     "slug": "casino777",
