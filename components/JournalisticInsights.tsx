@@ -26,6 +26,9 @@ import type { Audit, AuditSection, AuditCategory } from "@/src/types/audit";
 import auditsData from "@/src/data/audits.json";
 import { ComplianceSeal } from "./ComplianceSeal";
 import { AuditModal } from "./AuditModal";
+import { createLogger } from "@/src/utils/logging";
+
+const log = createLogger("journalistic-insights");
 
 const FALLBACK_ARTICLES = auditsData as Audit[];
 
@@ -120,7 +123,7 @@ export function JournalisticInsights({ limit }: { limit?: number } = {}) {
         const data = await res.json();
         setArticles(sortByDateDesc(data));
       } catch (err) {
-        console.error("Failed to load insights, falling back to static content:", err);
+        log.error("Failed to load insights, falling back to static content", { error: err });
         setArticles(sortByDateDesc(FALLBACK_ARTICLES));
       } finally {
         setLoading(false);
