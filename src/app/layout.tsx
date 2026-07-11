@@ -97,7 +97,7 @@ export default function RootLayout({
               {/* Less top padding on mobile — 64px (py-16) on a narrow
                   viewport reads as dead space between the nav and the first
                   card; desktop keeps the original spacious gap. */}
-              <div className="flex-1 pt-6 pb-16 md:pt-16">
+              <div className="flex-1 pt-2 pb-16 md:pt-16">
                 {children}
               </div>
               <Footer />
