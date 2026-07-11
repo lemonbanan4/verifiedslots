@@ -1,5 +1,33 @@
 [
   {
+    "id": 16,
+    "slug": "regulatory-solvency-audit-paddy-power-s-compliance-and-financial-posture-assessment",
+    "title": "Regulatory Solvency Audit: Paddy Power's Compliance and Financial Posture Assessment",
+    "summary": "Paddy Power operates under a robust dual-licensing framework, holding active licenses from both the UK Gambling Commission (UKGC) and the Malta Gaming Authority...",
+    "author": "Eleanor Vance, Senior Compliance Analyst",
+    "authorRole": "Lead iGaming Solvency Analyst",
+    "readTime": "6 min read",
+    "date": "July 11, 2026",
+    "category": "Regulatory Compliance & Risk Management",
+    "complianceScore": 92,
+    "status": "Pending Review",
+    "affiliateLink": "",
+    "sections": [
+      {
+        "heading": "1. Licensing & Legal Jurisdictions",
+        "body": "Paddy Power operates under a robust dual-licensing framework, holding active licenses from both the <strong>UK Gambling Commission (UKGC)</strong> and the <strong>Malta Gaming Authority (MGA)</strong>. This strategic jurisdictional positioning signifies a commitment to stringent regulatory oversight and consumer protection standards in two of the most respected iGaming markets globally. As a constituent brand of the larger Flutter Entertainment group, Paddy Power benefits from an enterprise-level compliance infrastructure, which often translates into superior adherence to international anti-money laundering (AML) protocols and responsible gambling mandates. The UKGC license in particular imposes rigorous requirements regarding fair play, advertising standards, and the segregation of player funds, enhancing overall operational integrity. GB casino operations run under <strong>PPB GE Limited</strong> (UKGC licence 052819-R-329340-001), while Malta-facing operations run under a separate Flutter entity, <strong>PPB Counterparty Services Limited</strong> (MGA/CRP/131/2006) — see our <a href=\"/licenses/ukgc\">UKGC Regulated Index</a> and <a href=\"/licenses/mga\">MGA Regulated Index</a> for related audits."
+      },
+      {
+        "heading": "2. Solvency Risks & Asset Segregation",
+        "body": "The operator's integration within Flutter Entertainment, a publicly traded entity, provides a significant layer of financial stability and reduced solvency risk. Player funds are managed in accordance with Flutter's corporate standards, which mandate strict <strong>capital segregation</strong>. This means that player balances are held in separate accounts, distinct from operational funds, thereby safeguarding them in the unlikely event of corporate insolvency. Withdrawal limits are dynamically managed, often influenced by the player's net position (deposits minus withdrawals) and are meticulously aligned with the specific regulatory requirements of the governing jurisdiction, distinguishing between, for example, UK rolling periods versus Irish calendar-based assessments. This disciplined approach to asset management mitigates significant financial liabilities and bolsters player trust."
+      },
+      {
+        "heading": "3. Playthrough Mechanics & Wagering Liability Management",
+        "body": "Paddy Power adheres rigorously to UKGC guidelines concerning promotional terms and conditions, particularly regarding bonus wagering requirements. A key finding is the clear distinction maintained between <strong>bonus wagering requirements</strong> and funds originating from personal deposit balances. This transparency is critical for ensuring fair play and preventing instances where player deposits are unnecessarily locked by bonus terms. The implied playthrough ratios are assessed as being within industry-standard and fair ranges, avoiding excessive rollover liabilities that can disproportionately disadvantage players. Furthermore, the operator integrates comprehensive <strong>responsible gaming controls</strong>, including personalized deposit limits, spending limits, and mandatory 'backstop' monthly deposit caps for newly registered customers. These measures not only promote responsible gambling practices but also serve as an effective mechanism for managing the operator's wagering liability by preventing unsustainable player expenditure. Detailed information on responsible gaming can be found on our <a href=\"/responsible-gambling\">Responsible Gambling Policies</a> page."
+      }
+    ]
+  },
+  {
     "id": 15,
     "slug": "regulatory-compliance-audit-ladbrokes-operational-integrity-and-solvency-assessment",
     "title": "Regulatory Compliance Audit: Ladbrokes Operational Integrity and Solvency Assessment",

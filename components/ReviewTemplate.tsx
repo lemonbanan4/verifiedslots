@@ -92,6 +92,8 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
       displayLicenseNumber = "MGA/B2C/258/2014";
     } else if (review.id === "bet365") {
       displayLicenseNumber = "MGA/B2C/218/2012";
+    } else if (review.id === "paddy-power") {
+      displayLicenseNumber = "MGA/CRP/131/2006";
     }
   } else if (activeRegulator === "ksa") {
     if (review.id === "bet365") {

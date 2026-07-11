@@ -1,8 +1,8 @@
 const DEFAULT_RAW_DATA = `
-Casino Name: Ladbrokes
-License Status: Operated by the Entain Group, licensed by the UK Gambling Commission and the Gibraltar Gambling Commissioner.
-Asset Segregation: Complies with Entain Group’s internal and regulatory financial protection policies to ensure fund liquidity and management.
-Withdrawal Limits: No strictly enforced site-wide cap; however, transaction limits may apply based on payment methods and regulatory status.
-Wagering / Playthrough: Transparent terms regarding promotional play; bonus funds and deposit balances are displayed separately to prevent unfair restrictions on withdrawing personal deposits.
-Responsible Gaming Controls: Extensive suite of tools including deposit limits, max stake limits, deposit curfews, reality checks, play breaks, and irreversible self-exclusion.
+Casino Name: Paddy Power
+License Status: Licensed and regulated by the UK Gambling Commission and the Malta Gaming Authority. Part of the Flutter Entertainment group.
+Asset Segregation: Operates under Flutter Entertainment's corporate standards, ensuring strict financial separation and regulatory compliance.
+Withdrawal Limits: Limits may be based on net position (deposits minus withdrawals) and are subject to regulatory jurisdictional requirements (UK rolling vs. Irish calendar periods).
+Wagering / Playthrough: Adheres to UKGC guidelines on fair terms; bonus wagering requirements must be clearly distinguished from personal deposit balances.
+Responsible Gaming Controls: Features include personalized deposit limits, spending limits, and mandatory "backstop" monthly deposit caps for newly registered customers.
 `;

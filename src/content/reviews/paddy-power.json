@@ -1,0 +1,165 @@
+{
+  "id": "paddy-power",
+  "name": "Paddy Power",
+  "slug": "paddy-power",
+  "domain": "paddypower.com",
+  "isKsaLicensed": false,
+  "isLicensedInNL": false,
+  "license": "052819-R-329340-001",
+  "licenseType": "ukgc",
+  "licenseTypes": ["ukgc", "mga"],
+  "restrictedCountries": ["NL", "US"],
+  "bonus": "260 Free Spins (No Wagering)",
+  "wagering": "10x (Site-Wide Max, from Jan 2026)",
+  "licenseNumber": "052819-R-329340-001",
+  "rating": 9,
+  "author": "Eleanor Vance, Senior Compliance Analyst",
+  "datePublished": "2026-07-11",
+  "lastModified": "2026-07-11",
+  "lastUpdated": "2026-07-11",
+  "logoColor": "from-emerald-800 to-green-950",
+  "gameLibraryCount": "2,000+ Titles",
+  "summaryText": "Paddy Power is a Flutter Entertainment-owned brand dual-licensed by the UK Gambling Commission (PPB GE Limited) and the Malta Gaming Authority (PPB Counterparty Services Limited). It's known for a no-wagering free spins welcome structure and a slots library featuring proprietary exclusive titles.",
+  "editorialVerdict": "Paddy Power's GB casino operations run under PPB GE Limited's active UK Gambling Commission licence (account 52819, Casino Remote reference 052819-R-329340-001, effective since 20 Sep 2018), with its Malta-facing operations held by a separate Flutter entity, PPB Counterparty Services Limited, under an active MGA licence (MGA/CRP/131/2006). Flutter operates several distinct legal entities across its brand portfolio (including separate ones for sportsbook vs. casino/gaming software), so players should confirm which entity governs their specific account. The headline welcome offer is unusually structured as no-wagering free spins rather than a deposit match, though Flutter introduced a site-wide 10x maximum wagering cap across all bonus offers from 19 January 2026, worth checking against current promotional terms.",
+  "warningText": "Paddy Power is subject to geo-restrictions and Dutch (NL) residents are strictly prohibited. Confirm which Flutter legal entity (PPB GE Limited for UKGC vs. PPB Counterparty Services Limited for MGA) applies to your account before depositing.",
+  "affiliateUrl": "",
+  "pros": [
+    "Dual UKGC and MGA licensing, both independently verified as active on their respective official registries",
+    "No-wagering free spins welcome structure — spin winnings are paid as withdrawable cash rather than locked behind a multiplier",
+    "Large game library (2,000+ titles) including proprietary Paddy Power-exclusive slots not available elsewhere",
+    "Reasonable payout window, with withdrawals typically clearing within 4 days across all supported methods",
+    "Backed by Flutter Entertainment's enterprise-level compliance and responsible gambling infrastructure"
+  ],
+  "cons": [
+    "Flutter operates several distinct legal entities under the Paddy Power brand (separate ones for casino, sportsbook and gaming software) — confirm which one your account terms actually reference",
+    "Since 19 January 2026, a site-wide 10x maximum wagering cap applies to all bonus offers, superseding any previous no-wagering terms — always check current promotional copy",
+    "Deposits for the flagship free spins offer are restricted to Pay by Bank, Apple Pay or debit card only",
+    "Withdrawal limits are tied to net deposit position and vary between UK (rolling period) and Irish (calendar period) regulatory frameworks, which can be confusing for cross-border players"
+  ],
+  "securityTitle": "Licensing Structure and Fair Play at Paddy Power",
+  "securitySummary": "Paddy Power's GB casino operations are licensed by the UK Gambling Commission under PPB GE Limited (account 52819, Casino Remote reference 052819-R-329340-001). Its Malta-facing operations are licensed separately by the Malta Gaming Authority under PPB Counterparty Services Limited (MGA/CRP/131/2006), independently confirmed active on the MGA's own verification portal. Game fairness is backed by established suppliers including NetEnt, Pragmatic Play and Evolution for live dealer titles.",
+  "securityWarning": "Flutter operates multiple distinct legal entities under the Paddy Power brand for different products (casino, sportsbook, gaming software) — confirm which entity and licence your account terms actually reference.",
+  "securityPoints": [
+    {
+      "title": "UKGC Licensed",
+      "description": "Active UK Gambling Commission Casino Remote licence (052819-R-329340-001) under PPB GE Limited, effective since 20 Sep 2018.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "MGA Licensed",
+      "description": "Active Malta Gaming Authority licence (MGA/CRP/131/2006) under PPB Counterparty Services Limited, independently verified on the MGA's own portal.",
+      "iconName": "shield",
+      "status": "success"
+    },
+    {
+      "title": "Multiple Flutter Legal Entities",
+      "description": "Casino, sportsbook and gaming-software products are held by separate Flutter-owned entities — confirm which applies to your account.",
+      "iconName": "alert",
+      "status": "warning"
+    },
+    {
+      "title": "Independent RNG Testing",
+      "description": "Game fairness is tested at the provider level by labs used by NetEnt, Pragmatic Play and Evolution.",
+      "iconName": "zap",
+      "status": "success"
+    }
+  ],
+  "bonusMatchOffer": "260 Free Spins",
+  "bonusWagering": "No Wagering (Spins) / 10x Site-Wide Max (Other Bonuses, from Jan 2026)",
+  "bonusMinDeposit": "£10",
+  "bonusValidity": "7 Days",
+  "bonusMaxBet": "Not explicitly stated on homepage, please verify",
+  "bonusTermsVerdict": "The no-wagering free spins structure is genuinely player-friendly when available, but Flutter's site-wide 10x maximum wagering policy (effective 19 January 2026) applies to bonus offers generally — always confirm current terms rather than relying on legacy no-wagering marketing copy.",
+  "bonusTermsDetails": [
+    {
+      "title": "Free Spins Structure",
+      "description": "50 spins on registration, 10 spins on a specific title, and up to 200 more after a £10 deposit and wager — all paid as withdrawable cash with no wagering requirement."
+    },
+    {
+      "title": "Site-Wide Wagering Cap",
+      "description": "From 19 January 2026, all bonus offers are capped at a maximum 10x wagering requirement, superseding prior no-wagering terms on other promotions."
+    },
+    {
+      "title": "Qualifying Deposit Methods",
+      "description": "The flagship free spins offer requires depositing via Pay by Bank, Apple Pay or debit card specifically."
+    },
+    {
+      "title": "Expiry",
+      "description": "Free spins expire 7 days after being credited."
+    }
+  ],
+  "gameSummary": "Paddy Power combines a 2,000+ title library with proprietary exclusive slots and an Evolution-powered live casino, alongside dedicated bingo and poker platforms.",
+  "gameCategories": [
+    {
+      "title": "Video Slots",
+      "description": "1,500+ slot titles including Paddy Power-exclusive proprietary games alongside industry staples.",
+      "notable": "Book of Dead, Gates of Olympus, Big Bass series, 1p Slots",
+      "iconName": "slots"
+    },
+    {
+      "title": "Live Casino",
+      "description": "Evolution-powered live dealer lobby covering core table games and game shows.",
+      "notable": "Lightning Roulette, Crazy Time, Live Blackjack",
+      "iconName": "live"
+    },
+    {
+      "title": "Table Games, Bingo & Poker",
+      "description": "Standard RNG table games alongside dedicated bingo and online poker platforms.",
+      "notable": "Blackjack, Roulette, Bingo, Poker",
+      "iconName": "dice"
+    }
+  ],
+  "gameContributions": [
+    { "category": "Slots", "contribution": "100%" },
+    { "category": "Live Casino", "contribution": "Reduced (verify per game)" },
+    { "category": "Table Games", "contribution": "Reduced (verify per game)" }
+  ],
+  "paymentSummary": "Paddy Power supports nine deposit methods with a typically low £5 minimum, and withdrawal times are capped at a maximum of 4 days across supported methods.",
+  "paymentMethods": [
+    { "name": "Debit Card", "type": "Debit Card", "depositTime": "Instant", "withdrawalTime": "Up to 4 Days", "fees": "None" },
+    { "name": "PayPal", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Up to 4 Days", "fees": "None" },
+    { "name": "Apple Pay", "type": "Mobile Wallet", "depositTime": "Instant", "withdrawalTime": "N/A (deposit only)", "fees": "None" },
+    { "name": "Pay by Bank", "type": "Bank Transfer", "depositTime": "Instant", "withdrawalTime": "N/A (deposit only)", "fees": "None" },
+    { "name": "Neteller", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Up to 4 Days", "fees": "None" },
+    { "name": "Skrill", "type": "E-Wallet", "depositTime": "Instant", "withdrawalTime": "Up to 4 Days", "fees": "None" },
+    { "name": "Paysafecard", "type": "Prepaid Card", "depositTime": "Instant", "withdrawalTime": "N/A (deposit only)", "fees": "None" }
+  ],
+  "rgSummary": "As a Flutter Entertainment brand, Paddy Power offers personalised deposit and spending limits, alongside mandatory 'backstop' monthly deposit caps automatically applied to newly registered customers.",
+  "rgTools": [
+    { "title": "Deposit Limits", "description": "Set personalised daily, weekly, or monthly deposit caps.", "status": "success", "iconName": "euro" },
+    { "title": "Spending Limits", "description": "Set overall spending limits across products.", "status": "success", "iconName": "euro" },
+    { "title": "Backstop Deposit Caps", "description": "Mandatory monthly deposit caps automatically applied to newly registered customers.", "status": "success", "iconName": "shield-ban" },
+    { "title": "Self-Exclusion", "description": "Temporary or permanent self-exclusion from the platform.", "status": "success", "iconName": "ban" }
+  ],
+  "comparisonTitle": "Paddy Power vs. Industry Standards",
+  "comparisonRows": [
+    { "feature": "License & Safety", "thisCasino": "UKGC (PPB GE Limited) + MGA (PPB Counterparty Services)", "regulatedStandard": "KSA Standard Requirement", "status": "success" },
+    { "feature": "Welcome Bonus Wagering", "thisCasino": "No Wagering (Spins) / 10x Max (Other)", "regulatedStandard": "30x-40x (Average)", "status": "success" },
+    { "feature": "Welcome Bonus Size", "thisCasino": "260 Free Spins", "regulatedStandard": "100% up to £200+ (Average)", "status": "success" },
+    { "feature": "Game Variety", "thisCasino": "2,000+ Titles", "regulatedStandard": "1,000+ Titles", "status": "success" },
+    { "feature": "Responsible Gambling Tools", "thisCasino": "Flutter Enterprise Suite", "regulatedStandard": "Basic Tools", "status": "success" }
+  ],
+  "faqs": [
+    {
+      "question": "Is Paddy Power a licensed casino?",
+      "answer": "Yes. Paddy Power's GB casino operations are licensed by the UK Gambling Commission under PPB GE Limited (Casino Remote licence 052819-R-329340-001). Its Malta-facing operations are separately licensed by the Malta Gaming Authority under PPB Counterparty Services Limited (MGA/CRP/131/2006), both independently verified as active."
+    },
+    {
+      "question": "Does Paddy Power operate under one single licence?",
+      "answer": "No. Flutter Entertainment operates several distinct legal entities under the Paddy Power brand for different products — casino, sportsbook and gaming software are held by separate entities. Always check your account Terms & Conditions for the specific entity that applies to you."
+    },
+    {
+      "question": "What is the welcome bonus at Paddy Power?",
+      "answer": "New customers can claim up to 260 free spins with no wagering requirement on winnings, split across registration, a specific title, and a £10 deposit-and-wager unlock. Note that Flutter introduced a site-wide 10x maximum wagering cap on bonus offers generally from 19 January 2026 — always confirm current terms."
+    },
+    {
+      "question": "Can Dutch (NL) residents play at Paddy Power?",
+      "answer": "No. Paddy Power operates under UKGC/MGA licensing without a Dutch KSA licence, so Netherlands residents are restricted."
+    },
+    {
+      "question": "How fast are Paddy Power withdrawals?",
+      "answer": "Withdrawals are capped at a maximum of 4 days across all supported payment methods, with limits also depending on net deposit position and whether UK or Irish regulatory periods apply."
+    }
+  ]
+}
