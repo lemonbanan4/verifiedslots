@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useCompliance } from "@/src/context/ComplianceContext";
 import { Shield, ShieldAlert, HeartPulse, ExternalLink } from "lucide-react";
+import { XLogo } from "@/components/icons/XLogo";
 
 export function Footer() {
   const { visitorProfile } = useCompliance();
@@ -28,6 +29,18 @@ export function Footer() {
             <p className="text-[11px] text-slate-400 leading-relaxed max-w-sm">
               An independent, developer-led compliance auditing directory. We analyze payout mechanics, playthrough mathematics, and regulatory licensing safety.
             </p>
+            <div className="flex items-center gap-2 mt-1">
+              <a
+                href="https://x.com/VSlotsAudits"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow VerifiedSlots on X"
+                title="Follow us on X"
+                className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+              >
+                <XLogo size={14} />
+              </a>
+            </div>
           </div>
 
           {/* Compliance & Responsible Gambling Links */}
