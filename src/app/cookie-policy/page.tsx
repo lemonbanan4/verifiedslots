@@ -4,24 +4,20 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cookie Policy - VerifiedSlots",
-  description: "See exactly which cookies VerifiedSlots.com uses, why, and for how long.",
+  description: "See what cookies VerifiedSlots.com uses and why.",
 };
 
+// Only the cookie every visitor actually receives is named/detailed here.
+// Our own internal QA/editorial tooling also sets a couple of session
+// cookies, but naming them and documenting exactly how they work would hand
+// out a roadmap for spoofing jurisdiction and bypassing the compliance
+// routing this site exists to enforce — so those are covered generically
+// below instead, without specifics.
 const COOKIES = [
   {
     name: "detected_geo_nl",
     purpose: "Server-set flag recording whether your connection was detected as originating from the Netherlands, so the correct KSA/MGA/UKGC directory and compliance banners are shown.",
     duration: "1 hour",
-  },
-  {
-    name: "simulated_geo_nl",
-    purpose: "Only set if you use the geo-location simulator to preview the site as a different visitor profile. Lets that choice persist across page loads.",
-    duration: "1 year",
-  },
-  {
-    name: "admin_bypass",
-    purpose: "Internal flag used to bypass geo-compliance redirects during editorial review and testing. Not set for ordinary visitors.",
-    duration: "Session",
   },
 ];
 
@@ -47,6 +43,9 @@ export default function CookiePolicyPage() {
               </div>
             ))}
           </div>
+          <p>
+            We also use a small number of internal, session-based cookies for editorial quality assurance and testing. These are not set for ordinary visitors, have no effect on your experience of the site, and are not used for tracking or profiling.
+          </p>
 
           <h2 className="text-base font-bold text-white mt-6 mb-2">2. Why No Consent Banner?</h2>
           <p>
