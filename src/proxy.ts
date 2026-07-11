@@ -5,17 +5,23 @@ import { casinos, isCasinoAvailableInCountry } from "./data/casinos";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Determine Geo status
+  // 1. Determine Geo status. This app runs on Cloud Run behind Cloudflare,
+  // which adds "cf-ipcountry" to every request that reaches the origin;
+  // "x-vercel-ip-country" is kept as a fallback for any environment that
+  // provides it instead. A simulated cookie (admin/testing override) always
+  // takes full priority over the real header, in either direction.
   const simulatedGeo = request.cookies.get("simulated_geo_nl")?.value;
-  const rawCountryHeader = request.headers.get("x-vercel-ip-country")?.toUpperCase();
-  const isDutch = simulatedGeo === "true" || rawCountryHeader === "NL";
+  const rawCountryHeader = (
+    request.headers.get("cf-ipcountry") || request.headers.get("x-vercel-ip-country")
+  )?.toUpperCase();
+  const isDutch = simulatedGeo !== undefined ? simulatedGeo === "true" : rawCountryHeader === "NL";
   const countryCode = isDutch ? "NL" : (rawCountryHeader || "GB");
 
   // Determine user's country code to forward (lowercase, e.g. "nl", "global", "us")
   const country = (
-    simulatedGeo === "true"
-      ? "nl"
-      : (rawCountryHeader || (request as any).geo?.country || "global")
+    simulatedGeo !== undefined
+      ? (simulatedGeo === "true" ? "nl" : "global")
+      : (rawCountryHeader || "global")
   ).toLowerCase();
 
   // clone request headers and inject country
@@ -28,11 +34,18 @@ export function proxy(request: NextRequest) {
   const hasBypassCookie = request.cookies.get("admin_bypass")?.value === "true";
   const isAdminBypass = (hasBypassParam || hasBypassCookie) && !hasDisableBypass;
 
+  // Hands the real, server-detected geo down to the client via a plain
+  // (non-httpOnly) cookie, so ComplianceContext can read it synchronously
+  // instead of calling third-party IP-geolocation APIs from the browser.
+  const withGeoCookie = <T extends NextResponse>(res: T): T => {
+    res.cookies.set("detected_geo_nl", isDutch ? "true" : "false", { path: "/", maxAge: 3600 });
+    return res;
+  };
 
   // 2. License Enforcement for Dutch Visitors
   if (isDutch && !isAdminBypass) {
     if (pathname === "/licenses" || pathname === "/licenses/" || pathname.startsWith("/licenses/ukgc") || pathname.startsWith("/licenses/mga")) {
-      return NextResponse.redirect(new URL("/licenses/ksa", request.url));
+      return withGeoCookie(NextResponse.redirect(new URL("/licenses/ksa", request.url)));
     }
   }
 
@@ -42,7 +55,7 @@ export function proxy(request: NextRequest) {
     const casino = casinos.find((c) => c.slug === slug || c.id === slug);
     if (casino) {
       const license = casino.licenseType.toLowerCase();
-      return NextResponse.redirect(new URL(`/audits/${license}/${slug}`, request.url), 308);
+      return withGeoCookie(NextResponse.redirect(new URL(`/audits/${license}/${slug}`, request.url), 308));
     }
   }
 
@@ -55,16 +68,16 @@ export function proxy(request: NextRequest) {
     const isCasinoReviewRoute = ["ksa", "mga", "ukgc"].includes(segments[2]);
     const slug = segments[3] || "";
     if (isCasinoReviewRoute && slug && !isCasinoAvailableInCountry(slug, countryCode)) {
-      return NextResponse.redirect(new URL(isDutch ? "/licenses/ksa" : "/licenses/mga", request.url));
+      return withGeoCookie(NextResponse.redirect(new URL(isDutch ? "/licenses/ksa" : "/licenses/mga", request.url)));
     }
   }
 
   // 4. Robots Protection for non-matching profiles
-  const response = NextResponse.next({
+  const response = withGeoCookie(NextResponse.next({
     request: {
       headers: requestHeaders,
     },
-  });
+  }));
 
   if (hasBypassParam) {
     response.cookies.set("admin_bypass", "true", { path: "/" });
@@ -77,6 +90,11 @@ export function proxy(request: NextRequest) {
   } else if (!isDutch && pathname.startsWith("/licenses/ksa")) {
     response.headers.set("x-robots-tag", "noindex");
   }
+
+  // Temporary diagnostic header confirming which upstream geo header (if
+  // any) actually reaches the origin in production — safe to remove once
+  // confirmed live.
+  response.headers.set("x-debug-geo-header", rawCountryHeader || "none");
 
   return response;
 }

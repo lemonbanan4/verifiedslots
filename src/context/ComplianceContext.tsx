@@ -28,93 +28,39 @@ export function ComplianceProvider({ children }: { children: React.ReactNode }) 
   };
 
   useEffect(() => {
-    // 1. Initial State Resolution from Cookie or LocalStorage
+    // 1. Admin/manual simulation override always wins (cookie, then
+    // localStorage), mirroring the proxy's own priority order.
     const simulatedCookie = getCookie("simulated_geo_nl");
-    let isNL = false;
+    const simulatedLocal = typeof window !== "undefined" ? localStorage.getItem("simulated_geo_nl") : null;
+    const simulated = simulatedCookie ?? simulatedLocal;
 
-    if (simulatedCookie !== null) {
-      isNL = simulatedCookie === "true";
-    } else {
-      // LocalStorage fallback
-      if (typeof window !== "undefined") {
-        const simulatedLocal = localStorage.getItem("simulated_geo_nl");
-        if (simulatedLocal !== null) {
-          isNL = simulatedLocal === "true";
-        } else {
-          // Timezone fallback
-          try {
-            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            isNL = tz === "Europe/Amsterdam";
-          } catch {}
-        }
-      }
+    if (simulated !== null) {
+      const isNL = simulated === "true";
+      setVisitorProfile(isNL ? "Local" : "Global");
+      setDetectedCountry(isNL ? "Netherlands (Simulated)" : "Global / Rest of World (Simulated)");
+      return;
     }
 
-    setVisitorProfile(isNL ? "Local" : "Global");
-    setDetectedCountry(isNL ? "Netherlands (Simulated)" : "Global / Rest of World (Simulated)");
-
-    // 2. Fetch IP Geolocation API if no simulation overrides are set
-    if (simulatedCookie === null && typeof window !== "undefined" && localStorage.getItem("simulated_geo_nl") === null) {
-      let active = true;
-
-      const resolveGeo = async () => {
-        // Provider 1: ipapi.co
-        try {
-          const res = await fetch("https://ipapi.co/json/");
-          if (!res.ok) throw new Error();
-          const data = await res.json();
-          return { code: data.country_code?.toUpperCase(), country: data.country_name };
-        } catch {}
-
-        // Provider 2: freeipapi.com
-        try {
-          const res = await fetch("https://freeipapi.com/api/json");
-          if (!res.ok) throw new Error();
-          const data = await res.json();
-          return { code: data.countryCode?.toUpperCase(), country: data.countryName };
-        } catch {}
-
-        // Provider 3: ipwhois.app
-        try {
-          const res = await fetch("https://ipwhois.app/json/");
-          if (!res.ok) throw new Error();
-          const data = await res.json();
-          return { code: data.country_code?.toUpperCase(), country: data.country };
-        } catch {}
-
-        throw new Error("All geo-location APIs exhausted");
-      };
-
-      resolveGeo()
-        .then((data) => {
-          if (!active) return;
-          const isIPNL = data.code === "NL";
-          setVisitorProfile(isIPNL ? "Local" : "Global");
-          setDetectedCountry(isIPNL ? `${data.country} (IP Geolocation)` : `${data.country || "Rest of World"} (IP Geolocation)`);
-        })
-        .catch(() => {
-          // Fallback timezone and language check
-          if (!active) return;
-          try {
-            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            const isTzNL = tz === "Europe/Amsterdam";
-            const langs = navigator.languages || [navigator.language];
-            const isLangNL = langs.some((l) => l.toLowerCase().startsWith("nl"));
-            
-            if (isTzNL || isLangNL) {
-              setVisitorProfile("Local");
-              setDetectedCountry("Netherlands (Fallback - Timezone/Language)");
-            } else {
-              setVisitorProfile("Global");
-              setDetectedCountry("Rest of World (Fallback)");
-            }
-          } catch {}
-        });
-
-      return () => {
-        active = false;
-      };
+    // 2. Real detection, resolved server-side in src/proxy.ts from
+    // Cloudflare's ip-country header and handed to the client via a plain
+    // cookie — no client-side IP-geolocation API calls needed.
+    const detectedCookie = getCookie("detected_geo_nl");
+    if (detectedCookie !== null) {
+      const isNL = detectedCookie === "true";
+      setVisitorProfile(isNL ? "Local" : "Global");
+      setDetectedCountry(isNL ? "Netherlands (Server Detected)" : "Global / Rest of World (Server Detected)");
+      return;
     }
+
+    // 3. Defensive fallback if the cookie is somehow missing (e.g. a cached
+    // asset served without going through the proxy).
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const langs = navigator.languages || [navigator.language];
+      const isNL = tz === "Europe/Amsterdam" || langs.some((l) => l.toLowerCase().startsWith("nl"));
+      setVisitorProfile(isNL ? "Local" : "Global");
+      setDetectedCountry(isNL ? "Netherlands (Fallback)" : "Global / Rest of World (Fallback)");
+    } catch {}
   }, []);
 
   const setProfile = (profile: VisitorProfile) => {
