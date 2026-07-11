@@ -1,23 +1,31 @@
 rules_version = '2';
 
+// The app has no end-user sign-in flow anywhere, so "authenticated" isn't a
+// meaningful trust boundary here — Firebase API keys are public by design,
+// and anyone could call the client SDK's own sign-in methods directly
+// against this project if any auth provider is enabled, satisfying
+// `request.auth != null` without being an admin. All legitimate writes to
+// this data happen exclusively through scripts/seed-firestore.ts, which
+// uses the Admin SDK and bypasses these rules entirely — so client writes
+// are denied outright rather than gated on mere authentication.
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Public-facing casino data — readable by anyone, writable only by auth'd users
+    // Public-facing casino data — readable by anyone, never client-writable
     match /casinos/{casinoId} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if false;
     }
 
-    // Insights/audit articles — readable by anyone, writable only by auth'd users
+    // Insights/audit articles — readable by anyone, never client-writable
     match /insights/{insightId} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if false;
     }
 
-    // Everything else: require auth for any access
+    // Everything else: fully locked down; only the Admin SDK can touch it
     match /{document=**} {
-      allow read, write: if request.auth != null;
+      allow read, write: if false;
     }
   }
 }

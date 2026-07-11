@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
 import dotenv from "dotenv";
-import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { initializeApp, applicationDefault, cert, getApps } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
 import { casinos } from "../src/data/casinos";
 import { createLogger } from "@/src/utils/logging";
 
@@ -21,22 +21,30 @@ if (fs.existsSync(envLocalPath)) {
   log.info(".env.local not found, using system environment variables");
 }
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || process.env.FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || process.env.FIREBASE_APP_ID
-};
+const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || process.env.FIREBASE_PROJECT_ID;
 
-if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
-  log.error("Firebase configuration keys are missing. Please add them to your .env.local file.");
+if (!projectId) {
+  log.error("FIREBASE_PROJECT_ID is missing. Please add it to your .env.local file.");
   process.exit(1);
 }
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// This is a trusted, server-side maintenance script — it uses the Admin SDK
+// (which bypasses Firestore security rules entirely) rather than the client
+// SDK, since firestore.rules intentionally denies client writes to casinos/
+// insights. Picks up credentials from GOOGLE_APPLICATION_CREDENTIALS if set,
+// otherwise falls back to gcloud's Application Default Credentials.
+const serviceAccountPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+
+if (getApps().length === 0) {
+  initializeApp({
+    credential: serviceAccountPath && fs.existsSync(serviceAccountPath)
+      ? cert(serviceAccountPath)
+      : applicationDefault(),
+    projectId,
+  });
+}
+
+const db = getFirestore();
 
 async function seed() {
   log.info(`Starting to seed ${casinos.length} casinos to Firestore...`);
@@ -44,8 +52,7 @@ async function seed() {
   for (const casino of casinos) {
     try {
       log.info(`Uploading ${casino.name} (${casino.slug})...`);
-      const docRef = doc(db, "casinos", casino.slug);
-      await setDoc(docRef, casino);
+      await db.collection("casinos").doc(casino.slug).set(casino);
       log.info(`Successfully uploaded ${casino.name}!`);
     } catch (e) {
       log.error(`Failed to upload ${casino.name}`, { error: e });
