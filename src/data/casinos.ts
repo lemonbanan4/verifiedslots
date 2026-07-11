@@ -328,6 +328,273 @@ export const casinos: Casino[] = [
     "wagering": "1x"
   },
   {
+    "id": "betfair",
+    "name": "Betfair",
+    "slug": "betfair",
+    "domain": "betfair.com",
+    "isKsaLicensed": false,
+    "isLicensedInNL": false,
+    "license": "039439-R-319330-012",
+    "licenseType": "ukgc",
+    "licenseTypes": [
+      "ukgc",
+      "mga"
+    ],
+    "restrictedCountries": [
+      "NL",
+      "US"
+    ],
+    "bonus": "100 Free Spins (No Wagering)",
+    "wagering": "No Wagering (Spins) / Up to 35x (Other Promotions)",
+    "licenseNumber": "039439-R-319330-012",
+    "rating": 9,
+    "author": "Dr. Eleanor Vance, Lead Compliance Analyst",
+    "datePublished": "2026-07-12",
+    "lastModified": "2026-07-11",
+    "lastUpdated": "2026-07-11",
+    "logoColor": "from-yellow-600 to-amber-800",
+    "gameLibraryCount": "1,500+ Titles",
+    "summaryText": "Betfair is a Flutter Entertainment-owned brand best known for its betting exchange, dual-licensed by the UK Gambling Commission (PPB Counterparty Services Limited) and the Malta Gaming Authority (Betfair International PLC). Its casino product pairs a solid slots library with Playtech and Evolution live dealer tables.",
+    "editorialVerdict": "Betfair's GB operations run under PPB Counterparty Services Limited's active UK Gambling Commission licence (account 39439, reference 039439-R-319330-012, effective since 2014/2017), with a separate Malta entity, Betfair International PLC, holding an independently verified active MGA licence (MGA/CRP/131/2006-02) — sharing its base licence number with Paddy Power's MGA entity, consistent with both brands sitting under Flutter's shared 'PPB' corporate umbrella. The welcome offer's no-wagering free spins structure is genuinely favourable, though this only applies to specific spin promotions — other bonus offers can carry wagering up to 35x, so terms should be checked per-promotion rather than assumed uniform.",
+    "warningText": "Betfair is subject to geo-restrictions and Dutch (NL) residents are strictly prohibited. Wagering terms vary significantly by promotion (no-wagering spins vs. up to 35x on other bonuses) — always check the specific offer's terms before opting in.",
+    "affiliateUrl": "",
+    "pros": [
+      "Dual UKGC and MGA licensing, both independently verified as active on their respective official registries",
+      "No-wagering free spins welcome structure — spin winnings are paid as withdrawable cash",
+      "Established live casino via both Playtech and Evolution, alongside a 1,500+ title slots library",
+      "Product-specific wagering transparency — Exchange and Sportsbook bonus terms are clearly separated",
+      "Backed by Flutter Entertainment's enterprise-level compliance and responsible gambling infrastructure"
+    ],
+    "cons": [
+      "Flutter operates Betfair under different legal entities per jurisdiction and per product (Exchange vs. Sportsbook vs. Casino) — confirm which one your account terms reference",
+      "Wagering requirements are not uniform across the platform: no-wagering spins coexist with other bonuses carrying up to 35x",
+      "Withdrawal policy is closed-loop (funds return to the original deposit source), which can slow payouts for players who used multiple methods",
+      "Maximum payout limits apply to certain proprietary products, subject to identity verification completion first"
+    ],
+    "securityTitle": "Licensing Structure and Fair Play at Betfair",
+    "securitySummary": "Betfair's GB operations are licensed by the UK Gambling Commission under PPB Counterparty Services Limited (account 39439, reference 039439-R-319330-012). Its Malta-facing operations are held by a separate entity, Betfair International PLC, under an independently verified active MGA licence (MGA/CRP/131/2006-02). Game fairness is backed by established suppliers including NetEnt, Playtech and Evolution for live dealer titles.",
+    "securityWarning": "Betfair's UKGC entity (PPB Counterparty Services Limited) differs from its MGA entity (Betfair International PLC) — confirm which one your account terms actually reference.",
+    "securityPoints": [
+      {
+        "title": "UKGC Licensed",
+        "description": "Active UK Gambling Commission licence (039439-R-319330-012) under PPB Counterparty Services Limited.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "MGA Licensed",
+        "description": "Active Malta Gaming Authority licence (MGA/CRP/131/2006-02) under Betfair International PLC, independently verified on the MGA's own portal.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "Separate Entities Per Jurisdiction",
+        "description": "UKGC and MGA operations are held by two different Flutter-owned legal entities — confirm which applies to your account.",
+        "iconName": "alert",
+        "status": "warning"
+      },
+      {
+        "title": "Independent RNG Testing",
+        "description": "Game fairness is tested at the provider level by labs used by NetEnt, Playtech and Evolution.",
+        "iconName": "zap",
+        "status": "success"
+      }
+    ],
+    "bonusMatchOffer": "100 Free Spins",
+    "bonusWagering": "No Wagering (Spins) / Up to 35x (Other Promotions)",
+    "bonusMinDeposit": "£10",
+    "bonusValidity": "Not explicitly stated on homepage, please verify",
+    "bonusMaxBet": "Not explicitly stated on homepage, please verify",
+    "bonusTermsVerdict": "The no-wagering structure on the flagship free spins offer is a genuine player-friendly standout, but it is not representative of every promotion on the platform — other bonuses can carry wagering up to 35x, so check terms per offer.",
+    "bonusTermsDetails": [
+      {
+        "title": "Free Spins Structure",
+        "description": "50 free spins with no deposit required, plus up to 50 more after a qualifying deposit — both paid as withdrawable cash with no wagering requirement."
+      },
+      {
+        "title": "Live Casino Offer",
+        "description": "A separate live casino promotion carries a lower 1x wagering requirement."
+      },
+      {
+        "title": "Other Bonuses",
+        "description": "Some promotional offers carry wagering requirements of up to 35x on eligible games — always check the specific promotion's terms."
+      },
+      {
+        "title": "Eligible Games",
+        "description": "Each bonus specifies its own eligible games for meeting wagering requirements, listed on the relevant promotion's terms page."
+      }
+    ],
+    "gameSummary": "Betfair pairs a 1,500+ title slots library with Playtech- and Evolution-powered live dealer tables, alongside Slingo and jackpot game sections.",
+    "gameCategories": [
+      {
+        "title": "Video Slots",
+        "description": "1,500+ slot titles from established providers spanning classics through modern mechanics.",
+        "notable": "NetEnt, Playtech, Blueprint Gaming, IGT/WagerWorks",
+        "iconName": "slots"
+      },
+      {
+        "title": "Live Casino",
+        "description": "A live dealer lobby powered by both Playtech and Evolution, covering core table games and game shows.",
+        "notable": "Live Roulette, Live Blackjack, Game Shows",
+        "iconName": "live"
+      },
+      {
+        "title": "Table Games, Slingo & Jackpots",
+        "description": "Standard RNG table games alongside dedicated Slingo and jackpot sections.",
+        "notable": "Blackjack, Roulette, Slingo, Megaways Jackpots",
+        "iconName": "dice"
+      }
+    ],
+    "gameContributions": [
+      {
+        "category": "Slots",
+        "contribution": "100%"
+      },
+      {
+        "category": "Live Casino",
+        "contribution": "Reduced (verify per game)"
+      },
+      {
+        "category": "Table Games",
+        "contribution": "Reduced (verify per game)"
+      }
+    ],
+    "paymentSummary": "Betfair supports a solid line-up of cards and e-wallets with instant deposits (typically £5-£30 minimum, no fees), while withdrawals follow a closed-loop policy returning funds to the original deposit source.",
+    "paymentMethods": [
+      {
+        "name": "Visa/Mastercard/Maestro",
+        "type": "Debit Card",
+        "depositTime": "Instant",
+        "withdrawalTime": "A Few Business Days",
+        "fees": "None"
+      },
+      {
+        "name": "Apple Pay",
+        "type": "Mobile Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "N/A (deposit only)",
+        "fees": "None"
+      },
+      {
+        "name": "PayPal",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 24 Hours (post-approval)",
+        "fees": "None"
+      },
+      {
+        "name": "Neteller",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 24 Hours (post-approval)",
+        "fees": "None"
+      },
+      {
+        "name": "Skrill",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "Within 24 Hours (post-approval)",
+        "fees": "None"
+      },
+      {
+        "name": "Bank Transfer",
+        "type": "Bank Transfer",
+        "depositTime": "Instant",
+        "withdrawalTime": "A Few Business Days",
+        "fees": "None"
+      }
+    ],
+    "rgSummary": "Betfair offers an advanced responsible gambling toolkit including deposit, transfer and loss limits, cooling-off periods, game session timers, and a robust self-exclusion facility.",
+    "rgTools": [
+      {
+        "title": "Deposit Limits",
+        "description": "Set daily, weekly, or monthly deposit caps.",
+        "status": "success",
+        "iconName": "euro"
+      },
+      {
+        "title": "Transfer & Loss Limits",
+        "description": "Limit transfers between products and cap overall losses.",
+        "status": "success",
+        "iconName": "euro"
+      },
+      {
+        "title": "Cooling-Off Periods",
+        "description": "Take a temporary break from the platform for a set period.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Game Session Timers",
+        "description": "Set maximum session durations with reminders.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Self-Exclusion",
+        "description": "Robust temporary or permanent self-exclusion facility.",
+        "status": "success",
+        "iconName": "ban"
+      }
+    ],
+    "comparisonTitle": "Betfair vs. Industry Standards",
+    "comparisonRows": [
+      {
+        "feature": "License & Safety",
+        "thisCasino": "UKGC (PPB Counterparty Services) + MGA (Betfair International PLC)",
+        "regulatedStandard": "KSA Standard Requirement",
+        "status": "success"
+      },
+      {
+        "feature": "Welcome Bonus Wagering",
+        "thisCasino": "No Wagering (Spins) / Up to 35x (Other)",
+        "regulatedStandard": "30x-40x (Average)",
+        "status": "success"
+      },
+      {
+        "feature": "Welcome Bonus Size",
+        "thisCasino": "100 Free Spins",
+        "regulatedStandard": "100% up to £200+ (Average)",
+        "status": "neutral"
+      },
+      {
+        "feature": "Game Variety",
+        "thisCasino": "1,500+ Titles",
+        "regulatedStandard": "1,000+ Titles",
+        "status": "success"
+      },
+      {
+        "feature": "Responsible Gambling Tools",
+        "thisCasino": "Flutter Enterprise Suite",
+        "regulatedStandard": "Basic Tools",
+        "status": "success"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Betfair a licensed casino?",
+        "answer": "Yes. Betfair's GB operations are licensed by the UK Gambling Commission under PPB Counterparty Services Limited (licence 039439-R-319330-012). Its Malta-facing operations are separately licensed by the Malta Gaming Authority under Betfair International PLC (MGA/CRP/131/2006-02), both independently verified as active."
+      },
+      {
+        "question": "Is Betfair related to Paddy Power?",
+        "answer": "Yes, both are Flutter Entertainment-owned brands operating under Flutter's shared 'PPB' corporate structure. Their MGA licences share the same base number (MGA/CRP/131/2006) with different entity-specific suffixes, though their UKGC entities differ."
+      },
+      {
+        "question": "What is the welcome bonus at Betfair?",
+        "answer": "New customers can claim up to 100 free spins (50 no-deposit, 50 after a qualifying deposit) with no wagering requirement on winnings. Other promotions on the platform can carry wagering requirements up to 35x — always check the specific offer's terms."
+      },
+      {
+        "question": "Can Dutch (NL) residents play at Betfair?",
+        "answer": "No. Betfair operates under UKGC/MGA licensing without a Dutch KSA licence, so Netherlands residents are restricted."
+      },
+      {
+        "question": "How fast are Betfair withdrawals?",
+        "answer": "E-wallet withdrawals typically clear within 24 hours of approval, while card and bank transfer withdrawals take a few business days. Withdrawals follow a closed-loop policy, returning funds to the original deposit method."
+      }
+    ],
+    "welcomeBonus": "100 Free Spins"
+  },
+  {
     "id": "bwin",
     "name": "bwin",
     "slug": "bwin",

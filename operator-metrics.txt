@@ -1,8 +1,8 @@
 const DEFAULT_RAW_DATA = `
-Casino Name: Paddy Power
-License Status: Licensed and regulated by the UK Gambling Commission and the Malta Gaming Authority. Part of the Flutter Entertainment group.
-Asset Segregation: Operates under Flutter Entertainment's corporate standards, ensuring strict financial separation and regulatory compliance.
-Withdrawal Limits: Limits may be based on net position (deposits minus withdrawals) and are subject to regulatory jurisdictional requirements (UK rolling vs. Irish calendar periods).
-Wagering / Playthrough: Adheres to UKGC guidelines on fair terms; bonus wagering requirements must be clearly distinguished from personal deposit balances.
-Responsible Gaming Controls: Features include personalized deposit limits, spending limits, and mandatory "backstop" monthly deposit caps for newly registered customers.
+Casino Name: Betfair
+License Status: Licensed by the UK Gambling Commission and the Malta Gaming Authority. Part of the Flutter Entertainment group.
+Asset Segregation: Funds are managed in compliance with high-tier regulatory standards for the Flutter group to ensure liquidity and player protection.
+Withdrawal Limits: Maximum payout limits apply to specific services and products; withdrawal of winnings is subject to completion of identity verification checks.
+Wagering / Playthrough: Transparent separation of bonus and deposit funds; wagering requirements are clearly defined per product (Exchange vs. Sportsbook).
+Responsible Gaming Controls: Advanced tools including deposit/transfer/loss limits, cooling-off periods, game session timers, and a robust self-exclusion facility.
 `;
