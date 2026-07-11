@@ -5,7 +5,8 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { OutboundLink } from "./OutboundLink";
 import { Star, ShieldCheck, ShieldAlert, ArrowRight } from "lucide-react";
-import type { Casino } from "@/src/data/casinos";
+import { casinoHoldsLicense, type Casino } from "@/src/data/casinos";
+import { normalizeRating } from "@/src/utils/rating";
 
 interface CasinoCardProps {
   casino: Casino;
@@ -14,10 +15,11 @@ interface CasinoCardProps {
 
 export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }: CasinoCardProps) {
   // Determine active license based on page context
-  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
-  const activeLicense = licenseType && types.includes(licenseType as any)
+  const activeLicense = licenseType && casinoHoldsLicense(casino, licenseType)
     ? licenseType.toLowerCase()
     : casino.licenseType.toLowerCase();
+
+  const displayRating = normalizeRating(casino.rating);
 
   const displayName = casino.name === "Bet365 NL" && activeLicense !== "ksa"
     ? "Bet365"
@@ -88,9 +90,9 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
           <Star className="text-amber-400 fill-amber-400" size={14} aria-hidden="true" />
           <span
             className="text-xs font-bold text-slate-100"
-            aria-label={`Rating ${casino.rating} out of ${isKsa ? "10" : "5"}`}
+            aria-label={`Rating ${displayRating} out of 10`}
           >
-            {casino.rating}
+            {displayRating}
           </span>
           <span className="text-[10px] text-slate-400">{ratingScale}</span>
         </div>

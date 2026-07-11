@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchCasinoBySlug, fetchAllCasinos } from "@/src/lib/auditService";
+import { casinoHoldsLicense } from "@/src/data/casinos";
 import { ReviewTemplate } from "@/components/ReviewTemplate";
 import type { Metadata } from "next";
 
@@ -17,8 +18,7 @@ export async function generateMetadata({ params }: AuditPageProps): Promise<Meta
   const { license, slug } = await params;
   const casino = await fetchCasinoBySlug(slug);
 
-  const types = casino ? (casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType]) : [];
-  const hasMatchingLicense = types.map((t) => t.toLowerCase()).includes(license.toLowerCase());
+  const hasMatchingLicense = !!casino && casinoHoldsLicense(casino, license.toLowerCase());
 
   if (!casino || !hasMatchingLicense) {
     return {
@@ -27,7 +27,12 @@ export async function generateMetadata({ params }: AuditPageProps): Promise<Meta
     };
   }
 
-  const name = casino.name;
+  // Matches ReviewTemplate's own on-page display name correction — "Bet365
+  // NL" is only accurate for the KSA (Dutch) jurisdiction; the tab title
+  // shouldn't say "NL" while viewing the MGA/UKGC audit for the same brand.
+  const name = casino.name === "Bet365 NL" && license.toLowerCase() !== "ksa"
+    ? "Bet365"
+    : casino.name;
   const jurisdiction = license.toUpperCase();
   const title = `${name} Audit & Compliance Report (${jurisdiction})`;
   const description = `Independent iGaming audit of ${name} (${casino.domain}). Verify safety rating (${casino.rating}), regulatory license status, welcome offer wagering terms (${casino.wagering}), and payment solvency.`;
@@ -51,10 +56,7 @@ export default async function AuditPage({ params }: AuditPageProps) {
     notFound();
   }
 
-  const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
-  const hasMatchingLicense = types.map((t) => t.toLowerCase()).includes(license.toLowerCase());
-
-  if (!hasMatchingLicense) {
+  if (!casinoHoldsLicense(casino, license.toLowerCase())) {
     notFound();
   }
 

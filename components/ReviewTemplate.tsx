@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { cookies, headers } from "next/headers";
-import { Casino } from "@/src/data/casinos";
+import { Casino, casinoHoldsLicense } from "@/src/data/casinos";
+import { normalizeRating } from "@/src/utils/rating";
 import { TrustAndSafety } from "./TrustAndSafety";
 import { BonusTerms } from "./BonusTerms";
 import { GameVariety } from "./GameVariety";
@@ -24,12 +25,20 @@ const WageringCalculator = dynamic(
   () => import("./WageringCalculator").then((mod) => mod.WageringCalculator),
   { loading: () => <div className="animate-pulse bg-slate-900/50 border border-white/5 h-[320px] rounded-2xl" /> }
 );
-import { CheckCircle2, XCircle, ShieldCheck, ShieldAlert, Star, Calendar, Activity } from "lucide-react";
+import { CheckCircle2, XCircle, ShieldCheck, ShieldAlert, Star, Calendar, Activity, ExternalLink } from "lucide-react";
 
 interface ReviewTemplateProps {
   review: Casino;
   activeLicenseRoute?: string;
 }
+
+// Official public registry for each jurisdiction, keyed by the same license
+// slug used in routes (/audits/ksa/..., /audits/mga/..., /audits/ukgc/...).
+const OFFICIAL_REGISTRIES: Record<string, { label: string; url: string }> = {
+  ksa: { label: "Kansspelautoriteit (KSA) Official Website", url: "https://kansspelautoriteit.nl/" },
+  mga: { label: "Malta Gaming Authority (MGA) Registry Portal", url: "https://www.mga.org.mt/" },
+  ukgc: { label: "UK Gambling Commission (UKGC) Portal", url: "https://www.gamblingcommission.gov.uk/" },
+};
 
 export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTemplateProps) {
   // Determine compliance profile directly on the server via cookies
@@ -38,9 +47,8 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
   const isNl = simulatedGeo === "true";
 
   // Check if operator holds the license for the current route
-  const types = review.licenseTypes && review.licenseTypes.length > 0 ? review.licenseTypes : [review.licenseType];
-  const isLicensedInCurrentRoute = activeLicenseRoute 
-    ? types.map((t) => t.toLowerCase()).includes(activeLicenseRoute.toLowerCase())
+  const isLicensedInCurrentRoute = activeLicenseRoute
+    ? casinoHoldsLicense(review, activeLicenseRoute.toLowerCase())
     : true;
 
   const activeRegulator = activeLicenseRoute 
@@ -123,6 +131,8 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     topBadgeClass = "bg-amber-500/10 border border-amber-500/20 text-amber-400";
   }
 
+  const activeRegistry = OFFICIAL_REGISTRIES[activeRegulator] ?? OFFICIAL_REGISTRIES.mga;
+
   // geo location
   const headerStore = await headers();
   const userCountry = headerStore.get('x-user-country') || 'global';
@@ -132,6 +142,8 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
   const activeBonus = review.localizedBonuses?.[userCountry] || review.localizedBonuses?.['global'];
   const currentWelcomeBonus = activeBonus?.offer || review.welcomeBonus;
   const currentWagering = activeBonus?.wagering || review.wagering;
+
+  const displayRating = normalizeRating(review.rating);
 
   // Wage requirement check vs. industry averages (Truth Table Data)
   const wagerLimit = parseInt(currentWagering.replace(/[^0-9]/g, "")) || 35;
@@ -178,7 +190,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                 <p className="text-xs text-slate-400 font-mono mb-3">{displayDomain}</p>
                 <div className="flex items-center justify-center md:justify-start gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg w-max">
                   <Star className="text-amber-400 fill-amber-400" size={14} />
-                  <span className="text-xs font-bold text-white">{review.rating}</span>
+                  <span className="text-xs font-bold text-white">{displayRating}</span>
                   <span className="text-[10px] text-slate-500">/10 rating</span>
                 </div>
               </div>
@@ -309,37 +321,20 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
               <div className="mt-3 pt-2.5 border-t border-white/5 flex flex-wrap items-center justify-between gap-1.5 text-[10px]">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="text-slate-450 font-bold uppercase tracking-wider">Source / Official Regulator:</span>
-                  {activeRegulator === "ksa" ? (
-                    <a
-                      href="https://kansspelautoriteit.nl/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 font-bold underline transition-colors cursor-pointer"
-                    >
-                      Kansspelautoriteit (KSA) Official Website
-                    </a>
-                  ) : activeRegulator === "mga" ? (
-                    <a
-                      href="https://www.mga.org.mt/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 font-bold underline transition-colors cursor-pointer"
-                    >
-                      Malta Gaming Authority (MGA) Registry Portal
-                    </a>
-                  ) : (
-                    <a
-                      href="https://www.gamblingcommission.gov.uk/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 font-bold underline transition-colors cursor-pointer"
-                    >
-                      UK Gambling Commission (UKGC) Portal
-                    </a>
-                  )}
+                  <span className="text-slate-300 font-bold">{activeRegistry.label}</span>
                 </div>
 
-                <LicenseVerifier licenseType={activeRegulator} licenseNumber={displayLicenseNumber} />
+                <div className="flex items-center gap-2">
+                  <a
+                    href={activeRegistry.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  >
+                    Verify Registry <ExternalLink size={11} />
+                  </a>
+                  <LicenseVerifier licenseType={activeRegulator} licenseNumber={displayLicenseNumber} />
+                </div>
               </div>
             </div>
           </div>
