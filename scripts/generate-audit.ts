@@ -7,6 +7,30 @@ import type { Audit, AuditCategory } from "@/src/types/audit";
 
 const log = createLogger("generate-audit");
 
+// These are the only internal routes that actually exist on the site.
+// The model is instructed to stick to them, but LLM prompt compliance isn't
+// guaranteed — this is a code-level backstop that strips any <a> tag with a
+// missing href or a fabricated internal path (unwrapping it to plain text)
+// rather than letting a dead link reach production. External links (https://...)
+// are left untouched.
+const VALID_INTERNAL_LINKS = new Set(["/licenses/ksa", "/licenses/mga", "/licenses/ukgc", "/responsible-gambling"]);
+
+function sanitizeInternalLinks(html: string): string {
+    return html.replace(/<a\b([^>]*)>(.*?)<\/a>/gis, (match, attrs, innerText) => {
+        const hrefMatch = attrs.match(/href\s*=\s*"([^"]*)"/i);
+        if (!hrefMatch) {
+            log.warn("Stripped an <a> tag with no href attribute from AI-generated content", { snippet: match.slice(0, 80) });
+            return innerText;
+        }
+        const href = hrefMatch[1];
+        if (href.startsWith("/") && !VALID_INTERNAL_LINKS.has(href)) {
+            log.warn(`Stripped a fabricated internal link (${href}) from AI-generated content`);
+            return innerText;
+        }
+        return match;
+    });
+}
+
 const VALID_CATEGORIES: AuditCategory[] = [
     "Math & RNG Auditing",
     "Strategy & Solvency",
@@ -181,7 +205,12 @@ Your task is to analyze the operator data provided below and compile it into a s
 ### Editorial Tone & Style Rules:
 1. **Objective and Analytical**: Avoid marketing copy, buzzwords, or enthusiastic affiliate language ("best casino", "incredible bonuses"). Write with critical distance, focusing on structural safety, wagering math, and legal liabilities.
 2. **Financial Terminology**: Use terms like "capital segregation," "solvency ratios," "playthrough rollover liabilities," "anti-money laundering (AML) controls," and "regulatory compliance."
-3. **Structured HTML Formatting**: Write the body of the sections using standard HTML elements for typography (use <strong> for key concepts, <em> for emphasis, and absolute local anchor links \`/licenses/...\` or \`/responsible-gambling\` for internal links).
+3. **Structured HTML Formatting**: Write the body of the sections using standard HTML elements for typography (use <strong> for key concepts, <em> for emphasis). Every <a> tag MUST have an href attribute, and that href MUST be exactly one of these four paths — no others exist on this site, and inventing any other path (e.g. a made-up "/licenses/some-topic" or "/licenses/operator-name") produces a broken link:
+   - \`/licenses/ksa\`
+   - \`/licenses/mga\`
+   - \`/licenses/ukgc\`
+   - \`/responsible-gambling\`
+   If none of these four are a natural fit for a given sentence, do not include a link at all — plain text is always safer than a fabricated URL.
 
 ### Output JSON Constraints:
 Assemble the output strictly adhering to the requested JSON schema.
@@ -253,7 +282,7 @@ ${isSearchMode ? searchFacts : rawData}
             // shouldn't claim "Editorial Approved" until someone checks it.
             status: "Pending Review",
             affiliateLink: "",
-            sections: report.sections,
+            sections: report.sections.map((s) => ({ ...s, body: sanitizeInternalLinks(s.body) })),
         };
 
         audits.unshift(newAudit); // Add to the beginning of the list
