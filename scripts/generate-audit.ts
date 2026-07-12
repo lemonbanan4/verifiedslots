@@ -101,6 +101,9 @@ export interface ComplianceAuditReport {
         heading: string;
         body: string;
     }>;
+    metaTitle: string;
+    metaDescription: string;
+    keywords: string[];
 }
 
 const SCHEMA = {
@@ -143,6 +146,19 @@ const SCHEMA = {
                 },
                 required: ["heading", "body"]
             }
+        },
+        metaTitle: {
+            type: "STRING",
+            description: "SEO meta title, hard limit 60 characters."
+        },
+        metaDescription: {
+            type: "STRING",
+            description: "SEO meta description, hard limit 160 characters."
+        },
+        keywords: {
+            type: "ARRAY",
+            description: "3-6 target SEO keywords/phrases for this article.",
+            items: { type: "STRING" }
         }
     },
     required: [
@@ -151,7 +167,10 @@ const SCHEMA = {
         "readTime",
         "category",
         "complianceScore",
-        "sections"
+        "sections",
+        "metaTitle",
+        "metaDescription",
+        "keywords"
     ]
 };
 
@@ -165,17 +184,44 @@ Wagering / Playthrough: 45x wagering on bonus + deposit (effective 90x playthrou
 Responsible Gaming Controls: No self-exclusion linkage (outside NL CRUKS). Local tools are limited to manual email requests.
 `;
 
+const LINK_RULES = `Every <a> tag MUST have an href attribute, and that href MUST be exactly one of these four paths — no others exist on this site, and inventing any other path (e.g. a made-up "/licenses/some-topic" or "/licenses/operator-name") produces a broken link:
+   - \`/licenses/ksa\`
+   - \`/licenses/mga\`
+   - \`/licenses/ukgc\`
+   - \`/responsible-gambling\`
+   If none of these four are a natural fit for a given sentence, do not include a link at all — plain text is always safer than a fabricated URL.`;
+
 async function run() {
+    const args = process.argv.slice(2);
+    const isTopicMode = args.includes("--topic");
+    const imageFlagIndex = args.indexOf("--image");
+    const rawImageArg = imageFlagIndex !== -1 ? args[imageFlagIndex + 1] : undefined;
+    // Normalize to a public/-relative URL path regardless of whether the
+    // caller passed "public/foo.png", "./public/foo.png", or "/foo.png".
+    const coverImage = rawImageArg
+        ? "/" + rawImageArg.replace(/^\.?\/?/, "").replace(/^public\//, "")
+        : undefined;
+    if (rawImageArg) {
+        const imageFullPath = path.resolve(process.cwd(), "public", coverImage!.slice(1));
+        if (!fs.existsSync(imageFullPath)) {
+            log.error(`--image path does not exist in public/: ${coverImage} (resolved to ${imageFullPath})`);
+            process.exit(1);
+        }
+    }
+    const inputArg = args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--image");
+
     let rawData = DEFAULT_RAW_DATA;
     let isSearchMode = false;
     let searchFacts = "";
-    const inputArg = process.argv[2];
 
     if (inputArg) {
         const fullPath = path.resolve(process.cwd(), inputArg);
         if (fs.existsSync(fullPath)) {
             rawData = fs.readFileSync(fullPath, "utf-8");
             log.info(`Loaded raw data from file: ${inputArg}`);
+        } else if (isTopicMode) {
+            log.error(`--topic mode requires an existing input file; "${inputArg}" was not found.`);
+            process.exit(1);
         } else {
             isSearchMode = true;
             log.info(`Input "${inputArg}" is not a local file. Enabling Google Search Grounding to research operator details...`);
@@ -197,20 +243,38 @@ async function run() {
         log.info("No input file provided. Using default demo data (SlotVibe Casino).");
     }
 
-    const prompt = `
-You are a Lead iGaming Solvency Analyst and Senior Editorial Writer for a high-end financial compliance publication (e.g., Financial Times or Bloomberg Compliance Desk). 
+    // Operator audits analyze one named brand's compliance posture. Topic
+    // pieces (--topic) are industry-wide op-eds/newsletters not tied to any
+    // single operator — same editorial tone and link rules, but the section
+    // structure is thematic rather than "Licensing & Legal Jurisdictions for
+    // Operator X", and complianceScore reflects overall industry maturity on
+    // the topic rather than one operator's specific rating.
+    const prompt = isTopicMode ? `
+You are a Lead iGaming Compliance Analyst and Senior Editorial Writer for a high-end financial compliance publication (e.g., Financial Times or Bloomberg Compliance Desk).
+
+Your task is to expand the raw notes/draft below into a structured, journalistic-style industry op-ed or newsletter piece. This is NOT about one specific operator — it's an industry-wide analytical piece on the topic given. Do not invent a specific named operator to audit; keep the analysis at the industry/regulatory level, citing general patterns rather than fabricated specific companies.
+
+### Editorial Tone & Style Rules:
+1. **Objective and Analytical**: Avoid marketing copy or hype. Write with critical distance and journalistic authority, in the voice of an independent compliance desk — not promotional copy for VerifiedSlots itself.
+2. **Financial/Regulatory Terminology**: Use precise terms like "capital segregation," "solvency ratios," "playthrough rollover liabilities," "anti-money laundering (AML) controls," and "regulatory compliance" where relevant to the topic.
+3. **Structured HTML Formatting**: Use <strong> for key concepts and <em> for emphasis. ${LINK_RULES}
+
+### Output JSON Constraints:
+- **complianceScore**: Rate the industry's current overall maturity/rigor on this specific topic out of 100 (this is a thematic maturity score, not one operator's rating).
+- **sections**: Structure logically around the actual argument/structure of the source notes provided (e.g. mirror its own headings/points as section headings), typically 4-6 sections.
+
+---
+### SOURCE NOTES / DRAFT FOR THIS PIECE:
+${rawData}
+` : `
+You are a Lead iGaming Solvency Analyst and Senior Editorial Writer for a high-end financial compliance publication (e.g., Financial Times or Bloomberg Compliance Desk).
 
 Your task is to analyze the operator data provided below and compile it into a structured, journalistic-style 'Compliance Audit Report' that evaluates the operator's regulatory posture, financial solvency, and licensing liabilities.
 
 ### Editorial Tone & Style Rules:
 1. **Objective and Analytical**: Avoid marketing copy, buzzwords, or enthusiastic affiliate language ("best casino", "incredible bonuses"). Write with critical distance, focusing on structural safety, wagering math, and legal liabilities.
 2. **Financial Terminology**: Use terms like "capital segregation," "solvency ratios," "playthrough rollover liabilities," "anti-money laundering (AML) controls," and "regulatory compliance."
-3. **Structured HTML Formatting**: Write the body of the sections using standard HTML elements for typography (use <strong> for key concepts, <em> for emphasis). Every <a> tag MUST have an href attribute, and that href MUST be exactly one of these four paths — no others exist on this site, and inventing any other path (e.g. a made-up "/licenses/some-topic" or "/licenses/operator-name") produces a broken link:
-   - \`/licenses/ksa\`
-   - \`/licenses/mga\`
-   - \`/licenses/ukgc\`
-   - \`/responsible-gambling\`
-   If none of these four are a natural fit for a given sentence, do not include a link at all — plain text is always safer than a fabricated URL.
+3. **Structured HTML Formatting**: Write the body of the sections using standard HTML elements for typography (use <strong> for key concepts, <em> for emphasis). ${LINK_RULES}
 
 ### Output JSON Constraints:
 Assemble the output strictly adhering to the requested JSON schema.
@@ -272,7 +336,7 @@ ${isSearchMode ? searchFacts : rawData}
             title: report.title,
             summary,
             author: report.author,
-            authorRole: "Lead iGaming Solvency Analyst",
+            authorRole: isTopicMode ? "Lead iGaming Compliance Analyst" : "Lead iGaming Solvency Analyst",
             readTime: report.readTime,
             date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
             category: normalizeCategory(report.category),
@@ -283,6 +347,10 @@ ${isSearchMode ? searchFacts : rawData}
             status: "Pending Review",
             affiliateLink: "",
             sections: report.sections.map((s) => ({ ...s, body: sanitizeInternalLinks(s.body) })),
+            metaTitle: report.metaTitle?.slice(0, 60),
+            metaDescription: report.metaDescription?.slice(0, 160),
+            keywords: report.keywords,
+            ...(coverImage ? { coverImage } : {}),
         };
 
         audits.unshift(newAudit); // Add to the beginning of the list

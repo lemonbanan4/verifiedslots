@@ -60,4 +60,6 @@ export interface Audit {
   metaDescription?: string;
   /** Target SEO keywords */
   keywords?: string[];
+  /** Optional cover image, as a public/-relative path (e.g. "/my-image.png") */
+  coverImage?: string;
 }

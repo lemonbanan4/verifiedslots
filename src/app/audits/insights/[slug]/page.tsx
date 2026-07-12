@@ -173,6 +173,17 @@ export default async function AuditInsightPage({ params }: AuditInsightPageProps
           <span className="text-slate-400 ml-auto text-xs font-bold">{audit.date}</span>
         </div>
 
+        {/* Optional Cover Image */}
+        {audit.coverImage && (
+          <div className="mb-8 -mt-2 rounded-2xl overflow-hidden border border-white/10">
+            <img
+              src={audit.coverImage}
+              alt={audit.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+
         {/* Main Body Sections */}
         <div className="space-y-6 text-slate-300 leading-relaxed pb-8 border-b border-white/10">
           {audit.sections.map((section, idx) => (
