@@ -220,7 +220,11 @@ function AuditCard({ audit, onSelect }: { audit: Audit; onSelect: () => void }) 
 // ─── Page ────────────────────────────────────────────────────────────────────
 export default function AuditsPage() {
   const { isDutch } = useCompliance();
-  const [activeTab, setActiveTab] = useState<MainTabKey>("directory");
+  // Every current entry point to this page (nav "Insights" link, the
+  // homepage "View All Audits" button, and each insight article's "Back to
+  // Audits Hub" link) comes from journalistic-article context, not casino
+  // browsing — so the archive tab is the landing tab visitors actually want.
+  const [activeTab, setActiveTab] = useState<MainTabKey>("archive");
 
   // State for Directory Tab
   const [activeLicenseFilter, setActiveLicenseFilter] = useState<"All" | "ksa" | "mga" | "ukgc">("All");
