@@ -59,6 +59,8 @@ export interface Casino {
   warningText?: string;
   affiliateUrl: string;
   isPartner?: boolean;
+  complianceScore?: number;
+  auditReference?: string;
 
   // Verdict section
   editorialVerdict?: string;
@@ -2893,6 +2895,349 @@ export const casinos: Casino[] = [
         "wagering": "35x"
       }
     }
+  },
+  {
+    "id": "luckyniki",
+    "name": "LuckyNiki",
+    "slug": "luckyniki",
+    "domain": "luckyniki.com",
+    "isKsaLicensed": false,
+    "isLicensedInNL": false,
+    "licenseNumber": "39326",
+    "licenseType": "ukgc",
+    "licenseTypes": [
+      "ukgc",
+      "mga"
+    ],
+    "restrictedCountries": [
+      "NL",
+      "US",
+      "FR",
+      "ES"
+    ],
+    "rating": 8.8,
+    "wagering": "35x",
+    "author": "iGaming Compliance Specialist",
+    "datePublished": "2026-07-20",
+    "lastModified": "2026-07-20",
+    "lastUpdated": "2026-07-20",
+    "logoColor": "from-pink-600 to-rose-700",
+    "welcomeBonus": "Up to £500 + 150 Free Spins",
+    "gameLibraryCount": "3,000+ Titles",
+    "summaryText": "LuckyNiki is an anime-themed online casino operated by White Hat Gaming Limited, holding an active UKGC licence (ID: 39326) and MGA licence (MGA/B2C/248/2014). It targets regulated markets including the UK, Denmark, Canada, Ireland, and Sweden with a rich slot library and a full responsible gaming suite including GAMSTOP integration.",
+    "editorialVerdict": "LuckyNiki earns a Certified compliance rating of 88/100, anchored by two verifiable tier-one licences — UKGC 39326 and MGA/B2C/248/2014 — both held by the reputable White Hat Gaming group. Its responsible gaming infrastructure is robust: GAMSTOP is mandatory and integrated for UK players, deposit limits are enforced immediately on reduction, and reality checks are configurable. Payout mechanics are transparent with e-wallets processing within 0–24 hours and all standard methods fee-free. Key risk flags include an unresolved GGL (Germany) licence status, medium-level player fund protection (segregated but not insured), and the availability of reverse withdrawal — a standard industry feature that carries a consumer advisory. Overall, LuckyNiki is a strongly recommended operator for GB, DK, CA, IE, and SE players seeking a compliant, anime-themed casino experience with solid financial controls.",
+    "warningText": "LuckyNiki is not available to residents of the Netherlands (NL), United States (US), or France (FR). German (DE) residents should verify an active GGL licence before play. Credit card deposits are prohibited for UK residents per UKGC April 2020 directive.",
+    "affiliateUrl": "https://wow.itisfine.work/click?pid=31416&offer_id=5806",
+    "isPartner": true,
+    "complianceScore": 88,
+    "auditReference": "VSAUD-LNIKI-2026-07",
+    "pros": [
+      "Dual UKGC (39326) and MGA licences from reputable White Hat Gaming group",
+      "Full GAMSTOP integration — mandatory national self-exclusion for UK players",
+      "E-wallet withdrawals processed within 0–24 hours with no operator fees",
+      "Extensive library of 3,000+ titles with independently certified RNG (BMM/eCOGRA)",
+      "Comprehensive responsible gaming suite including deposit limits, loss limits, reality checks, and session timers",
+      "Unique anime-themed design with a curated, premium player experience"
+    ],
+    "cons": [
+      "GGL licence (Germany) unconfirmed — DE players should verify regulatory status",
+      "Player funds at medium protection level (segregated but not insured)",
+      "Reverse withdrawal available — player funds can be cancelled before processing",
+      "Credit cards blocked for UK players (regulatory, not operator restriction)"
+    ],
+    "securityTitle": "Tier-One Regulatory Safety at LuckyNiki",
+    "securitySummary": "LuckyNiki is operated by White Hat Gaming Limited under active UKGC licence 39326 and MGA licence MGA/B2C/248/2014. Player funds are held in segregated accounts separate from operational capital, and all gaming software is subject to independent RNG audits by BMM Testlabs and eCOGRA. UK players benefit from mandatory GAMSTOP integration, and all data transfers are encrypted via 256-bit SSL.",
+    "securityWarning": "Player fund protection is at medium level under UKGC classification: funds are segregated but not protected via an insured trust. In an insolvency scenario, player balances rank above operational debts but are not guaranteed via independent insurance.",
+    "securityPoints": [
+      {
+        "title": "UKGC Licence 39326 (Active)",
+        "description": "Verified active on the UK Gambling Commission public register. Licensee: White Hat Gaming Limited. Subject to full LCCP compliance including AML, social responsibility, and financial reporting obligations.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "MGA/B2C/248/2014 (Active)",
+        "description": "Active Malta Gaming Authority B2C licence covering EU and international GEOs. Subject to MGA Player Funds Regulations and PMLA (Prevention of Money Laundering Act).",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "Segregated Player Funds",
+        "description": "Customer funds are held in bank accounts segregated from operational capital per UKGC SR Code 3.4.1 and MGA Player Funds Regulation. Classified as medium-level protection.",
+        "iconName": "shield",
+        "status": "success"
+      },
+      {
+        "title": "RNG Certified — BMM / eCOGRA",
+        "description": "All casino software is independently audited for RNG integrity and RTP accuracy by BMM Testlabs and eCOGRA, ensuring fair play and statistical transparency.",
+        "iconName": "zap",
+        "status": "success"
+      }
+    ],
+    "bonusMatchOffer": "100% up to £500",
+    "bonusWagering": "35x",
+    "bonusMinDeposit": "£20",
+    "bonusValidity": "21 Days",
+    "bonusMaxBet": "£5 per spin during wagering",
+    "bonusTermsVerdict": "Standard wagering requirements of 35x on bonus funds. The 21-day validity window is reasonable. A £5 max bet limit during wagering is industry standard. UK players should note that free spins cannot be funded by credit card deposits (prohibited under UKGC rules).",
+    "bonusTermsDetails": [
+      {
+        "title": "Wagering Requirement",
+        "description": "Bonus funds must be wagered 35x before withdrawal. This is within the 30x–40x industry average for MGA/UKGC licensed operators."
+      },
+      {
+        "title": "Minimum Deposit",
+        "description": "A minimum deposit of £20 (or currency equivalent) is required to trigger the welcome package."
+      },
+      {
+        "title": "Validity Window",
+        "description": "Bonus funds and free spins must be used within 21 days of activation. Unused bonus balance is forfeited after this period."
+      },
+      {
+        "title": "Max Bet Restriction",
+        "description": "While a bonus is active, a maximum bet of £5 per spin or hand is enforced. Bets exceeding this limit may result in bonus forfeiture."
+      },
+      {
+        "title": "Credit Card Prohibition (UK)",
+        "description": "Per UKGC regulations, UK players may not deposit using credit cards. All bonuses must be funded via debit card, e-wallet, or bank transfer."
+      }
+    ],
+    "gameSummary": "LuckyNiki offers a curated library of over 3,000 titles across slots, live casino, table games, and jackpots, sourced from leading providers including NetEnt, Pragmatic Play, Play'n GO, Microgaming, and Evolution Gaming. The anime-themed interface provides a distinctive player experience.",
+    "gameCategories": [
+      {
+        "title": "Video Slots",
+        "description": "Thousands of slot titles from premium providers including NetEnt, Pragmatic Play, and Play'n GO. Includes anime-exclusive branded slots unique to the LuckyNiki catalogue.",
+        "notable": "Big Bass Bonanza, Gates of Olympus, Book of Dead",
+        "iconName": "slots"
+      },
+      {
+        "title": "Live Dealer Casino",
+        "description": "Powered by Evolution Gaming — the industry gold standard. Offers baccarat, roulette, blackjack, and live game shows with professional croupiers.",
+        "notable": "Crazy Time, Lightning Roulette, Immersive Roulette",
+        "iconName": "live"
+      },
+      {
+        "title": "Progressive Jackpots",
+        "description": "A selection of networked progressive jackpot slots with multi-million prize pools, certified by independent auditors for RNG integrity.",
+        "notable": "Mega Moolah, Divine Fortune, WowPot",
+        "iconName": "slots"
+      },
+      {
+        "title": "Table Games",
+        "description": "RNG-certified table games including blackjack variants, European and American roulette, baccarat, and poker — all with independently verified payout percentages.",
+        "notable": "Multihand Blackjack, European Roulette Pro",
+        "iconName": "dice"
+      }
+    ],
+    "paymentSummary": "LuckyNiki supports a comprehensive range of regulated payment methods. E-wallet withdrawals (Skrill, Neteller, PayPal) are processed within 0–24 hours with no operator fees. Debit card and bank transfer withdrawals take 1–5 business days. Credit cards are prohibited for UK deposits. All transactions are processed via encrypted, PCI DSS-compliant channels.",
+    "paymentMethods": [
+      {
+        "name": "Skrill",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "0–24 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "Neteller",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "0–24 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "PayPal",
+        "type": "E-Wallet",
+        "depositTime": "Instant",
+        "withdrawalTime": "0–24 Hours",
+        "fees": "None (UK only)"
+      },
+      {
+        "name": "Trustly",
+        "type": "Open Banking",
+        "depositTime": "Instant",
+        "withdrawalTime": "0–24 Hours",
+        "fees": "None"
+      },
+      {
+        "name": "Visa Debit",
+        "type": "Debit Card",
+        "depositTime": "Instant",
+        "withdrawalTime": "1–3 Business Days",
+        "fees": "None"
+      },
+      {
+        "name": "Mastercard Debit",
+        "type": "Debit Card",
+        "depositTime": "Instant",
+        "withdrawalTime": "1–3 Business Days",
+        "fees": "None"
+      },
+      {
+        "name": "Bank Wire (SEPA)",
+        "type": "Wire Transfer",
+        "depositTime": "1–3 Business Days",
+        "withdrawalTime": "3–5 Business Days",
+        "fees": "None"
+      },
+      {
+        "name": "Paysafecard",
+        "type": "Prepaid Voucher",
+        "depositTime": "Instant",
+        "withdrawalTime": "N/A (Deposit Only)",
+        "fees": "None"
+      }
+    ],
+    "rgSummary": "LuckyNiki operates a full responsible gaming suite mandated by UKGC LCCP and MGA Responsible Gaming conditions. UK players must interact with GAMSTOP for national self-exclusion. All players can set deposit, loss, wagering, and session limits. Reality checks and cooling-off periods are available. The operator meets the 2024 UKGC LCCP enhanced requirements including soft affordability checks.",
+    "rgTools": [
+      {
+        "title": "GAMSTOP Integration",
+        "description": "LuckyNiki is fully integrated with GAMSTOP — the UK national self-exclusion scheme. UK players registered with GAMSTOP cannot access the platform. Minimum exclusion: 6 months. Mandatory under UKGC LCCP SR Code 3.5.3.",
+        "status": "success",
+        "iconName": "shield-ban"
+      },
+      {
+        "title": "Deposit Limits",
+        "description": "Players can set daily, weekly, or monthly deposit limits. Limit reductions are applied immediately. Limit increases require a 24-hour cooling-off period before activation.",
+        "status": "success",
+        "iconName": "euro"
+      },
+      {
+        "title": "Loss Limits",
+        "description": "Configurable daily, weekly, and monthly loss limits prevent players from exceeding a self-defined loss threshold within any rolling period.",
+        "status": "success",
+        "iconName": "alert"
+      },
+      {
+        "title": "Session Time Limits",
+        "description": "Players must configure session time limits at registration (UK players). Alerts are issued every 60 minutes by default, with configurable intervals.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Reality Checks",
+        "description": "Configurable pop-up notifications during play display time elapsed and net profit/loss figures, supporting informed player decision-making per UKGC SR Code 3.4.3.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Self-Exclusion",
+        "description": "Players can self-exclude at the operator level for a minimum of 6 months (UK) or permanently. Self-exclusion is irrevocable for the selected minimum period.",
+        "status": "success",
+        "iconName": "ban"
+      },
+      {
+        "title": "Cooling-Off Periods",
+        "description": "Short-term account pauses of 24 hours, 7 days, or 30 days are available to players who need a break without formal self-exclusion.",
+        "status": "success",
+        "iconName": "clock"
+      },
+      {
+        "title": "Affordability Checks (2024 LCCP)",
+        "description": "Soft financial risk checks are triggered at lower spending thresholds per the updated 2024 UKGC White Paper implementation. Enhanced checks apply at higher loss levels.",
+        "status": "warning",
+        "iconName": "alert"
+      }
+    ],
+    "comparisonTitle": "LuckyNiki vs. Industry Compliance Benchmarks",
+    "comparisonRows": [
+      {
+        "feature": "Licence Tier & Verifiability",
+        "thisCasino": "UKGC 39326 + MGA — Publicly Verifiable",
+        "regulatedStandard": "Single verifiable licence minimum",
+        "status": "success"
+      },
+      {
+        "feature": "GAMSTOP Integration (UK)",
+        "thisCasino": "Yes — Mandatory; irrevocable 6-month minimum",
+        "regulatedStandard": "UKGC Mandatory Requirement",
+        "status": "success"
+      },
+      {
+        "feature": "E-Wallet Withdrawal Speed",
+        "thisCasino": "0–24 Hours (Skrill, Neteller, PayPal)",
+        "regulatedStandard": "0–48 Hour Industry Norm",
+        "status": "success"
+      },
+      {
+        "feature": "Welcome Bonus Wagering",
+        "thisCasino": "35x (Bonus Funds)",
+        "regulatedStandard": "30x–40x Average",
+        "status": "success"
+      },
+      {
+        "feature": "Player Fund Protection Level",
+        "thisCasino": "Medium (Segregated, not insured)",
+        "regulatedStandard": "Medium–High (varies by operator)",
+        "status": "warning"
+      },
+      {
+        "feature": "Germany (GGL) Licence",
+        "thisCasino": "Unconfirmed — DE availability conditional",
+        "regulatedStandard": "GGL licence required for DE market",
+        "status": "warning"
+      },
+      {
+        "feature": "Credit Card Prohibition (UK)",
+        "thisCasino": "Enforced — Compliant with UKGC 2020 directive",
+        "regulatedStandard": "UKGC Mandatory",
+        "status": "success"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LuckyNiki licensed and legal in the UK?",
+        "answer": "Yes. LuckyNiki holds an active UK Gambling Commission (UKGC) licence with ID 39326, issued to White Hat Gaming Limited. This can be independently verified on the UKGC public register at gamblingcommission.gov.uk. UK players are fully protected under the Licence Conditions and Codes of Practice (LCCP)."
+      },
+      {
+        "question": "Is LuckyNiki registered with GAMSTOP?",
+        "answer": "Yes. GAMSTOP integration is mandatory under UKGC LCCP SR Code 3.5.3. UK players who have registered a self-exclusion with GAMSTOP will be blocked from accessing LuckyNiki. The minimum GAMSTOP exclusion period is 6 months."
+      },
+      {
+        "question": "Can players from Germany access LuckyNiki?",
+        "answer": "This is currently conditional. Germany's GGL regulator requires a specific national licence under the GlüStV 2021 State Treaty. LuckyNiki's GGL licence status is unconfirmed at the time of this audit (July 2026). German residents are advised to verify an active GGL licence number before playing."
+      },
+      {
+        "question": "How fast are withdrawals at LuckyNiki?",
+        "answer": "E-wallet withdrawals via Skrill, Neteller, PayPal, and Trustly are processed within 0–24 hours. Debit card withdrawals take 1–3 business days. SEPA bank wire transfers take 3–5 business days. There are no operator fees on any standard withdrawal method. KYC verification must be completed before the first withdrawal."
+      },
+      {
+        "question": "Are credit cards accepted at LuckyNiki?",
+        "answer": "No, not for UK players. Credit card deposits are prohibited at all UKGC-licensed operators under a directive that came into force in April 2020. UK players can use Visa/Mastercard debit cards, e-wallets, or bank transfer."
+      },
+      {
+        "question": "What responsible gambling tools are available?",
+        "answer": "LuckyNiki offers a comprehensive suite: deposit limits (daily/weekly/monthly), loss limits, wagering limits, session time limits, reality checks, cooling-off periods, and self-exclusion. UK players must interact with GAMSTOP for national self-exclusion. Swedish players are covered by SPELPAUS integration."
+      }
+    ],
+    "license": "UKGC: 39326 | MGA: MGA/B2C/248/2014",
+    "localizedBonuses": {
+      "uk": {
+        "offer": "100% up to £500 + 150 Free Spins",
+        "wagering": "35x"
+      },
+      "den": {
+        "offer": "100% up to 500 DKK + 100 Free Spins",
+        "wagering": "35x"
+      },
+      "can": {
+        "offer": "100% up to CAD 500 + 150 Free Spins",
+        "wagering": "35x"
+      },
+      "ire": {
+        "offer": "100% up to €500 + 150 Free Spins",
+        "wagering": "35x"
+      },
+      "swe": {
+        "offer": "100% up to 2,000 SEK + 100 Free Spins",
+        "wagering": "30x"
+      },
+      "global": {
+        "offer": "100% up to €500 + 150 Free Spins",
+        "wagering": "35x"
+      }
+    },
+    "bonus": "100% up to £500"
   },
   {
     "id": "paddy-power",

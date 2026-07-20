@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { getAnalytics, isSupported } from "firebase/analytics";
 import { createLogger } from "@/src/utils/logging";
 
 const log = createLogger("firebase");
@@ -24,16 +25,27 @@ export const isFirebaseConfigured = !!(
 
 let db: any = null;
 let auth: any = null;
+let analytics: any = null;
 
 if (isFirebaseConfigured) {
   try {
     const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
     db = getFirestore(app);
     auth = getAuth(app);
+    
+    if (typeof window !== "undefined") {
+      isSupported().then((supported) => {
+        if (supported) {
+          analytics = getAnalytics(app);
+          log.info("Firebase Analytics initialized successfully");
+        }
+      });
+    }
   } catch (error) {
     log.error("Failed to initialize Firebase SDK", { error });
   }
 }
 
-export { db, auth };
+export { db, auth, analytics };
+
 

@@ -8,6 +8,14 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["lucide-react"],
+  // Native Node modules (C++ bindings) must never be bundled by Turbopack/Webpack.
+  // grpc-js is pulled in transitively by @firebase/firestore → google-gax.
+  serverExternalPackages: [
+    "@grpc/grpc-js",
+    "@grpc/proto-loader",
+    "google-gax",
+    "@google-cloud/storage",
+  ],
   turbopack: {
     root: path.resolve(__dirname),
   },

@@ -103,6 +103,8 @@ export interface Casino {
   warningText?: string;
   affiliateUrl: string;
   isPartner?: boolean;
+  complianceScore?: number;
+  auditReference?: string;
 
   // Verdict section
   editorialVerdict?: string;

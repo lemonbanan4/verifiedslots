@@ -1,6 +1,8 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import "@/src/lib/firebase";
+
 
 export type VisitorProfile = "Global" | "Local";
 

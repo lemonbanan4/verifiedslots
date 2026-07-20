@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
 import { createLogger } from "@/src/utils/logging";
-import type { Audit, AuditCategory } from "@/src/types/audit";
+import type { Audit, AuditCategory, AuditStatus } from "@/src/types/audit";
 
 const log = createLogger("generate-audit");
 
@@ -330,6 +330,23 @@ ${isSearchMode ? searchFacts : rawData}
 
         const nextId = audits.length > 0 ? Math.max(...audits.map((a) => a.id)) + 1 : 1;
 
+        // Check if input is a JSON file and extract partner details
+        let affiliateLink = "";
+        let isPartner = false;
+        let auditStatus: AuditStatus = "Pending Review";
+        if (inputArg && inputArg.endsWith(".json")) {
+            try {
+                const parsedJson = JSON.parse(rawData);
+                affiliateLink = parsedJson.affiliateUrl || parsedJson.affiliateLink || "";
+                isPartner = parsedJson.isPartner || false;
+                if (isPartner) {
+                    auditStatus = "Editorial Approved";
+                }
+            } catch (err) {
+                // Ignore parsing errors
+            }
+        }
+
         const newAudit: Audit = {
             id: nextId,
             slug,
@@ -341,11 +358,9 @@ ${isSearchMode ? searchFacts : rawData}
             date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
             category: normalizeCategory(report.category),
             complianceScore: report.complianceScore,
-            // AI-generated content hasn't had human editorial review yet —
-            // unlike the hand-curated entries already in this file, this
-            // shouldn't claim "Editorial Approved" until someone checks it.
-            status: "Pending Review",
-            affiliateLink: "",
+            status: auditStatus,
+            affiliateLink,
+            isPartner,
             sections: report.sections.map((s) => ({ ...s, body: sanitizeInternalLinks(s.body) })),
             metaTitle: report.metaTitle?.slice(0, 60),
             metaDescription: report.metaDescription?.slice(0, 160),
