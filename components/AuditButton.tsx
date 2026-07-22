@@ -33,7 +33,7 @@ export function AuditButton({
         <a
           href={affiliateLink}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
           className={`inline-flex items-center gap-1 text-emerald-450 hover:text-emerald-300 font-bold transition-all focus:outline-none focus:ring-1 focus:ring-emerald-500 rounded px-1 py-0.5 ${className}`}
         >
           Visit Operator <ExternalLink size={12} />
@@ -66,7 +66,7 @@ export function AuditButton({
       <a
         href={affiliateLink}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow sponsored noopener noreferrer"
         className={`w-full py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-955 ${buttonColorClass} ${className}`}
       >
         Visit Operator <ExternalLink size={13} />

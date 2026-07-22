@@ -253,7 +253,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                       : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
                   }`}
                 >
-                  {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}
+                  {isNl ? "Audit Aanvragen" : "Request Audit"}
                 </Link>
               )}
             </div>
