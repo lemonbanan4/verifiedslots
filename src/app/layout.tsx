@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "0peRJxoodv1nsEicZnNx3vrd_Bx341lGZkl_l4JLtrA",
+  },
   openGraph: {
     title: "VerifiedSlots - Independent Assessments & Compliance Reviews",
     description: "Objective, developer-led analysis of regulated KSA online casinos and offshore entities.",
