@@ -37,8 +37,17 @@ export function proxy(request: NextRequest) {
   // Hands the real, server-detected geo down to the client via a plain
   // (non-httpOnly) cookie, so ComplianceContext can read it synchronously
   // instead of calling third-party IP-geolocation APIs from the browser.
+  // The precise country, used to gate geo-restricted affiliate offers. Unlike
+  // countryCode above it never falls back to "GB": an unknown origin must read
+  // as unknown so a restricted offer stays hidden rather than being shown by
+  // default. A "simulated_country" cookie allows previewing another geo.
+  const simulatedCountry = request.cookies.get("simulated_country")?.value?.toUpperCase();
+  const affiliateCountry =
+    simulatedCountry || (simulatedGeo === "true" ? "NL" : rawCountryHeader || "");
+
   const withGeoCookie = <T extends NextResponse>(res: T): T => {
     res.cookies.set("detected_geo_nl", isDutch ? "true" : "false", { path: "/", maxAge: 3600 });
+    res.cookies.set("detected_country", affiliateCountry, { path: "/", maxAge: 3600 });
     return res;
   };
 

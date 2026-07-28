@@ -5,8 +5,9 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { OutboundLink } from "./OutboundLink";
 import { Star, ShieldCheck, ShieldAlert, ArrowRight } from "lucide-react";
-import { casinoHoldsLicense, type Casino } from "@/src/data/casinos";
+import { casinoHoldsLicense, isAffiliateOfferAvailable, type Casino } from "@/src/data/casinos";
 import { normalizeRating } from "@/src/utils/rating";
+import { useCompliance } from "@/src/context/ComplianceContext";
 
 interface CasinoCardProps {
   casino: Casino;
@@ -14,6 +15,8 @@ interface CasinoCardProps {
 }
 
 export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }: CasinoCardProps) {
+  const { countryCode } = useCompliance();
+
   // Determine active license based on page context
   const activeLicense = licenseType && casinoHoldsLicense(casino, licenseType)
     ? licenseType.toLowerCase()
@@ -125,7 +128,7 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
           >
             Read Review
           </Link>
-          {casino.isPartner && casino.affiliateUrl && casino.affiliateUrl.trim().length > 0 ? (
+          {isAffiliateOfferAvailable(casino, countryCode) ? (
             <OutboundLink
               href={casino.affiliateUrl}
               className={`flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer ${

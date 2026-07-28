@@ -102,6 +102,7 @@ export interface Casino {
   summaryText: string;
   warningText?: string;
   affiliateUrl: string;
+  affiliateGeos?: string[];
   isPartner?: boolean;
   complianceScore?: number;
   auditReference?: string;

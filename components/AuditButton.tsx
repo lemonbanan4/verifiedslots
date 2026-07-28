@@ -1,10 +1,19 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { isAffiliateOfferAvailable } from "@/src/data/casinos";
+import { useCompliance } from "@/src/context/ComplianceContext";
 
 interface AuditButtonProps {
   /** Optional affiliate redirect link to visit the operator directly */
   affiliateLink?: string;
+  /**
+   * Country codes the offer is approved for. When set, the affiliate CTA is
+   * only rendered for visitors in those countries. Omit if unrestricted.
+   */
+  affiliateGeos?: string[];
   /** Boolean flag to indicate whether the operator has a signed partner contract */
   isPartner?: boolean;
   /** License jurisdiction held by this operator (e.g. ksa, mga, curacao) */
@@ -19,13 +28,18 @@ interface AuditButtonProps {
 
 export function AuditButton({
   affiliateLink,
+  affiliateGeos,
   isPartner = false,
   licenseType = "mga",
   onClick,
   variant = "block",
   className = "",
 }: AuditButtonProps) {
-  const hasAffiliate = isPartner && !!affiliateLink && affiliateLink.trim().length > 0;
+  const { countryCode } = useCompliance();
+  const hasAffiliate = isAffiliateOfferAvailable(
+    { affiliateUrl: affiliateLink || "", affiliateGeos, isPartner },
+    countryCode,
+  );
 
   if (variant === "inline") {
     if (hasAffiliate) {

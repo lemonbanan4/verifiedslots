@@ -10,6 +10,12 @@ interface ComplianceContextType {
   visitorProfile: VisitorProfile;
   isDutch: boolean;
   detectedCountry: string;
+  /**
+   * ISO country code resolved server-side by the proxy, or "" while detection
+   * is still pending or the origin is unknown. Used to gate geo-restricted
+   * affiliate offers — see `affiliateGeos` on the Casino type.
+   */
+  countryCode: string;
   setProfile: (profile: VisitorProfile) => void;
   toggleProfile: () => void;
 }
@@ -19,6 +25,7 @@ const ComplianceContext = createContext<ComplianceContextType | undefined>(undef
 export function ComplianceProvider({ children }: { children: React.ReactNode }) {
   const [visitorProfile, setVisitorProfile] = useState<VisitorProfile>("Global");
   const [detectedCountry, setDetectedCountry] = useState<string>("Detecting...");
+  const [countryCode, setCountryCode] = useState<string>("");
 
   // Helper to read cookies on the client side
   const getCookie = (name: string) => {
@@ -30,6 +37,11 @@ export function ComplianceProvider({ children }: { children: React.ReactNode }) 
   };
 
   useEffect(() => {
+    // 0. Precise country for affiliate geo-gating, set by the proxy on every
+    // response. Independent of the NL/Global profile below, which is a
+    // compliance concept rather than a literal country.
+    setCountryCode((getCookie("detected_country") || "").toUpperCase());
+
     // 1. Admin/manual simulation override always wins (cookie, then
     // localStorage), mirroring the proxy's own priority order.
     const simulatedCookie = getCookie("simulated_geo_nl");
@@ -92,7 +104,7 @@ export function ComplianceProvider({ children }: { children: React.ReactNode }) 
   const isDutch = visitorProfile === "Local";
 
   return (
-    <ComplianceContext.Provider value={{ visitorProfile, isDutch, detectedCountry, setProfile, toggleProfile }}>
+    <ComplianceContext.Provider value={{ visitorProfile, isDutch, detectedCountry, countryCode, setProfile, toggleProfile }}>
       {children}
     </ComplianceContext.Provider>
   );

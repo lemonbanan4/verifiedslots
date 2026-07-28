@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { cookies, headers } from "next/headers";
-import { Casino, casinoHoldsLicense } from "@/src/data/casinos";
+import { Casino, casinoHoldsLicense, isAffiliateOfferAvailable } from "@/src/data/casinos";
 import { normalizeRating } from "@/src/utils/rating";
 import { TrustAndSafety } from "./TrustAndSafety";
 import { BonusTerms } from "./BonusTerms";
@@ -45,6 +45,11 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
   const cookieStore = await cookies();
   const simulatedGeo = cookieStore.get("simulated_geo_nl")?.value;
   const isNl = simulatedGeo === "true";
+
+  // Precise country for affiliate geo-gating, resolved by the proxy. Read here
+  // on the server so a restricted CTA never flashes before hydration.
+  const visitorCountry = (cookieStore.get("detected_country")?.value || "").toUpperCase();
+  const affiliateAvailable = isAffiliateOfferAvailable(review, visitorCountry);
 
   // Check if operator holds the license for the current route
   const isLicensedInCurrentRoute = activeLicenseRoute
@@ -224,7 +229,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                 <div className="mt-2 text-center py-2.5 px-4 rounded-xl text-[10px] font-bold uppercase tracking-wider text-rose-400 border border-rose-500/20 bg-rose-500/5 neon-border-rose">
                   Niet beschikbaar in NL
                 </div>
-              ) : review.isPartner && review.affiliateUrl && review.affiliateUrl.trim().length > 0 ? (
+              ) : affiliateAvailable ? (
                 <OutboundLinkWithTooltip
                   affiliateUrl={review.affiliateUrl}
                   isLicensedInNL={review.isLicensedInNL}

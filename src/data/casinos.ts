@@ -58,6 +58,14 @@ export interface Casino {
   summaryText: string;
   warningText?: string;
   affiliateUrl: string;
+  /**
+   * Country codes the affiliate offer is actually approved for. When set, the
+   * affiliate CTA is only shown to visitors in these countries — clicks from
+   * anywhere else are rejected by the network's tracker and land on a dead
+   * "disabled" page, so we show the non-partner fallback instead. Omit when
+   * the offer has no geo restriction.
+   */
+  affiliateGeos?: string[];
   isPartner?: boolean;
   complianceScore?: number;
   auditReference?: string;
@@ -2927,7 +2935,10 @@ export const casinos: Casino[] = [
     "summaryText": "LuckyNiki is an anime-themed online casino operated by White Hat Gaming Limited, holding an active UKGC licence (ID: 39326) and MGA licence (MGA/B2C/248/2014). It targets regulated markets including the UK, Denmark, Canada, Ireland, and Sweden with a rich slot library and a full responsible gaming suite including GAMSTOP integration.",
     "editorialVerdict": "LuckyNiki earns a Certified compliance rating of 88/100, anchored by two verifiable tier-one licences — UKGC 39326 and MGA/B2C/248/2014 — both held by the reputable White Hat Gaming group. Its responsible gaming infrastructure is robust: GAMSTOP is mandatory and integrated for UK players, deposit limits are enforced immediately on reduction, and reality checks are configurable. Payout mechanics are transparent with e-wallets processing within 0–24 hours and all standard methods fee-free. Key risk flags include an unresolved GGL (Germany) licence status, medium-level player fund protection (segregated but not insured), and the availability of reverse withdrawal — a standard industry feature that carries a consumer advisory. Overall, LuckyNiki is a strongly recommended operator for GB, DK, CA, IE, and SE players seeking a compliant, anime-themed casino experience with solid financial controls.",
     "warningText": "LuckyNiki is not available to residents of the Netherlands (NL), United States (US), or France (FR). German (DE) residents should verify an active GGL licence before play. Credit card deposits are prohibited for UK residents per UKGC April 2020 directive.",
-    "affiliateUrl": "https://wow.itisfine.work/click?pid=31416&offer_id=5806",
+    "affiliateUrl": "https://wow.itisfine.work/click?pid=31416&offer_id=5806&l=1784204880",
+    "affiliateGeos": [
+      "GB"
+    ],
     "isPartner": true,
     "complianceScore": 88,
     "auditReference": "VSAUD-LNIKI-2026-07",
@@ -5073,4 +5084,18 @@ export function isCasinoAvailableInCountry(slug: string, countryCode: string): b
 export function casinoHoldsLicense(casino: Casino, licenseType: string): boolean {
   const types = casino.licenseTypes && casino.licenseTypes.length > 0 ? casino.licenseTypes : [casino.licenseType];
   return types.includes(licenseType as Casino["licenseType"]);
+}
+
+// Whether the affiliate CTA may be shown to a visitor in `countryCode`.
+// An offer with no `affiliateGeos` is unrestricted; a restricted one requires
+// a positively known, matching country — an empty/unknown code keeps the CTA
+// hidden rather than sending the visitor to the network's "disabled" page.
+export function isAffiliateOfferAvailable(
+  casino: Pick<Casino, "affiliateUrl" | "affiliateGeos" | "isPartner">,
+  countryCode: string,
+): boolean {
+  if (!casino.isPartner) return false;
+  if (!casino.affiliateUrl || casino.affiliateUrl.trim().length === 0) return false;
+  if (!casino.affiliateGeos || casino.affiliateGeos.length === 0) return true;
+  return casino.affiliateGeos.includes(countryCode.toUpperCase());
 }

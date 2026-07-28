@@ -52,6 +52,12 @@ export interface Audit {
   sections: AuditSection[];
   /** Optional affiliate redirect link to visit the operator directly */
   affiliateLink?: string;
+  /**
+   * Country codes the affiliate offer is approved for. When set, the CTA is
+   * only shown to visitors in those countries — see `affiliateGeos` on the
+   * Casino type. Omit when the offer has no geo restriction.
+   */
+  affiliateGeos?: string[];
   /** Boolean flag to indicate whether the operator has a signed partner contract */
   isPartner?: boolean;
   /** SEO specific meta title (max 60 chars) */
