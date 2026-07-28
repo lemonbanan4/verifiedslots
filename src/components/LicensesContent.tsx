@@ -4,7 +4,7 @@ import React from "react";
 import { useCompliance } from "@/src/context/ComplianceContext";
 import { CasinoCard } from "@/components/CasinoCard";
 import { ShieldCheck, ShieldAlert, Sparkles, BookOpen } from "lucide-react";
-import { Casino, casinoHoldsLicense } from "@/src/data/casinos";
+import { Casino, casinoHoldsLicense, sortByAffiliatePriority } from "@/src/data/casinos";
 import { motion, Variants } from "motion/react";
 
 interface LicensesContentProps {
@@ -42,11 +42,13 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
   // array, not just each casino's single primary licenseType, so dual/multi-
   // licensed operators show up under every jurisdiction they actually hold).
   // If Dutch, only show KSA.
-  const visibleCasinos = casinos.filter((c) => {
-    const matchesLicense = casinoHoldsLicense(c, licenseType);
-    const passesGeoCheck = visitorProfile !== "Local" || casinoHoldsLicense(c, "ksa");
-    return matchesLicense && passesGeoCheck;
-  });
+  const visibleCasinos = sortByAffiliatePriority(
+    casinos.filter((c) => {
+      const matchesLicense = casinoHoldsLicense(c, licenseType);
+      const passesGeoCheck = visitorProfile !== "Local" || casinoHoldsLicense(c, "ksa");
+      return matchesLicense && passesGeoCheck;
+    })
+  );
 
   // Setup dynamic content based on license type
   let heading = "";

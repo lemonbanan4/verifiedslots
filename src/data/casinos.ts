@@ -5092,3 +5092,19 @@ export function isAffiliateOfferAvailable(
   if (!casino.affiliateGeos || casino.affiliateGeos.length === 0) return true;
   return casino.affiliateGeos.includes(countryCode.toUpperCase());
 }
+
+// Whether a casino has a real affiliate deal at all, regardless of whether
+// the visitor's own geo happens to qualify for it right now — used to rank
+// partner brands to the top of directory listings so they get seen first,
+// independent of the (geo-aware) CTA-visibility check above.
+export function hasAffiliateDeal(casino: Pick<Casino, "affiliateUrl" | "isPartner">): boolean {
+  return !!casino.isPartner && !!casino.affiliateUrl && casino.affiliateUrl.trim().length > 0;
+}
+
+// Stable sort that floats casinos with a real affiliate deal to the top,
+// preserving the existing relative order within each group.
+export function sortByAffiliatePriority<T extends Pick<Casino, "affiliateUrl" | "isPartner">>(
+  list: T[],
+): T[] {
+  return [...list].sort((a, b) => Number(hasAffiliateDeal(b)) - Number(hasAffiliateDeal(a)));
+}

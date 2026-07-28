@@ -23,7 +23,7 @@ import type { Audit, AuditCategory } from "@/src/types/audit";
 import auditsData from "@/src/data/audits.json";
 import { ComplianceSeal } from "@/components/ComplianceSeal";
 import { AuditModal } from "@/components/AuditModal";
-import { casinos, casinoHoldsLicense } from "@/src/data/casinos";
+import { casinos, casinoHoldsLicense, sortByAffiliatePriority } from "@/src/data/casinos";
 import { CasinoCard } from "@/components/CasinoCard";
 import { useCompliance } from "@/src/context/ComplianceContext";
 
@@ -264,7 +264,7 @@ export default function AuditsPage() {
       );
     }
 
-    return list;
+    return sortByAffiliatePriority(list);
   }, [activeLicenseFilter, searchQuery, isDutch]);
 
   // Filtered Archive Audits list
