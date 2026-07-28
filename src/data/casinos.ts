@@ -58,13 +58,6 @@ export interface Casino {
   summaryText: string;
   warningText?: string;
   affiliateUrl: string;
-  /**
-   * Country codes the affiliate offer is actually approved for. When set, the
-   * affiliate CTA is only shown to visitors in these countries — clicks from
-   * anywhere else are rejected by the network's tracker and land on a dead
-   * "disabled" page, so we show the non-partner fallback instead. Omit when
-   * the offer has no geo restriction.
-   */
   affiliateGeos?: string[];
   isPartner?: boolean;
   complianceScore?: number;
@@ -2927,8 +2920,8 @@ export const casinos: Casino[] = [
     "wagering": "35x",
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-07-20",
-    "lastModified": "2026-07-20",
-    "lastUpdated": "2026-07-20",
+    "lastModified": "2026-07-28",
+    "lastUpdated": "2026-07-28",
     "logoColor": "from-pink-600 to-rose-700",
     "welcomeBonus": "Up to £500 + 150 Free Spins",
     "gameLibraryCount": "3,000+ Titles",
