@@ -5,6 +5,26 @@ interface ReviewSchemaProps {
   review: Casino;
 }
 
+const LICENSE_LABELS: Record<string, string> = {
+  ksa: "Kansspelautoriteit (KSA)",
+  ukgc: "UK Gambling Commission (UKGC)",
+  mga: "Malta Gaming Authority (MGA)",
+};
+
+function describeLicensing(review: Casino): string {
+  const types = review.licenseTypes && review.licenseTypes.length > 0
+    ? review.licenseTypes
+    : [review.licenseType];
+  const labels = types.map((t) => LICENSE_LABELS[t] || t.toUpperCase());
+
+  if (labels.length === 0) {
+    return "Offshore/Unlicensed entity. Restricted in Netherlands.";
+  }
+  return `Licensed and regulated by ${labels.join(" and ")}${
+    review.licenseNumber ? ` under license number: ${review.licenseNumber}` : ""
+  }.`;
+}
+
 export function ReviewSchema({ review }: ReviewSchemaProps) {
   const schemaData = {
     "@context": "https://schema.org",
@@ -21,14 +41,14 @@ export function ReviewSchema({ review }: ReviewSchemaProps) {
         "@type": "AggregateRating",
         "ratingValue": review.rating.toString(),
         "reviewCount": "38", // Number of independent audited audits
-        "bestRating": review.isKsaLicensed ? "10" : "5",
+        "bestRating": "10",
         "worstRating": "1"
       }
     },
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": review.rating.toString(),
-      "bestRating": review.isKsaLicensed ? "10" : "5",
+      "bestRating": "10",
       "worstRating": "1"
     },
     "author": {
@@ -46,10 +66,7 @@ export function ReviewSchema({ review }: ReviewSchemaProps) {
     "datePublished": review.datePublished,
     "dateModified": review.lastModified || review.datePublished,
     "description": review.summaryText,
-    "reviewBody": `Independent audit report of ${review.name} (${review.domain}). Licensing configuration: ${review.isKsaLicensed
-        ? `Fully licensed and compliant with the Kansspelautoriteit (KSA) under license number: ${review.licenseNumber}.`
-        : `Offshore/Unlicensed entity. Restricted in Netherlands.`
-      }`
+    "reviewBody": `Independent audit report of ${review.name} (${review.domain}). Licensing configuration: ${describeLicensing(review)}`
   };
 
   return (

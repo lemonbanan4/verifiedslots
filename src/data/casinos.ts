@@ -2932,8 +2932,8 @@ export const casinos: Casino[] = [
     "logoColor": "from-pink-600 to-rose-700",
     "welcomeBonus": "Up to £500 + 150 Free Spins",
     "gameLibraryCount": "3,000+ Titles",
-    "summaryText": "LuckyNiki is an anime-themed online casino operated by White Hat Gaming Limited, holding an active UKGC licence (ID: 39326) and MGA licence (MGA/B2C/248/2014). It targets regulated markets including the UK, Denmark, Canada, Ireland, and Sweden with a rich slot library and a full responsible gaming suite including GAMSTOP integration.",
-    "editorialVerdict": "LuckyNiki earns a Certified compliance rating of 88/100, anchored by two verifiable tier-one licences — UKGC 39326 and MGA/B2C/248/2014 — both held by the reputable White Hat Gaming group. Its responsible gaming infrastructure is robust: GAMSTOP is mandatory and integrated for UK players, deposit limits are enforced immediately on reduction, and reality checks are configurable. Payout mechanics are transparent with e-wallets processing within 0–24 hours and all standard methods fee-free. Key risk flags include an unresolved GGL (Germany) licence status, medium-level player fund protection (segregated but not insured), and the availability of reverse withdrawal — a standard industry feature that carries a consumer advisory. Overall, LuckyNiki is a strongly recommended operator for GB, DK, CA, IE, and SE players seeking a compliant, anime-themed casino experience with solid financial controls.",
+    "summaryText": "LuckyNiki is an anime-themed online casino operated by Skill On Net Limited, holding an active UKGC licence (ID: 39326) and MGA licence (MGA/B2C/248/2014). It targets regulated markets including the UK, Denmark, Canada, Ireland, and Sweden with a rich slot library and a full responsible gaming suite including GAMSTOP integration.",
+    "editorialVerdict": "LuckyNiki earns a Certified compliance rating of 88/100, anchored by two verifiable tier-one licences — UKGC 39326 and MGA/B2C/248/2014 — both held by the reputable SkillOnNet group. Its responsible gaming infrastructure is robust: GAMSTOP is mandatory and integrated for UK players, deposit limits are enforced immediately on reduction, and reality checks are configurable. Payout mechanics are transparent with e-wallets processing within 0–24 hours and all standard methods fee-free. Key risk flags include an unresolved GGL (Germany) licence status, medium-level player fund protection (segregated but not insured), and the availability of reverse withdrawal — a standard industry feature that carries a consumer advisory. Overall, LuckyNiki is a strongly recommended operator for GB, DK, CA, IE, and SE players seeking a compliant, anime-themed casino experience with solid financial controls.",
     "warningText": "LuckyNiki is not available to residents of the Netherlands (NL), United States (US), or France (FR). German (DE) residents should verify an active GGL licence before play. Credit card deposits are prohibited for UK residents per UKGC April 2020 directive.",
     "affiliateUrl": "https://wow.itisfine.work/click?pid=31416&offer_id=5806&l=1784204880",
     "affiliateGeos": [
@@ -2943,7 +2943,7 @@ export const casinos: Casino[] = [
     "complianceScore": 88,
     "auditReference": "VSAUD-LNIKI-2026-07",
     "pros": [
-      "Dual UKGC (39326) and MGA licences from reputable White Hat Gaming group",
+      "Dual UKGC (39326) and MGA licences from reputable SkillOnNet group",
       "Full GAMSTOP integration — mandatory national self-exclusion for UK players",
       "E-wallet withdrawals processed within 0–24 hours with no operator fees",
       "Extensive library of 3,000+ titles with independently certified RNG (BMM/eCOGRA)",
@@ -2957,12 +2957,12 @@ export const casinos: Casino[] = [
       "Credit cards blocked for UK players (regulatory, not operator restriction)"
     ],
     "securityTitle": "Tier-One Regulatory Safety at LuckyNiki",
-    "securitySummary": "LuckyNiki is operated by White Hat Gaming Limited under active UKGC licence 39326 and MGA licence MGA/B2C/248/2014. Player funds are held in segregated accounts separate from operational capital, and all gaming software is subject to independent RNG audits by BMM Testlabs and eCOGRA. UK players benefit from mandatory GAMSTOP integration, and all data transfers are encrypted via 256-bit SSL.",
+    "securitySummary": "LuckyNiki is operated by Skill On Net Limited under active UKGC licence 39326 and MGA licence MGA/B2C/248/2014. Player funds are held in segregated accounts separate from operational capital, and all gaming software is subject to independent RNG audits by BMM Testlabs and eCOGRA. UK players benefit from mandatory GAMSTOP integration, and all data transfers are encrypted via 256-bit SSL.",
     "securityWarning": "Player fund protection is at medium level under UKGC classification: funds are segregated but not protected via an insured trust. In an insolvency scenario, player balances rank above operational debts but are not guaranteed via independent insurance.",
     "securityPoints": [
       {
         "title": "UKGC Licence 39326 (Active)",
-        "description": "Verified active on the UK Gambling Commission public register. Licensee: White Hat Gaming Limited. Subject to full LCCP compliance including AML, social responsibility, and financial reporting obligations.",
+        "description": "Verified active on the UK Gambling Commission public register. Licensee: Skill On Net Limited. Subject to full LCCP compliance including AML, social responsibility, and financial reporting obligations.",
         "iconName": "shield",
         "status": "success"
       },
@@ -3198,7 +3198,7 @@ export const casinos: Casino[] = [
     "faqs": [
       {
         "question": "Is LuckyNiki licensed and legal in the UK?",
-        "answer": "Yes. LuckyNiki holds an active UK Gambling Commission (UKGC) licence with ID 39326, issued to White Hat Gaming Limited. This can be independently verified on the UKGC public register at gamblingcommission.gov.uk. UK players are fully protected under the Licence Conditions and Codes of Practice (LCCP)."
+        "answer": "Yes. LuckyNiki holds an active UK Gambling Commission (UKGC) licence with ID 39326, issued to Skill On Net Limited. This can be independently verified on the UKGC public register at gamblingcommission.gov.uk. UK players are fully protected under the Licence Conditions and Codes of Practice (LCCP)."
       },
       {
         "question": "Is LuckyNiki registered with GAMSTOP?",
