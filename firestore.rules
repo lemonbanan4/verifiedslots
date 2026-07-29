@@ -23,6 +23,30 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // User comments on casino reviews. Anonymous, name-only submission (the
+    // app has no sign-in flow — see note above). Every comment is created as
+    // "pending" and is only ever readable once flipped to "approved", which
+    // only happens via the Admin SDK / Firebase console (manual moderation).
+    // Clients can never read pending comments, update, or delete anything —
+    // this is a strictly append-only, pre-moderated public form.
+    match /comments/{commentId} {
+      allow read: if resource.data.status == "approved";
+
+      allow create: if
+        request.resource.data.keys().hasOnly(["casinoSlug", "authorName", "text", "status", "createdAt"]) &&
+        request.resource.data.status == "pending" &&
+        request.resource.data.createdAt == request.time &&
+        request.resource.data.casinoSlug is string &&
+        request.resource.data.casinoSlug.size() > 0 && request.resource.data.casinoSlug.size() <= 60 &&
+        request.resource.data.authorName is string &&
+        request.resource.data.authorName.size() > 0 && request.resource.data.authorName.size() <= 60 &&
+        request.resource.data.text is string &&
+        request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 1000 &&
+        !request.resource.data.text.matches(".*(https?://|www\\.).*");
+
+      allow update, delete: if false;
+    }
+
     // Everything else: fully locked down; only the Admin SDK can touch it
     match /{document=**} {
       allow read, write: if false;

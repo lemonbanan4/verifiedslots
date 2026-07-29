@@ -15,6 +15,7 @@ import { OutboundLinkWithTooltip } from "./OutboundLinkWithTooltip";
 import { StickyRgFooter } from "./StickyRgFooter";
 import { ReviewSchema } from "./ReviewSchema";
 import { FAQSchema } from "./FAQSchema";
+import { CasinoComments } from "./CasinoComments";
 import { TrustBadges } from "./TrustBadges";
 import dynamic from "next/dynamic";
 
@@ -533,6 +534,11 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
         {/* Bento Item 14: Audit FAQ block (Full Width) */}
         <div className="reveal-card delay-8 lg:col-span-3 optimize-gpu">
           <FAQ faqs={review.faqs} />
+        </div>
+
+        {/* Bento Item 15: Player Comments (Full Width) */}
+        <div className="reveal-card delay-8 lg:col-span-3 optimize-gpu">
+          <CasinoComments casinoSlug={review.slug} casinoName={displayName} />
         </div>
 
       </main>
