@@ -14,6 +14,7 @@ import { AuthorBox } from "./AuthorBox";
 import { OutboundLinkWithTooltip } from "./OutboundLinkWithTooltip";
 import { StickyRgFooter } from "./StickyRgFooter";
 import { ReviewSchema } from "./ReviewSchema";
+import { FAQSchema } from "./FAQSchema";
 import { TrustBadges } from "./TrustBadges";
 import dynamic from "next/dynamic";
 
@@ -171,6 +172,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     <>
       {/* Dynamic SEO JSON-LD injection (Server-side generated) */}
       <ReviewSchema review={review} />
+      <FAQSchema faqs={review.faqs} />
 
       <main className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6 pb-20 relative optimize-gpu">
 
