@@ -1475,8 +1475,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-07-30",
+    "lastUpdated": "2026-07-30",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "800+ Titles",
     "summaryText": "Holland Casino Online is the official online casino of the Netherlands' state-owned Holland Casino. Licensed by the KSA, it offers a secure and regulated gaming environment with a strong focus on responsible gambling and a diverse selection of games, primarily powered by Playtech.",
@@ -1698,6 +1698,22 @@ export const casinos: Casino[] = [
       {
         "question": "What responsible gambling tools does Holland Casino Online offer?",
         "answer": "They offer a range of tools including deposit limits, session limits, reality checks, cool-off periods, and self-exclusion options to promote responsible play."
+      },
+      {
+        "question": "Is Holland Casino state-owned?",
+        "answer": "Holland Casino Online is operated by Holland Casino, the Netherlands' long-standing state-owned land-based casino operator, now also licensed by the KSA to run its regulated online platform."
+      },
+      {
+        "question": "What software provider powers Holland Casino Online's games?",
+        "answer": "Holland Casino Online's game library is primarily powered by Playtech, one of the largest licensed casino software providers, covering video slots, live dealer games, table games, and progressive jackpots including the Age of the Gods series."
+      },
+      {
+        "question": "How long do withdrawals take at Holland Casino Online?",
+        "answer": "Card and bank transfer withdrawals typically take 1-3 business days. Note that iDEAL is available for deposits only at Holland Casino Online and cannot be used for withdrawals — withdrawals go via card or direct bank transfer instead."
+      },
+      {
+        "question": "Is Holland Casino Online integrated with CRUKS self-exclusion?",
+        "answer": "As a KSA-licensed operator, Holland Casino Online is legally required to check CRUKS (the Dutch national self-exclusion register) before allowing account access, alongside its own self-exclusion and cool-off tools."
       }
     ],
     "license": "Not explicitly stated on homepage, please verify",
