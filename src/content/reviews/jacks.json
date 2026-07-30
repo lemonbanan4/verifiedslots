@@ -192,7 +192,24 @@
       "status": "success"
     }
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "Is Jacks.nl licensed and legal in the Netherlands?",
+      "answer": "Yes. Jacks.nl holds a licence from the Dutch Kansspelautoriteit (KSA), the regulator responsible for all legal online gambling in the Netherlands. As with all KSA-licensed operators, Jacks.nl is required to integrate with CRUKS, the national self-exclusion register, and to enforce Dutch responsible-gambling requirements such as deposit limits and session limits."
+    },
+    {
+      "question": "Does Jacks.nl offer live casino games with Dutch dealers?",
+      "answer": "Yes. Jacks.nl's live casino includes roulette and blackjack hosted by Dutch-speaking (Nederlandstalige) game presenters, alongside its regular video slot and table game library."
+    },
+    {
+      "question": "What payment methods does Jacks.nl support?",
+      "answer": "Jacks.nl supports iDEAL and Trustly bank transfers (instant deposits, 1–3 business day withdrawals), plus Visa and Mastercard (instant deposits, 2–5 business day withdrawals). No operator fees apply to any of these methods."
+    },
+    {
+      "question": "Does Jacks.nl offer sports betting as well as casino games?",
+      "answer": "Yes. Alongside its casino, Jacks.nl operates a sportsbook covering football, darts, tennis, and Formula 1, among other sports, within the same KSA-regulated platform."
+    }
+  ],
   "license": "KSA (Kansspelautoriteit) licensed. Specific number not explicitly stated on homepage, please verify.",
   "localizedBonuses": {
     "global": {

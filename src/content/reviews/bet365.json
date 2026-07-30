@@ -199,6 +199,22 @@
     {
       "question": "Is Bet365 integrated with self-exclusion systems?",
       "answer": "Yes. Bet365 is integrated with CRUKS in the Netherlands and GAMSTOP in the United Kingdom, ensuring compliance with player exclusion requests."
+    },
+    {
+      "question": "Is Bet365 licensed and safe to use in the UK?",
+      "answer": "Yes. Bet365 holds a UK Gambling Commission (UKGC) licence in addition to its KSA (Netherlands) and MGA (Malta) licences, making it a triple-regulated operator. UK players are covered by full UKGC LCCP protections, including mandatory GAMSTOP integration and segregated player funds."
+    },
+    {
+      "question": "What licence does Bet365 hold, and where can I verify it?",
+      "answer": "Bet365 NL operates under KSA licence KSA/1782/30912 for the Dutch market, and separately holds UKGC and MGA licences for the UK and international markets respectively. All three can be independently verified on their respective regulators' public registers."
+    },
+    {
+      "question": "Does Bet365 accept cryptocurrency deposits?",
+      "answer": "No. Bet365 does not support cryptocurrency deposits or withdrawals on its regulated KSA or UKGC platforms — crypto payment methods are prohibited under the anti-money laundering (AML) rules both regulators enforce. Players must use bank-integrated methods such as iDEAL, Visa/Mastercard, or direct bank wire."
+    },
+    {
+      "question": "How long do Bet365 withdrawals take?",
+      "answer": "iDEAL withdrawals are typically processed within 10 minutes. Debit/credit card withdrawals take 1–3 business days, and direct bank wire withdrawals take 1–2 business days. There are no operator fees on any of these methods."
     }
   ],
   "license": "KSA/1782/30912"

@@ -141,8 +141,8 @@ export const casinos: Casino[] = [
     "rating": 9.4,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-07-30",
+    "lastUpdated": "2026-07-30",
     "logoColor": "from-indigo-650 to-blue-700",
     "welcomeBonus": "50 Free Spins or €50 Bet Credits",
     "gameLibraryCount": "1,000+ Titles",
@@ -324,6 +324,22 @@ export const casinos: Casino[] = [
       {
         "question": "Is Bet365 integrated with self-exclusion systems?",
         "answer": "Yes. Bet365 is integrated with CRUKS in the Netherlands and GAMSTOP in the United Kingdom, ensuring compliance with player exclusion requests."
+      },
+      {
+        "question": "Is Bet365 licensed and safe to use in the UK?",
+        "answer": "Yes. Bet365 holds a UK Gambling Commission (UKGC) licence in addition to its KSA (Netherlands) and MGA (Malta) licences, making it a triple-regulated operator. UK players are covered by full UKGC LCCP protections, including mandatory GAMSTOP integration and segregated player funds."
+      },
+      {
+        "question": "What licence does Bet365 hold, and where can I verify it?",
+        "answer": "Bet365 NL operates under KSA licence KSA/1782/30912 for the Dutch market, and separately holds UKGC and MGA licences for the UK and international markets respectively. All three can be independently verified on their respective regulators' public registers."
+      },
+      {
+        "question": "Does Bet365 accept cryptocurrency deposits?",
+        "answer": "No. Bet365 does not support cryptocurrency deposits or withdrawals on its regulated KSA or UKGC platforms — crypto payment methods are prohibited under the anti-money laundering (AML) rules both regulators enforce. Players must use bank-integrated methods such as iDEAL, Visa/Mastercard, or direct bank wire."
+      },
+      {
+        "question": "How long do Bet365 withdrawals take?",
+        "answer": "iDEAL withdrawals are typically processed within 10 minutes. Debit/credit card withdrawals take 1–3 business days, and direct bank wire withdrawals take 1–2 business days. There are no operator fees on any of these methods."
       }
     ],
     "license": "KSA/1782/30912",
@@ -1760,8 +1776,8 @@ export const casinos: Casino[] = [
     "rating": 8.5,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-07-30",
+    "lastUpdated": "2026-07-30",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "Not explicitly stated on homepage, please verify",
     "summaryText": "Jacks.nl is a prominent online casino and sports betting platform specifically catering to the Dutch market. It offers a diverse range of slots, live casino games with native Dutch dealers, and extensive sports betting options, all within a regulated and secure environment.",
@@ -1938,7 +1954,24 @@ export const casinos: Casino[] = [
         "status": "success"
       }
     ],
-    "faqs": [],
+    "faqs": [
+      {
+        "question": "Is Jacks.nl licensed and legal in the Netherlands?",
+        "answer": "Yes. Jacks.nl holds a licence from the Dutch Kansspelautoriteit (KSA), the regulator responsible for all legal online gambling in the Netherlands. As with all KSA-licensed operators, Jacks.nl is required to integrate with CRUKS, the national self-exclusion register, and to enforce Dutch responsible-gambling requirements such as deposit limits and session limits."
+      },
+      {
+        "question": "Does Jacks.nl offer live casino games with Dutch dealers?",
+        "answer": "Yes. Jacks.nl's live casino includes roulette and blackjack hosted by Dutch-speaking (Nederlandstalige) game presenters, alongside its regular video slot and table game library."
+      },
+      {
+        "question": "What payment methods does Jacks.nl support?",
+        "answer": "Jacks.nl supports iDEAL and Trustly bank transfers (instant deposits, 1–3 business day withdrawals), plus Visa and Mastercard (instant deposits, 2–5 business day withdrawals). No operator fees apply to any of these methods."
+      },
+      {
+        "question": "Does Jacks.nl offer sports betting as well as casino games?",
+        "answer": "Yes. Alongside its casino, Jacks.nl operates a sportsbook covering football, darts, tennis, and Formula 1, among other sports, within the same KSA-regulated platform."
+      }
+    ],
     "license": "KSA (Kansspelautoriteit) licensed. Specific number not explicitly stated on homepage, please verify.",
     "localizedBonuses": {
       "global": {
