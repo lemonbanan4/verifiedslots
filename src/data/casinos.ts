@@ -4302,8 +4302,8 @@ export const casinos: Casino[] = [
     "name": "Unibet",
     "slug": "unibet",
     "domain": "unibet.com",
-    "isKsaLicensed": false,
-    "isLicensedInNL": false,
+    "isKsaLicensed": true,
+    "isLicensedInNL": true,
     "licenseNumber": "MGA/B2C/106/2000",
     "licenseType": "mga",
     "licenseTypes": [
@@ -4312,7 +4312,6 @@ export const casinos: Casino[] = [
       "ukgc"
     ],
     "restrictedCountries": [
-      "NL",
       "USA",
       "Afghanistan",
       "Ethiopia",
@@ -4327,8 +4326,8 @@ export const casinos: Casino[] = [
     "rating": 8.9,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-07-30",
+    "lastUpdated": "2026-07-30",
     "logoColor": "from-emerald-800 to-teal-900",
     "welcomeBonus": "100% up to £100 + 50 Free Spins",
     "gameLibraryCount": "1,500+ Titles",
@@ -4554,6 +4553,22 @@ export const casinos: Casino[] = [
       {
         "question": "How fast are withdrawals at Unibet?",
         "answer": "Withdrawal times at Unibet vary by method. E-wallet withdrawals are typically processed instantly to within 12 hours, while bank transfers and card withdrawals can take 1-5 business days."
+      },
+      {
+        "question": "Is Unibet licensed in the Netherlands under a KSA licence?",
+        "answer": "Yes. Unibet has held a licence from the Dutch Kansspelautoriteit (KSA) since June 2022, alongside its Malta Gaming Authority (MGA) and UK Gambling Commission (UKGC) licences, making it a triple-regulated operator."
+      },
+      {
+        "question": "Has Unibet faced any regulatory penalties?",
+        "answer": "Yes. The Dutch Kansspelautoriteit fined Unibet's parent company, Kindred Group, €400,000 for a self-exclusion (CRUKS) compliance breach, and issued a separate penalty order of up to €450,000 for breaching Dutch bonus-advertising rules. Both actions are matters of public regulatory record and don't affect the validity of Unibet's current KSA licence, but are worth knowing as part of its compliance history."
+      },
+      {
+        "question": "What is the wagering requirement on Unibet's welcome bonus?",
+        "answer": "Unibet's welcome bonus carries a 35x wagering requirement, in line with the industry average of 30x-40x. A minimum £10 deposit is required, a £5 max bet applies while the bonus is active, and bonus funds and winnings must be used within 30 days."
+      },
+      {
+        "question": "Which countries is Unibet unavailable in?",
+        "answer": "Unibet is restricted in the United States and several other jurisdictions including Afghanistan, Ethiopia, Iran, Iraq, Jordan, Kuwait, Pakistan, Syria, and Yemen, in line with local gambling laws in those countries."
       }
     ],
     "license": "MGA/B2C/106/2000",
