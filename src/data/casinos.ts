@@ -4704,8 +4704,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-07-30",
+    "lastUpdated": "2026-07-30",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "9,000+ Titles",
     "summaryText": "Videoslots – A casino with a selection of over 9,000 games! Our catalogue is packed with exciting titles to offer every player something to enjoy.",
@@ -4940,6 +4940,22 @@ export const casinos: Casino[] = [
       {
         "question": "Does VideoSlots offer a welcome bonus for new players?",
         "answer": "Yes, new players at VideoSlots are typically offered a welcome bonus, such as a 100% match up to a certain amount plus free spins, subject to specific terms and wagering requirements."
+      },
+      {
+        "question": "Why is VideoSlots not available in the Netherlands?",
+        "answer": "VideoSlots holds MGA and UKGC licences but not a KSA licence, so it cannot legally accept players from the Netherlands, along with the United States, under those countries' own licensing regimes."
+      },
+      {
+        "question": "What is VideoSlots' welcome bonus wagering requirement?",
+        "answer": "The global welcome bonus (100% up to €200 plus Welcome Spins) carries a 35x wagering requirement, in line with the 30x-40x industry standard. A minimum €10 deposit is required, bonus funds are valid for 60 days, Welcome Spins for 7 days, and a €5 max bet applies while the bonus is active."
+      },
+      {
+        "question": "Does VideoSlots have a live casino?",
+        "answer": "Yes. VideoSlots' live casino includes Blackjack, Roulette, Baccarat, and game shows powered by Evolution Gaming and Pragmatic Play Live, including titles like Crazy Time and Lightning Roulette."
+      },
+      {
+        "question": "What is VideoSlots' MGA licence number?",
+        "answer": "VideoSlots operates under Malta Gaming Authority licence MGA/B2C/218/2012, alongside a separate UK Gambling Commission licence for UK players. Both can be independently verified on their respective regulators' public registers."
       }
     ],
     "license": "MGA/B2C/218/2012",
