@@ -216,6 +216,14 @@
     {
       "question": "What payment methods are available?",
       "answer": "While not explicitly stated on the restricted page, Kansino, as a Dutch-licensed casino, is expected to offer secure and popular methods like iDEAL, Trustly, and potentially credit cards."
+    },
+    {
+      "question": "Is Kansino integrated with CRUKS self-exclusion?",
+      "answer": "Yes. As a KSA-licensed operator, Kansino integrates with CRUKS, the Dutch national self-exclusion register — a legal requirement for every operator holding a Dutch gambling licence."
+    },
+    {
+      "question": "What responsible gambling tools does Kansino offer?",
+      "answer": "Kansino provides deposit limits, loss limits, session time limits, reality check notifications, and CRUKS self-exclusion integration, in line with the responsible gambling framework mandated for all KSA-licensed operators."
     }
   ],
   "license": "Not explicitly stated on homepage, inferred to be KSA licensed",

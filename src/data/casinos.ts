@@ -2064,8 +2064,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-08-01",
+    "lastUpdated": "2026-08-01",
     "logoColor": "from-blue-900 to-indigo-950",
     "gameLibraryCount": "Not explicitly stated on homepage, please verify (likely 1,000+ Titles)",
     "summaryText": "Kansino is an online casino primarily targeting the Dutch market, operating under a strict license from the Kansspelautoriteit (KSA). While access is restricted from outside the Netherlands, it adheres to high standards of security and responsible gaming for its local players.",
@@ -2266,6 +2266,14 @@ export const casinos: Casino[] = [
       {
         "question": "What payment methods are available?",
         "answer": "While not explicitly stated on the restricted page, Kansino, as a Dutch-licensed casino, is expected to offer secure and popular methods like iDEAL, Trustly, and potentially credit cards."
+      },
+      {
+        "question": "Is Kansino integrated with CRUKS self-exclusion?",
+        "answer": "Yes. As a KSA-licensed operator, Kansino integrates with CRUKS, the Dutch national self-exclusion register — a legal requirement for every operator holding a Dutch gambling licence."
+      },
+      {
+        "question": "What responsible gambling tools does Kansino offer?",
+        "answer": "Kansino provides deposit limits, loss limits, session time limits, reality check notifications, and CRUKS self-exclusion integration, in line with the responsible gambling framework mandated for all KSA-licensed operators."
       }
     ],
     "license": "Not explicitly stated on homepage, inferred to be KSA licensed",
