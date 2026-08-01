@@ -8,7 +8,7 @@
   "welcomeBonus": "Up to €250 casino bonus or €100 Free Bet",
   "isKsaLicensed": true,
   "isLicensedInNL": true,
-  "licenseNumber": "Not explicitly stated on homepage, please verify",
+  "licenseNumber": "1959",
   "licenseType": "ksa",
   "restrictedCountries": [],
   "rating": 8.5,
@@ -198,6 +198,10 @@
       "answer": "Yes. Jacks.nl holds a licence from the Dutch Kansspelautoriteit (KSA), the regulator responsible for all legal online gambling in the Netherlands. As with all KSA-licensed operators, Jacks.nl is required to integrate with CRUKS, the national self-exclusion register, and to enforce Dutch responsible-gambling requirements such as deposit limits and session limits."
     },
     {
+      "question": "What is Jacks.nl's KSA licence number?",
+      "answer": "Jacks.nl operates under KSA licence number 1959, held by JOI Gaming Limited (Malta), valid from 20 November 2021 to 20 November 2026. This can be independently verified on the official Kansspelautoriteit register."
+    },
+    {
       "question": "Does Jacks.nl offer live casino games with Dutch dealers?",
       "answer": "Yes. Jacks.nl's live casino includes roulette and blackjack hosted by Dutch-speaking (Nederlandstalige) game presenters, alongside its regular video slot and table game library."
     },
@@ -210,7 +214,7 @@
       "answer": "Yes. Alongside its casino, Jacks.nl operates a sportsbook covering football, darts, tennis, and Formula 1, among other sports, within the same KSA-regulated platform."
     }
   ],
-  "license": "KSA (Kansspelautoriteit) licensed. Specific number not explicitly stated on homepage, please verify.",
+  "license": "KSA licence 1959, held by JOI Gaming Limited",
   "localizedBonuses": {
     "global": {
       "offer": "100% up to €500",

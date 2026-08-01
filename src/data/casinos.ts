@@ -1786,14 +1786,14 @@ export const casinos: Casino[] = [
     "welcomeBonus": "Up to €250 casino bonus or €100 Free Bet",
     "isKsaLicensed": true,
     "isLicensedInNL": true,
-    "licenseNumber": "Not explicitly stated on homepage, please verify",
+    "licenseNumber": "1959",
     "licenseType": "ksa",
     "restrictedCountries": [],
     "rating": 8.5,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-30",
-    "lastUpdated": "2026-07-30",
+    "lastModified": "2026-08-01",
+    "lastUpdated": "2026-08-01",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "Not explicitly stated on homepage, please verify",
     "summaryText": "Jacks.nl is a prominent online casino and sports betting platform specifically catering to the Dutch market. It offers a diverse range of slots, live casino games with native Dutch dealers, and extensive sports betting options, all within a regulated and secure environment.",
@@ -1976,6 +1976,10 @@ export const casinos: Casino[] = [
         "answer": "Yes. Jacks.nl holds a licence from the Dutch Kansspelautoriteit (KSA), the regulator responsible for all legal online gambling in the Netherlands. As with all KSA-licensed operators, Jacks.nl is required to integrate with CRUKS, the national self-exclusion register, and to enforce Dutch responsible-gambling requirements such as deposit limits and session limits."
       },
       {
+        "question": "What is Jacks.nl's KSA licence number?",
+        "answer": "Jacks.nl operates under KSA licence number 1959, held by JOI Gaming Limited (Malta), valid from 20 November 2021 to 20 November 2026. This can be independently verified on the official Kansspelautoriteit register."
+      },
+      {
         "question": "Does Jacks.nl offer live casino games with Dutch dealers?",
         "answer": "Yes. Jacks.nl's live casino includes roulette and blackjack hosted by Dutch-speaking (Nederlandstalige) game presenters, alongside its regular video slot and table game library."
       },
@@ -1988,7 +1992,7 @@ export const casinos: Casino[] = [
         "answer": "Yes. Alongside its casino, Jacks.nl operates a sportsbook covering football, darts, tennis, and Formula 1, among other sports, within the same KSA-regulated platform."
       }
     ],
-    "license": "KSA (Kansspelautoriteit) licensed. Specific number not explicitly stated on homepage, please verify.",
+    "license": "KSA licence 1959, held by JOI Gaming Limited",
     "localizedBonuses": {
       "global": {
         "offer": "100% up to €500",
@@ -2058,7 +2062,7 @@ export const casinos: Casino[] = [
     "welcomeBonus": "Not explicitly stated on homepage, please verify",
     "isKsaLicensed": true,
     "isLicensedInNL": true,
-    "licenseNumber": "Not explicitly stated on homepage, inferred to be KSA licensed",
+    "licenseNumber": "1653",
     "licenseType": "ksa",
     "restrictedCountries": [],
     "rating": 8.8,
@@ -2256,6 +2260,10 @@ export const casinos: Casino[] = [
         "answer": "Yes, Kansino holds a license from the Kansspelautoriteit (KSA), making it a fully legal and regulated online casino for players within the Netherlands."
       },
       {
+        "question": "What is Kansino's KSA licence number?",
+        "answer": "Kansino operates under KSA licence number 1653, held by Play North Limited (Malta), valid from 1 October 2021 to 1 October 2026. This can be independently verified on the official Kansspelautoriteit register."
+      },
+      {
         "question": "Why can't I access Kansino from my country?",
         "answer": "Kansino is specifically licensed and regulated for the Dutch market by the KSA. Access is restricted to players outside of the Netherlands to comply with local regulations."
       },
@@ -2276,7 +2284,7 @@ export const casinos: Casino[] = [
         "answer": "Kansino provides deposit limits, loss limits, session time limits, reality check notifications, and CRUKS self-exclusion integration, in line with the responsible gambling framework mandated for all KSA-licensed operators."
       }
     ],
-    "license": "Not explicitly stated on homepage, inferred to be KSA licensed",
+    "license": "KSA licence 1653, held by Play North Limited",
     "localizedBonuses": {
       "global": {
         "offer": "100% up to €500",

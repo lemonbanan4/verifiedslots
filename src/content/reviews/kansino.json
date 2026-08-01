@@ -8,7 +8,7 @@
   "welcomeBonus": "Not explicitly stated on homepage, please verify",
   "isKsaLicensed": true,
   "isLicensedInNL": true,
-  "licenseNumber": "Not explicitly stated on homepage, inferred to be KSA licensed",
+  "licenseNumber": "1653",
   "licenseType": "ksa",
   "restrictedCountries": [],
   "rating": 8.8,
@@ -206,6 +206,10 @@
       "answer": "Yes, Kansino holds a license from the Kansspelautoriteit (KSA), making it a fully legal and regulated online casino for players within the Netherlands."
     },
     {
+      "question": "What is Kansino's KSA licence number?",
+      "answer": "Kansino operates under KSA licence number 1653, held by Play North Limited (Malta), valid from 1 October 2021 to 1 October 2026. This can be independently verified on the official Kansspelautoriteit register."
+    },
+    {
       "question": "Why can't I access Kansino from my country?",
       "answer": "Kansino is specifically licensed and regulated for the Dutch market by the KSA. Access is restricted to players outside of the Netherlands to comply with local regulations."
     },
@@ -226,7 +230,7 @@
       "answer": "Kansino provides deposit limits, loss limits, session time limits, reality check notifications, and CRUKS self-exclusion integration, in line with the responsible gambling framework mandated for all KSA-licensed operators."
     }
   ],
-  "license": "Not explicitly stated on homepage, inferred to be KSA licensed",
+  "license": "KSA licence 1653, held by Play North Limited",
   "localizedBonuses": {
     "global": {
       "offer": "100% up to €500",
