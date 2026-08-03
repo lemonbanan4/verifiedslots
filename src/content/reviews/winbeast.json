@@ -143,6 +143,26 @@
     {
       "question": "What are the withdrawal limits?",
       "answer": "Winbeast imposes restrictive limits of $2,000 per week and $5,000 per month, which can delay large payouts substantially."
+    },
+    {
+      "question": "What is Winbeast's welcome bonus wagering requirement?",
+      "answer": "Winbeast's welcome bonus carries a 45x wagering requirement applied to the combined deposit and bonus amount — which works out to roughly 112.5x the bonus value itself before a withdrawal is possible. This is significantly steeper than the 30x-40x bonus-only average seen at MGA and UKGC operators, and the bonus expires after just 7 days."
+    },
+    {
+      "question": "How long does self-exclusion take to process at Winbeast?",
+      "answer": "Self-exclusion is not instant. Players must email support and wait a standard 48-72 hour turnaround, during which the account remains active and deposits/play are still possible. This is slower than KSA and UKGC operators, where self-exclusion via CRUKS or GAMSTOP takes effect immediately upon registration."
+    },
+    {
+      "question": "Is Winbeast connected to any national self-exclusion database?",
+      "answer": "No. Winbeast has no connection to national self-exclusion registers such as CRUKS (Netherlands) or GAMSTOP (UK). Players who have self-excluded through those national schemes are not blocked from creating a new account at Winbeast."
+    },
+    {
+      "question": "Are there restrictions on which games can be played while a bonus is active?",
+      "answer": "Yes. While a Winbeast bonus is active, wagering is restricted to slots with an RTP of 96.5% or lower — any higher-RTP slots are barred from contributing to wagering until the bonus is cleared or forfeited."
+    },
+    {
+      "question": "Does Winbeast charge fees on deposits or withdrawals?",
+      "answer": "Credit card transactions (Visa/Mastercard) carry a 2.5% processing fee, and withdrawals via this method take 3-5 business days. MiFinity e-wallet transfers are fee-free with a faster 24-48 hour withdrawal window."
     }
   ]
 }
