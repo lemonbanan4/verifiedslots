@@ -35,19 +35,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // One entry per casino per license it actually holds, mirroring the
-  // route generation in audits/[license]/[slug]/page.tsx.
-  const reviewEntries: MetadataRoute.Sitemap = casinos.flatMap((casino) => {
-    const types = casino.licenseTypes && casino.licenseTypes.length > 0
-      ? casino.licenseTypes
-      : [casino.licenseType];
-    return types.map((licenseType) => ({
-      url: `${BASE_URL}/audits/${licenseType.toLowerCase()}/${casino.slug.toLowerCase()}`,
-      lastModified: casino.lastModified ? new Date(casino.lastModified) : undefined,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    }));
-  });
+  // One entry per casino at its primary license route only. Casinos with
+  // multiple license types also have static pages at those other routes
+  // (for contextual per-regulator directory browsing), but those all
+  // canonicalize back to this primary URL — submitting them here too would
+  // just tell Google to crawl and compare duplicate pages against each other.
+  const reviewEntries: MetadataRoute.Sitemap = casinos.map((casino) => ({
+    url: `${BASE_URL}/audits/${casino.licenseType.toLowerCase()}/${casino.slug.toLowerCase()}`,
+    lastModified: casino.lastModified ? new Date(casino.lastModified) : undefined,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
 
   const insightEntries: MetadataRoute.Sitemap = audits.map((audit) => ({
     url: `${BASE_URL}/audits/insights/${audit.slug.toLowerCase()}`,

@@ -41,7 +41,12 @@ export async function generateMetadata({ params }: AuditPageProps): Promise<Meta
     title,
     description,
     alternates: {
-      canonical: `/audits/${license.toLowerCase()}/${slug.toLowerCase()}`,
+      // Casinos with multiple license types (e.g. LuckyNiki holds both UKGC
+      // and MGA) get one static page per license so each regulator's
+      // directory can link to a contextually-framed version. All of those
+      // variants must canonicalize to the same primary URL or Google treats
+      // them as separate duplicate pages competing for crawl budget.
+      canonical: `/audits/${casino.licenseType.toLowerCase()}/${slug.toLowerCase()}`,
     },
   };
 }
