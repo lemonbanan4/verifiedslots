@@ -879,8 +879,8 @@ export const casinos: Casino[] = [
     "rating": 2.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2022-01-01",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-blue-700 to-indigo-900",
     "gameLibraryCount": "1000+ Titles",
     "summaryText": "Casino777.nl is a legal and safe online casino licensed by the Dutch Kansspelautoriteit. It offers a wide range of games including slots, table games, and live casino, ensuring a secure and action-packed experience for players in the Netherlands.",
@@ -1135,51 +1135,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50 Bonus",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD",
         "wagering": "35x"
       }
@@ -1475,8 +1475,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-30",
-    "lastUpdated": "2026-07-30",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "800+ Titles",
     "summaryText": "Holland Casino Online is the official online casino of the Netherlands' state-owned Holland Casino. Licensed by the KSA, it offers a secure and regulated gaming environment with a strong focus on responsible gambling and a diverse selection of games, primarily powered by Playtech.",
@@ -1726,51 +1726,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50 Bonus Cash",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD",
         "wagering": "35x"
       }
@@ -1792,8 +1792,8 @@ export const casinos: Casino[] = [
     "rating": 8.5,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-08-01",
-    "lastUpdated": "2026-08-01",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "Not explicitly stated on homepage, please verify",
     "summaryText": "Jacks.nl is a prominent online casino and sports betting platform specifically catering to the Dutch market. It offers a diverse range of slots, live casino games with native Dutch dealers, and extensive sports betting options, all within a regulated and secure environment.",
@@ -2002,51 +2002,51 @@ export const casinos: Casino[] = [
         "offer": "100% up to €250 Casino Bonus or €100 Free Bet",
         "wagering": "Not explicitly stated on homepage, please verify (typically 1x for free bet, ~30x for casino bonus)"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD",
         "wagering": "35x"
       }
@@ -2068,8 +2068,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-08-01",
-    "lastUpdated": "2026-08-01",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-blue-900 to-indigo-950",
     "gameLibraryCount": "Not explicitly stated on homepage, please verify (likely 1,000+ Titles)",
     "summaryText": "Kansino is an online casino primarily targeting the Dutch market, operating under a strict license from the Kansspelautoriteit (KSA). While access is restricted from outside the Netherlands, it adheres to high standards of security and responsible gaming for its local players.",
@@ -2294,51 +2294,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50 Free Bet",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD",
         "wagering": "35x"
       }
@@ -2644,8 +2644,8 @@ export const casinos: Casino[] = [
     "rating": 9,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "2,000+ Titles",
     "summaryText": "Leovegas is a renowned mobile-first online casino offering a vast selection of casino games, live casino, and sports betting. Players can enjoy a comprehensive gaming experience with a generous welcome package and various ongoing promotions.",
@@ -2912,51 +2912,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50 Free Bet",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK + 100 Free Spins",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK + 75 Free Spins",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€ + 50 Free Spins",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR + 200 Free Spins",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€ + 20 Free Spins",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€ + 200 Free Spins",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€ + 100 Free Spins",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$ + 50 Free Spins",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD + 200 Free Spins",
         "wagering": "35x"
       }
@@ -2985,8 +2985,8 @@ export const casinos: Casino[] = [
     "wagering": "35x",
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-07-20",
-    "lastModified": "2026-07-29",
-    "lastUpdated": "2026-07-29",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-pink-600 to-rose-700",
     "welcomeBonus": "Up to £500 + 150 Free Spins",
     "gameLibraryCount": "3,000+ Titles",
@@ -3293,23 +3293,23 @@ export const casinos: Casino[] = [
     ],
     "license": "UKGC: 39326 | MGA: MGA/B2C/248/2014",
     "localizedBonuses": {
-      "uk": {
+      "gb": {
         "offer": "100% up to £500 + 150 Free Spins",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 500 DKK + 100 Free Spins",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to CAD 500 + 150 Free Spins",
         "wagering": "35x"
       },
-      "ire": {
+      "ie": {
         "offer": "100% up to €500 + 150 Free Spins",
         "wagering": "35x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 2,000 SEK + 100 Free Spins",
         "wagering": "30x"
       },
@@ -3639,8 +3639,8 @@ export const casinos: Casino[] = [
     "rating": 8.5,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2025-12-17",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "2,000+ Titles",
     "summaryText": "Slotspice Casino offers an exciting gaming experience with a vast selection of high-speed slots and live casino favorites. Players can grab a generous welcome bonus, enjoy weekly cashback, and benefit from a rewarding loyalty program.",
@@ -3886,51 +3886,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD",
         "wagering": "35x"
       }
@@ -3960,8 +3960,8 @@ export const casinos: Casino[] = [
     "rating": 8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2025-12-17",
-    "lastModified": "2026-07-10",
-    "lastUpdated": "2026-07-10",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "2,500+ Titles",
     "summaryText": "Grab up to €1,200 + 1,200 Free Spins at SpinSkull Casino. Enter the world of SpinSkull, where thrilling slots & live casino favourites deliver nonstop action. With weekly cashback rewards & a loyalty programme that pays tribute to every bet, the excitement never stops.",
@@ -4179,51 +4179,51 @@ export const casinos: Casino[] = [
         "offer": "Bet €10, Get €50 Bonus",
         "wagering": "1x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "40x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 3000 SEK + 100 Free Spins",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK + 75 Free Spins",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€ + 50 Free Spins",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 1000 EUR + 100 Free Spins",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€ + 20 Free Spins",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 500€ + 50 Free Spins",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€ + 100 Free Spins",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 1000€ + 50 Free Spins",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1000 R$ + 100 Free Spins",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD + 150 Free Spins",
         "wagering": "35x"
       }
@@ -4374,8 +4374,8 @@ export const casinos: Casino[] = [
     "rating": 8.9,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-30",
-    "lastUpdated": "2026-07-30",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "welcomeBonus": "100% up to £100 + 50 Free Spins",
     "gameLibraryCount": "1,500+ Titles",
@@ -4650,51 +4650,51 @@ export const casinos: Casino[] = [
         "offer": "Not explicitly stated on homepage, please verify local site.",
         "wagering": "Not explicitly stated on homepage, please verify local site."
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £100 + 50 Free Spins",
         "wagering": "35x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 1000 SEK + 100 Free Spins",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 2000 NOK + 50 Free Spins",
         "wagering": "30x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€ + 50 Free Spins",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 500 DKK + 25 Free Spins",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 300€ + 150 Free Spins",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "Bet €10, Get €50 Free Bets",
         "wagering": "1x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 200€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 500€ + 50 Free Spins",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "Not explicitly stated on homepage, please verify local site.",
         "wagering": "Not explicitly stated on homepage, please verify local site."
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 500 BRL + R$20 Free Bet",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 500 CAD + 50 Free Spins",
         "wagering": "35x"
       }
@@ -4720,8 +4720,8 @@ export const casinos: Casino[] = [
     "rating": 8.8,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-07-30",
-    "lastUpdated": "2026-07-30",
+    "lastModified": "2026-08-03",
+    "lastUpdated": "2026-08-03",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "9,000+ Titles",
     "summaryText": "Videoslots – A casino with a selection of over 9,000 games! Our catalogue is packed with exciting titles to offer every player something to enjoy.",
@@ -4984,51 +4984,51 @@ export const casinos: Casino[] = [
         "offer": "100% up to €100 + 50 Free Spins",
         "wagering": "30x"
       },
-      "uk": {
+      "gb": {
         "offer": "100% up to £200 + 11 Welcome Spins",
         "wagering": "35x"
       },
-      "swe": {
+      "se": {
         "offer": "100% up to 2000 SEK + 11 Welcome Spins",
         "wagering": "30x"
       },
-      "nor": {
+      "no": {
         "offer": "100% up to 5000 NOK + 11 Welcome Spins",
         "wagering": "25x"
       },
-      "fin": {
+      "fi": {
         "offer": "100% up to 200€ + 11 Welcome Spins",
         "wagering": "35x"
       },
-      "den": {
+      "dk": {
         "offer": "100% up to 1000 DKK + 11 Welcome Spins",
         "wagering": "10x"
       },
-      "ger": {
+      "de": {
         "offer": "100% up to 500 EUR + 11 Welcome Spins",
         "wagering": "30x"
       },
-      "fra": {
+      "fr": {
         "offer": "100% up to 100€",
         "wagering": "35x"
       },
-      "bel": {
+      "be": {
         "offer": "100% up to 250€",
         "wagering": "40x"
       },
-      "ita": {
+      "it": {
         "offer": "100% up to 1000€ + 11 Welcome Spins",
         "wagering": "35x"
       },
-      "esp": {
+      "es": {
         "offer": "100% up to 200€ + 11 Welcome Spins",
         "wagering": "35x"
       },
-      "bra": {
+      "br": {
         "offer": "100% up to 1500 R$ + 11 Welcome Spins",
         "wagering": "35x"
       },
-      "can": {
+      "ca": {
         "offer": "100% up to 1000 CAD + 11 Welcome Spins",
         "wagering": "35x"
       }

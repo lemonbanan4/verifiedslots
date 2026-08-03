@@ -30,7 +30,9 @@
   "editorialVerdict": "LuckyNiki earns a Certified compliance rating of 88/100, anchored by two verifiable tier-one licences — UKGC 39326 and MGA/B2C/248/2014 — both held by the reputable SkillOnNet group. Its responsible gaming infrastructure is robust: GAMSTOP is mandatory and integrated for UK players, deposit limits are enforced immediately on reduction, and reality checks are configurable. Payout mechanics are transparent with e-wallets processing within 0–24 hours and all standard methods fee-free. Key risk flags include an unresolved GGL (Germany) licence status, medium-level player fund protection (segregated but not insured), and the availability of reverse withdrawal — a standard industry feature that carries a consumer advisory. Overall, LuckyNiki is a strongly recommended operator for GB, DK, CA, IE, and SE players seeking a compliant, anime-themed casino experience with solid financial controls.",
   "warningText": "LuckyNiki is not available to residents of the Netherlands (NL), United States (US), or France (FR). German (DE) residents should verify an active GGL licence before play. Credit card deposits are prohibited for UK residents per UKGC April 2020 directive.",
   "affiliateUrl": "https://wow.itisfine.work/click?pid=31416&offer_id=5806&l=1784204880",
-  "affiliateGeos": ["GB"],
+  "affiliateGeos": [
+    "GB"
+  ],
   "isPartner": true,
   "complianceScore": 88,
   "auditReference": "VSAUD-LNIKI-2026-07",
@@ -327,23 +329,23 @@
   ],
   "license": "UKGC: 39326 | MGA: MGA/B2C/248/2014",
   "localizedBonuses": {
-    "uk": {
+    "gb": {
       "offer": "100% up to £500 + 150 Free Spins",
       "wagering": "35x"
     },
-    "den": {
+    "dk": {
       "offer": "100% up to 500 DKK + 100 Free Spins",
       "wagering": "35x"
     },
-    "can": {
+    "ca": {
       "offer": "100% up to CAD 500 + 150 Free Spins",
       "wagering": "35x"
     },
-    "ire": {
+    "ie": {
       "offer": "100% up to €500 + 150 Free Spins",
       "wagering": "35x"
     },
-    "swe": {
+    "se": {
       "offer": "100% up to 2,000 SEK + 100 Free Spins",
       "wagering": "30x"
     },

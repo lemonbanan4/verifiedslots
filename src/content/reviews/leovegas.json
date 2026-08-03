@@ -290,51 +290,51 @@
       "offer": "Bet €10, Get €50 Free Bet",
       "wagering": "1x"
     },
-    "uk": {
+    "gb": {
       "offer": "100% up to £100 + 50 Free Spins",
       "wagering": "40x"
     },
-    "swe": {
+    "se": {
       "offer": "100% up to 3000 SEK + 100 Free Spins",
       "wagering": "30x"
     },
-    "nor": {
+    "no": {
       "offer": "100% up to 5000 NOK + 75 Free Spins",
       "wagering": "25x"
     },
-    "fin": {
+    "fi": {
       "offer": "100% up to 200€ + 50 Free Spins",
       "wagering": "35x"
     },
-    "den": {
+    "dk": {
       "offer": "100% up to 1000 DKK",
       "wagering": "10x"
     },
-    "ger": {
+    "de": {
       "offer": "100% up to 1000 EUR + 200 Free Spins",
       "wagering": "30x"
     },
-    "fra": {
+    "fr": {
       "offer": "100% up to 100€ + 20 Free Spins",
       "wagering": "35x"
     },
-    "bel": {
+    "be": {
       "offer": "100% up to 500€",
       "wagering": "40x"
     },
-    "ita": {
+    "it": {
       "offer": "100% up to 1000€ + 200 Free Spins",
       "wagering": "35x"
     },
-    "esp": {
+    "es": {
       "offer": "100% up to 1000€ + 100 Free Spins",
       "wagering": "35x"
     },
-    "bra": {
+    "br": {
       "offer": "100% up to 1000 R$ + 50 Free Spins",
       "wagering": "35x"
     },
-    "can": {
+    "ca": {
       "offer": "100% up to 1000 CAD + 200 Free Spins",
       "wagering": "35x"
     }
