@@ -8,7 +8,7 @@
   "welcomeBonus": "Claim Up to €1,000 and 2,600 Free Spins",
   "isKsaLicensed": true,
   "isLicensedInNL": true,
-  "licenseNumber": "Not explicitly stated on homepage, please verify",
+  "licenseNumber": "1970/01.297.569",
   "licenseType": "mga",
   "licenseTypes": [
     "mga",
@@ -278,9 +278,29 @@
     {
       "question": "Which countries are restricted from playing at Leovegas?",
       "answer": "Leovegas has geo-restrictions. Based on the provided context, players from the Netherlands (NL) and the United States (US) are restricted for the general 'en-row' domain."
+    },
+    {
+      "question": "What is LeoVegas's KSA licence number?",
+      "answer": "LeoVegas operates under KSA licence 1970/01.297.569, granted to LeoVegas Gaming p.l.c. (registered in Malta under company number C59314) on 7 September 2023, valid until 7 September 2028. This can be independently verified on the official Kansspelautoriteit website."
+    },
+    {
+      "question": "How long do withdrawals take at LeoVegas?",
+      "answer": "E-wallet withdrawals via Skrill and Neteller are processed within 0-24 hours with no fees. Card withdrawals (Visa/Mastercard) take 2-5 business days, and Trustly bank transfers take 1-3 business days. None of LeoVegas's listed payment methods carry withdrawal fees."
+    },
+    {
+      "question": "What happens to the free spins if I don't use them in time?",
+      "answer": "The welcome offer's up to 2,600 free spins (worth €0.20 each on Gates of Olympus Super Scatter) expire just 3 days after being credited, separate from the main 14-day wagering window for the deposit bonus. Live casino and table games do not count toward clearing the free spins wagering requirement."
+    },
+    {
+      "question": "Does LeoVegas have progressive jackpot slots?",
+      "answer": "Yes. Alongside its own exclusive LeoJackpot network, LeoVegas offers major third-party progressive jackpots including Mega Moolah and WowPot, both known for multi-million-euro prize pools."
+    },
+    {
+      "question": "Can I bet on sports at LeoVegas, or is it casino-only?",
+      "answer": "LeoVegas offers both. Alongside its casino and live dealer games, it runs a full sportsbook covering football, basketball, tennis, esports, and other major sports and events."
     }
   ],
-  "license": "Not explicitly stated on homepage, please verify",
+  "license": "KSA licence 1970/01.297.569, held by LeoVegas Gaming p.l.c.",
   "localizedBonuses": {
     "global": {
       "offer": "100% up to €500 + 100 Free Spins",
