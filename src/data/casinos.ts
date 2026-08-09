@@ -3383,8 +3383,8 @@ export const casinos: Casino[] = [
     "rating": 9,
     "author": "Eleanor Vance, Senior Compliance Analyst",
     "datePublished": "2026-07-11",
-    "lastModified": "2026-07-11",
-    "lastUpdated": "2026-07-11",
+    "lastModified": "2026-08-09",
+    "lastUpdated": "2026-08-09",
     "logoColor": "from-emerald-800 to-green-950",
     "gameLibraryCount": "2,000+ Titles",
     "summaryText": "Paddy Power is a Flutter Entertainment-owned brand dual-licensed by the UK Gambling Commission (PPB GE Limited) and the Malta Gaming Authority (PPB Counterparty Services Limited). It's known for a no-wagering free spins welcome structure and a slots library featuring proprietary exclusive titles.",
@@ -3624,6 +3624,26 @@ export const casinos: Casino[] = [
       {
         "question": "How fast are Paddy Power withdrawals?",
         "answer": "Withdrawals are capped at a maximum of 4 days across all supported payment methods, with limits also depending on net deposit position and whether UK or Irish regulatory periods apply."
+      },
+      {
+        "question": "What payment methods does Paddy Power support?",
+        "answer": "Paddy Power supports debit card, PayPal, Apple Pay, Pay by Bank, Neteller, Skrill, and Paysafecard, all with instant deposits and no operator fees, from a low £5 minimum. Apple Pay, Pay by Bank, and Paysafecard are deposit-only; the rest support withdrawals within up to 4 days."
+      },
+      {
+        "question": "What is a 'backstop' deposit cap at Paddy Power?",
+        "answer": "A backstop deposit cap is a mandatory monthly deposit limit automatically applied to every newly registered customer, on top of any personalised deposit or spending limits a player sets themselves. It's a default safety net rather than an opt-in responsible gambling tool."
+      },
+      {
+        "question": "Why might my Paddy Power withdrawal limit differ from a friend's in another country?",
+        "answer": "Withdrawal limits are tied to net deposit position, but the calculation period differs by regulatory framework: UK accounts use a rolling period, while Irish accounts use a calendar period. Cross-border players should check which framework applies to their specific account."
+      },
+      {
+        "question": "Which deposit methods qualify for the free spins welcome offer?",
+        "answer": "The flagship free spins welcome offer specifically requires depositing via Pay by Bank, Apple Pay, or debit card. Depositing through other supported methods like PayPal, Neteller, or Skrill will not trigger the qualifying deposit component of the offer."
+      },
+      {
+        "question": "Does Paddy Power have exclusive slot titles?",
+        "answer": "Yes. Alongside industry staples like Book of Dead, Gates of Olympus, and the Big Bass series, Paddy Power's 2,000+ title library includes proprietary slots exclusive to the brand, plus an Evolution-powered live casino covering titles like Lightning Roulette and Crazy Time."
       }
     ],
     "welcomeBonus": "260 Free Spins"
