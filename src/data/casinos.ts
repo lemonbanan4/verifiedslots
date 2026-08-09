@@ -369,8 +369,8 @@ export const casinos: Casino[] = [
     "rating": 9,
     "author": "Dr. Eleanor Vance, Lead Compliance Analyst",
     "datePublished": "2026-07-12",
-    "lastModified": "2026-07-11",
-    "lastUpdated": "2026-07-11",
+    "lastModified": "2026-08-09",
+    "lastUpdated": "2026-08-09",
     "logoColor": "from-yellow-600 to-amber-800",
     "gameLibraryCount": "1,500+ Titles",
     "summaryText": "Betfair is a Flutter Entertainment-owned brand best known for its betting exchange, dual-licensed by the UK Gambling Commission (PPB Counterparty Services Limited) and the Malta Gaming Authority (Betfair International PLC). Its casino product pairs a solid slots library with Playtech and Evolution live dealer tables.",
@@ -609,6 +609,26 @@ export const casinos: Casino[] = [
       {
         "question": "How fast are Betfair withdrawals?",
         "answer": "E-wallet withdrawals typically clear within 24 hours of approval, while card and bank transfer withdrawals take a few business days. Withdrawals follow a closed-loop policy, returning funds to the original deposit method."
+      },
+      {
+        "question": "What payment methods does Betfair support?",
+        "answer": "Betfair accepts Visa, Mastercard, Maestro, Apple Pay, PayPal, Neteller, Skrill, and bank transfer, all with instant deposits and no operator fees. E-wallets withdraw within 24 hours of approval; cards and bank transfers take a few business days."
+      },
+      {
+        "question": "Does Betfair's live casino have the same wagering terms as the free spins offer?",
+        "answer": "No. The flagship 100 free spins carry no wagering requirement, but a separate live casino promotion has its own 1x wagering requirement, and other bonuses on the platform can carry up to 35x. Terms are not uniform across products — always check the specific offer."
+      },
+      {
+        "question": "What responsible gambling tools does Betfair offer?",
+        "answer": "Betfair provides deposit, transfer, and loss limits, cooling-off periods, game session timers with reminders, and a robust self-exclusion facility, backed by Flutter Entertainment's enterprise-level responsible gambling infrastructure."
+      },
+      {
+        "question": "Which live casino providers does Betfair use?",
+        "answer": "Betfair's live dealer lobby is powered by both Playtech and Evolution, covering core tables like roulette and blackjack alongside game shows, in addition to a 1,500+ title slots library from providers including NetEnt, Playtech, Blueprint Gaming, and IGT/WagerWorks."
+      },
+      {
+        "question": "Why did my Betfair withdrawal go back to a different account than I expected?",
+        "answer": "Betfair uses a closed-loop withdrawal policy: funds are returned to whichever method they were originally deposited from, rather than a payment method of your choosing. Players who deposited via multiple methods should expect withdrawals split accordingly, which can slow payouts."
       }
     ],
     "welcomeBonus": "100 Free Spins"
