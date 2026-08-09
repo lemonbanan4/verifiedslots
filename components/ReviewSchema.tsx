@@ -30,19 +30,12 @@ export function ReviewSchema({ review }: ReviewSchemaProps) {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
-      "@type": "GamePlatform",
+      "@type": "Organization",
       "name": review.name,
       "url": `https://${review.domain}`,
       "logo": {
         "@type": "ImageObject",
         "url": `https://VerifiedSlots.com/assets/${review.id}-logo.png`
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": review.rating.toString(),
-        "reviewCount": "38", // Number of independent audited audits
-        "bestRating": "10",
-        "worstRating": "1"
       }
     },
     "reviewRating": {
