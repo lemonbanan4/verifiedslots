@@ -5,6 +5,7 @@ import { useCompliance } from "@/src/context/ComplianceContext";
 import { CasinoCard } from "@/components/CasinoCard";
 import { ShieldCheck, ShieldAlert, Sparkles, BookOpen } from "lucide-react";
 import { Casino, casinoHoldsLicense, sortByAffiliatePriority } from "@/src/data/casinos";
+import { getRegulatorMeta } from "@/src/data/regulators";
 import { motion, Variants } from "motion/react";
 
 interface LicensesContentProps {
@@ -50,28 +51,14 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
     })
   );
 
-  // Setup dynamic content based on license type
-  let heading = "";
-  let subHeading = "";
-  let subLicenseText = "";
-  let heroIconClass = "";
-
-  if (licenseType === "ksa") {
-    heading = "KSA Regulated Operators";
-    subHeading = "Nederlandse Kansspelen Evaluatie";
-    subLicenseText = "We compare and review operators holding active licenses from the Kansspelautoriteit (KSA) under the Remote Gambling Act (Wet Koa).";
-    heroIconClass = "text-emerald-400";
-  } else if (licenseType === "mga") {
-    heading = "MGA Regulated Operators";
-    subHeading = "Malta Gaming Authority Evaluation";
-    subLicenseText = "Independent audits and compliance reviews of operators licensed by the Malta Gaming Authority (MGA). Check playthrough maths and regulatory safety.";
-    heroIconClass = "text-blue-400";
-  } else {
-    heading = "UKGC Regulated Operators";
-    subHeading = "UK Gambling Commission Evaluation";
-    subLicenseText = "Compliance oversight and safety evaluations of operators regulated by the UK Gambling Commission (UKGC). Inspect playthrough math and social responsibility standards.";
-    heroIconClass = "text-amber-400";
-  }
+  // Setup dynamic content based on license type, driven by the shared
+  // regulator registry so an unrecognized licenseType gets an explicit
+  // neutral fallback instead of silently reusing UKGC's copy.
+  const meta = getRegulatorMeta(licenseType);
+  const heading = meta.directoryHeading;
+  const subHeading = meta.directorySubHeading;
+  const subLicenseText = meta.directorySubLicenseText;
+  const heroIconClass = meta.colors.licensesContentHeroIconClass;
 
   // Dynamically update the header depending on the active visitorProfile (Global vs. Local)
   const verifiedBrandsHeader = visitorProfile === "Local"
@@ -85,15 +72,6 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
   // page is actually the wrong jurisdiction, so the warning is scoped to
   // it rather than shown unconditionally to every visitor.
   const isWrongJurisdictionRisk = licenseType !== "ksa" && visitorProfile === "Local";
-
-  const regulatedBannerClass: Record<string, string> = {
-    mga: "bg-blue-500/10 border border-blue-500/20 text-blue-400 neon-border-blue",
-    ukgc: "bg-amber-500/10 border border-amber-500/20 text-amber-400",
-  };
-  const regulatorFullName: Record<string, string> = {
-    mga: "Malta Gaming Authority",
-    ukgc: "UK Gambling Commission",
-  };
 
   return (
     <motion.div
@@ -115,9 +93,9 @@ export function LicensesContent({ licenseType, casinos }: LicensesContentProps) 
             <span>International Licensed ({licenseType.toUpperCase()}): Not authorized for residents of the Netherlands. NL players are strictly prohibited.</span>
           </div>
         ) : (
-          <div className={`px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 ${regulatedBannerClass[licenseType] ?? regulatedBannerClass.mga}`}>
+          <div className={`px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 ${meta.colors.licensesContentBannerClass}`}>
             <ShieldCheck className="shrink-0" size={16} />
-            <span>{licenseType.toUpperCase()} Regulated: Independently audited operator compliant with {regulatorFullName[licenseType] ?? regulatorFullName.mga} standards.</span>
+            <span>{meta.shortLabel} Regulated: Independently audited operator compliant with {meta.fullName} standards.</span>
           </div>
         )}
       </motion.div>

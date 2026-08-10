@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { ShieldCheck, Info, X, ShieldAlert, Award, FileText } from "lucide-react";
+import { getRegulatorMeta } from "@/src/data/regulators";
 
 interface LicenseVerifierProps {
   licenseType: string;
@@ -31,64 +32,14 @@ export function LicenseVerifier({ licenseType, licenseNumber, className = "" }: 
     };
   }, [isOpen]);
 
-  // Determine license attributes
-  let name = "";
-  let status = "";
-  let guarantees: string[] = [];
-  let risks: string[] = [];
-
-  if (licenseType === "ksa") {
-    name = "Kansspelautoriteit (KSA) - Netherlands";
-    status = "Highly Regulated (Gold Standard)";
-    guarantees = [
-      "Mandatory self-exclusion integration with CRUKS to prevent addiction.",
-      "Strict segregation of player funds (money is safe even if operator goes bankrupt).",
-      "Fairness audits of all RNG games by European-certified test houses.",
-      "Local dispute resolution and legal recourse under Dutch Civil Law."
-    ];
-    risks = [
-      "Rigid deposit limits and mandatory registration requirements.",
-      "Lacks cryptocurrency payment gateways due to AML compliance regulations."
-    ];
-  } else if (licenseType === "mga") {
-    name = "Malta Gaming Authority (MGA) - Europe";
-    status = "Standard Regulated (Standard Trust)";
-    guarantees = [
-      "Standard financial audit checks and solvency verification.",
-      "Standard RNG fairness checks for certified casino suppliers.",
-      "Dispute mediation portal offered directly by the MGA board."
-    ];
-    risks = [
-      "No protection under Dutch local civil laws or KSA regulations.",
-      "No national CRUKS database checks (separate site-specific limit tools only)."
-    ];
-  } else if (licenseType === "ukgc") {
-    name = "UK Gambling Commission (UKGC) - United Kingdom";
-    status = "Highly Regulated (Gold Standard)";
-    guarantees = [
-      "Strict player protection rules and verification standards.",
-      "Solvency and client fund segregation (medium/high protection standard requirements).",
-      "Mandatory participation in national multi-operator self-exclusion registry (GAMSTOP).",
-      "Strict oversight on game math, fairness checks, and marketing transparency."
-    ];
-    risks = [
-      "No support for credit card deposits (restricted under UKGC rules).",
-      "Rigorous affordability and KYC validation checks."
-    ];
-  } else {
-    name = "Curaçao eGaming - Offshore";
-    status = "Offshore Regulated (High Risk)";
-    guarantees = [
-      "Basic operator background checks.",
-      "Supports cryptocurrency deposits and higher transactional limits.",
-      "Available globally for players residing in non-regulated jurisdictions."
-    ];
-    risks = [
-      "Zero player protection or dispute arbitration for residents of regulated markets (NL/UK).",
-      "Elevated insolvency risks (no guarantee of funds in the event of default).",
-      "No mandatory responsible gambling checks or self-exclusion register."
-    ];
-  }
+  // Determine license attributes from the shared regulator registry. An
+  // unrecognized licenseType gets a neutral "data unavailable" state rather
+  // than a specific offshore/high-risk claim we haven't actually verified.
+  const meta = getRegulatorMeta(licenseType);
+  const name = `${meta.fullName}${meta.shortLabel !== "N/A" ? ` (${meta.shortLabel})` : ""} - ${meta.jurisdictionLabel}`;
+  const status = meta.status;
+  const guarantees = meta.guarantees;
+  const risks = meta.risks;
 
   const modalContent = isOpen && mounted && (
     <div className="fixed inset-0 z-[99999] overflow-y-auto p-4 bg-slate-950/95 backdrop-blur-md optimize-gpu animate-fade-in flex justify-center items-center" onClick={() => setIsOpen(false)}>
@@ -108,13 +59,7 @@ export function LicenseVerifier({ licenseType, licenseNumber, className = "" }: 
 
         {/* Header */}
         <div className="flex items-center gap-3.5 mb-6">
-          <div className={`p-2.5 rounded-xl ${
-            licenseType === "ksa"
-              ? "bg-emerald-500/10 text-emerald-400"
-              : licenseType === "mga"
-              ? "bg-blue-500/10 text-blue-400"
-              : "bg-amber-500/10 text-amber-400"
-          }`}>
+          <div className={`p-2.5 rounded-xl ${meta.colors.badgeBg} ${meta.colors.badgeText}`}>
             <Award size={24} />
           </div>
           <div>

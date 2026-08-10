@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { cookies, headers } from "next/headers";
 import { Casino, casinoHoldsLicense, isAffiliateOfferAvailable } from "@/src/data/casinos";
+import { getRegulatorMeta } from "@/src/data/regulators";
 import { normalizeRating } from "@/src/utils/rating";
 import { TrustAndSafety } from "./TrustAndSafety";
 import { BonusTerms } from "./BonusTerms";
@@ -33,14 +34,6 @@ interface ReviewTemplateProps {
   review: Casino;
   activeLicenseRoute?: string;
 }
-
-// Official public registry for each jurisdiction, keyed by the same license
-// slug used in routes (/audits/ksa/..., /audits/mga/..., /audits/ukgc/...).
-const OFFICIAL_REGISTRIES: Record<string, { label: string; url: string }> = {
-  ksa: { label: "Kansspelautoriteit (KSA) Official Website", url: "https://kansspelautoriteit.nl/" },
-  mga: { label: "Malta Gaming Authority (MGA) Registry Portal", url: "https://www.mga.org.mt/" },
-  ukgc: { label: "UK Gambling Commission (UKGC) Portal", url: "https://www.gamblingcommission.gov.uk/" },
-};
 
 export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTemplateProps) {
   // Determine compliance profile directly on the server via cookies
@@ -116,40 +109,11 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     }
   }
 
-  let avatarGradient = "from-slate-700 to-slate-800";
-  let avatarTextClass = "text-white";
-  if (activeRegulator === "ksa") {
-    avatarGradient = "from-emerald-600 to-teal-700";
-  } else if (activeRegulator === "mga") {
-    avatarGradient = "from-blue-600 to-indigo-700";
-  } else if (activeRegulator === "ukgc") {
-    avatarGradient = "from-amber-400 to-yellow-500";
-    avatarTextClass = "text-slate-950";
-  }
-
-  let bonusTextColor = "text-emerald-400";
-  if (activeRegulator === "ksa") {
-    bonusTextColor = "text-emerald-400";
-  } else if (activeRegulator === "mga") {
-    bonusTextColor = "text-sky-400";
-  } else if (activeRegulator === "ukgc") {
-    bonusTextColor = "text-amber-400";
-  }
-
-  let topBadgeText = "Reviewed & Audited";
-  let topBadgeClass = "bg-blue-500/10 border border-blue-500/20 text-blue-400";
-  if (activeRegulator === "ksa") {
-    topBadgeText = isNl ? "KSA Gecertificeerd" : "KSA Licensed";
-    topBadgeClass = "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400";
-  } else if (activeRegulator === "mga") {
-    topBadgeText = "MGA Licensed";
-    topBadgeClass = "bg-blue-500/10 border border-blue-500/20 text-blue-450";
-  } else if (activeRegulator === "ukgc") {
-    topBadgeText = "UKGC Regulated";
-    topBadgeClass = "bg-amber-500/10 border border-amber-500/20 text-amber-400";
-  }
-
-  const activeRegistry = OFFICIAL_REGISTRIES[activeRegulator] ?? OFFICIAL_REGISTRIES.mga;
+  const activeMeta = getRegulatorMeta(activeRegulator);
+  const bonusTextColor = activeMeta.colors.reviewTemplateBonusTextClass;
+  const topBadgeText = isNl && activeMeta.cardBadgeTextNl ? activeMeta.cardBadgeTextNl : activeMeta.cardBadgeText;
+  const topBadgeClass = activeMeta.colors.reviewTemplateTopBadgeClass;
+  const activeRegistry = { label: activeMeta.registryLabel, url: activeMeta.registryUrl };
 
   // geo location
   const headerStore = await headers();
@@ -187,13 +151,7 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
 
             {/* LEFT: Casino identity */}
             <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left lg:justify-self-start">
-              <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center font-bold text-3xl shadow-xl shadow-slate-950/50 shrink-0 ${
-                activeRegulator === "ksa"
-                  ? "bg-gradient-to-br from-emerald-600 to-teal-700 text-white"
-                  : activeRegulator === "mga"
-                  ? "bg-gradient-to-br from-blue-600 to-indigo-700 text-white"
-                  : "bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950"
-              }`}>
+              <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center font-bold text-3xl shadow-xl shadow-slate-950/50 shrink-0 ${activeMeta.colors.reviewTemplateAvatarGradient}`}>
                 {displayName.charAt(0)}
               </div>
               <div>
@@ -240,26 +198,14 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
                   licenseType={activeRegulator}
                   name={displayName}
                   welcomeBonus={currentWelcomeBonus}
-                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
-                    activeRegulator === "ksa"
-                      ? "bg-emerald-500 hover:bg-emerald-450 shadow-emerald-500/10"
-                      : activeRegulator === "mga"
-                      ? "bg-sky-500 hover:bg-sky-450 shadow-sky-500/10"
-                      : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
-                  }`}
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${activeMeta.colors.reviewTemplateButtonClass}`}
                 >
                   {isNl ? "Claim Bonus & Speel" : "Claim Offer & Play"}
                 </OutboundLinkWithTooltip>
               ) : (
                 <Link
                   href="/contact"
-                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${
-                    activeRegulator === "ksa"
-                      ? "bg-emerald-500 hover:bg-emerald-450 shadow-emerald-500/10"
-                      : activeRegulator === "mga"
-                      ? "bg-sky-500 hover:bg-sky-450 shadow-sky-500/10"
-                      : "bg-amber-400 hover:bg-amber-350 shadow-amber-500/10"
-                  }`}
+                  className={`mt-2 inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-lg hover:scale-[1.03] active:scale-95 transition-all cursor-pointer ${activeMeta.colors.reviewTemplateButtonClass}`}
                 >
                   {isNl ? "Audit Aanvragen" : "Request Audit"}
                 </Link>

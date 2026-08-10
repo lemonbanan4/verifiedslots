@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { casinos } from "@/src/data/casinos";
+import { REGULATOR_KEYS } from "@/src/data/regulators";
 import auditsData from "@/src/data/audits.json";
 import type { Audit } from "@/src/types/audit";
 
@@ -20,8 +21,6 @@ const STATIC_ROUTES = [
   "/terms",
 ];
 
-const LICENSE_TYPES = ["ksa", "mga", "ukgc"];
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
     url: `${BASE_URL}${route}`,
@@ -29,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.7,
   }));
 
-  const licenseEntries: MetadataRoute.Sitemap = LICENSE_TYPES.map((licenseType) => ({
+  const licenseEntries: MetadataRoute.Sitemap = REGULATOR_KEYS.map((licenseType) => ({
     url: `${BASE_URL}/licenses/${licenseType}`,
     changeFrequency: "daily",
     priority: 0.9,

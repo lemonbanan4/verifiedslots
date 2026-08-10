@@ -4,6 +4,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
 import { createLogger } from '@/src/utils/logging';
+import { REGULATOR_KEYS } from '@/src/data/regulators';
 
 // Load environment variables
 dotenv.config();
@@ -75,8 +76,8 @@ Here is the exact JSON schema structure required:
   "isKsaLicensed": true or false,
   "isLicensedInNL": true or false,
   "licenseNumber": "License number string or empty if unlicensed",
-  "licenseType": "ksa" | "mga" | "ukgc" (primary license, e.g. mga),
-  "licenseTypes": ["ksa", "mga", "ukgc"] (array containing all license jurisdictions held by this operator, e.g. ["ksa", "mga"]),
+  "licenseType": ${REGULATOR_KEYS.map((k) => `"${k}"`).join(" | ")} (primary license, e.g. ${REGULATOR_KEYS[1] || REGULATOR_KEYS[0]}),
+  "licenseTypes": [${REGULATOR_KEYS.map((k) => `"${k}"`).join(", ")}] (array containing all license jurisdictions actually held by this operator, e.g. ["${REGULATOR_KEYS[0]}", "${REGULATOR_KEYS[1] || REGULATOR_KEYS[0]}"]),
   "restrictedCountries": ["NL"] or [] (if KSA, restrictedCountries must NOT contain "NL". If mga/ukgc, it must contain "NL"),
   "rating": number (e.g. 8.5),
   "author": "iGaming Compliance Specialist",

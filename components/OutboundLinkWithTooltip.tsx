@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useCompliance } from "@/src/context/ComplianceContext";
 import { OutboundLink } from "./OutboundLink";
 import { HelpCircle, ShieldCheck, ShieldAlert } from "lucide-react";
+import { isLicenseType, getRegulatorMeta } from "@/src/data/regulators";
 
 interface OutboundLinkWithTooltipProps {
   affiliateUrl: string;
@@ -46,19 +47,20 @@ export function OutboundLinkWithTooltip({
       isCompliant = false;
     }
   } else {
-    // International visitor
-    if (licenseType === "mga") {
-      statusText = `✓ MGA Licensed: Solvency checked under EU rules. Available for global players.`;
-      tooltipTitle = "Compliant Gateway";
-      isCompliant = true;
-    } else if (licenseType === "ukgc") {
-      statusText = `✓ UKGC Regulated: Secure and compliant UK Gambling Commission standards. Available for UK players.`;
-      tooltipTitle = "Compliant Gateway";
-      isCompliant = true;
-    } else {
-      statusText = `⚠️ KSA Regulated: Exclusively structured for Netherlands market players.`;
+    // International visitor. Only a regulator with a genuine hard local-market
+    // carve-out (today: KSA -> NL) is non-compliant for a non-local visitor;
+    // every other regulator (including any not yet in REGULATOR_META) reads
+    // as compliant rather than defaulting to a false "KSA-only" claim.
+    const meta = isLicenseType(licenseType) ? getRegulatorMeta(licenseType) : undefined;
+    if (meta?.localMarketCountryCode) {
+      statusText = meta.internationalComplianceText;
       tooltipTitle = "Compliance Warning";
       isCompliant = false;
+    } else {
+      statusText = meta?.internationalComplianceText
+        ?? "✓ Licensed & Regulated: Independently verified by our compliance desk.";
+      tooltipTitle = "Compliant Gateway";
+      isCompliant = true;
     }
   }
 

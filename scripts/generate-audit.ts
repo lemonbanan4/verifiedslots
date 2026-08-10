@@ -4,6 +4,7 @@ import * as path from "path";
 import * as dotenv from "dotenv";
 import { createLogger } from "@/src/utils/logging";
 import type { Audit, AuditCategory, AuditStatus } from "@/src/types/audit";
+import { REGULATOR_KEYS } from "@/src/data/regulators";
 
 const log = createLogger("generate-audit");
 
@@ -13,7 +14,10 @@ const log = createLogger("generate-audit");
 // missing href or a fabricated internal path (unwrapping it to plain text)
 // rather than letting a dead link reach production. External links (https://...)
 // are left untouched.
-const VALID_INTERNAL_LINKS = new Set(["/licenses/ksa", "/licenses/mga", "/licenses/ukgc", "/responsible-gambling"]);
+const VALID_INTERNAL_LINKS = new Set([
+  ...REGULATOR_KEYS.map((key) => `/licenses/${key}`),
+  "/responsible-gambling",
+]);
 
 function sanitizeInternalLinks(html: string): string {
     return html.replace(/<a\b([^>]*)>(.*?)<\/a>/gis, (match, attrs, innerText) => {
@@ -184,12 +188,9 @@ Wagering / Playthrough: 45x wagering on bonus + deposit (effective 90x playthrou
 Responsible Gaming Controls: No self-exclusion linkage (outside NL CRUKS). Local tools are limited to manual email requests.
 `;
 
-const LINK_RULES = `Every <a> tag MUST have an href attribute, and that href MUST be exactly one of these four paths — no others exist on this site, and inventing any other path (e.g. a made-up "/licenses/some-topic" or "/licenses/operator-name") produces a broken link:
-   - \`/licenses/ksa\`
-   - \`/licenses/mga\`
-   - \`/licenses/ukgc\`
-   - \`/responsible-gambling\`
-   If none of these four are a natural fit for a given sentence, do not include a link at all — plain text is always safer than a fabricated URL.`;
+const LINK_RULES = `Every <a> tag MUST have an href attribute, and that href MUST be exactly one of these paths — no others exist on this site, and inventing any other path (e.g. a made-up "/licenses/some-topic" or "/licenses/operator-name") produces a broken link:
+${[...VALID_INTERNAL_LINKS].map((link) => `   - \`${link}\``).join("\n")}
+   If none of these are a natural fit for a given sentence, do not include a link at all — plain text is always safer than a fabricated URL.`;
 
 async function run() {
     const args = process.argv.slice(2);

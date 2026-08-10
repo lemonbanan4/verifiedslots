@@ -42,7 +42,9 @@ function main() {
 
   // Sort casinos by name or rating to keep the list stable
   casinos.sort((a, b) => a.name.localeCompare(b.name));
-  const interfacesCode = `export interface ResponsibleGamblingTool {
+  const interfacesCode = `import type { LicenseType } from "@/src/data/regulators";
+
+export interface ResponsibleGamblingTool {
   title: string;
   description: string;
   status: "success" | "warning" | "error" | "supported";
@@ -83,8 +85,8 @@ export interface Casino {
   isKsaLicensed: boolean;
   isLicensedInNL: boolean;
   license: string;
-  licenseType: "ksa" | "mga" | "ukgc";
-  licenseTypes?: Array<"ksa" | "mga" | "ukgc">;
+  licenseType: LicenseType;
+  licenseTypes?: LicenseType[];
   restrictedCountries: string[];
   bonus: string;
   wagering: string;

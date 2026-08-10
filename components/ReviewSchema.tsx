@@ -1,21 +1,19 @@
 import React from "react";
 import { Casino } from "@/src/data/casinos";
+import { getRegulatorMeta } from "@/src/data/regulators";
 
 interface ReviewSchemaProps {
   review: Casino;
 }
 
-const LICENSE_LABELS: Record<string, string> = {
-  ksa: "Kansspelautoriteit (KSA)",
-  ukgc: "UK Gambling Commission (UKGC)",
-  mga: "Malta Gaming Authority (MGA)",
-};
-
 function describeLicensing(review: Casino): string {
   const types = review.licenseTypes && review.licenseTypes.length > 0
     ? review.licenseTypes
     : [review.licenseType];
-  const labels = types.map((t) => LICENSE_LABELS[t] || t.toUpperCase());
+  const labels = types.map((t) => {
+    const meta = getRegulatorMeta(t);
+    return `${meta.fullName} (${meta.shortLabel})`;
+  });
 
   if (labels.length === 0) {
     return "Offshore/Unlicensed entity. Restricted in Netherlands.";

@@ -5,14 +5,17 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Info, BookOpen, AlertTriangle, ChevronDown, MessageSquare, Handshake, Menu, X, ShieldCheck, Sparkles } from "lucide-react";
+import { REGULATOR_KEYS, REGULATOR_META } from "@/src/data/regulators";
 
 // Every destination in the desktop nav + Resources dropdown, flattened into
 // one list — the mobile drawer shows all of them vertically rather than
 // nesting a second dropdown inside the drawer.
 const MOBILE_LINKS = [
-  { href: "/licenses/ksa", label: "KSA", icon: ShieldCheck },
-  { href: "/licenses/mga", label: "MGA", icon: ShieldCheck },
-  { href: "/licenses/ukgc", label: "UKGC", icon: ShieldCheck },
+  ...REGULATOR_KEYS.map((key) => ({
+    href: `/licenses/${key}`,
+    label: REGULATOR_META[key].shortLabel,
+    icon: ShieldCheck,
+  })),
   { href: "/audits", label: "Insights", icon: Sparkles },
   { href: "/about-us", label: "Info", icon: Info },
   { href: "/editorial-policy", label: "Policy", icon: BookOpen },
@@ -139,35 +142,21 @@ export function Navbar() {
 
       {/* Nav Links (right) - desktop/tablet only; mobile gets the hamburger + drawer below */}
       <div className="hidden md:flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-slate-350">
-        <Link
-          href="/licenses/ksa"
-          className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent ${currentPath === "/licenses/ksa"
-            ? "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
-            : "hover:text-white hover:bg-white/5"
-            }`}
-        >
-          KSA
-        </Link>
-
-        <Link
-          href="/licenses/mga"
-          className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent ${currentPath === "/licenses/mga"
-            ? "text-blue-400 bg-blue-500/10 border-blue-500/20"
-            : "hover:text-white hover:bg-white/5"
-            }`}
-        >
-          MGA
-        </Link>
-
-        <Link
-          href="/licenses/ukgc"
-          className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent ${currentPath === "/licenses/ukgc"
-            ? "text-amber-400 bg-amber-500/10 border-amber-500/20"
-            : "hover:text-white hover:bg-white/5"
-            }`}
-        >
-          UKGC
-        </Link>
+        {REGULATOR_KEYS.map((key) => {
+          const href = `/licenses/${key}`;
+          return (
+            <Link
+              key={key}
+              href={href}
+              className={`transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg px-2.5 py-1.5 border border-transparent ${currentPath === href
+                ? REGULATOR_META[key].colors.navActiveClass
+                : "hover:text-white hover:bg-white/5"
+                }`}
+            >
+              {REGULATOR_META[key].shortLabel}
+            </Link>
+          );
+        })}
 
         <Link
           href="/audits"

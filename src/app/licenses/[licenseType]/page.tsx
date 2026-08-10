@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { fetchAllCasinos } from "@/src/lib/auditService";
 import { LicensesContent } from "@/src/components/LicensesContent";
+import { REGULATOR_KEYS, getRegulatorMeta, isLicenseType } from "@/src/data/regulators";
 
 interface LicensePageProps {
   params: Promise<{
@@ -13,35 +14,24 @@ interface LicensePageProps {
 export async function generateMetadata({ params }: LicensePageProps): Promise<Metadata> {
   const { licenseType } = await params;
 
-  let title = "";
-  let description = "";
-
-  if (licenseType === "ksa") {
-    title = "KSA Licensed Casinos - Compliance Audits & Reviews";
-    description = "Compare online casinos officially licensed by the Dutch Kansspelautoriteit (KSA) under the Remote Gambling Act (Wet Koa). Read independent reviews.";
-  } else if (licenseType === "mga") {
-    title = "MGA Regulated Casinos - European Standards Compliance";
-    description = "Audit reports and safety evaluations of gaming platforms licensed by the Malta Gaming Authority (MGA). Analyze payout metrics and wagering terms.";
-  } else if (licenseType === "ukgc") {
-    title = "UKGC Regulated Casinos - UK Compliance Audits";
-    description = "Read compliance reports and consumer safety evaluations of international gaming operators regulated by the UK Gambling Commission (UKGC).";
-  } else {
-    title = "VerifiedSlots - Independent Licensing Audits";
-    description = "Independent compliance evaluations of regulated and offshore iGaming platforms.";
+  if (!isLicenseType(licenseType)) {
+    return {
+      title: "VerifiedSlots - Independent Licensing Audits",
+      description: "Independent compliance evaluations of regulated and offshore iGaming platforms.",
+    };
   }
 
+  const meta = getRegulatorMeta(licenseType);
   return {
-    title,
-    description,
+    title: meta.metaTitle,
+    description: meta.metaDescription,
   };
 }
 
 export default async function LicensePage({ params }: LicensePageProps) {
   const { licenseType } = await params;
 
-  // Validate licenseType
-  const validLicenses = ["ksa", "mga", "ukgc"];
-  if (!validLicenses.includes(licenseType)) {
+  if (!isLicenseType(licenseType)) {
     notFound();
   }
 
@@ -52,9 +42,5 @@ export default async function LicensePage({ params }: LicensePageProps) {
 
 // Generate static parameters for static site generation
 export async function generateStaticParams() {
-  return [
-    { licenseType: "ksa" },
-    { licenseType: "mga" },
-    { licenseType: "ukgc" },
-  ];
+  return REGULATOR_KEYS.map((licenseType) => ({ licenseType }));
 }

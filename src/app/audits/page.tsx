@@ -24,6 +24,7 @@ import auditsData from "@/src/data/audits.json";
 import { ComplianceSeal } from "@/components/ComplianceSeal";
 import { AuditModal } from "@/components/AuditModal";
 import { casinos, casinoHoldsLicense, sortByAffiliatePriority } from "@/src/data/casinos";
+import { REGULATOR_KEYS, type LicenseType } from "@/src/data/regulators";
 import { CasinoCard } from "@/components/CasinoCard";
 import { useCompliance } from "@/src/context/ComplianceContext";
 
@@ -227,7 +228,7 @@ export default function AuditsPage() {
   const [activeTab, setActiveTab] = useState<MainTabKey>("archive");
 
   // State for Directory Tab
-  const [activeLicenseFilter, setActiveLicenseFilter] = useState<"All" | "ksa" | "mga" | "ukgc">("All");
+  const [activeLicenseFilter, setActiveLicenseFilter] = useState<"All" | LicenseType>("All");
 
   // Reset active license filter if user is Dutch and it's set to non-KSA
   useEffect(() => {
@@ -401,7 +402,7 @@ export default function AuditsPage() {
           {activeTab === "directory" ? (
             // Compliance Directory License Filters
             <>
-              {(isDutch ? (["ksa"] as const) : (["All", "ksa", "mga", "ukgc"] as const)).map((license) => (
+              {(isDutch ? (["ksa"] as const) : (["All", ...REGULATOR_KEYS] as const)).map((license) => (
                 <button
                   key={license}
                   onClick={() => setActiveLicenseFilter(license)}

@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { isAffiliateOfferAvailable } from "@/src/data/casinos";
+import { getRegulatorMeta } from "@/src/data/regulators";
 import { useCompliance } from "@/src/context/ComplianceContext";
 
 interface AuditButtonProps {
@@ -67,14 +68,7 @@ export function AuditButton({
 
   // Block style (large card button)
   if (hasAffiliate) {
-    let buttonColorClass = "";
-    if (licenseType === "ksa") {
-      buttonColorClass = "bg-emerald-500 hover:bg-emerald-450 text-slate-950 shadow-[0_4px_20px_rgba(16,185,129,0.18)] hover:shadow-[0_4px_25px_rgba(16,185,129,0.4)] border border-emerald-500/20 focus:ring-emerald-500";
-    } else if (licenseType === "mga") {
-      buttonColorClass = "bg-sky-500 hover:bg-sky-450 text-slate-955 shadow-[0_4px_20px_rgba(14,165,233,0.18)] hover:shadow-[0_4px_25px_rgba(14,165,233,0.4)] border border-sky-500/20 focus:ring-sky-500";
-    } else {
-      buttonColorClass = "bg-amber-400 hover:bg-amber-350 text-slate-955 shadow-[0_4px_20px_rgba(245,158,11,0.18)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.4)] border border-amber-500/20 focus:ring-amber-500";
-    }
+    const buttonColorClass = getRegulatorMeta(licenseType).colors.auditButtonClass;
 
     return (
       <a

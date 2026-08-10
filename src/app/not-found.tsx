@@ -1,6 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import { ShieldAlert, Home, ArrowLeft, ArrowRight } from "lucide-react";
+import { REGULATOR_KEYS, REGULATOR_META, type LicenseType } from "@/src/data/regulators";
+
+// Purely decorative dot color + hover-border accent per regulator, preserved
+// from the original hardcoded links. Defaults to indigo for any regulator
+// without a bespoke entry — carries no correctness risk either way.
+const NOT_FOUND_ACCENT: Partial<Record<LicenseType, { dot: string; hoverBorder: string }>> = {
+  ksa: { dot: "bg-emerald-400", hoverBorder: "hover:border-emerald-500/20" },
+  mga: { dot: "bg-blue-400", hoverBorder: "hover:border-blue-500/20" },
+  ukgc: { dot: "bg-amber-400", hoverBorder: "hover:border-amber-500/20" },
+};
+const DEFAULT_ACCENT = { dot: "bg-indigo-400", hoverBorder: "hover:border-indigo-500/20" };
 
 export default function NotFound() {
   return (
@@ -30,27 +41,23 @@ export default function NotFound() {
             Certified Jurisdictions
           </span>
           
-          <Link
-            href="/licenses/ksa"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/50 hover:bg-slate-950/80 border border-white/5 hover:border-emerald-500/20 text-slate-200 hover:text-white transition-all cursor-pointer group"
-          >
-            <span className="text-xs font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
-              KSA Licensed Audits (NL)
-            </span>
-            <ArrowRight size={14} className="text-slate-550 group-hover:translate-x-1 transition-transform" />
-          </Link>
-
-          <Link
-            href="/licenses/mga"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/50 hover:bg-slate-950/80 border border-white/5 hover:border-blue-500/20 text-slate-200 hover:text-white transition-all cursor-pointer group"
-          >
-            <span className="text-xs font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-400 shrink-0" />
-              MGA Licensed Audits (Europe)
-            </span>
-            <ArrowRight size={14} className="text-slate-550 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          {REGULATOR_KEYS.map((key) => {
+            const accent = NOT_FOUND_ACCENT[key] ?? DEFAULT_ACCENT;
+            const meta = REGULATOR_META[key];
+            return (
+              <Link
+                key={key}
+                href={`/licenses/${key}`}
+                className={`flex items-center justify-between p-3.5 rounded-xl bg-slate-950/50 hover:bg-slate-950/80 border border-white/5 ${accent.hoverBorder} text-slate-200 hover:text-white transition-all cursor-pointer group`}
+              >
+                <span className="text-xs font-bold flex items-center gap-2">
+                  <span className={`w-2 h-2 rounded-full ${accent.dot} shrink-0`} />
+                  {meta.shortLabel} Licensed Audits ({meta.jurisdictionLabel})
+                </span>
+                <ArrowRight size={14} className="text-slate-550 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            );
+          })}
         </div>
 
         {/* Back to Home action */}

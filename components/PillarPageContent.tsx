@@ -5,10 +5,58 @@ import Link from "next/link";
 import { motion, Variants } from "motion/react";
 import { Shield, ShieldCheck, ShieldAlert, BookOpen, HeartPulse, Scale, ArrowRight } from "lucide-react";
 import { Casino, casinoHoldsLicense } from "@/src/data/casinos";
+import { REGULATOR_KEYS, REGULATOR_META, type LicenseType } from "@/src/data/regulators";
 
 interface PillarPageContentProps {
   casinos: Casino[];
 }
+
+// Purely decorative per-regulator presentation for this page's cluster
+// cards. Kept local (not in regulators.ts) since this copy/styling is
+// specific to the pillar page and already differs subtly from the
+// homepage's own cluster cards (e.g. "Browse KSA Directory" vs "KSA
+// Audits", "{n} audited" vs "{n} active"). A new regulator without an
+// entry here gets the indigo default rather than silently reusing
+// another regulator's icon/copy/colors.
+const PILLAR_ICON: Partial<Record<LicenseType, React.ElementType>> = {
+  ksa: ShieldCheck,
+  mga: Shield,
+  ukgc: ShieldAlert,
+};
+const PILLAR_ICON_WRAP_CLASS: Partial<Record<LicenseType, string>> = {
+  ksa: "bg-emerald-500/10 text-emerald-450 border-emerald-500/20",
+  mga: "bg-blue-500/10 text-blue-405 border-blue-500/20",
+  ukgc: "bg-amber-500/10 text-amber-450 border-amber-500/20",
+};
+const DEFAULT_PILLAR_ICON_WRAP_CLASS = "bg-indigo-500/10 text-indigo-405 border-indigo-500/20";
+const PILLAR_HEADING: Partial<Record<LicenseType, string>> = {
+  ksa: "KSA Licensed (NL)",
+  mga: "MGA Regulated",
+  ukgc: "UKGC Regulated",
+};
+const PILLAR_COPY: Partial<Record<LicenseType, string>> = {
+  ksa: "Operators holding active permits from the Dutch Kansspelautoriteit (KSA) under the Remote Gambling Act (Wet Koa). Features segregated player funds, strict deposit limitations, and mandatory CRUKS integration.",
+  mga: "Audits of operators licensed by the Malta Gaming Authority (MGA). MGA provides European player protection standards, rigorous operator solvency checks, and independent third-party RNG verification, but lacks Dutch local legal support.",
+  ukgc: "Assessments of operators licensed by the UK Gambling Commission (UKGC). High social responsibility standards, strict playthrough math audits, and secure payouts.",
+};
+const DEFAULT_PILLAR_COPY = "Independent audits and compliance reviews of licensed operators.";
+const PILLAR_STATS_TEXT_CLASS: Partial<Record<LicenseType, string>> = {
+  ksa: "text-emerald-400",
+  mga: "text-blue-400",
+  ukgc: "text-amber-400",
+};
+const PILLAR_BADGE_CLASS: Partial<Record<LicenseType, string>> = {
+  ksa: "bg-emerald-500/15 border border-emerald-500/20 text-emerald-400",
+  mga: "bg-blue-500/15 border border-blue-500/20 text-blue-400",
+  ukgc: "bg-amber-500/15 border border-amber-500/20 text-amber-400",
+};
+const DEFAULT_PILLAR_BADGE_CLASS = "bg-indigo-500/15 border border-indigo-500/20 text-indigo-400";
+const PILLAR_LINK_CLASS: Partial<Record<LicenseType, string>> = {
+  ksa: "text-emerald-450 hover:text-emerald-300",
+  mga: "text-blue-405 hover:text-blue-300",
+  ukgc: "text-amber-455 hover:text-amber-300",
+};
+const DEFAULT_PILLAR_LINK_CLASS = "text-indigo-405 hover:text-indigo-300";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -34,9 +82,9 @@ const itemVariants: Variants = {
 };
 
 export function PillarPageContent({ casinos }: PillarPageContentProps) {
-  const ksaCount = casinos.filter((c) => casinoHoldsLicense(c, "ksa")).length;
-  const mgaCount = casinos.filter((c) => casinoHoldsLicense(c, "mga")).length;
-  const ukgcCount = casinos.filter((c) => casinoHoldsLicense(c, "ukgc")).length;
+  const licenseCounts = Object.fromEntries(
+    REGULATOR_KEYS.map((key) => [key, casinos.filter((c) => casinoHoldsLicense(c, key)).length])
+  ) as Record<LicenseType, number>;
 
   return (
     <motion.div
@@ -76,97 +124,46 @@ export function PillarPageContent({ casinos }: PillarPageContentProps) {
               <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Total Audits</span>
               <p className="text-lg font-bold text-white font-mono">{casinos.length} Platforms</p>
             </div>
-            <div>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated KSA</span>
-              <p className="text-lg font-bold text-emerald-400 font-mono">{ksaCount} Brands</p>
-            </div>
-            <div>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated MGA</span>
-              <p className="text-lg font-bold text-blue-400 font-mono">{mgaCount} Brands</p>
-            </div>
-            <div>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated UKGC</span>
-              <p className="text-lg font-bold text-amber-400 font-mono">{ukgcCount} Brands</p>
-            </div>
+            {REGULATOR_KEYS.map((key) => (
+              <div key={key}>
+                <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Regulated {REGULATOR_META[key].shortLabel}</span>
+                <p className={`text-lg font-bold font-mono ${PILLAR_STATS_TEXT_CLASS[key] ?? "text-indigo-400"}`}>{licenseCounts[key]} Brands</p>
+              </div>
+            ))}
           </div>
         </div>
       </motion.section>
 
       {/* 2. Core Pillars - Bento Grids with dynamic hover glow */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        {/* Cluster 1 - KSA */}
-        <motion.div 
-          variants={itemVariants}
-          className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu"
-        >
-          <div>
-            <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-450 mb-4 border border-emerald-500/20 group-hover:scale-105 transition-transform duration-200">
-              <ShieldCheck size={18} />
-            </div>
-            <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
-              KSA Licensed (NL)
-              <span className="text-[9px] bg-emerald-500/15 border border-emerald-500/20 text-emerald-400 font-extrabold px-2 py-0.5 rounded font-mono">
-                {ksaCount} audited
-              </span>
-            </h3>
-            <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Operators holding active permits from the Dutch Kansspelautoriteit (KSA) under the Remote Gambling Act (Wet Koa). Features segregated player funds, strict deposit limitations, and mandatory CRUKS integration.
-            </p>
-          </div>
-          <Link href="/licenses/ksa" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-450 hover:text-emerald-300 transition-colors">
-            Browse KSA Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-
-        {/* Cluster 2 - MGA */}
-        <motion.div 
-          variants={itemVariants}
-          className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu"
-        >
-          <div>
-            <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-405 mb-4 border border-blue-500/20 group-hover:scale-105 transition-transform duration-200">
-              <Shield size={18} />
-            </div>
-            <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
-              MGA Regulated
-              <span className="text-[9px] bg-blue-500/15 border border-blue-500/20 text-blue-400 font-extrabold px-2 py-0.5 rounded font-mono">
-                {mgaCount} audited
-              </span>
-            </h3>
-            <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Audits of operators licensed by the Malta Gaming Authority (MGA). MGA provides European player protection standards, rigorous operator solvency checks, and independent third-party RNG verification, but lacks Dutch local legal support.
-            </p>
-          </div>
-          <Link href="/licenses/mga" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-405 hover:text-blue-300 transition-colors">
-            Browse MGA Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-
-        {/* Cluster 3 - UKGC */}
-        <motion.div 
-          variants={itemVariants}
-          className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu"
-        >
-          <div>
-            <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-450 mb-4 border border-amber-500/20 group-hover:scale-105 transition-transform duration-200">
-              <ShieldAlert size={18} />
-            </div>
-            <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
-              UKGC Regulated
-              <span className="text-[9px] bg-amber-500/15 border border-amber-500/20 text-amber-400 font-extrabold px-2 py-0.5 rounded font-mono">
-                {ukgcCount} audited
-              </span>
-            </h3>
-            <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
-              Assessments of operators licensed by the UK Gambling Commission (UKGC). High social responsibility standards, strict playthrough math audits, and secure payouts.
-            </p>
-          </div>
-          <Link href="/licenses/ukgc" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-455 hover:text-amber-300 transition-colors">
-            Browse UKGC Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-
+        {REGULATOR_KEYS.map((key) => {
+          const Icon = PILLAR_ICON[key] ?? ShieldCheck;
+          return (
+            <motion.div
+              key={key}
+              variants={itemVariants}
+              className="glass-card-interactive rounded-2xl p-6 flex flex-col justify-between group optimize-gpu"
+            >
+              <div>
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 border group-hover:scale-105 transition-transform duration-200 ${PILLAR_ICON_WRAP_CLASS[key] ?? DEFAULT_PILLAR_ICON_WRAP_CLASS}`}>
+                  <Icon size={18} />
+                </div>
+                <h3 className="text-md font-bold text-white mb-2 flex items-center justify-between">
+                  {PILLAR_HEADING[key] ?? REGULATOR_META[key].cardBadgeText}
+                  <span className={`text-[9px] font-extrabold px-2 py-0.5 rounded font-mono ${PILLAR_BADGE_CLASS[key] ?? DEFAULT_PILLAR_BADGE_CLASS}`}>
+                    {licenseCounts[key]} audited
+                  </span>
+                </h3>
+                <p className="text-[11px] text-slate-350 leading-relaxed mb-6">
+                  {PILLAR_COPY[key] ?? DEFAULT_PILLAR_COPY}
+                </p>
+              </div>
+              <Link href={`/licenses/${key}`} className={`inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors ${PILLAR_LINK_CLASS[key] ?? DEFAULT_PILLAR_LINK_CLASS}`}>
+                Browse {REGULATOR_META[key].shortLabel} Directory <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          );
+        })}
       </section>
 
       {/* 3. Supporting Pillars - Help and Verification Info */}

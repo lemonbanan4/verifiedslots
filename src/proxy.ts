@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest, ProxyConfig } from "next/server";
 import { casinos, isCasinoAvailableInCountry } from "./data/casinos";
+import { isLicenseType } from "./data/regulators";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -74,7 +75,7 @@ export function proxy(request: NextRequest) {
     // segments[3] — /audits/insights/[slug] editorial articles use segments[2]
     // for "insights" and segments[3] for the article slug, which never matches
     // a casino and would otherwise redirect every article away for everyone.
-    const isCasinoReviewRoute = ["ksa", "mga", "ukgc"].includes(segments[2]);
+    const isCasinoReviewRoute = isLicenseType(segments[2]);
     const slug = segments[3] || "";
     if (isCasinoReviewRoute && slug && !isCasinoAvailableInCountry(slug, countryCode)) {
       return withGeoCookie(NextResponse.redirect(new URL(isDutch ? "/licenses/ksa" : "/licenses/mga", request.url)));
@@ -129,7 +130,7 @@ export function runComplianceMiddleware(pathname: string, isDutch: boolean): str
     }
     if (pathname.startsWith("/audits/")) {
       const segments = pathname.split("/");
-      const isCasinoReviewRoute = ["ksa", "mga", "ukgc"].includes(segments[2]);
+      const isCasinoReviewRoute = isLicenseType(segments[2]);
       const slug = segments[3] || "";
       if (isCasinoReviewRoute && slug && !isCasinoAvailableInCountry(slug, countryCode)) {
         return "/licenses/ksa";
@@ -149,7 +150,7 @@ export function runComplianceMiddleware(pathname: string, isDutch: boolean): str
     }
     if (pathname.startsWith("/audits/")) {
       const segments = pathname.split("/");
-      const isCasinoReviewRoute = ["ksa", "mga", "ukgc"].includes(segments[2]);
+      const isCasinoReviewRoute = isLicenseType(segments[2]);
       const slug = segments[3] || "";
       if (isCasinoReviewRoute && slug && !isCasinoAvailableInCountry(slug, countryCode)) {
         return "/licenses/mga";

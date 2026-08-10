@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ShieldCheck, FileText, Globe, User, Linkedin } from "lucide-react";
+import { isLicenseType, getRegulatorMeta } from "@/src/data/regulators";
 
 interface AuthorBoxProps {
   authorName: string;
@@ -25,20 +26,12 @@ export function AuthorBox({
     .join("")
     .toUpperCase();
 
-  // Dynamic license verification destination
-  let verificationUrl = "/licenses";
-  let verificationText = "Verify Regulatory Index";
-
-  if (licenseType === "ksa") {
-    verificationUrl = "https://www.kansspelautoriteit.nl/kansspelwijzer/";
-    verificationText = "Verify KSA Kansspelwijzer";
-  } else if (licenseType === "mga") {
-    verificationUrl = "https://www.mga.org.mt/licensee-hub/licensee-register/";
-    verificationText = "Verify MGA Register";
-  } else if (licenseType === "ukgc") {
-    verificationUrl = "https://www.gamblingcommission.gov.uk/public-register/";
-    verificationText = "Verify UKGC Public Register";
-  }
+  // Dynamic license verification destination, driven by the shared
+  // regulator registry. Falls back to the generic licensing index for any
+  // unrecognized type rather than silently pointing at another regulator's
+  // verification tool.
+  const verificationUrl = isLicenseType(licenseType) ? getRegulatorMeta(licenseType).verificationUrl : "/licenses";
+  const verificationText = isLicenseType(licenseType) ? getRegulatorMeta(licenseType).verificationLabel : "Verify Regulatory Index";
 
   return (
     <div className={`glass-card rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center gap-5 relative overflow-hidden optimize-gpu ${className}`}>

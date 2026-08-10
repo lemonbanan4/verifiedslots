@@ -4,6 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShieldCheck, Shield, ShieldAlert, Scale, AlertTriangle } from "lucide-react";
+import { REGULATOR_KEYS, REGULATOR_META, type LicenseType } from "@/src/data/regulators";
+
+// Purely decorative per-regulator icon choice — preserved from the original
+// 3-type hardcoded list. Not part of REGULATOR_META since it carries no
+// correctness risk (unlike labels/colors/copy); a new regulator without an
+// entry here just gets the ShieldCheck default.
+const NAV_ICONS: Partial<Record<LicenseType, React.ReactNode>> = {
+  ksa: <ShieldCheck size={18} />,
+  mga: <Shield size={18} />,
+  ukgc: <ShieldAlert size={18} />,
+};
 
 export function MobileNav() {
   const currentPath = usePathname() || "";
@@ -14,21 +25,11 @@ export function MobileNav() {
       icon: <Scale size={18} />,
       path: "/",
     },
-    {
-      label: "KSA",
-      icon: <ShieldCheck size={18} />,
-      path: "/licenses/ksa",
-    },
-    {
-      label: "MGA",
-      icon: <Shield size={18} />,
-      path: "/licenses/mga",
-    },
-    {
-      label: "UKGC",
-      icon: <ShieldAlert size={18} />,
-      path: "/licenses/ukgc",
-    },
+    ...REGULATOR_KEYS.map((key) => ({
+      label: REGULATOR_META[key].shortLabel,
+      icon: NAV_ICONS[key] ?? <ShieldCheck size={18} />,
+      path: `/licenses/${key}`,
+    })),
   ];
 
   return (

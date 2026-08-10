@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { OutboundLink } from "./OutboundLink";
 import { Star, ShieldCheck, ShieldAlert, ArrowRight } from "lucide-react";
 import { casinoHoldsLicense, isAffiliateOfferAvailable, type Casino } from "@/src/data/casinos";
+import { getRegulatorMeta } from "@/src/data/regulators";
 import { normalizeRating } from "@/src/utils/rating";
 import { useCompliance } from "@/src/context/ComplianceContext";
 
@@ -32,27 +33,12 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
     ? "bet365.com"
     : casino.domain;
 
-  const isKsa = activeLicense === "ksa";
-  const isMga = activeLicense === "mga";
   const ratingScale = "/10";
 
-  let badgeText = "";
-  let badgeClass = "";
-  let icon: React.ReactNode = null;
-
-  if (isKsa) {
-    badgeText = "KSA Licensed";
-    badgeClass = "bg-emerald-500/15 border border-emerald-500/30 text-emerald-400";
-    icon = <ShieldCheck size={13} className="text-emerald-400 shrink-0" />;
-  } else if (isMga) {
-    badgeText = "MGA Licensed";
-    badgeClass = "bg-blue-500/15 border border-blue-500/30 text-blue-400";
-    icon = <ShieldCheck size={13} className="text-blue-400 shrink-0" />;
-  } else {
-    badgeText = "UKGC Regulated";
-    badgeClass = "bg-amber-500/15 border border-amber-500/30 text-amber-400";
-    icon = <ShieldCheck size={13} className="text-amber-400 shrink-0" />;
-  }
+  const activeMeta = getRegulatorMeta(activeLicense);
+  const badgeText = activeMeta.cardBadgeText;
+  const badgeClass = activeMeta.colors.cardBadgeClass;
+  const icon = <ShieldCheck size={13} className={`${activeMeta.colors.cardBadgeIconClass} shrink-0`} />;
 
   return (
     <motion.div
@@ -131,13 +117,7 @@ export const CasinoCard = React.memo(function CasinoCard({ casino, licenseType }
           {isAffiliateOfferAvailable(casino, countryCode) ? (
             <OutboundLink
               href={casino.affiliateUrl}
-              className={`flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer ${
-                activeLicense === "ksa"
-                  ? "bg-emerald-500 hover:bg-emerald-450 focus:ring-emerald-500"
-                  : activeLicense === "mga"
-                  ? "bg-sky-500 hover:bg-sky-450 focus:ring-sky-500"
-                  : "bg-amber-400 hover:bg-amber-350 focus:ring-amber-500"
-              }`}
+              className={`flex-1 min-w-0 text-center py-2.5 px-3 rounded-lg text-xs font-bold text-slate-955 flex items-center justify-center gap-1 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 cursor-pointer ${activeMeta.colors.casinoCardButtonClass}`}
             >
               Visit Operator <ArrowRight size={12} aria-hidden="true" className="shrink-0" />
             </OutboundLink>
