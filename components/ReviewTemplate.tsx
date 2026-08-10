@@ -107,6 +107,10 @@ export async function ReviewTemplate({ review, activeLicenseRoute }: ReviewTempl
     } else if (review.id === "videoslots") {
       displayLicenseNumber = "2138/30992";
     }
+  } else if (activeRegulator === "dk") {
+    if (review.id === "leovegas") {
+      displayLicenseNumber = "21-70665";
+    }
   }
 
   const activeMeta = getRegulatorMeta(activeRegulator);

@@ -12,9 +12,9 @@
 // that would silently mislabel any 4th value. This file exists to collapse
 // both problems into one place.
 
-export type LicenseType = "ksa" | "mga" | "ukgc";
+export type LicenseType = "ksa" | "mga" | "ukgc" | "dk";
 
-export const REGULATOR_KEYS: LicenseType[] = ["ksa", "mga", "ukgc"];
+export const REGULATOR_KEYS: LicenseType[] = ["ksa", "mga", "ukgc", "dk"];
 
 export interface RegulatorMeta {
   key: LicenseType;
@@ -209,6 +209,51 @@ export const REGULATOR_META: Record<LicenseType, RegulatorMeta> = {
       licensesContentBannerClass: "bg-amber-500/10 border border-amber-500/20 text-amber-400",
       licensesContentHeroIconClass: "text-amber-400",
       navActiveClass: "text-amber-400 bg-amber-500/10 border-amber-500/20",
+    },
+  },
+  dk: {
+    key: "dk",
+    shortLabel: "DK",
+    cardBadgeText: "DK Licensed",
+    fullName: "Spillemyndigheden",
+    jurisdictionLabel: "Denmark",
+    registryUrl: "https://spillemyndigheden.dk/",
+    registryLabel: "Spillemyndigheden (Danish Gambling Authority) Official Website",
+    verificationUrl: "https://spillemyndigheden.dk/en-us/licensed-gambling-operators",
+    verificationLabel: "Verify Spillemyndigheden Register",
+    status: "Highly Regulated (Gold Standard)",
+    guarantees: [
+      "Mandatory cross-check against ROFUS, Denmark's national self-exclusion register, before any marketing contact — operators cannot market to self-excluded players.",
+      "Strict advertising controls, including mandatory visible risk warnings and restrictions on celebrity/influencer promotion.",
+      "Bonus and promotional value capped at DKK 1,000 per operator, with free bets for new customers prohibited outright — among the strictest bonus rules of any regulator this site covers.",
+      "Independent oversight by the Danish Gambling Authority (Spillemyndigheden), part of the Danish Ministry of Taxation.",
+    ],
+    risks: [
+      "A Danish licence covers Denmark only — it provides no protection or legal recourse for players outside Denmark.",
+      "Strict promotional limits mean welcome offers are typically far smaller than in other markets.",
+    ],
+    internationalComplianceText: "⚠️ Spillemyndigheden Regulated: Exclusively structured for Danish market players.",
+    directoryHeading: "Danish Regulated Operators",
+    directorySubHeading: "Spillemyndigheden Evaluation",
+    directorySubLicenseText: "Independent audits and compliance reviews of operators licensed by Spillemyndigheden, the Danish Gambling Authority. Check ROFUS integration and Danish-specific bonus/advertising rules.",
+    metaTitle: "Denmark-Licensed Casinos - Spillemyndigheden Compliance Audits",
+    metaDescription: "Compare online casinos officially licensed by Spillemyndigheden, the Danish Gambling Authority. Read independent reviews covering ROFUS integration and Danish bonus rules.",
+    localMarketCountryCode: "DK",
+    colors: {
+      badgeBg: "bg-indigo-500/10",
+      badgeText: "text-indigo-400",
+      cardBadgeClass: "bg-indigo-500/15 border border-indigo-500/30 text-indigo-400",
+      cardBadgeIconClass: "text-indigo-400",
+      casinoCardButtonClass: "bg-indigo-600 hover:bg-indigo-500 focus:ring-indigo-500",
+      auditButtonClass: "bg-indigo-600 hover:bg-indigo-500 text-white shadow-[0_4px_20px_rgba(99,102,241,0.18)] hover:shadow-[0_4px_25px_rgba(99,102,241,0.4)] border border-indigo-500/20 focus:ring-indigo-500",
+      reviewTemplateButtonClass: "bg-indigo-600 hover:bg-indigo-500 shadow-indigo-500/10",
+      reviewTemplateAvatarGradient: "bg-indigo-600 text-white",
+      reviewTemplateAvatarTextClass: "text-white",
+      reviewTemplateBonusTextClass: "text-indigo-400",
+      reviewTemplateTopBadgeClass: "bg-indigo-500/10 border border-indigo-500/20 text-indigo-400",
+      licensesContentBannerClass: "bg-indigo-500/10 border border-indigo-500/20 text-indigo-400",
+      licensesContentHeroIconClass: "text-indigo-400",
+      navActiveClass: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
     },
   },
 };

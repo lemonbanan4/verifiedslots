@@ -13,7 +13,8 @@
   "licenseTypes": [
     "mga",
     "ksa",
-    "ukgc"
+    "ukgc",
+    "dk"
   ],
   "restrictedCountries": [
     "NL",
@@ -298,6 +299,10 @@
     {
       "question": "Can I bet on sports at LeoVegas, or is it casino-only?",
       "answer": "LeoVegas offers both. Alongside its casino and live dealer games, it runs a full sportsbook covering football, basketball, tennis, esports, and other major sports and events."
+    },
+    {
+      "question": "Is LeoVegas licensed in Denmark?",
+      "answer": "Yes. LeoVegas Gaming plc holds a Danish casino licence (number 21-70665) issued by Spillemyndigheden on 3 October 2021, valid until 2 October 2026, confirmed directly on LeoVegas's own Danish terms and conditions and on the official Spillemyndigheden operator register. Danish players are protected by mandatory ROFUS self-exclusion checks and some of the strictest bonus and advertising rules of any regulator this site covers, including a DKK 1,000 cap on promotional value and a ban on free bets for new customers."
     }
   ],
   "license": "KSA licence 1970/01.297.569, held by LeoVegas Gaming p.l.c.",

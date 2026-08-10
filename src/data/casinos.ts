@@ -2657,7 +2657,8 @@ export const casinos: Casino[] = [
     "licenseTypes": [
       "mga",
       "ksa",
-      "ukgc"
+      "ukgc",
+      "dk"
     ],
     "restrictedCountries": [
       "NL",
@@ -2666,8 +2667,8 @@ export const casinos: Casino[] = [
     "rating": 9,
     "author": "iGaming Compliance Specialist",
     "datePublished": "2026-06-30",
-    "lastModified": "2026-08-06",
-    "lastUpdated": "2026-08-06",
+    "lastModified": "2026-08-10",
+    "lastUpdated": "2026-08-10",
     "logoColor": "from-emerald-800 to-teal-900",
     "gameLibraryCount": "2,000+ Titles",
     "summaryText": "Leovegas is a renowned mobile-first online casino offering a vast selection of casino games, live casino, and sports betting. Players can enjoy a comprehensive gaming experience with a generous welcome package and various ongoing promotions.",
@@ -2942,6 +2943,10 @@ export const casinos: Casino[] = [
       {
         "question": "Can I bet on sports at LeoVegas, or is it casino-only?",
         "answer": "LeoVegas offers both. Alongside its casino and live dealer games, it runs a full sportsbook covering football, basketball, tennis, esports, and other major sports and events."
+      },
+      {
+        "question": "Is LeoVegas licensed in Denmark?",
+        "answer": "Yes. LeoVegas Gaming plc holds a Danish casino licence (number 21-70665) issued by Spillemyndigheden on 3 October 2021, valid until 2 October 2026, confirmed directly on LeoVegas's own Danish terms and conditions and on the official Spillemyndigheden operator register. Danish players are protected by mandatory ROFUS self-exclusion checks and some of the strictest bonus and advertising rules of any regulator this site covers, including a DKK 1,000 cap on promotional value and a ban on free bets for new customers."
       }
     ],
     "license": "KSA licence 1970/01.297.569, held by LeoVegas Gaming p.l.c.",
