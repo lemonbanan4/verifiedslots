@@ -1230,8 +1230,8 @@ export const casinos: Casino[] = [
     "rating": 9,
     "author": "Dr. Evelyn Reed, Senior Compliance Analyst",
     "datePublished": "2026-07-11",
-    "lastModified": "2026-07-11",
-    "lastUpdated": "2026-07-11",
+    "lastModified": "2026-08-10",
+    "lastUpdated": "2026-08-10",
     "logoColor": "from-orange-700 to-pink-800",
     "gameLibraryCount": "3,500+ Titles",
     "summaryText": "Casumo is a Malta-based operator with a distinctive space-themed loyalty program, offering a large slots-first library alongside an Evolution-powered live casino. UK operations are run under a separate licensed entity, Recro Limited, following a 2023 licence transfer.",
@@ -1477,6 +1477,26 @@ export const casinos: Casino[] = [
       {
         "question": "How fast are Casumo withdrawals?",
         "answer": "E-wallet withdrawals (PayPal, Skrill, Neteller) are typically the fastest, often clearing within an hour of approval. Card and bank transfer withdrawals can take 1-5 business days."
+      },
+      {
+        "question": "What payment methods does Casumo support?",
+        "answer": "Casumo accepts Visa, Mastercard, PayPal, Skrill, Neteller, Trustly, and Paysafecard, all with instant deposits and no operator fees. E-wallets withdraw within an hour of approval; cards and bank transfers take 1-5 business days. Paysafecard is deposit-only."
+      },
+      {
+        "question": "What happens if I don't clear the wagering requirement within 7 days?",
+        "answer": "The bonus funds and any related winnings expire if the 10x wagering requirement isn't met within 7 days of opting in. The clock starts from opt-in, not from the deposit itself."
+      },
+      {
+        "question": "Do all games count the same toward Casumo's wagering requirement?",
+        "answer": "No. Slots contribute 100% toward clearing the wagering requirement, while live casino and table games contribute at a reduced rate or may be excluded entirely — check the specific game's contribution before relying on it to clear a bonus."
+      },
+      {
+        "question": "What responsible gambling tools does Casumo offer?",
+        "answer": "Casumo surfaces deposit limits, loss limits, session limits, reality checks, and self-exclusion directly in the account dashboard rather than in a separate support menu, making them easier to find and adjust."
+      },
+      {
+        "question": "Which live casino provider does Casumo use?",
+        "answer": "Casumo's live casino is powered by Evolution, covering titles like Lightning Roulette, VIP Blackjack, Crazy Time, and Dream Catcher — though the live selection is comparatively smaller than the site's 3,500+ title slots library."
       }
     ],
     "welcomeBonus": "50% up to £100"
